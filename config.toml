@@ -22,7 +22,7 @@ hasCJKLanguage = true
     location = "混沌"
     site_description = "準備中"
     copyright  = "yewton. Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
-    avatar = "img/avatar.png"
+    gravatar = "yewton@gmail.com"
 
     # Format dates with Go's time formatting
     date_format = "2006.01.02 Mon"
