@@ -18,9 +18,9 @@ hasCJKLanguage = true
 [params]
     # Tell me who you are
     author = "yewton"
-    bio = "サイト準備中。。"
-    location = "混沌"
-    site_description = "準備中"
+    bio = "だらだらしたい。"
+    location = "Tokyo, Japan"
+    site_description = "開発的な話とか日常の駄文、その他もろもろ。"
     copyright  = "yewton. Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
     gravatar = "yewton@gmail.com"
 
@@ -50,7 +50,7 @@ hasCJKLanguage = true
 
 # Enter a link for the follow button on the left
 [params.profile]
-    follow_button = "https://github.com/yewton"
+    follow_button = "https://twitter.com/yewton"
 
 [social]
 # Add your social network accounts to the profile section on the left
