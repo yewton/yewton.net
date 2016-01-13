@@ -2,17 +2,15 @@
   <div class="inner profile-inner">
     <div class="base-info profile-block">
       {{ if $.Site.Params.gravatar }}
-      <div class="profilepic">
-        <img id="avatar" src="{{ .Site.BaseURL }}img/avatar-placeholder.png" alt="Profile Picture"/>
-        <script src="{{ .Site.BaseURL }}js/md5.js"></script>
-        <script type="text/javascript">
-          $(function(){
-          $('#avatar').attr('src', 'http://www.gravatar.com/avatar/' + MD5('{{ $.Site.Params.gravatar | lower }}') + '?s=128');
-          });
-        </script>
-      </div>
+      <img id="avatar" class="avatar" src="{{ .Site.BaseURL }}img/avatar-placeholder.png" alt="Profile Picture"/>
+      <script src="{{ .Site.BaseURL }}js/md5.js"></script>
+      <script type="text/javascript">
+        $(function(){
+        $('#avatar').attr('src', 'http://www.gravatar.com/avatar/' + MD5('{{ $.Site.Params.gravatar | lower }}') + '?s=128');
+        });
+      </script>
       {{ else }}
-      <img id="avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
+      <img id="avatar" class="avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
       {{ end }}
       {{ with .Site.Params.author}}<h2 id="name">{{ . }}</h2>{{ end }}
       {{ with .Site.Params.bio }}<h3 id="title">{{ . }}</h3>{{ end }}
