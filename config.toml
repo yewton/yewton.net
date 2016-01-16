@@ -26,6 +26,27 @@ hasCJKLanguage = true
 
     # Format dates with Go's time formatting
     date_format = "2006.01.02 Mon"
+    birthday = "1986-06-11"
+
+[[params.anniversary]]
+    prefix = "結婚"
+    date = "2010-11-30"
+    suffix = "目"
+
+[[params.anniversary]]
+    prefix = "付き合って"
+    date = "2007-11-30"
+    suffix = "目"
+
+[[params.anniversary]]
+    prefix = "社会人"
+    date = "2010-04-01"
+    suffix = "目"
+
+[[params.anniversary]]
+    prefix = "現職勤続"
+    date = "2015-09-01"
+    suffix = ""
 
 # Create custom menu entries by defining a label and a link for
 # them. Since you can also link posts, you've the option the

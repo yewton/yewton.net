@@ -22,6 +22,16 @@
     tags = "Tags"
     posts = "Posts"
 
+[profile.age]
+    years = "歳"
+    and = "と"
+    days = "日"
+
+
+[anniversary]
+    years = "年"
+    days = "日"
+
 [page_not_found]
     title = "404 - page not found"
     subtitle = "The content you're looking for doesn't seem to exist."

@@ -1,49 +1,99 @@
 <aside id="profile">
-  <div class="inner profile-inner">
-    <div class="base-info profile-block">
-      {{ if $.Site.Params.gravatar }}
-      <img id="avatar" class="avatar" src="{{ .Site.BaseURL }}img/avatar-placeholder.png" alt="Profile Picture"/>
-      <script src="{{ .Site.BaseURL }}js/md5.js"></script>
-      <script type="text/javascript">
-        $(function(){
-        $('#avatar').attr('src', 'http://www.gravatar.com/avatar/' + MD5('{{ $.Site.Params.gravatar | lower }}') + '?s=128');
-        });
-      </script>
-      {{ else }}
-      <img id="avatar" class="avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
-      {{ end }}
-      {{ with .Site.Params.author}}<h2 id="name">{{ . }}</h2>{{ end }}
-      {{ with .Site.Params.bio }}<h3 id="title">{{ . }}</h3>{{ end }}
-      {{ with .Site.Params.location }}<span id="location"><i class="fa fa-map-marker"></i>{{ . }}</span>{{ end }}
-      {{ with .Site.Params.profile.follow_button }}
-      <a id="follow" href="{{ . }}">
-        {{with $.Site.Data.l10n.profile.follow_button}}{{.}}{{end}}
-      </a>
-      {{ end }}
-    </div>
-    <div class="article-info profile-block">
-      <div class="article-info-block">
-        {{ len (where .Site.Pages "Type" "post") }}
-        <span>{{with .Site.Data.l10n.profile.posts}}{{.}}{{end}}</span>
-      </div>
-      <div class="article-info-block">
-        {{ if isset .Site.Taxonomies "tags" }}
-        {{ len .Site.Taxonomies.tags }}
-        {{ else }}
-        0
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            {{ if $.Site.Params.gravatar }}
+                <img id="avatar" class="avatar" src="{{ .Site.BaseURL }}img/avatar-placeholder.png" alt="Profile Picture"/>
+                <script src="{{ .Site.BaseURL }}js/md5.js"></script>
+                <script type="text/javascript">
+                 $(function(){
+                     $('#avatar').attr('src', 'http://www.gravatar.com/avatar/' + MD5('{{ $.Site.Params.gravatar | lower }}') + '?s=128');
+                 });
+                </script>
+            {{ else }}
+                <img id="avatar" class="avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
+            {{ end }}
+            {{ with .Site.Params.author}}<h2 id="name">{{ . }}</h2>{{ end }}
+            {{ with .Site.Params.bio }}<h3 id="title">{{ . }}</h3>{{ end }}
+            {{ with .Site.Params.location }}<span id="location"><i class="fa fa-map-marker"></i>{{ . }}</span>{{ end }}
+            {{ with .Site.Params.birthday}}
+                <span id="age" style="visibility: hidden;"><i class="fa fa-birthday-cake"></i></span>
+                <script type="text/javascript">
+                 $(function(){
+                     var birthday = moment('{{ . }}');
+                     var wholedays = moment().diff(birthday, 'days');
+                     var years = Math.floor(wholedays / 365);
+                     var days = wholedays % 365;
+                     var text = '';
+                     if (years) { text += years + '{{ $.Site.Data.l10n.profile.age.years }}'; }
+                     if (days) { text += '{{ $.Site.Data.l10n.profile.age.and }}' + days + '{{ $.Site.Data.l10n.profile.age.days }}'; }
+                     $('#age').append(text).hide().css({'visibility': 'visible'}).fadeIn();
+                 });
+                </script>
+            {{ end }}
+            {{ with .Site.Params.profile.follow_button }}
+                <a id="follow" href="{{ . }}">
+                    {{with $.Site.Data.l10n.profile.follow_button}}{{.}}{{end}}
+                </a>
+            {{ end }}
+        </div>
+        <div class="contact-info profile-block">
+            <table class="contact-list">
+                <tr>
+                    {{ partial "social" . }}
+                    <td><a href="{{ .RSSLink }}" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+                </tr>
+            </table>
+        </div>
+        {{ with .Site.Params.anniversary }}
+            <div class="anniversary-info profile-block">
+                <table id="anniversary-list">
+                    {{ range .}}
+                        <tr>
+                            <td><i class="fa fa-calendar"></i></td>
+                            <td>{{ .prefix }}</td>
+                            <td>
+                                <span class="anniversary"
+                                      data-prefix="{{ .prefix }}"
+                                      data-suffix="{{ .suffix }}"
+                                      data-date="{{ .date }}"
+                                      style="visibility: hidden;">&nbsp;</span>
+                            </td>
+                        </tr>
+                    {{ end }}
+                </table>
+            </div>
+
+            <script type="text/javascript">
+             $(function(){
+                 $('.anniversary').each(function () {
+                     var suffix = $(this).data('suffix');
+                     var date = moment($(this).data('date'));
+                     var wholedays = moment().diff(date, 'days');
+                     var years = Math.floor(wholedays / 365);
+                     var days = wholedays % 365;
+                     var text = '';
+                     if (years) { text += years + '{{ $.Site.Data.l10n.anniversary.years }}'; }
+                     if (days) { text += days + '{{ $.Site.Data.l10n.anniversary.days }}'; }
+                     $(this).html(text + suffix).hide().css({'visibility': 'visible'}).fadeIn();
+                 });
+             });
+            </script>
         {{ end }}
-        <span>
-          {{with .Site.Data.l10n.profile.tags}}{{.}}{{end}}
-        </span>
-      </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                {{ len (where .Site.Pages "Type" "post") }}
+                <span>{{with .Site.Data.l10n.profile.posts}}{{.}}{{end}}</span>
+            </div>
+            <div class="article-info-block">
+                {{ if isset .Site.Taxonomies "tags" }}
+                    {{ len .Site.Taxonomies.tags }}
+                {{ else }}
+                    0
+                {{ end }}
+                <span>
+                    {{with .Site.Data.l10n.profile.tags}}{{.}}{{end}}
+                </span>
+            </div>
+        </div>
     </div>
-    <div class="contact-info profile-block">
-      <table class="contact-list">
-        <tr>
-          {{ partial "social" . }}
-          <td><a href="{{ .RSSLink }}" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
-        </tr>
-      </table>
-    </div>
-  </div>
 </aside>

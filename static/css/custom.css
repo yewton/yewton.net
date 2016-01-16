@@ -15,3 +15,30 @@ div.article-banner-transparent-layer {
     height: 100%;
     background-color: rgba(34, 34, 34, 0.4);
 }
+
+#age {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #9a9ea3;
+}
+
+#anniversary-list {
+    padding: 0 20px;
+}
+
+#anniversary-list td {
+    padding: 2px;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #9a9ea3;
+}
+
+#age {
+    text-align: center;
+}
+
+#age .fa {
+    margin-right: 5px;
+}
+
