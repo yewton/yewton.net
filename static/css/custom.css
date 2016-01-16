@@ -1,5 +1,17 @@
 .avatar {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+div.article-banner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div.article-banner-transparent-layer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.4);
 }
