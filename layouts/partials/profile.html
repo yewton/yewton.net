@@ -6,7 +6,7 @@
                 <script src="{{ .Site.BaseURL }}js/md5.js"></script>
                 <script type="text/javascript">
                  $(function(){
-                     $('#avatar').attr('src', 'http://www.gravatar.com/avatar/' + MD5('{{ $.Site.Params.gravatar | lower }}') + '?s=128');
+                     $('#avatar').attr('src', 'https://www.gravatar.com/avatar/' + MD5('{{ $.Site.Params.gravatar | lower }}') + '?s=128');
                  });
                 </script>
             {{ else }}

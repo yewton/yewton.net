@@ -1,4 +1,4 @@
-baseurl = "http://yewton.net/"
+baseurl = "https://yewton.net/"
 languageCode = "ja-jp"
 title = "yewton.net"
 # Enable comments by entering your Disqus shortname
