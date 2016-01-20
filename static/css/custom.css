@@ -42,3 +42,31 @@ div.article-banner-transparent-layer {
     margin-right: 5px;
 }
 
+.article-entry pre {
+  background: #f8f8f8;
+  margin: 20px 0;
+  padding: 15px 20px;
+  border-style: solid;
+  border-color: #eceff2;
+  border-width: 1px 0;
+  overflow: auto;
+  color: #333;
+  line-height: 22.400000000000002px;
+}
+
+.article-entry pre,
+.article-entry code {
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+}
+
+.article-entry code {
+  background: #f5f8f9;
+  text-shadow: 0 1px #fff;
+  padding: 0 0.3em;
+}
+
+.article-entry pre code {
+  background: none;
+  text-shadow: none;
+  padding: 0;
+}
