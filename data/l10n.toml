@@ -1,9 +1,9 @@
 [articles]
-    read_more = "Read more"
-    words = "words"
-    readingtime = "minute read"
-    share = "Share"
-    comments = "Comments"
+    read_more = "続きを読む"
+    words = "語"
+    readingtime = "分"
+    share = "シェア"
+    comments = "コメント"
 
 # Linked older/newer posts at the bottom of each one
 [articles.linked_posts]
@@ -11,16 +11,16 @@
     newer = "Newer"
 
 [search]
-    placeholder = "Search"
+    placeholder = "検索"
 
 [pagination]
-    previous = "Prev"
-    next = "Next"
+    previous = "前"
+    next = "次"
 
 [profile]
-    follow_button = "Follow"
-    tags = "Tags"
-    posts = "Posts"
+    follow_button = "フォロー"
+    tags = "タグ"
+    posts = "投稿"
 
 [profile.age]
     years = "歳"
@@ -37,13 +37,13 @@
     subtitle = "The content you're looking for doesn't seem to exist."
 
 [widgets.categories]
-    title = "Categories"
+    title = "カテゴリ"
 
 [widgets.recent_articles]
-    title = "Recents"
+    title = "最新記事"
 
 [widgets.tag_cloud]
-    title = "Tag cloud"
+    title = "タグクラウド"
 
 [widgets.tags]
-    title = "Tags"
+    title = "タグ"

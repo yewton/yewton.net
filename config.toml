@@ -1,4 +1,4 @@
-baseurl = "https://yewton.net/"
+baseurl = "https://www.yewton.net/"
 languageCode = "ja-jp"
 title = "yewton.net"
 # Enable comments by entering your Disqus shortname
@@ -18,9 +18,9 @@ hasCJKLanguage = true
 [params]
     # Tell me who you are
     author = "yewton"
-    bio = "だらだらしたい。"
+    bio = "サーバーサイドエンジニア。インフラも少々。あと認定スクラムマスター。"
     location = "Tokyo, Japan"
-    site_description = "開発的な話とか日常の駄文、その他もろもろ。"
+    site_description = "技術的な話とか日常の駄文、その他もろもろ。"
     copyright  = "yewton. Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
     gravatar = "yewton@gmail.com"
 
@@ -110,4 +110,4 @@ hasCJKLanguage = true
     recent_articles = true
     categories = true
     tags = true
-    tag_cloud = true
+    tag_cloud = false
