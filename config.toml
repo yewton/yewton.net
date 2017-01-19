@@ -11,6 +11,7 @@ canonifyurls = true
 footnotereturnlinkcontents = "↩"
 theme = "hugo-icarus"
 hasCJKLanguage = true
+enableEmoji = true
 
 [permalinks]
     post = "/:year/:month/:day/:slug"
@@ -18,7 +19,7 @@ hasCJKLanguage = true
 [params]
     # Tell me who you are
     author = "yewton"
-    bio = "サーバーサイドエンジニア。インフラも少々。あと認定スクラムマスター。"
+    bio = "サーバーサイドエンジニア。インフラも少々。1児の父親。"
     location = "Tokyo, Japan"
     site_description = "技術的な話とか日常の駄文、その他もろもろ。"
     copyright  = "yewton. Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
@@ -46,6 +47,11 @@ hasCJKLanguage = true
 [[params.anniversary]]
     prefix = "現職勤続"
     date = "2015-09-01"
+    suffix = ""
+
+[[params.anniversary]]
+    prefix = "父親歴"
+    date = "2016-12-09"
     suffix = ""
 
 # Create custom menu entries by defining a label and a link for
