@@ -70,3 +70,70 @@ div.article-banner-transparent-layer {
   text-shadow: none;
   padding: 0;
 }
+
+.admonitions {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    color: #333;
+}
+
+.admonitions__title:before {
+    font-size: large;
+    margin: 2px 4px 2px 2px;
+    font-family: FontAwesome;
+}
+
+.admonitions__title {
+    font-weight: bold;
+}
+
+.admonitions__content {
+    margin: 0px;
+    padding: 0px;
+}
+
+.admonitions__content p {
+    margin: 10px;
+}
+
+.admonitions_info {
+    border-color: #ccc;
+    background-color: #fcfcfc;
+}
+
+.admonitions_info .admonitions__title:before {
+    color: #1e90ff;
+    content: "\f05a";
+}
+
+.admonitions_tip {
+    border-color: #91c89c;
+    background-color: #f3f9f4;
+}
+
+.admonitions_tip .admonitions__title:before {
+    color: #127b1c;
+    content: "\f058";
+}
+
+.admonitions_note {
+    border-color: #ffeaae;
+    background-color: #fffdf6;
+}
+
+.admonitions_note .admonitions__title:before {
+    color: #ffcc00;
+    content: "\f071";
+}
+
+.admonitions_warn {
+    border-color: #d04437;
+    background-color: #fff8f7;
+}
+
+.admonitions_warn .admonitions__title:before {
+    color: #c42d25;
+    content: "\f06a";
+}
