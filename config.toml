@@ -19,7 +19,7 @@ enableEmoji = true
 [params]
     # Tell me who you are
     author = "yewton"
-    bio = "サーバーサイドエンジニア。インフラも少々。1児の父親。"
+    bio = "サーバーサイドエンジニア。iOS, Android, Web, インフラも少々。2児の父親。"
     location = "Tokyo, Japan"
     site_description = "技術的な話とか日常の駄文、その他もろもろ。"
     copyright  = "yewton. Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
