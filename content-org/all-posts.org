@@ -1,0 +1,57 @@
+#+hugo_section: post
+#+hugo_base_dir: ../
+#+startup: indent
+#+author: yewton
+#+options: H:5 ^:nil
+#+seq_todo: TODO DRAFT DONE
+
+* 雑記                                                             :@雑記:
+
+** DONE 久々の更新
+:PROPERTIES:
+:EXPORT_FILE_NAME: 2020-01-02_happy_new_year
+:EXPORT_HUGO_SLUG: happy-new-year
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :banner banners/default.jpg
+:EXPORT_DATE: 2019-01-02
+:END:
+
+最近仕事用のmacを新調して環境を作り直す機会があったことと、 2020 年が始まるということもあり、久々にサイトを更新することにした。
+
+[[/resume][オープン職務経歴書]]を書きたかった、というのもある。
+
+更新にあたっていくつか困難があった。
+
+*まず、このサイトのソースが最近の Hugo では動かせなくなっていた。*
+
+このサイトのテーマには [[https://github.com/digitalcraftsman/hugo-icarus-theme][Icarus]] を使わせていただいているのだが、最終更新が 2017 年となっており、
+Hugo 0.55.0 以降で動かなくなってしまっていたり、 Deprecated Warning が出るようになっていた。
+
+[[https://github.com/digitalcraftsman/hugo-icarus-theme/pull/124][PRは出されている]] のだけれど、マージされる様子が無い。
+
+そもそも、当時のバージョンに対してカスタマイズしたレイアウトを作ってしまったので、
+単純なテーマの更新だけでは追随できない。
+
+どのバージョンなら動くのか突き止めるのも骨が折れた。
+[[https://bitbucket.org/mgladdish/asdf-gohugo][asdf-gohugo]] を入れて、少しずつバージョンを上げながら確認していった。
+
+#+begin_src sh
+asdf plugin add hugo https://bitbucket.org/mgladdish/asdf-gohugo
+#+end_src
+
+*そして、そもそも Hugo の使い方を忘れていた。*
+
+[[/2016/02/02/blog-with-hugo/][Hugo 導入記事]] や [[/2016/01/26/hugo-el/][Hugo 用 Emacs ライブラリ]] を書いておいてなんだが、当時から3年も経ってほとんど忘れてしまっていた。
+
+そこで改めて調べてみると、イマドキは org-mode で書くことも出来るらしい。
+
+この3年ですっかり org-mode 無しでは生きられない体になってしまっていたし、
+せっかくなので本記事からは [[https://ox-hugo.scripter.co/][ox-hugo]] を使って書くことにする。
+
+使い始めるにあたって色々調べたり考えたりすることも多かったので、そのうち記事にしようと思う。
+結論としては、org-mode と Hugo の組み合わせは最高だし、その橋渡しをしてくれる [[https://ox-hugo.scripter.co/][ox-hugo]] は本当にグッジョブだということ。
+
+...
+
+そんなこんなで色々対応していたものの、デプロイする仕組みなどは当時と変わりなく動いたのでその点は助かった。
+
+org-mode で書けるようになったことだし、少しは記事を書いていきたい所だが、まずは Hugo の最新版に追従する作業が待っている…。

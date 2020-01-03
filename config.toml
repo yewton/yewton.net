@@ -20,7 +20,7 @@ enableEmoji = true
     # Tell me who you are
     author = "yewton"
     bio = "サーバーサイドエンジニア。iOS, Android, Web, インフラも少々。2児の父親。"
-    location = "Tokyo, Japan"
+    location = "Chiba, Japan"
     site_description = "技術的な話とか日常の駄文、その他もろもろ。"
     copyright  = "yewton. Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
     gravatar = "yewton@gmail.com"
@@ -75,6 +75,11 @@ enableEmoji = true
     label  = "Categories"
     link   = "categories/"
 
+[[params.menu]]
+    before = false
+    label  = "Resume"
+    link   = "resume/"
+
 # Enter a link for the follow button on the left
 [params.profile]
     follow_button = "https://twitter.com/yewton"
@@ -105,7 +110,7 @@ enableEmoji = true
     stackoverflow   = ""
     reddit          = ""
     pinterest       = ""
-    googleplus      = "YutoSasaki"
+    googleplus      = ""
     facebook        = "yewton"
     facebook_admin  = ""
     twitter_domain  = ""

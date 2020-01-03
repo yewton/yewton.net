@@ -1,6 +1,6 @@
 +++
 categories = ["雑記"]
-tags = [""]
+tags = []
 slug = "misc"
 banner = "banners/default.jpg"
 draft = true

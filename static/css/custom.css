@@ -137,3 +137,8 @@ div.article-banner-transparent-layer {
     color: #c42d25;
     content: "\f06a";
 }
+
+#TableOfContents ul {
+    list-style: none;
+    margin-left: 1em;
+}
