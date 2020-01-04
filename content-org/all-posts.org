@@ -1,23 +1,20 @@
+#+setupfile: setup.org
 #+hugo_section: post
-#+hugo_base_dir: ../
-#+startup: indent
-#+author: yewton
-#+options: H:5 ^:nil
 #+seq_todo: TODO DRAFT DONE
 
 * 雑記                                                             :@雑記:
 
-** DONE 久々の更新
+** DONE 久々の更新                                      :emacs:hugo:ox_hugo:
 :PROPERTIES:
-:EXPORT_FILE_NAME: 2020-01-02_happy_new_year
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 2020-01-02_happy_new_year
 :EXPORT_HUGO_SLUG: happy-new-year
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :banner banners/default.jpg
 :EXPORT_DATE: 2019-01-02
 :END:
 
 最近仕事用のmacを新調して環境を作り直す機会があったことと、 2020 年が始まるということもあり、久々にサイトを更新することにした。
 
-[[/resume][オープン職務経歴書]]を書きたかった、というのもある。
+[[/cv/][オープン職務経歴書]]を書きたかった、というのもある。
 
 更新にあたっていくつか困難があった。
 
@@ -55,3 +52,53 @@ asdf plugin add hugo https://bitbucket.org/mgladdish/asdf-gohugo
 そんなこんなで色々対応していたものの、デプロイする仕組みなどは当時と変わりなく動いたのでその点は助かった。
 
 org-mode で書けるようになったことだし、少しは記事を書いていきたい所だが、まずは Hugo の最新版に追従する作業が待っている…。
+
+** DRAFT 久々の更新2                                    :emacs:hugo:ox_hugo:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 2020-01-05_random
+:EXPORT_HUGO_SLUG: random
+:EXPORT_DATE: 2019-01-05
+:END:
+
+org-mode ではタグにハイフンを付けられない。
+
+=ox_hugo= ~hoge~
+
+conf-toml がある https://github.com/dryman/toml-mode.el/issues/14
+
+#+begin_src emacs-lisp
+(use-package ox-hugo
+  :after ox
+  :init
+  (defalias 'toml-mode 'conf-toml-mode)
+  :config 
+  (setq org-hugo-use-code-for-kbd t))
+#+end_src
+
+#+begin_src sh
+hugo gen chromastyles --style=monokai > pbcopy
+hugo gen chromastyles --style=monokailight > pbcopy
+#+end_src
+
+https://css2sass.herokuapp.com/
+
+=.np= とか、light にしか無いやつを消した(暫定)
+
+https://gohugo.io/getting-started/configuration-markup#highlight
+
+#+begin_src toml
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = "emacs"
+    tabWidth = 4
+#+end_src
+
+
+

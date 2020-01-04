@@ -1,0 +1,4 @@
+#+hugo_base_dir: ../
+#+startup: indent
+#+author: yewton
+#+options: H:5 ^:nil
