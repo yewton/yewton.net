@@ -1,4 +1,5 @@
 +++
+lastmod = 2020-01-06T08:49:04+09:00
 weight = 2005
 # Experience widget.
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
@@ -95,6 +96,17 @@ date_format = "2006年1月"
   date_start = "2019-04-01"
   date_end = ""
   description = "開発メンバーとして参加"
+
+[[experience]]
+  title = "個人事業主として開業"
+  company = "YAGNI ワーク"
+  date_start = "2017-10-01"
+  date_end = ""
+  description = """
+知り合いから声を掛けられて副業を開始。
+その頃ちょうど `.work` ドメインが安売りされていて [yagni.work](https://yagni.work) というドメインを安く取れたので、
+屋号を YAGNI ワークとした。
+"""
 
 [[experience]]
   title = "BtoB動画マニュアル管理ツール開発"

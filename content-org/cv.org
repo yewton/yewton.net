@@ -239,6 +239,17 @@ type = "widget_page"
     description = "開発メンバーとして参加"
 
   [[experience]]
+    title = "個人事業主として開業"
+    company = "YAGNI ワーク"
+    date_start = "2017-10-01"
+    date_end = ""
+    description = """
+  知り合いから声を掛けられて副業を開始。
+  その頃ちょうど `.work` ドメインが安売りされていて [yagni.work](https://yagni.work) というドメインを安く取れたので、
+  屋号を YAGNI ワークとした。
+  """
+
+  [[experience]]
     title = "BtoB動画マニュアル管理ツール開発"
     company = "株式会社S"
     date_start = "2017-10-01"
