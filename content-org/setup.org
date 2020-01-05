@@ -1,4 +1,5 @@
 #+hugo_base_dir: ../
+#+hugo_auto_set_lastmod: t
 #+startup: indent
 #+author: yewton
 #+options: H:5 ^:nil

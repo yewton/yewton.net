@@ -1,4 +1,5 @@
 +++
+lastmod = 2020-01-06T08:07:15+09:00
 weight = 2001
 # About widget.
 widget = "about-ext"  # See https://sourcethemes.com/academic/docs/page-builder/
