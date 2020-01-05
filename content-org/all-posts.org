@@ -55,7 +55,7 @@ asdf plugin add hugo https://bitbucket.org/mgladdish/asdf-gohugo
 
 org-mode で書けるようになったことだし、少しは記事を書いていきたい所だが、まずは Hugo の最新版に追従する作業が待っている…。
 
-** DRAFT #MadeWithAcademic                                :academic:ox_hugo:
+** DONE #MadeWithAcademic                                 :academic:ox_hugo:
 :PROPERTIES:
 :EXPORT_HUGO_BUNDLE: 2020-01-06_academic
 :EXPORT_HUGO_SLUG: made-with-academic

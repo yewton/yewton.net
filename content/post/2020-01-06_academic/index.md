@@ -2,11 +2,11 @@
 title = "#MadeWithAcademic"
 author = ["yewton"]
 date = 2019-01-06
-lastmod = 2020-01-06T08:39:37+09:00
+lastmod = 2020-01-06T08:50:43+09:00
 slug = "made-with-academic"
 tags = ["academic", "ox-hugo"]
 categories = ["雑記"]
-draft = true
+draft = false
 +++
 
 [Icarus](https://github.com/digitalcraftsman/hugo-icarus-theme) がメンテされておらず Hugo 0.55.0 以降で正しく動かなくなっていたので、
