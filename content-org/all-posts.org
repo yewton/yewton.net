@@ -128,5 +128,18 @@ https://gohugo.io/getting-started/configuration-markup#highlight
     tabWidth = 4
 #+end_src
 
+https://github.com/sourcethemes/academic-scripts に page bunlde 化するスクリプトがある。
+
+#+begin_src sh
+asdf plugin add hugo https://github.com/beardix/asdf-hugo
+#+end_src
+
+=baseurl= を設定しないと Twitter Card などが表示されないので気をつけよう
+
+#+begin_src toml
+# The URL of your site.
+# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+baseurl = "https://www.yewton.net/"
+#+end_src
 
 
