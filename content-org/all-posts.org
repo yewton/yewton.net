@@ -142,4 +142,9 @@ asdf plugin add hugo https://github.com/beardix/asdf-hugo
 baseurl = "https://www.yewton.net/"
 #+end_src
 
+=google_tag_manager= が設定されていると Google Analytics のコードが埋め込まれない
+https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803-663f-4b38-8d6f-bc645935da26?authed=true
+
+
+
 
