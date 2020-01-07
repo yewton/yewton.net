@@ -9,6 +9,7 @@
 
 #+begin_src toml :front_matter_extra t
 type = "widget_page"
+title = "オープン職務経歴書"
 #+end_src
 
 * cv

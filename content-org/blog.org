@@ -9,6 +9,7 @@
 
 #+begin_src toml :front_matter_extra t
 type = "widget_page"
+title = "ブログ"
 #+end_src
 
 * blog
