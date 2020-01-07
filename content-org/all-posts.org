@@ -145,6 +145,22 @@ baseurl = "https://www.yewton.net/"
 =google_tag_manager= が設定されていると Google Analytics のコードが埋め込まれない
 https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803-663f-4b38-8d6f-bc645935da26?authed=true
 
+* 買ったモノ                                                    :@買ったモノ:
+** DRAFT lenovo                                     :Lenovo__Tab__M8:ATTACH:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 2020-01-08_lenovo-tab-m8
+:EXPORT_HUGO_SLUG: lenovo-tab-m8
+:EXPORT_DATE: 2019-01-08
+:ID:       170FC1CA-6B77-428D-BA28-764323C819D0
+:END:
 
+[[https://hb.afl.rakuten.co.jp/hgc/1a0d625b.bdb81d38.1a0d625c.bf0332b2/?pc=https%253A%252F%252Fitem.rakuten.co.jp%252Fbiccamera%252F4580550700484%252F&m=http%253A%252F%252Fm.rakuten.co.jp%252Fbiccamera%252Fi%252F12780179%252F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjB9][Lenovo Tab M8 (ZA5G0084JP)]]
+
+[[https://amzn.to/2T4dbTB][Sony WH-XB900N]]
+
+#+DOWNLOADED: file:/Users/yewton/Downloads/drive-download-20200107T213252Z-001/Screenshot_2020-01-08-01-02-37-802.jpeg @ 2020-01-08 06:36:21
+#+ATTR_ORG: :width 600
+[[file:data/17/0FC1CA-6B77-428D-BA28-764323C819D0/2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg]]
 
 
