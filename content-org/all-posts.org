@@ -233,6 +233,17 @@ https://emacs.stackexchange.com/questions/7377/named-string-substitution
 :EXPORT_HUGO_SLUG:   find-alternate-file
 :END:
 
+#+begin_src emacs-lisp
+;; -*- lexical-binding: t; -*-
+#+end_src
+
+#+begin_src emacs-lisp
+;; Local Variables:
+;; flycheck-disabled-checkers: (emacs-lisp emacs-lisp-checkdoc)
+;; no-byte-compile: t
+;; End:
+#+end_src
+
 =find-alternate-file=
 
 #+begin_quote

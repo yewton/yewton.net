@@ -2,11 +2,22 @@
 title = "Emacs でマジックコメントを反映させたいとき"
 author = ["yewton"]
 date = 2020-01-09
-lastmod = 2020-01-09T06:26:45+09:00
+lastmod = 2020-01-09T06:29:22+09:00
 slug = "find-alternate-file"
 categories = ["Emacs"]
 draft = true
 +++
+
+```emacs-lisp
+;; -*- lexical-binding: t; -*-
+```
+
+```emacs-lisp
+;; Local Variables:
+;; flycheck-disabled-checkers: (emacs-lisp emacs-lisp-checkdoc)
+;; no-byte-compile: t
+;; End:
+```
 
 `find-alternate-file`
 
