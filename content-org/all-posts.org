@@ -6,6 +6,15 @@
   :LOGBOOK:
   :END:
 
+** DRAFT auto-commit-and-push のこと書きたい
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-09
+:DIR:                images/2020-01-09_auto-commit-and-push
+:EXPORT_HUGO_BUNDLE: 2020-01-09_auto-commit-and-push
+:EXPORT_HUGO_SLUG:   auto-commit-and-push
+:END:
+
 * 雑記                                                             :@雑記:
 :PROPERTIES:
 :END:
