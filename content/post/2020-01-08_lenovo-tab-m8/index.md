@@ -2,9 +2,9 @@
 title = "lenovo"
 author = ["yewton"]
 date = 2020-01-08
-lastmod = 2020-01-08T11:25:51+09:00
+lastmod = 2020-01-09T06:15:36+09:00
 slug = "lenovo-tab-m8"
-tags = ["Lenovo Tab M8", "ATTACH"]
+tags = ["Lenovo Tab M8"]
 categories = ["買ったモノ"]
 draft = true
 +++
@@ -15,4 +15,6 @@ draft = true
 
 {{< figure src="images/2020-01-08_lonovo-tab-m8/2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg" >}}
 
-{{< figure src="images/2020-01-08_lonovo-tab-m8/2020-01-08_11-19-46_icon.png" >}}
+{{< figure src="images/2020-01-08_lonovo-tab-m8/2020-01-09_06-10-17_Screenshot_2020-01-08-01-02-47-757.jpeg" >}}
+
+{{< figure src="images/2020-01-08_lonovo-tab-m8/2020-01-09_06-11-57_Screenshot (2020_01_08 6_12_13).jpg" >}}
