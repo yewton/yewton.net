@@ -2,7 +2,7 @@
 title = "lenovo"
 author = ["yewton"]
 date = 2020-01-08
-lastmod = 2020-01-09T06:15:36+09:00
+lastmod = 2020-01-09T08:37:29+09:00
 slug = "lenovo-tab-m8"
 tags = ["Lenovo Tab M8"]
 categories = ["買ったモノ"]
@@ -13,8 +13,8 @@ draft = true
 
 [Sony WH-XB900N](https://amzn.to/2T4dbTB)
 
-{{< figure src="images/2020-01-08_lonovo-tab-m8/2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg" >}}
+{{< figure src="2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg" caption="&#22259;1:  koreh caption" >}}
 
-{{< figure src="images/2020-01-08_lonovo-tab-m8/2020-01-09_06-10-17_Screenshot_2020-01-08-01-02-47-757.jpeg" >}}
+{{< figure src="2020-01-09_06-10-17_Screenshot_2020-01-08-01-02-47-757.jpeg" >}}
 
-{{< figure src="images/2020-01-08_lonovo-tab-m8/2020-01-09_06-11-57_Screenshot (2020_01_08 6_12_13).jpg" >}}
+{{< figure src="2020-01-09_08-36-49_Screenshot (2020_01_08 6_12_13).jpg" caption="&#22259;2:  ゼクラス砂漠でウダウダしている一行" >}}
