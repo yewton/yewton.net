@@ -1,8 +1,8 @@
 +++
 title = "lenovo"
 author = ["yewton"]
-date = 2019-01-08
-lastmod = 2020-01-08T06:59:01+09:00
+date = 2020-01-08
+lastmod = 2020-01-08T11:25:51+09:00
 slug = "lenovo-tab-m8"
 tags = ["Lenovo Tab M8", "ATTACH"]
 categories = ["買ったモノ"]
@@ -13,4 +13,6 @@ draft = true
 
 [Sony WH-XB900N](https://amzn.to/2T4dbTB)
 
-{{< figure src="data/17/0FC1CA-6B77-428D-BA28-764323C819D0/2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg" >}}
+{{< figure src="images/2020-01-08_lonovo-tab-m8/2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg" >}}
+
+{{< figure src="images/2020-01-08_lonovo-tab-m8/2020-01-08_11-19-46_icon.png" >}}
