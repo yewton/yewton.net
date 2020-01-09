@@ -6,6 +6,42 @@
   :LOGBOOK:
   :END:
 
+** DRAFT org-mode に Web のリンクを貼りたい
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-09
+:DIR:                images/2020-01-09_org-mode-web-link
+:EXPORT_HUGO_BUNDLE: 2020-01-09_org-mode-web-link
+:EXPORT_HUGO_SLUG:   org-mode-web-link
+:END:
+
+https://orgmode.org/Changes.html
+
+#+begin_quote
+Version 9.3
+Incompatible changes
+Change bracket link escaping syntax
+Org used to percent-encode sensitive characters in the URI part of the bracket links.
+
+Now, escaping mechanism uses the usual backslash character, according to the following rules, applied in order:
+#+end_quote
+
+
+#+begin_src emacs-lisp
+(defun org-link-unescape (link)
+  "Remove escaping backslash characters from string LINK."
+  (replace-regexp-in-string
+   (rx (group (one-or-more "\\")) (or string-end (any "[]")))
+   (lambda (_)
+     (concat (make-string (/ (- (match-end 1) (match-beginning 1)) 2) ?\\)))
+   link nil t 1))
+#+end_src
+
+#+begin_example
+%text%\n%url%
+#+end_example
+
+
 ** DRAFT org-mode column view で clock した結果を集計
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
