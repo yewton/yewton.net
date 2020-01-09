@@ -6,15 +6,6 @@
   :LOGBOOK:
   :END:
 
-** DRAFT auto-commit-and-push のこと書きたい
-:PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-09
-:DIR:                images/2020-01-09_auto-commit-and-push
-:EXPORT_HUGO_BUNDLE: 2020-01-09_auto-commit-and-push
-:EXPORT_HUGO_SLUG:   auto-commit-and-push
-:END:
-
 * 雑記                                                             :@雑記:
 :PROPERTIES:
 :END:
@@ -188,6 +179,23 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 
 
 * Emacs                                                              :@Emacs:
+** DRAFT auto-commit-and-push のこと書きたい
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-09
+:DIR:                images/2020-01-09_auto-commit-and-push
+:EXPORT_HUGO_BUNDLE: 2020-01-09_auto-commit-and-push
+:EXPORT_HUGO_SLUG:   auto-commit-and-push
+:END:
+
+#+CAPTION: .dir-locals.el
+#+begin_src emacs-lisp
+((nil . ((eval git-auto-commit-mode 1)
+         (gac-automatically-push-p . t))))
+#+end_src
+
+=git-auto-commit-mode= は autoload されるので、 autoload が適切に扱われていれば =require= は不要。
+
 ** DRAFT org-download と ox-hugo を組み合わせて記事への画像挿入を快適にする :emacs:ox__hugo:org__download:org__attach:
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
