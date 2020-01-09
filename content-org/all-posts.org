@@ -6,6 +6,19 @@
   :LOGBOOK:
   :END:
 
+** DRAFT org-mode column view で clock した結果を集計
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-09
+:DIR:                images/2020-01-09_columns-clocksum
+:EXPORT_HUGO_BUNDLE: 2020-01-09_columns-clocksum
+:EXPORT_HUGO_SLUG:   columns-clocksum
+:END:
+
+#+begin_src org
+#+COLUMNS:  %40ITEM %TODO %CLOCKSUM %JIRA
+#+end_src
+
 * 雑記                                                             :@雑記:
 :PROPERTIES:
 :END:
