@@ -6,41 +6,16 @@
   :LOGBOOK:
   :END:
 
-** DRAFT org-mode に Web のリンクを貼りたい
+** DRAFT ox-hugo の src block caption はどこから来てるのか
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-09
-:DIR:                images/2020-01-09_org-mode-web-link
-:EXPORT_HUGO_BUNDLE: 2020-01-09_org-mode-web-link
-:EXPORT_HUGO_SLUG:   org-mode-web-link
+:EXPORT_DATE:        2020-01-10
+:DIR:                images/2020-01-10_ox-hugo-src-block-caption
+:EXPORT_HUGO_BUNDLE: 2020-01-10_ox-hugo-src-block-caption
+:EXPORT_HUGO_SLUG:   ox-hugo-src-block-caption
 :END:
 
-https://orgmode.org/Changes.html
-
-#+begin_quote
-Version 9.3
-Incompatible changes
-Change bracket link escaping syntax
-Org used to percent-encode sensitive characters in the URI part of the bracket links.
-
-Now, escaping mechanism uses the usual backslash character, according to the following rules, applied in order:
-#+end_quote
-
-
-#+begin_src emacs-lisp
-(defun org-link-unescape (link)
-  "Remove escaping backslash characters from string LINK."
-  (replace-regexp-in-string
-   (rx (group (one-or-more "\\")) (or string-end (any "[]")))
-   (lambda (_)
-     (concat (make-string (/ (- (match-end 1) (match-beginning 1)) 2) ?\\)))
-   link nil t 1))
-#+end_src
-
-#+begin_example
-%text%\n%url%
-#+end_example
-
+[[file:~/.emacs.d/var/el-get/org-mode/lisp/ox.el::("Listing" ("ar" :default "برنامج") ("cs" :default "Program") ("da" :default "Program") ("de" :default "Programmlisting") ("es" :default "Listado de programa") ("et" :default "Loend") ("fr" :default "Programme" :html "Programme") ("it" :default "Listato") ("ja" :default "ソースコード")][koko]]
 
 ** DRAFT org-mode column view で clock した結果を集計
 :PROPERTIES:
@@ -228,6 +203,81 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 
 
 * Emacs                                                              :@Emacs:
+** DONE org-mode に Chrome で開いてるページへのリンクを貼りたい :emacs:org__mode:
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-10
+:DIR:                images/2020-01-09_org-mode-web-link
+:EXPORT_HUGO_BUNDLE: 2020-01-09_org-mode-web-link
+:EXPORT_HUGO_SLUG:   org-mode-web-link
+:END:
+
+=org-mode= のリンクマークアップはちょっと特殊で、エスケープの仕様も独特です。
+
+また、  [[https://code.orgmode.org/bzg/org-mode/src/release_9.3/etc/ORG-NEWS][2019年の12月にリリースされたバージョン 9.3 で後方互換性の無い仕様変更が入る]] ということも有りました。
+
+#+begin_quote
+*Version 9.3*
+
+*Incompatible changes*
+
+Change bracket link escaping syntax
+Org used to percent-encode sensitive characters in the URI part of the bracket links.
+
+Now, escaping mechanism uses the usual backslash character, according to the following rules, applied in order:
+#+end_quote
+
+#+CAPTION[short]: (参考) =org-mode= 9.3 でのエスケープ実装
+#+begin_src emacs-lisp
+(defun org-link-unescape (link)
+  "Remove escaping backslash characters from string LINK."
+  (replace-regexp-in-string
+   (rx (group (one-or-more "\\")) (or string-end (any "[]")))
+   (lambda (_)
+     (concat (make-string (/ (- (match-end 1) (match-beginning 1)) 2) ?\\)))
+   link nil t 1))
+#+end_src
+
+こういう背景もあり、 =org-mode= の外で工夫して =org-mode= 形式のリンクを生成するよりは、
+ =org-mode= 自体に任せてしまうのが安心です。
+
+[[https://github.com/rexim/org-cliplink][org-cliplink]] というパッケージもありますが、これだとログインが必要なページへのリンクは
+(Basic 認証を設定していなければ)生成出来ません。
+
+もっと手軽に、 Chrome で見ているページへのリンクを挿入する手段として、
+[[https://github.com/ku/CreateLink][CreateLink]] という Chrome 拡張機能を使う方法があります。
+
+以下のように改行区切りでコピーするような設定を追加します:
+
+#+begin_example
+%text%%newline%%url%
+#+end_example
+
+CreateLink の =%text%= は改行をスペースに変換する仕様になっているので、区切り文字として改行を利用するのは安全なハズです。
+
+そして、以下のような独自関数を定義します:
+
+#+begin_src emacs-lisp
+  (require 's)
+
+  (defun ytn-org-insert-weblink ()
+    (interactive)
+    (let* ((pair (s-split "\n" (with-temp-buffer (clipboard-yank) (buffer-string))))
+           (desc (first pair))
+           (link (second pair)))
+      (insert (org-make-link-string link desc))))
+#+end_src
+
+単純に改行で区切って =org-make-link-string= に渡すだけです。
+
+これを、個人的には ~M-L~ にアサインしています([[https://github.com/jwiegley/use-package][use-package]] の =bind-key= を利用しています):
+
+#+begin_src emacs-lisp
+(bind-key "M-L" #'ytn-org-insert-weblink org-mode-map)
+#+end_src
+
+以上、ちょっとした小ネタでした。
+
 ** DRAFT auto-commit-and-push のこと書きたい
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
