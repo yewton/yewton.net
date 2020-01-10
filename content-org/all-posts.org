@@ -6,6 +6,15 @@
   :LOGBOOK:
   :END:
 
+** DRAFT Emacs の info の使い方いつも忘れる
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-10
+:DIR:                images/2020-01-10_emacs-info
+:EXPORT_HUGO_BUNDLE: 2020-01-10_emacs-info
+:EXPORT_HUGO_SLUG:   emacs-info
+:END:
+
 ** DRAFT ox-hugo alias
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
