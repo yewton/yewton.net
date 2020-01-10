@@ -6,6 +6,32 @@
   :LOGBOOK:
   :END:
 
+** DRAFT ox-hugo alias
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-10
+:DIR:                images/2020-01-10_hugo-aliases
+:EXPORT_HUGO_BUNDLE: 2020-01-10_hugo-aliases
+:EXPORT_HUGO_SLUG:   hugo-aliases
+:END:
+
+#+begin_example
+:EXPORT_HUGO_ALIASES: /2019/01/happy-new-year/
+#+end_example
+
+
+** DRAFT hugo-academic のデフォが removePathAccents=true な注意
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-10
+:DIR:                images/2020-01-10_hugo-academic-dakuten
+:EXPORT_HUGO_BUNDLE: 2020-01-10_hugo-academic-dakuten
+:EXPORT_HUGO_SLUG:   hugo-academic-dakuten
+:END:
+
+サーチコンソール
+ゲーム感想 → ケーム感想になってた
+
 ** DRAFT org-mode で祝日とか
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
@@ -57,6 +83,7 @@
 :EXPORT_HUGO_BUNDLE: 2020-01-02_happy_new_year
 :EXPORT_HUGO_SLUG: happy-new-year
 :EXPORT_DATE: 2020-01-02
+:EXPORT_HUGO_ALIASES: /2019/01/happy-new-year/
 :END:
 
 最近仕事用のmacを新調して環境を作り直す機会があったことと、 2020 年が始まるということもあり、久々にサイトを更新することにした。
@@ -106,6 +133,7 @@ org-mode で書けるようになったことだし、少しは記事を書い�
 :EXPORT_HUGO_SLUG: made-with-academic
 :EXPORT_FILE_NAME: index
 :EXPORT_DATE: 2020-01-06
+:EXPORT_HUGO_ALIASES: /2019/01/made-with-academic/
 :END:
 
 [[https://github.com/digitalcraftsman/hugo-icarus-theme][Icarus]] がメンテされておらず Hugo 0.55.0 以降で正しく動かなくなっていたので、

@@ -29,7 +29,7 @@ enablnneGitInfo = false
 defaultContentLanguage = "ja"
 hasCJKLanguage = true  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
-removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
+removePathAccents = false  # Workaround for https://github.com/gohugoio/hugo/issues/5687
 
 paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
