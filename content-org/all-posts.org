@@ -6,6 +6,23 @@
   :LOGBOOK:
   :END:
 
+** DRAFT org-mode で祝日とか
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-10
+:DIR:                images/2020-01-10_org-mode-holidays-anniversaries
+:EXPORT_HUGO_BUNDLE: 2020-01-10_org-mode-holidays-anniversaries
+:EXPORT_HUGO_SLUG:   org-mode-holidays-anniversaries
+:END:
+
+#+begin_src org
+  ,* 記念日 
+  ,#+CATEGORY: omochi
+  %%(org-date 2020 1 8) omochi 記念日
+  %%(diary-anniversary 1 8 2019) omochi %d 歳記念日
+#+end_src
+
+
 ** DRAFT ox-hugo の src block caption はどこから来てるのか
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
