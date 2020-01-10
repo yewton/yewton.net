@@ -1,8 +1,8 @@
 +++
 title = "久々の更新"
 author = ["yewton"]
-date = 2019-01-02
-lastmod = 2020-01-06T08:23:34+09:00
+date = 2020-01-02
+lastmod = 2020-01-10T09:25:36+09:00
 slug = "happy-new-year"
 tags = ["emacs", "hugo", "ox-hugo"]
 categories = ["雑記"]
