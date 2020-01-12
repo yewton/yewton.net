@@ -5,7 +5,7 @@ command = "hugo --gc --minify"
 [context.production.environment]
 HUGO_VERSION = "0.62.1"
 HUGO_ENV = "production"
-HUGO_ENABLEGITINFO = "true"
+HUGO_ENABLEGITINFO = "false"
 
 [context.split1]
 command = "hugo --gc --minify --enableGitInfo"
@@ -27,4 +27,4 @@ command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 HUGO_VERSION = "0.62.1"
 
 [context.next.environment]
-HUGO_ENABLEGITINFO = "true"
+HUGO_ENABLEGITINFO = "false"
