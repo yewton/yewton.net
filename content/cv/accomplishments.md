@@ -1,5 +1,6 @@
 +++
-weight = 2006
+lastmod = 2020-01-13T06:57:02+09:00
+weight = 3006
 # Accomplishments widget.
 widget = "accomplishments"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.

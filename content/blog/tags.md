@@ -1,5 +1,6 @@
 +++
-weight = 2002
+lastmod = 2020-01-13T06:59:17+09:00
+weight = 3002
 # Tag Cloud widget.
 widget = "tag_cloud"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.

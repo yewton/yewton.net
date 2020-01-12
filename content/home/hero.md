@@ -1,10 +1,10 @@
 +++
-lastmod = 2020-01-11T05:07:03+09:00
+lastmod = 2020-01-13T06:58:05+09:00
+weight = 3001
 # Hero widget.
 widget = "hero"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 10  # Order that this section will appear.
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
 hero_media = ""

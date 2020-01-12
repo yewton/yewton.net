@@ -1,6 +1,6 @@
 +++
-lastmod = 2020-01-06T08:07:15+09:00
-weight = 2001
+lastmod = 2020-01-13T06:57:00+09:00
+weight = 3001
 # About widget.
 widget = "about-ext"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
