@@ -1,1 +1,5 @@
 https://yewton-net.netlify.com/* https://www.yewton.net/:splat 301!
+
+/swagger-top-down-playground/* https://yewton.github.io/swagger-top-down-playground/:splat 301!
+/dockerfiles/*                 https://yewton.github.io/dockerfiles/:splat 301!
+/kafka-doc-ja/*                https://yewton.github.io/kafka-doc-ja/:splat 301!
