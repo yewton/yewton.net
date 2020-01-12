@@ -2,7 +2,7 @@
 title = "org-mode に Chrome で開いてるページへのリンクを貼りたい"
 author = ["yewton"]
 date = 2020-01-10
-lastmod = 2020-01-10T09:02:59+09:00
+mylastmod = 2020-01-12T06:40:12+09:00
 slug = "org-mode-web-link"
 tags = ["emacs", "org mode"]
 categories = ["Emacs"]

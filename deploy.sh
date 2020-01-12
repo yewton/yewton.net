@@ -5,7 +5,7 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 (cd public && rm -fr 20* about/ authors/ blog/ categories/ css/ cv/ images/ img/ js/ post/)
 
 # Build the project.
-hugo # if using a theme, replace by `hugo -t <yourtheme>`
+hugo --gc --minify # if using a theme, replace by `hugo -t <yourtheme>`
 
 # Go To Public folder
 cd public

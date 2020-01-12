@@ -2,7 +2,7 @@
 title = "org-mode で祝日とか"
 author = ["yewton"]
 date = 2020-01-10
-lastmod = 2020-01-10T12:54:02+09:00
+mylastmod = 2020-01-12T06:40:07+09:00
 slug = "org-mode-holidays-anniversaries"
 categories = ["未分類"]
 draft = true

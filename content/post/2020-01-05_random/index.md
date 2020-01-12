@@ -2,7 +2,7 @@
 title = "久々の更新2"
 author = ["yewton"]
 date = 2019-01-05
-lastmod = 2020-01-08T05:45:29+09:00
+mylastmod = 2020-01-12T06:40:11+09:00
 slug = "random"
 tags = ["emacs", "hugo", "ox-hugo"]
 categories = ["雑記"]
