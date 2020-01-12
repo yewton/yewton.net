@@ -1,13 +1,3 @@
-[submodule "themes/hugo-icarus"]
-	path = themes/hugo-icarus
-	url = https://github.com/digitalcraftsman/hugo-icarus-theme.git
-[submodule "public"]
-	path = public
-	url = https://github.com/yewton/yewton.github.io
-	branch = master
-[submodule "themes/hugo-academic"]
-	path = themes/hugo-academic
-	url = https://github.com/gcushen/hugo-academic.git
 [submodule "themes/academic"]
 	path = themes/academic
 	url = https://github.com/gcushen/hugo-academic.git
