@@ -7,17 +7,17 @@
 #+macro: pexels @@hugo:{{< pexels leading="$1" id="$2" name="$3">}}@@
 #+macro: lastmod @@hugo:{{< lastmod >}}@@
 
-* Inbox                                                             :@未分類:
-  :LOGBOOK:
-  :END:
+* Inbox                                                                :@未分類:
+:LOGBOOK:
+nil:END:
 
-** DRAFT 無料でいい感じのバナー用背景素材をダウンロード出来るサービス3選 :ATTACH:
+** DRAFT 無料でいい感じのバナー用背景素材をダウンロード出来るサービス3選                            :ATTACH:
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-13
-:DIR:                images/2020-01-13_unsplash-pexels-pixabay
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-13
+:DIR:      images/2020-01-13_unsplash-pexels-pixabay
 :EXPORT_HUGO_BUNDLE: 2020-01-13_unsplash-pexels-pixabay
-:EXPORT_HUGO_SLUG:   unsplash-pexels-pixabay
+:EXPORT_HUGO_SLUG: unsplash-pexels-pixabay
 :END:
 
 順不動。
@@ -26,13 +26,13 @@
 
 [[https://www.notion.so/][Notion]] のカバーイメージ選択欄にあったので存在を知った。
 
-#+DOWNLOADED: file:/Users/yewton/Downloads/ash-edmonds-0aWZdK8nK2I-unsplash.jpg @ 2020-01-13 11:43:22
-#+ATTR_ORG: :width 500
+#+downloaded: file:/Users/yewton/Downloads/ash-edmonds-0aWZdK8nK2I-unsplash.jpg @ 2020-01-13 11:43:22
+#+attr_org: :width 500
 [[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-13_11-43-22_ash-edmonds-0aWZdK8nK2I-unsplash.jpg]]
 {{{unsplash(Image by,badashphotos,Ash Edmonds)}}}
 
-#+DOWNLOADED: file:/Users/yewton/Downloads/abstract-architecture-building-exterior-geometric-593158.jpg @ 2020-01-13 11:46:07
-#+ATTR_ORG: :width 500
+#+downloaded: file:/Users/yewton/Downloads/abstract-architecture-building-exterior-geometric-593158.jpg @ 2020-01-13 11:46:07
+#+attr_org: :width 500
 [[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-13_11-46-07_abstract-architecture-building-exterior-geometric-593158.jpg]]
 {{{pexels(Photo by,scottwebb,Webb from Pexels)}}}
 
@@ -40,34 +40,34 @@
 
 ** DRAFT Emacs の info の使い方いつも忘れる
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-10
-:DIR:                images/2020-01-10_emacs-info
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-10
+:DIR:      images/2020-01-10_emacs-info
 :EXPORT_HUGO_BUNDLE: 2020-01-10_emacs-info
-:EXPORT_HUGO_SLUG:   emacs-info
+:EXPORT_HUGO_SLUG: emacs-info
 :END:
 
 ** DRAFT ox-hugo alias
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-10
-:DIR:                images/2020-01-10_hugo-aliases
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-10
+:DIR:      images/2020-01-10_hugo-aliases
 :EXPORT_HUGO_BUNDLE: 2020-01-10_hugo-aliases
-:EXPORT_HUGO_SLUG:   hugo-aliases
+:EXPORT_HUGO_SLUG: hugo-aliases
 :END:
 
 #+begin_example
-:EXPORT_HUGO_ALIASES: /2019/01/happy-new-year/
+  :EXPORT_HUGO_ALIASES: /2019/01/happy-new-year/
 #+end_example
 
 
 ** DRAFT hugo-academic のデフォが removePathAccents=true な注意
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-10
-:DIR:                images/2020-01-10_hugo-academic-dakuten
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-10
+:DIR:      images/2020-01-10_hugo-academic-dakuten
 :EXPORT_HUGO_BUNDLE: 2020-01-10_hugo-academic-dakuten
-:EXPORT_HUGO_SLUG:   hugo-academic-dakuten
+:EXPORT_HUGO_SLUG: hugo-academic-dakuten
 :END:
 
 サーチコンソール
@@ -75,11 +75,11 @@
 
 ** DRAFT org-mode で祝日とか
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-10
-:DIR:                images/2020-01-10_org-mode-holidays-anniversaries
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-10
+:DIR:      images/2020-01-10_org-mode-holidays-anniversaries
 :EXPORT_HUGO_BUNDLE: 2020-01-10_org-mode-holidays-anniversaries
-:EXPORT_HUGO_SLUG:   org-mode-holidays-anniversaries
+:EXPORT_HUGO_SLUG: org-mode-holidays-anniversaries
 :END:
 
 #+begin_src org
@@ -92,33 +92,33 @@
 
 ** DRAFT ox-hugo の src block caption はどこから来てるのか
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-10
-:DIR:                images/2020-01-10_ox-hugo-src-block-caption
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-10
+:DIR:      images/2020-01-10_ox-hugo-src-block-caption
 :EXPORT_HUGO_BUNDLE: 2020-01-10_ox-hugo-src-block-caption
-:EXPORT_HUGO_SLUG:   ox-hugo-src-block-caption
+:EXPORT_HUGO_SLUG: ox-hugo-src-block-caption
 :END:
 
 [[file:~/.emacs.d/var/el-get/org-mode/lisp/ox.el::("Listing" ("ar" :default "برنامج") ("cs" :default "Program") ("da" :default "Program") ("de" :default "Programmlisting") ("es" :default "Listado de programa") ("et" :default "Loend") ("fr" :default "Programme" :html "Programme") ("it" :default "Listato") ("ja" :default "ソースコード")][koko]]
 
 ** DRAFT org-mode column view で clock した結果を集計
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-09
-:DIR:                images/2020-01-09_columns-clocksum
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-09
+:DIR:      images/2020-01-09_columns-clocksum
 :EXPORT_HUGO_BUNDLE: 2020-01-09_columns-clocksum
-:EXPORT_HUGO_SLUG:   columns-clocksum
+:EXPORT_HUGO_SLUG: columns-clocksum
 :END:
 
 #+begin_src org
-#+COLUMNS:  %40ITEM %TODO %CLOCKSUM %JIRA
+  ,#+COLUMNS:  %40ITEM %TODO %CLOCKSUM %JIRA
 #+end_src
 
-* 雑記                                                                :@雑記:
+* 雑記                                                                    :@雑記:
 :PROPERTIES:
-:END:
+nil:END:
 
-** DONE 久々の更新                                      :emacs:hugo:ox_hugo:
+** DONE 久々の更新                                            :emacs:hugo:ox_hugo:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 2020-01-02_happy_new_year
@@ -129,7 +129,7 @@
 
 最近仕事用のmacを新調して環境を作り直す機会があったことと、 2020 年が始まるということもあり、久々にサイトを更新することにした。
 
-[[/cv/][オープン職務経歴書]]を書きたかった、というのもある。
+[[file:/cv/][オープン職務経歴書]]を書きたかった、というのもある。
 
 更新にあたっていくつか困難があった。
 
@@ -147,12 +147,12 @@ Hugo 0.55.0 以降で動かなくなってしまっていたり、 Deprecated Wa
 [[https://bitbucket.org/mgladdish/asdf-gohugo][asdf-gohugo]] を入れて、少しずつバージョンを上げながら確認していった。
 
 #+begin_src sh
-asdf plugin add hugo https://bitbucket.org/mgladdish/asdf-gohugo
+  asdf plugin add hugo https://bitbucket.org/mgladdish/asdf-gohugo
 #+end_src
 
 *そして、そもそも Hugo の使い方を忘れていた。*
 
-[[/2016/02/02/blog-with-hugo/][Hugo 導入記事]] や [[/2016/01/26/hugo-el/][Hugo 用 Emacs ライブラリ]] を書いておいてなんだが、当時から3年も経ってほとんど忘れてしまっていた。
+[[file:/2016/02/02/blog-with-hugo/][Hugo 導入記事]] や [[file:/2016/01/26/hugo-el/][Hugo 用 Emacs ライブラリ]] を書いておいてなんだが、当時から3年も経ってほとんど忘れてしまっていた。
 
 そこで改めて調べてみると、イマドキは org-mode で書くことも出来るらしい。
 
@@ -168,7 +168,7 @@ asdf plugin add hugo https://bitbucket.org/mgladdish/asdf-gohugo
 
 org-mode で書けるようになったことだし、少しは記事を書いていきたい所だが、まずは Hugo の最新版に追従する作業が待っている…。
 
-** DONE #MadeWithAcademic                                 :academic:ox_hugo:
+** DONE #MadeWithAcademic                                  :academic:ox_hugo:
 :PROPERTIES:
 :EXPORT_HUGO_BUNDLE: 2020-01-06_academic
 :EXPORT_HUGO_SLUG: made-with-academic
@@ -195,7 +195,7 @@ org-mode で書けるようになったことだし、少しは記事を書い�
 - ダークテーマ対応のシンタックスハイライトのやりかた
 - conf-toml-mode を [[https://ox-hugo.scripter.co/doc/custom-front-matter/#front-matter-extra][Front-matter Extra]] で使う方法
 
-** DRAFT 久々の更新2                                    :emacs:hugo:ox_hugo:
+** DRAFT 久々の更新2                                          :emacs:hugo:ox_hugo:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 2020-01-05_random
@@ -210,17 +210,17 @@ org-mode ではタグにハイフンを付けられない。
 conf-toml がある https://github.com/dryman/toml-mode.el/issues/14
 
 #+begin_src emacs-lisp
-(use-package ox-hugo
-  :after ox
-  :init
-  (defalias 'toml-mode 'conf-toml-mode)
-  :config 
-  (setq org-hugo-use-code-for-kbd t))
+  (use-package ox-hugo
+    :after ox
+    :init
+    (defalias 'toml-mode 'conf-toml-mode)
+    :config 
+    (setq org-hugo-use-code-for-kbd t))
 #+end_src
 
 #+begin_src sh
-hugo gen chromastyles --style=monokai > pbcopy
-hugo gen chromastyles --style=monokailight > pbcopy
+  hugo gen chromastyles --style=monokai > pbcopy
+  hugo gen chromastyles --style=monokailight > pbcopy
 #+end_src
 
 https://css2sass.herokuapp.com/
@@ -245,22 +245,22 @@ https://gohugo.io/getting-started/configuration-markup#highlight
 https://github.com/sourcethemes/academic-scripts に page bunlde 化するスクリプトがある。
 
 #+begin_src sh
-asdf plugin add hugo https://github.com/beardix/asdf-hugo
+  asdf plugin add hugo https://github.com/beardix/asdf-hugo
 #+end_src
 
 =baseurl= を設定しないと Twitter Card などが表示されないので気をつけよう
 
 #+begin_src toml
-# The URL of your site.
-# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "https://www.yewton.net/"
+  # The URL of your site.
+  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+  baseurl = "https://www.yewton.net/"
 #+end_src
 
 =google_tag_manager= が設定されていると Google Analytics のコードが埋め込まれない
 https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803-663f-4b38-8d6f-bc645935da26?authed=true
 
-* 買ったモノ                                                    :@買ったモノ:
-** DONE Lenovo Tab M8 が案外良かった                       :Lenovo__Tab__M8:
+* 買ったモノ                                                              :@買ったモノ:
+** DONE Lenovo Tab M8 が案外良かった                               :Lenovo__Tab__M8:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 2020-01-08_lenovo-tab-m8
@@ -271,7 +271,7 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 
 {{{lastmod}}}
 
-さすがにもう [[/2017/04/09/grouper-beanstalk/][Nexus 7 2012]] でやっていくのはしんどくなってきたので、手軽なタブレットを探していたら、
+さすがにもう [[file:/2017/04/09/grouper-beanstalk/][Nexus 7 2012]] でやっていくのはしんどくなってきたので、手軽なタブレットを探していたら、
 2019 年の 11 月に Lenovo から [[https://hb.afl.rakuten.co.jp/hgc/1a0d625b.bdb81d38.1a0d625c.bf0332b2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiccamera%2F4580550700484%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbiccamera%2Fi%2F12780179%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjB9][Lenovo Tab M8 (ZA5G0084JP)]] が発売されていたのを知った。
 
 2 万を切る価格で、 Android 9 、クアッドコアでメモリは 2 GB 、
@@ -294,17 +294,17 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 
 イコライザは以下のように設定している:
 
-#+DOWNLOADED: file:/Users/yewton/Downloads/drive-download-20200107T213252Z-001/Screenshot_2020-01-08-01-02-47-757.jpeg @ 2020-01-09 06:10:17
-#+ATTR_ORG: :width 500
-#+CAPTION: Dolby Audio のイコライザ設定
+#+downloaded: file:/Users/yewton/Downloads/drive-download-20200107T213252Z-001/Screenshot_2020-01-08-01-02-47-757.jpeg @ 2020-01-09 06:10:17
+#+attr_org: :width 500
+#+caption: Dolby Audio のイコライザ設定
 [[file:images/2020-01-08_lenovo-tab-m8/2020-01-09_06-10-17_Screenshot_2020-01-08-01-02-47-757.jpeg]]
 
 意外と音が良いので色々やりたくなってしまい、年末にセールしていた [[https://play.google.com/store/apps/details?id=com.square_enix.android_googleplay.FFT_jp2&hl=ja][FINAL FANTASY TACTICS 獅子戦争]] を買ってしまった。
 割と快適に動くので読書よりもゲームをやってしまう…。
 
-#+DOWNLOADED: file:/Users/yewton/Downloads/drive-download-20200107T213252Z-001/Screenshot (2020_01_08 6_12_13).jpg @ 2020-01-09 08:36:49
-#+ATTR_ORG: :width 500
-#+CAPTION: いつまでもゼクラス砂漠から出られない一行
+#+downloaded: file:/Users/yewton/Downloads/drive-download-20200107T213252Z-001/Screenshot (2020_01_08 6_12_13).jpg @ 2020-01-09 08:36:49
+#+attr_org: :width 500
+#+caption: いつまでもゼクラス砂漠から出られない一行
 [[file:images/2020-01-08_lenovo-tab-m8/2020-01-09_08-36-49_Screenshot (2020_01_08 6_12_13).jpg]]
 
 そんなわけで案外良かった Lenovo Tab M8 だがおかしな挙動もあり、
@@ -315,20 +315,20 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 一番うっとうしいのが、 *横画面になる度に Lenovo Launcher が停止する* こと。停止する度にダイアログが出るので邪魔。
 とはいえ「アプリを閉じる」を選択してしまえば以降差し支えなく使用は可能。
 
-#+ATTR_ORG: :width 600
-#+CAPTION: 横画面になる度に表示されるうっとうしいダイアログ
+#+attr_org: :width 600
+#+caption: 横画面になる度に表示されるうっとうしいダイアログ
 [[file:images/2020-01-08_lenovo-tab-m8/2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg]]
 
 {{{unsplash(Featured image background by, estherrj, Esther Jiao)}}}
 
 * Emacs                                                              :@Emacs:
-** DONE org-mode に Chrome で開いてるページへのリンクを貼りたい :emacs:org__mode:
+** DONE org-mode に Chrome で開いてるページへのリンクを貼りたい                :emacs:org__mode:
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-10
-:DIR:                images/2020-01-09_org-mode-web-link
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-10
+:DIR:      images/2020-01-09_org-mode-web-link
 :EXPORT_HUGO_BUNDLE: 2020-01-09_org-mode-web-link
-:EXPORT_HUGO_SLUG:   org-mode-web-link
+:EXPORT_HUGO_SLUG: org-mode-web-link
 :END:
 
 =org-mode= のリンクマークアップはちょっと特殊で、エスケープの仕様も独特です。
@@ -346,15 +346,15 @@ Org used to percent-encode sensitive characters in the URI part of the bracket l
 Now, escaping mechanism uses the usual backslash character, according to the following rules, applied in order:
 #+end_quote
 
-#+CAPTION[short]: (参考) =org-mode= 9.3 でのエスケープ実装
+#+caption[=org-mode=]: (参考) =org-mode= 9.3 でのエスケープ実装
 #+begin_src emacs-lisp
-(defun org-link-unescape (link)
-  "Remove escaping backslash characters from string LINK."
-  (replace-regexp-in-string
-   (rx (group (one-or-more "\\")) (or string-end (any "[]")))
-   (lambda (_)
-     (concat (make-string (/ (- (match-end 1) (match-beginning 1)) 2) ?\\)))
-   link nil t 1))
+  (defun org-link-unescape (link)
+    "Remove escaping backslash characters from string LINK."
+    (replace-regexp-in-string
+     (rx (group (one-or-more "\\")) (or string-end (any "[]")))
+     (lambda (_)
+       (concat (make-string (/ (- (match-end 1) (match-beginning 1)) 2) ?\\)))
+     link nil t 1))
 #+end_src
 
 こういう背景もあり、 =org-mode= の外で工夫して =org-mode= 形式のリンクを生成するよりは、
@@ -369,7 +369,7 @@ Now, escaping mechanism uses the usual backslash character, according to the fol
 以下のように改行区切りでコピーするような設定を追加します:
 
 #+begin_example
-%text%%newline%%url%
+  %text%%newline%%url%
 #+end_example
 
 CreateLink の =%text%= は改行をスペースに変換する仕様になっているので、区切り文字として改行を利用するのは安全なハズです。
@@ -392,65 +392,65 @@ CreateLink の =%text%= は改行をスペースに変換する仕様になっ�
 これを、個人的には ~M-L~ にアサインしています([[https://github.com/jwiegley/use-package][use-package]] の =bind-key= を利用しています):
 
 #+begin_src emacs-lisp
-(bind-key "M-L" #'ytn-org-insert-weblink org-mode-map)
+  (bind-key "M-L" #'ytn-org-insert-weblink org-mode-map)
 #+end_src
 
 以上、ちょっとした小ネタでした。
 
 ** DRAFT auto-commit-and-push のこと書きたい
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-09
-:DIR:                images/2020-01-09_auto-commit-and-push
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-09
+:DIR:      images/2020-01-09_auto-commit-and-push
 :EXPORT_HUGO_BUNDLE: 2020-01-09_auto-commit-and-push
-:EXPORT_HUGO_SLUG:   auto-commit-and-push
+:EXPORT_HUGO_SLUG: auto-commit-and-push
 :END:
 
-#+CAPTION: .dir-locals.el
+#+caption: .dir-locals.el
 #+begin_src emacs-lisp
-((nil . ((eval git-auto-commit-mode 1)
-         (gac-automatically-push-p . t))))
+  ((nil . ((eval git-auto-commit-mode 1)
+           (gac-automatically-push-p . t))))
 #+end_src
 
 =git-auto-commit-mode= は autoload されるので、 autoload が適切に扱われていれば =require= は不要。
 
 ** DRAFT org-download と ox-hugo を組み合わせて記事への画像挿入を快適にする :emacs:ox__hugo:org__download:org__attach:
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-09
-:DIR:                images/2020-01-09_org-download-ox-hugo
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-09
+:DIR:      images/2020-01-09_org-download-ox-hugo
 :EXPORT_HUGO_BUNDLE: 2020-01-09_org-download-ox-hugo
-:EXPORT_HUGO_SLUG:   org-download-ox-hugo
+:EXPORT_HUGO_SLUG: org-download-ox-hugo
 :END:
 
 #+begin_src emacs-lisp
-(use-package org-download
-  :after org
-  :functions (org-link-escape)
-  :config
-  (setq org-download-method 'attach)
-  (setq org-download-link-format-function
-        (lambda (filename)
-          (format org-download-link-format
-                  (org-link-escape
-                   (funcall org-download-abbreviate-filename-function filename)))))
-  (setq org-download-annotate-function
-        (lambda (link)
-          (format "#+DOWNLOADED: %s @ %s\n#+ATTR_ORG: :width 500\n"
-                  (if (equal link org-download-screenshot-file)
-                      "screenshot"
-                    link)
-                  (format-time-string "%Y-%m-%d %H:%M:%S"))))
-  (add-hook 'dired-mode-hook 'org-download-enable))
+  (use-package org-download
+    :after org
+    :functions (org-link-escape)
+    :config
+    (setq org-download-method 'attach)
+    (setq org-download-link-format-function
+          (lambda (filename)
+            (format org-download-link-format
+                    (org-link-escape
+                     (funcall org-download-abbreviate-filename-function filename)))))
+    (setq org-download-annotate-function
+          (lambda (link)
+            (format "#+DOWNLOADED: %s @ %s\n#+ATTR_ORG: :width 500\n"
+                    (if (equal link org-download-screenshot-file)
+                        "screenshot"
+                      link)
+                    (format-time-string "%Y-%m-%d %H:%M:%S"))))
+    (add-hook 'dired-mode-hook 'org-download-enable))
 #+end_src
 
 ** DRAFT Emacs で文字列補間(String interpolation)したい
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-09
-:DIR:                images/2020-01-09_s-lex-format
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-09
+:DIR:      images/2020-01-09_s-lex-format
 :EXPORT_HUGO_BUNDLE: 2020-01-09_s-lex-format
-:EXPORT_HUGO_SLUG:   s-lex-format
+:EXPORT_HUGO_SLUG: s-lex-format
 :EXPORT_HUGO_TAGS: s.el emacs
 :END:
 
@@ -458,22 +458,22 @@ https://emacs.stackexchange.com/questions/7377/named-string-substitution
 
 ** DRAFT Emacs でマジックコメントを反映させたいとき
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-09
-:DIR:                images/2020-01-09_find-alternate-file
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-09
+:DIR:      images/2020-01-09_find-alternate-file
 :EXPORT_HUGO_BUNDLE: 2020-01-09_find-alternate-file
-:EXPORT_HUGO_SLUG:   find-alternate-file
+:EXPORT_HUGO_SLUG: find-alternate-file
 :END:
 
 #+begin_src emacs-lisp
-;; -*- lexical-binding: t; -*-
+  ;; -*- lexical-binding: t; -*-
 #+end_src
 
 #+begin_src emacs-lisp
-;; Local Variables:
-;; flycheck-disabled-checkers: (emacs-lisp emacs-lisp-checkdoc)
-;; no-byte-compile: t
-;; End:
+  ;; Local Variables:
+  ;; flycheck-disabled-checkers: (emacs-lisp emacs-lisp-checkdoc)
+  ;; no-byte-compile: t
+  ;; End:
 #+end_src
 
 =find-alternate-file=
@@ -486,36 +486,114 @@ If the current buffer now contains an empty file that you just visited
 
 https://superuser.com/questions/208488/how-do-i-re-open-a-file-in-emacs
 
-** DRAFT emacs-plus で入れた Emacs が Spotlight 検索に引っかからない :emacs:spotlight:
+** DRAFT emacs-plus で入れた Emacs が Spotlight 検索に引っかからない       :emacs:spotlight:
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-09
-:DIR:                images/2020-01-09_emacs-plus-spotlight
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-09
+:DIR:      images/2020-01-09_emacs-plus-spotlight
 :EXPORT_HUGO_BUNDLE: 2020-01-09_emacs-plus-spotlight
-:EXPORT_HUGO_SLUG:   emacs-plus-spotlight
+:EXPORT_HUGO_SLUG: emacs-plus-spotlight
 :END:
 
 https://qiita.com/delphinus/items/438046d2bbeb3e63f8fa
 
+* Webサイト運用                                              :@Webサイト運用:
+** DONE GitHub Pages + Cloudflare から Netlify に移行した
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-13
+:DIR:      images/2020-01-13_hugo-netlify
+:EXPORT_HUGO_BUNDLE: 2020-01-13_hugo-netlify
+:EXPORT_HUGO_SLUG: hugo-netlify
+:EXPORT_HUGO_TAGS: Hugo Netlify Cloudflare "GitHub Pages"
+:END:
+
+[[/2016/02/02/blog-with-hugo/][この記事にあるとおり]] 、当初このサイトは [[https://pages.github.com/][GitHub Pages]] でホストされ、
+[[https://www.cloudflare.com/][Cloudflare CDN]] を利用して配信していた。
+
+だが先日 [[/2020/01/06/made-with-academic/][テーマを変えた]] ときに、既に使われていないリソースがそのまま残ってしまっていることに気がついた。
+単純に =/public= 以下を =git add -a= しているだけなので、明示的に消さなければ反映されなくて当然だった。
+
+デプロイスクリプトを見直してもよかったが、 [[https://gohugo.io/][Hugo]] 自体が [[https://www.netlify.com/][Netlify]] でホストされているし、
+[[https://gohugo.io/hosting-and-deployment/hosting-on-netlify/][Netlify でホストするときの公式ドキュメントも用意されている]] し、
+[[https://docs.netlify.com/site-deploys/post-processing/#post-processing-features][アセットの最適化機能]] とかもついてくるし、何より [[https://www.netlify.com/pricing/][無料だし]] 、
+ということで、移行することを決めた。
+
+#+toc: headlines 2
+
+*** デプロイ手順
+
+[[https://gohugo.io/hosting-and-deployment/hosting-on-netlify/][公式ドキュメント]] を超ざっくり要約すると、
+
+1.  [[https://app.netlify.com/][Netlify でアカウント作成]]
+2.  [[https://gohugo.io/hosting-and-deployment/hosting-on-netlify/#configure-hugo-version-in-netlify][=netlify.toml=]] をドキュメントを参考に配置
+3.  連携する GitHub リポジトリを選択
+4.  =Deploy site= ボタンをポチる
+
+*以上。*
+
+これだけで =hoge.netlify.com= でアクセス出来るようになる。いい時代になった。
+
+*** ドメイン移行手順
+
+ただドメインも移行する場合はもう一手間必要で、[[https://docs.netlify.com/domains-https/custom-domains/configure-external-dns/][Netlify の公式ドキュメント]] に従って
+DNS レコードの設定をする必要がある。
+
+[[https://www.cloudflare.com/][Cloudflare]] の場合は、以下のように Cloudflare のダッシュボードで、
+各ドメインが Netlify への =CNAME= となるように設定する。
+
+#+DOWNLOADED: file:/Users/yewton/Downloads/cloudflare.png @ 2020-01-13 15:37:38
+#+ATTR_ORG: :width 500
+[[file:images/2020-01-13_hugo-netlify/2020-01-13_15-37-38_cloudflare.png]]
+
+
+このとき、 *=Proxy status= が =DNS only= となるように*
+(雲のアイコンがオレンジではなくグレーになるように) 設定する必要がある。
+
+さもないと、 Cloudflare の CDN 機能が間に挟まってしまい、 Netlify 側から認識されない。
+
+なお、 *=DNS only= にした時点で Cloudflare が発行した SSL 証明書は無効になる* 。
+そのため、ここからなるべく早く [[https://docs.netlify.com/domains-https/https-ssl/#certificate-service-types][Netlify 側の SSL 証明書の設定]] をした方がいい。
+
+当サイトの場合は設定してから1時間もしない内に SSL 証明書が有効になっていた。
+
+*** GitHub Pages で提供していたその他のリポジトリのリダイレクト設定手順
+
+サイトだけなら以上で万事完了なのだけれど、 GitHub Pages を利用していた場合の注意点として、
+=github.io= リポジトリで =CNAME= を設定していた場合、それ以外で Pages 機能を利用しているリポジトリも同様のドメインでアクセスされるようになっている。
+つまり、 =github.io= を Netlify へ向けた時点で、 *それ以外のリポジトリが全てリンク切れとなる。*
+
+そのため、適切にリダイレクトするようにしなければならない。
+
+[[https://docs.netlify.com/routing/redirects/][Netlify の公式ドキュメント]] に従ってやればいい…と思ったのだけれど、
+原因は不明だが *=netlify.toml= で設定しようとしても反映されなかった* 。
+
+最終的な =_redirects= ファイルの内容は以下のようになった:
+
+#+begin_src text
+https://yewton-net.netlify.com/* https://www.yewton.net/:splat 301!
+
+/swagger-top-down-playground/* https://yewton.github.io/swagger-top-down-playground/:splat 301!
+/dockerfiles/*                 https://yewton.github.io/dockerfiles/:splat 301!
+/kafka-doc-ja/*                https://yewton.github.io/kafka-doc-ja/:splat 301!
+#+end_src
+
+
+*** その後
+
+移行ついでに [[https://developer.okta.com/blog/2019/04/11/site-security-cloudflare-netlify][How to Configure Better Web Site Security with Cloudflare and Netlify | Okta Developer]] を参考に
+[[https://securityheaders.com/][Security Headers]] や [[https://www.ssllabs.com/ssltest/index.html][SSL Server Test]] で高評価になるように設定を見直したりなどした。
+
+ただこれはあんまり理解しないで書かれてる通りやっただけなところがあるので、いつか改めて記事にしたい。
+
+#+ATTR_ORG: :width 500
+[[file:images/2020-01-13_hugo-netlify/2020-01-13_15-12-54_securityheaders.png]]
+
+#+ATTR_ORG: :width 500
+[[file:images/2020-01-13_hugo-netlify/2020-01-13_15-15-03_qualys.png]]
+
+{{{pixabay(Featured image background by <a href="https://pixabay.com/users/PIRO4D-2707530/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">PIRO4D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">Pixabay</a>)}}}
 
 # Local Variables:
 # org-attach-auto-tag: nil
 # End:
-
-* Webサイト運用                                               :Webサイト運用:
-** DRAFT GitHub Pages + Cloudflare から Netlify に移行した
-:PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-13
-:DIR:                images/2020-01-13_hugo-netlify
-:EXPORT_HUGO_BUNDLE: 2020-01-13_hugo-netlify
-:EXPORT_HUGO_SLUG:   hugo-netlify
-:END:
-
-[[/2016/02/02/blog-with-hugo/][この記事にあるとおり]] 、当初このサイトは GitHub Pages でホストされ、
-Cloudflare CDN を利用して配信していた。
-
-
-
-{{{pixabay(Featured image background by <a href="https://pixabay.com/users/PIRO4D-2707530/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">PIRO4D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">Pixabay</a>)}}}
-
