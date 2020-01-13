@@ -442,6 +442,31 @@ CreateLink の =%text%= は改行をスペースに変換する仕様になっ�
                       link)
                     (format-time-string "%Y-%m-%d %H:%M:%S"))))
     (add-hook 'dired-mode-hook 'org-download-enable))
+
+  (use-package org
+    :config
+    (setq org-use-property-inheritance '("DIR")))
+
+  (require 's)
+  (defun ytn-new-post-template ()
+    (let* ((slug (read-string "Slug: "))
+           (now (current-time))
+           (export-date (format-time-string "%Y-%m-%d" now))
+           (id (format "%s_%s" export-date slug)))
+      (s-lex-format "\
+  ,* DRAFT %?
+  :PROPERTIES:
+  :EXPORT_FILE_NAME:   index
+  :EXPORT_DATE:        ${export-date}
+  :DIR:                images/${id}
+  :EXPORT_HUGO_BUNDLE: ${id}
+  :EXPORT_HUGO_SLUG:   ${slug}
+  :END:")))
+
+  (setq org-capture-templates '(("n" "サイト用")
+                                ("np" "New post" entry (file+headline "~/Projects/yewton.net/content-org/all-posts.org" "Inbox")
+                                 (function ytn-new-post-template) :empty-lines 1 :prepend t)
+                                ))
 #+end_src
 
 ** DRAFT Emacs で文字列補間(String interpolation)したい
