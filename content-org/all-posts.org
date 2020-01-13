@@ -2,14 +2,16 @@
 #+hugo_section: post
 #+seq_todo: TODO DRAFT DONE
 #+hugo_front_matter_key_replace: lastmod>mylastmod
-#+macro: unsplash @@hugo:{{< unsplash id="$1" name="$2" >}}@@
+#+macro: unsplash @@hugo:{{< unsplash leading="$1" id="$2" name="$3" >}}@@
+#+macro: pixabay @@hugo:{{< pixabay >}}$1{{< /pixabay >}}@@
+#+macro: pexels @@hugo:{{< pexels leading="$1" id="$2" name="$3">}}@@
 #+macro: lastmod @@hugo:{{< lastmod >}}@@
 
 * Inbox                                                             :@未分類:
   :LOGBOOK:
   :END:
 
-** DRAFT 無料でいい感じのバナー用背景素材をダウンロード出来るサービス3選
+** DRAFT 無料でいい感じのバナー用背景素材をダウンロード出来るサービス3選 :ATTACH:
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
 :EXPORT_DATE:        2020-01-13
@@ -18,18 +20,23 @@
 :EXPORT_HUGO_SLUG:   unsplash-pexels-pixabay
 :END:
 
-** DRAFT GitHub Pages + Cloudflare から Netlify に移行した
-:PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-13
-:DIR:                images/2020-01-13_hugo-netlify
-:EXPORT_HUGO_BUNDLE: 2020-01-13_hugo-netlify
-:EXPORT_HUGO_SLUG:   hugo-netlify
-:END:
+順不動。
 
-[[/2016/02/02/blog-with-hugo/][この記事にあるとおり]] 、当初このサイトは GitHub Pages でホストされ、
-Cloudflare CDN を利用して配信していた。
+*** Unsplash
 
+[[https://www.notion.so/][Notion]] のカバーイメージ選択欄にあったので存在を知った。
+
+#+DOWNLOADED: file:/Users/yewton/Downloads/ash-edmonds-0aWZdK8nK2I-unsplash.jpg @ 2020-01-13 11:43:22
+#+ATTR_ORG: :width 500
+[[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-13_11-43-22_ash-edmonds-0aWZdK8nK2I-unsplash.jpg]]
+{{{unsplash(Image by,badashphotos,Ash Edmonds)}}}
+
+#+DOWNLOADED: file:/Users/yewton/Downloads/abstract-architecture-building-exterior-geometric-593158.jpg @ 2020-01-13 11:46:07
+#+ATTR_ORG: :width 500
+[[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-13_11-46-07_abstract-architecture-building-exterior-geometric-593158.jpg]]
+{{{pexels(Photo by,scottwebb,Webb from Pexels)}}}
+
+{{{pixabay(Featured image by <a href="https://pixabay.com/users/Sambeetarts-1339110/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Sambeet D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Pixabay</a>)}}}
 
 ** DRAFT Emacs の info の使い方いつも忘れる
 :PROPERTIES:
@@ -312,7 +319,7 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 #+CAPTION: 横画面になる度に表示されるうっとうしいダイアログ
 [[file:images/2020-01-08_lenovo-tab-m8/2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg]]
 
-{{{unsplash(estherrj, Esther Jiao)}}}
+{{{unsplash(Featured image background by, estherrj, Esther Jiao)}}}
 
 * Emacs                                                              :@Emacs:
 ** DONE org-mode に Chrome で開いてるページへのリンクを貼りたい :emacs:org__mode:
@@ -494,3 +501,21 @@ https://qiita.com/delphinus/items/438046d2bbeb3e63f8fa
 # Local Variables:
 # org-attach-auto-tag: nil
 # End:
+
+* Webサイト運用                                               :Webサイト運用:
+** DRAFT GitHub Pages + Cloudflare から Netlify に移行した
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-13
+:DIR:                images/2020-01-13_hugo-netlify
+:EXPORT_HUGO_BUNDLE: 2020-01-13_hugo-netlify
+:EXPORT_HUGO_SLUG:   hugo-netlify
+:END:
+
+[[/2016/02/02/blog-with-hugo/][この記事にあるとおり]] 、当初このサイトは GitHub Pages でホストされ、
+Cloudflare CDN を利用して配信していた。
+
+
+
+{{{pixabay(Featured image background by <a href="https://pixabay.com/users/PIRO4D-2707530/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">PIRO4D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">Pixabay</a>)}}}
+

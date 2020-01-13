@@ -19,17 +19,15 @@ DockerやらVagrantやらで作業していると、いつのまにかディス�
 ### (参考)Mac用の拡張ストレージ ###
 
 USBで外付けするようなのだと持ち運びに不便なので、
-<a rel="nofollow" href="http://www.amazon.co.jp/gp/product/B00TTFOJ4A/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00TTFOJ4A&linkCode=as2&tag=yewton-22">iSlice Pro</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=yewton-22&l=as2&o=9&a=B00TTFOJ4A" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+[iSlice Pro](https://amzn.to/39XeNVk)
 のような本体のSDカードスロットに差せるようなタイプを個人的には使っています。
 iSliceの場合はただのアダプタなので別途128GBのmicroSDカードを調達する必要がありますが、ストレージと一体になっているモノよりは若干割安です。
-
-<iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=yewton-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00TTFOJ4A" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
 
 ## Vagrant ##
 
 Vagrant用のBoxファイルとVMイメージの保存場所を変える際には、以下の記事が参考になります:
 
-[MacBookAir の容量がきついので Vagrant 環境を外付けに移した話 – モンキーレンチ](http://2inc.org/blog/2014/06/28/4311/ "MacBookAir の容量がきついので Vagrant 環境を外付けに移した話 – モンキーレンチ")
+[MacBookAir の容量がきついので Vagrant 環境を外付けに移した話 – モンキーレンチ](https://2inc.org/blog/2014/06/28/4311/ "MacBookAir の容量がきついので Vagrant 環境を外付けに移した話 – モンキーレンチ")
 
 上記の記事を参考に諸々のファイルの移動、VB上の設定を済ませたら、
 以下のようなコマンドを `.bashrc` やら `.zshenv` やらに書いておけば大丈夫です:

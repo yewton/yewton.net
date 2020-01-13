@@ -45,5 +45,5 @@ Chromeで [HTTP/2 and SPDY indicator](https://chrome.google.com/webstore/detail/
 その恩恵を最大限に活かせるようにしたい。
 そのためにDDDって実践的に役立つと思うので、もっと勉強しなければ。
 
-勉強の一環として今度[DDD Alliance! ドメイン駆動設計のためのオブジェクト指向入門](http://ddd-alliance.connpass.com/event/25209/)に行ってみる。
+勉強の一環として今度[DDD Alliance! ドメイン駆動設計のためのオブジェクト指向入門](https://ddd-alliance.connpass.com/event/25209/)に行ってみる。
 日本でDDDのコミュニティってここくらい？な気がするので、勉強会の内容というよりはコミュニティの様子が気になるので。

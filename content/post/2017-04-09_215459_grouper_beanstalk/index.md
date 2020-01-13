@@ -15,9 +15,9 @@ image = "banners/mb.jpg"
 
 +++
 
-最近はじめて [Fire タブレット](http://amzn.to/2nXsSKh) をキャンペーンで購入して、
+最近はじめて [Fire タブレット](https://amzn.to/2nXsSKh) をキャンペーンで購入して、
 こういう本読むだけとか書い物するだけとかの単機能なタブレットも結構いいな、と思った。
-そして、うちに使ってない [Nexus 7](http://amzn.to/2oSEwJK) があることを思い出した。
+そして、うちに使ってない [Nexus 7](https://amzn.to/2oSEwJK) があることを思い出した。
 
 この Nexus 7 、どうして使っていなかったかというと、
 Lollipop にアップデートしてしまったから。
@@ -25,7 +25,7 @@ Nexus 7 2012 は Lollipop にアップデートしてしまうと、
 動作が重過ぎて使い物にならなくなる。
 
 どうせ使いものにならないなら、ということで
-[SlimKat](http://www.slimroms.net/) や
+[SlimKat](https://www.slimroms.net/) や
 [PureNexus](https://forum.xda-developers.com/nexus-7/development/unofficial-pure-nexus-project-layers-t3243943) を
 焼いて使ってみたりもしたが、
 前者は軽いけど見た目や使用感がちょっと微妙( 4.4 ベースだし…)で、

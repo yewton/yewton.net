@@ -27,8 +27,8 @@ WordPressをHHVMで動かしたら超速くなった!やったぜ!!という記�
 
 ![HHVM](/img/2016-02-21_224951/hugo.png)
 
-[HHVM](http://hhvm.com/)は、Facebookがオープンソースとして開発している仮想実行環境で、
-[PHP](http://php.net/)と[Hack](http://hacklang.org/)を動かすための環境らしいです。
+[HHVM](https://hhvm.com/)は、Facebookがオープンソースとして開発している仮想実行環境で、
+[PHP](https://php.net/)と[Hack](https://hacklang.org/)を動かすための環境らしいです。
 
 まぁ、個人的にはHackもHHVMも **すごいPHP** ぐらいの認識しかありませんが…。
 Hackは言語的にすごくて、HHVMは実行環境がすごい。今回用があるのはHHVMだけです。
@@ -38,18 +38,18 @@ Hackは言語的にすごくて、HHVMは実行環境がすごい。今回用が
 [HTTP/2](https://http2.github.io/)は… **すごいHTTP** です。
 
 HTTP/1.xとの互換性を保ちつつ、効率化したもののようです。ヘッダの圧縮とか、リクエストの多重化とか。
-[RFC7540 日本語訳](http://summerwind.jp/docs/rfc7540/)や[日本語のFAQ](http://http2.info/faq.html#who-made-http2)もあります。
+[RFC7540 日本語訳](https://summerwind.jp/docs/rfc7540/)や[日本語のFAQ](https://http2.info/faq.html#who-made-http2)もあります。
 自分は全然見てないけれど…必要になったら読みます。
 
 とにかく、このプロトコルで配信するだけでより効率的でより早くなる、ということです。
 
 ### HTTP/2 の実装 ###
 
-[nginx](http://nginx.org/en/)の1.9.5からHTTP/2をサポートしているようです[^1]。
+[nginx](https://nginx.org/en/)の1.9.5からHTTP/2をサポートしているようです[^1]。
 [公式Dockerリポジトリ](https://hub.docker.com/_/nginx/)で配信されている最新イメージでもちゃんとサポートされていました。
 
-他にも[Apache HTTP Server 2.4.17+](http://httpd.apache.org/)や
-[DeNA](http://dena.com/intl/)の[H2O](https://h2o.examp1e.net/)など[色々ある](https://github.com/http2/http2-spec/wiki/Implementations)ようです。
+他にも[Apache HTTP Server 2.4.17+](https://httpd.apache.org/)や
+[DeNA](https://dena.com/intl/)の[H2O](https://h2o.examp1e.net/)など[色々ある](https://github.com/http2/http2-spec/wiki/Implementations)ようです。
 
 今回はApacheよりは速かろうというのと、WordPress稼動の実例も多いことから、nginxを選択しました。適当。
 

@@ -8,23 +8,23 @@ title = "BettorTouchToolが無料じゃなくなると分かったりした日"
 
 +++
 
-## [BetterTouchTool will switch from free to a “Pay what you want” model early next year. – BetterTouchTool, BTT Remote, BetterSnapTool and more](http://www.boastr.net/bettertouchtool-may-switch-from-free-to-a-pay-what-you-want-model-early-next-year/) ##
+## [BetterTouchTool will switch from free to a “Pay what you want” model early next year. – BetterTouchTool, BTT Remote, BetterSnapTool and more](https://www.boastr.net/bettertouchtool-may-switch-from-free-to-a-pay-what-you-want-model-early-next-year/) ##
 
 [BetterTouchTool](https://www.boastr.net/)が1月末を目処に無料じゃなくなるらしい。
 
-[FAQ](http://www.boastr.net/btt-paid-faq/)によると、ライセンスは買い切りで(当面)更新の必要は無く、
+[FAQ](https://www.boastr.net/btt-paid-faq/)によると、ライセンスは買い切りで(当面)更新の必要は無く、
 過去に寄付してたりといった一定の条件を満たす人は無料でライセンスを取得する手段が提供されるらしい。
 
 なお、古いのを使い続けるといったことは出来ず、そのうち使えなくなってしまうもよう。
 
 買うしかないなー。
 
-## [割と本気で家庭用Slack Botを作ってみた - 八発白中](http://blog.8arrow.org/entry/2016/01/13/183349) ##
+## [割と本気で家庭用Slack Botを作ってみた - 八発白中](https://blog.8arrow.org/entry/2016/01/13/183349) ##
 
 うちの嫁はSlack使ってくれないから無理ぽ。。
 自分もカナヘイスタンプ超気に入ってるから、LINE辞めるのは無理だな。
 
-記事中で[Hatena::Counting](http://counting.hatelabo.jp/)についての言及があった。
+記事中で[Hatena::Counting](https://counting.hatelabo.jp/)についての言及があった。
 ちょうどこういうサービス探してたのでありがたい。
 他に世界的にデファクトスタンダードなやつがあるのかとか、調べてみたい。
 [Create a Countdown Clock | CountingDownTo.com](https://countingdownto.com/)とかが、それらしい感じがする。
@@ -33,7 +33,7 @@ title = "BettorTouchToolが無料じゃなくなると分かったりした日"
 
 org-modeでだいたい間に合ってるけど、やっぱ同期と多デバイス対応が欲しいよなー。
 
-[MobileOrg : What is MobileOrg?](http://mobileorg.ncogni.to/)はちょっと使ってみて微妙だった。。
+[MobileOrg : What is MobileOrg?](https://mobileorg.github.io/)はちょっと使ってみて微妙だった。。
 
 そこだけ何とかなれば。。。
 

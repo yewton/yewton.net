@@ -12,8 +12,8 @@ banner = "banners/default.jpg"
 今年30歳になる節目の年なので、ブログを書いてみることにした。
 
 何もこういう試みは初めてではなく、
-これまでも、[はてなダイアリー](http://d.hatena.ne.jp/yuto_sasaki/)だったり、
-[Qiita](http://qiita.com/yewton)だったりに断続的に記事を書いたりメモしたりしていた。
+これまでも、[はてなダイアリー](https://d.hatena.ne.jp/yuto_sasaki/)だったり、
+[Qiita](https://qiita.com/yewton)だったりに断続的に記事を書いたりメモしたりしていた。
 
 それより以前も、個人でサイト作成したり、既存のブログサービスを使っていたこともあった。
 

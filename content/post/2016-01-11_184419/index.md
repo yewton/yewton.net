@@ -39,18 +39,18 @@ GitHub Pages や類似のサービスを使えば無料で利用できますね�
 
 [Top Open-Source Static Site Generators - StaticGen](https://www.staticgen.com/) の中から適当に選びましょう。
 
-[Jekyll](http://jekyllrb.com/) や [Octopress](http://octopress.org/) はメジャーっぽいですが検索してみると、何だか遅いみたいです(使ったことない)。
+[Jekyll](https://jekyllrb.com/) や [Octopress](http://octopress.org/) はメジャーっぽいですが検索してみると、何だか遅いみたいです(使ったことない)。
 
 [GitBook](https://www.gitbook.com/) はドキュメントを書くのには向いています(自分も利用しています)。ですがブログを書くためのものではありません。
 
-[Hexo](http://hexo.io/) か [Hugo](http://gohugo.io/) あたりがよさそうです。
+[Hexo](https://hexo.io/) か [Hugo](https://gohugo.io/) あたりがよさそうです。
 これら二つはコンセプトもよく似ているし、最早好みの世界ですね。自分は何となく Hugo を使っています。
 
 ## Hugo ##
 
 ![Hugoのロゴ](/img/2016-01-11_184419/hugo.png)
 
-[Hugo](http://gohugo.io/) は超高速でシンプルかつ柔軟な静的サイトジェネレータだそうです。
+[Hugo](https://gohugo.io/) は超高速でシンプルかつ柔軟な静的サイトジェネレータだそうです。
 Go言語で書かれていて、インストールはとってもカンタン。すぐに使えます。
 
 使い方もとってもカンタン…というワケではないかもしれません。
@@ -88,7 +88,7 @@ Hugoの場合、テーマはそのサイトの構成まで決めてしまいま�
 
 早速サイトを作っていきましょう。
 
-[Hugo - Hugo Quickstart Guide](http://gohugo.io/overview/quickstart/) に従えば基本的に迷うことは無いと思います。
+[Hugo - Hugo Quickstart Guide](https://gohugo.io/overview/quickstart/) に従えば基本的に迷うことは無いと思います。
 ここでは、適当にサイトを作って、ひとつ記事を書いてみて、それがブラウザで確認出来るようになれば大丈夫です。
 
 ただし、 **日本語に対応させる設定は追加で必要** です。
@@ -105,19 +105,19 @@ Hugoの場合、テーマはそのサイトの構成まで決めてしまいま�
 
 次はサイトに適用するテーマを選択しましょう。
 
-[Hugo Themes Site](http://themes.gohugo.io/) で実際の例を見ながらテーマを選ぶことが出来ます。
-ブログ用のテーマのみに絞って見たい場合は [こちら](http://themes.gohugo.io/tags/blog) からどうぞ。
+[Hugo Themes Site](https://themes.gohugo.io/) で実際の例を見ながらテーマを選ぶことが出来ます。
+ブログ用のテーマのみに絞って見たい場合は [こちら](https://themes.gohugo.io/tags/blog) からどうぞ。
 
 注意点として、Hugoには記事を読み終えるまでの時間やおおよその文字数を表示する機能が組込まれているのですが、テーマがサポートしていない場合は表示されません。
 このような機能を使いたい場合は、テーマでサポートされているかを確認しましょう。
 
-このサイトは [Icarus](http://themes.gohugo.io/hugo-icarus/) を使っています。
+このサイトは [Icarus](https://themes.gohugo.io/hugo-icarus/) を使っています。
 ショーケースの中では使える機能が一番多いと思うので、どういうことが出来るのか知るには丁度よいテーマだと思います。
 
 ## favicon を置こう ##
 
 デフォルトでは Hugo の favicon が表示されてしまうので、カスタマイズしましょう。
-[Favicon &amp; App Icon Generator](http://www.favicon-generator.org/) などを使うとよいです。
+[Favicon &amp; App Icon Generator](https://www.favicon-generator.org/) などを使うとよいです。
 
 生成した `.ico` ファイルを `static` 直下に配置すればOKです。
 

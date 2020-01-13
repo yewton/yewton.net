@@ -48,11 +48,11 @@ title = "JIRA Agile用のuserscriptを作ったりした日"
 前者の方法はスプリントレビュー時には使えない。
 
 画面遷移せずに詳細画面が開ければ用は足りると考え、
-[SimpleModal](http://www.ericmmartin.com/projects/simplemodal/)という、
+[SimpleModal](https://www.ericmmartin.com/projects/simplemodal/)という、
 その名の通りシンプルなモーダル機能を実装するためのライブラリを使って、
 `iframe` で詳細画面を開くだけの機能を追加した。
 
-## [第3回 実践的ドメイン駆動設計ワークショップ - connpass](http://ddd-alliance.connpass.com/event/24672/) ##
+## [第3回 実践的ドメイン駆動設計ワークショップ - connpass](https://ddd-alliance.connpass.com/event/24672/) ##
 
 参加してきた。
 

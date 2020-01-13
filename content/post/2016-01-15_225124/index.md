@@ -38,14 +38,14 @@ HTMLファイルはCSSファイルは、始めから関連付けておくとい�
 ついでに、画像を丸く表示するようにした。
 
 [gravatarに対応している他のテーマ(greyshade)](https://github.com/cxfksword/greyshade/blob/28fb061bb674a2add89724dfbbf167f88f381d40/layouts/partials/header.html)と、
-[How to Round Gravatar Images in WordPress](http://tdwp.us/round-gravatar-images-wordpress/)を参考にした。
+[How to Round Gravatar Images in WordPress](https://tdwp.us/round-gravatar-images-wordpress/)を参考にした。
 
 ### 記念日対応 ###
 
-最初は[Hatena::Counting](http://counting.hatelabo.jp/)とか類似のサービスを利用しようと思ったんだけど、
+最初は[Hatena::Counting](https://counting.hatelabo.jp/)とか類似のサービスを利用しようと思ったんだけど、
 あんまりシンプルなのが無かったので自作した。
 
-自作といったって、[Moment.js](http://momentjs.com/)というとても便利なライブラリがあったので、
+自作といったって、[Moment.js](https://momentjs.com/)というとても便利なライブラリがあったので、
 それを使って適当にJavaScriptを埋め込んだだけ。
 
 [template - The Go Programming Language](https://golang.org/pkg/text/template/)とか

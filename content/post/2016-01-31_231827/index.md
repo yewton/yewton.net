@@ -11,7 +11,7 @@ title = "スクラム入門を翻訳する日々"
 最近、[スクラム入門の翻訳](https://www.gitbook.com/book/yewton/scrumprimer/details)を
 細々とやっている。
 
-元々は[Scrum Primer - Short Introduction to Scrum](http://www.scrumprimer.org/)で配布されているPDFで、
+元々は[Scrum Primer - Short Introduction to Scrum](https://www.scrumprimer.org/)で配布されているPDFで、
 認定スクラムマスター研修でも参照される真っ当な文献(のはす)。
 
 日本語版があるにはある[^1]んだけれど、古いし翻訳の質が怪しいので、
