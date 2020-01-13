@@ -9,6 +9,28 @@
   :LOGBOOK:
   :END:
 
+** DRAFT 無料でいい感じのバナー用背景素材をダウンロード出来るサービス3選
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-13
+:DIR:                images/2020-01-13_unsplash-pexels-pixabay
+:EXPORT_HUGO_BUNDLE: 2020-01-13_unsplash-pexels-pixabay
+:EXPORT_HUGO_SLUG:   unsplash-pexels-pixabay
+:END:
+
+** DRAFT GitHub Pages + Cloudflare から Netlify に移行した
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-13
+:DIR:                images/2020-01-13_hugo-netlify
+:EXPORT_HUGO_BUNDLE: 2020-01-13_hugo-netlify
+:EXPORT_HUGO_SLUG:   hugo-netlify
+:END:
+
+[[/2016/02/02/blog-with-hugo/][この記事にあるとおり]] 、当初このサイトは GitHub Pages でホストされ、
+Cloudflare CDN を利用して配信していた。
+
+
 ** DRAFT Emacs の info の使い方いつも忘れる
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
