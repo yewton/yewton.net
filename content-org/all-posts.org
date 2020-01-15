@@ -11,6 +11,17 @@
 :LOGBOOK:
 nil:END:
 
+** TODO この記事を訳す
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-15
+:DIR:                images/2020-01-15_test-optional-with-xctest
+:EXPORT_HUGO_BUNDLE: 2020-01-15_test-optional-with-xctest
+:EXPORT_HUGO_SLUG:   test-optional-with-xctest
+:END:
+
+https://www.swiftbysundell.com/articles/avoiding-force-unwrapping-in-swift-unit-tests/#sticking-with-optionals
+
 ** DRAFT 無料でいい感じのバナー用背景素材をダウンロード出来るサービス3選                            :ATTACH:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
