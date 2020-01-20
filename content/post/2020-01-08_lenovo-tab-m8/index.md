@@ -2,7 +2,7 @@
 title = "Lenovo Tab M8 が案外良かった"
 author = ["yewton"]
 date = 2020-01-11
-mylastmod = 2020-01-13T11:31:51+09:00
+mylastmod = 2020-01-21T06:07:00+09:00
 slug = "lenovo-tab-m8"
 tags = ["Lenovo Tab M8"]
 categories = ["買ったモノ"]
@@ -48,5 +48,10 @@ draft = false
 とはいえ「アプリを閉じる」を選択してしまえば以降差し支えなく使用は可能。
 
 {{< figure src="2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg" caption="&#22259;3:  横画面になる度に表示されるうっとうしいダイアログ" >}}
+
+{{< alert note >}}
+2020年1月20日に配信されたアップデートを適用したところ、
+少なくとも `Lenovo Launcher が停止しました` のダイアログは出なくなっていた。
+{{</ alert >}}
 
 {{< unsplash leading="Featured image background by" id=" estherrj" name=" Esther Jiao" >}}

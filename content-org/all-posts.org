@@ -6,6 +6,8 @@
 #+macro: pixabay @@hugo:{{< pixabay >}}$1{{< /pixabay >}}@@
 #+macro: pexels @@hugo:{{< pexels leading="$1" id="$2" name="$3">}}@@
 #+macro: lastmod @@hugo:{{< lastmod >}}@@
+#+macro: begin_alert @@hugo:{{< alert $1 >}}@@
+#+macro: end_alert @@hugo:{{</ alert >}}@@
 
 * Inbox                                                                :@未分類:
 :LOGBOOK:
@@ -329,6 +331,11 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 #+attr_org: :width 600
 #+caption: 横画面になる度に表示されるうっとうしいダイアログ
 [[file:images/2020-01-08_lenovo-tab-m8/2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg]]
+
+{{{begin_alert(note)}}}
+2020年1月20日に配信されたアップデートを適用したところ、
+少なくとも =Lenovo Launcher が停止しました= のダイアログは出なくなっていた。
+{{{end_alert}}}
 
 {{{unsplash(Featured image background by, estherrj, Esther Jiao)}}}
 
