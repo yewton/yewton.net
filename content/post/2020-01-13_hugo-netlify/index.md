@@ -1,13 +1,15 @@
-+++
-title = "GitHub Pages + Cloudflare から Netlify に移行した"
-author = ["yewton"]
-date = 2020-01-13
-mylastmod = 2020-01-13T15:43:21+09:00
-slug = "hugo-netlify"
-tags = ["Hugo", "Netlify", "Cloudflare", "GitHub Pages"]
-categories = ["Webサイト運用"]
-draft = false
-+++
+---
+title: "GitHub Pages + Cloudflare から Netlify に移行した"
+author: ["yewton"]
+date: 2020-01-13
+mylastmod: 2020-01-23T04:19:50+09:00
+slug: "hugo-netlify"
+tags: ["Hugo", "Netlify", "Cloudflare", "GitHub Pages"]
+categories: ["Webサイト運用"]
+draft: false
+image:
+  caption: Background image by <a href="https://pixabay.com/users/PIRO4D-2707530/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">PIRO4D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">Pixabay</a>
+---
 
 [この記事にあるとおり](/2016/02/02/blog-with-hugo/) 、当初このサイトは [GitHub Pages](https://pages.github.com/) でホストされ、
 [Cloudflare CDN](https://www.cloudflare.com/) を利用して配信していた。
@@ -101,5 +103,3 @@ https://yewton-net.netlify.com/* https://www.yewton.net/:splat 301!
 {{< figure src="2020-01-13_15-12-54_securityheaders.png" >}}
 
 {{< figure src="2020-01-13_15-15-03_qualys.png" >}}
-
-{{< pixabay >}}Featured image background by <a href="https://pixabay.com/users/PIRO4D-2707530/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">PIRO4D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">Pixabay</a>{{< /pixabay >}}

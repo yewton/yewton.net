@@ -2,12 +2,14 @@
 #+hugo_section: post
 #+seq_todo: TODO DRAFT DONE
 #+hugo_front_matter_key_replace: lastmod>mylastmod
+#+hugo_front_matter_format: yaml
 #+macro: unsplash @@hugo:{{< unsplash leading="$1" id="$2" name="$3" >}}@@
 #+macro: pixabay @@hugo:{{< pixabay >}}$1{{< /pixabay >}}@@
 #+macro: pexels @@hugo:{{< pexels leading="$1" id="$2" name="$3">}}@@
 #+macro: lastmod @@hugo:{{< lastmod >}}@@
 #+macro: begin_alert @@hugo:{{< alert $1 >}}@@
 #+macro: end_alert @@hugo:{{</ alert >}}@@
+
 
 * Inbox                                                                :@未分類:
 :LOGBOOK:
@@ -23,33 +25,6 @@ nil:END:
 :END:
 
 https://www.swiftbysundell.com/articles/avoiding-force-unwrapping-in-swift-unit-tests/#sticking-with-optionals
-
-** DRAFT 無料でいい感じのバナー用背景素材をダウンロード出来るサービス3選                            :ATTACH:
-:PROPERTIES:
-:EXPORT_FILE_NAME: index
-:EXPORT_DATE: 2020-01-13
-:DIR:      images/2020-01-13_unsplash-pexels-pixabay
-:EXPORT_HUGO_BUNDLE: 2020-01-13_unsplash-pexels-pixabay
-:EXPORT_HUGO_SLUG: unsplash-pexels-pixabay
-:END:
-
-順不動。
-
-*** Unsplash
-
-[[https://www.notion.so/][Notion]] のカバーイメージ選択欄にあったので存在を知った。
-
-#+downloaded: file:/Users/yewton/Downloads/ash-edmonds-0aWZdK8nK2I-unsplash.jpg @ 2020-01-13 11:43:22
-#+attr_org: :width 500
-[[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-13_11-43-22_ash-edmonds-0aWZdK8nK2I-unsplash.jpg]]
-{{{unsplash(Image by,badashphotos,Ash Edmonds)}}}
-
-#+downloaded: file:/Users/yewton/Downloads/abstract-architecture-building-exterior-geometric-593158.jpg @ 2020-01-13 11:46:07
-#+attr_org: :width 500
-[[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-13_11-46-07_abstract-architecture-building-exterior-geometric-593158.jpg]]
-{{{pexels(Photo by,scottwebb,Webb from Pexels)}}}
-
-{{{pixabay(Featured image by <a href="https://pixabay.com/users/Sambeetarts-1339110/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Sambeet D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Pixabay</a>)}}}
 
 ** DRAFT Emacs の info の使い方いつも忘れる
 :PROPERTIES:
@@ -541,6 +516,82 @@ https://superuser.com/questions/208488/how-do-i-re-open-a-file-in-emacs
 https://qiita.com/delphinus/items/438046d2bbeb3e63f8fa
 
 * Webサイト運用                                              :@Webサイト運用:
+** DONE 無料でいい感じのバナー用背景素材をダウンロード出来るフリー画像サービス 3 選
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-13
+:DIR:      images/2020-01-13_unsplash-pexels-pixabay
+:EXPORT_HUGO_BUNDLE: 2020-01-13_unsplash-pexels-pixabay
+:EXPORT_HUGO_SLUG: unsplash-pexels-pixabay
+:END:
+
+#+begin_src yaml :front_matter_extra t
+  image:
+    caption: Image by <a href="https://pixabay.com/users/Sambeetarts-1339110/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Sambeet D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Pixabay</a>
+#+end_src
+
+記事のバナー、アイキャッチ画像([[https://sourcethemes.com/academic/][Academic]] 的には [[https://sourcethemes.com/academic/docs/managing-content/#featured-image][Featured image]])があると書く時のテンションが上がるので、
+出来るだけ設定するようにしたい。
+
+でも出来るだけ手間はかけたくない…、そんな時に使っているサービスを順不同で挙げる。
+
+なお、いずれのサービスにおいても、 =geometric= (幾何学模様)や
+=abstract= (抽象的)、あるいは =network= や =programming= といったワードで検索すると、
+いわゆる /いい感じ/ な画像がヒットする。
+
+*** Unsplash
+
+[[https://www.notion.so/][Notion]] のカバーイメージ選択欄にあったので存在を知った。
+
+#+attr_org: :width 500
+[[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-13_11-43-22_ash-edmonds-0aWZdK8nK2I-unsplash.jpg]]
+{{{unsplash(Image by,badashphotos,Ash Edmonds)}}}
+
+[[https://unsplash.com/license][License | Unsplash]]
+
+[[https://help.unsplash.com/en/articles/2612315-can-i-use-unsplash-photos-for-personal-or-commercial-projects][FAQ ページ]] より引用:
+
+#+begin_quote
+The photos on Unsplash are free to use and can be used for most commercial, personal projects, and for editorial use. 
+#+end_quote
+
+*** Pexels
+
+#+attr_org: :width 500
+[[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-13_11-46-07_abstract-architecture-building-exterior-geometric-593158.jpg]]
+{{{pexels(Photo by,scottwebb,Webb from Pexels)}}}
+
+[[https://www.pexels.com/photo-license/][License of our free stock photos - Pexels]]
+
+[[https://www.pexels.com/ja-jp/faq/][FAQ ページ]] より引用:
+
+#+begin_quote
+Yes, all photos and videos are free for commercial use. You can use them on your commercial website, blog, product or anywhere else. 
+#+end_quote
+
+#+begin_quote
+すべての写真や動画は、商業コンテンツの一部として無料で利用できます。商業用のWebサイト、ブログ、製品、その他どんな場所にでも利用可能です。
+#+end_quote
+
+*** Pixabay
+
+#+ATTR_ORG: :width 500
+[[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-23_04-30-34_social-3064515_1280.jpg]]
+{{{pixabay(Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3064515">Gerd Altmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3064515">Pixabay</a>)}}}
+
+[[https://pixabay.com/service/license/][Pixabay License]]
+
+[[https://pixabay.com/service/faq/][FAQ ページ]] より引用:
+
+#+begin_quote
+You can copy, modify, distribute, and use the images, even for commercial purposes, all without asking for permission or giving credits to the artist. However, depicted content may still be protected by trademarks, publicity or privacy rights.
+#+end_quote
+
+#+begin_quote
+これらの画像は、商用、非商用を問わず、コピー、改変、再配布することができます。利用に関する許諾や使用料の支払いは必要ありません。しかし、画像の中には商標やパブリシティ権、プライバシー権などに基づき保護されているものが含まれます。
+#+end_quote
+
+
 ** DONE GitHub Pages + Cloudflare から Netlify に移行した
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
@@ -550,6 +601,11 @@ https://qiita.com/delphinus/items/438046d2bbeb3e63f8fa
 :EXPORT_HUGO_SLUG: hugo-netlify
 :EXPORT_HUGO_TAGS: Hugo Netlify Cloudflare "GitHub Pages"
 :END:
+
+#+begin_src yaml :front_matter_extra t
+  image:
+    caption: Background image by <a href="https://pixabay.com/users/PIRO4D-2707530/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">PIRO4D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">Pixabay</a>
+#+end_src
 
 [[/2016/02/02/blog-with-hugo/][この記事にあるとおり]] 、当初このサイトは [[https://pages.github.com/][GitHub Pages]] でホストされ、
 [[https://www.cloudflare.com/][Cloudflare CDN]] を利用して配信していた。
@@ -634,8 +690,6 @@ https://yewton-net.netlify.com/* https://www.yewton.net/:splat 301!
 
 #+ATTR_ORG: :width 500
 [[file:images/2020-01-13_hugo-netlify/2020-01-13_15-15-03_qualys.png]]
-
-{{{pixabay(Featured image background by <a href="https://pixabay.com/users/PIRO4D-2707530/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">PIRO4D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">Pixabay</a>)}}}
 
 # Local Variables:
 # org-attach-auto-tag: nil
