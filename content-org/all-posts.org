@@ -493,7 +493,7 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 
 サーチコンソール
 ゲーム感想 → ケーム感想になってた
-** DRAFT Hugo Academic でダーク・ライト両モードに対応した Chroma によるシンタックスハイライト :emacs:chroma:hugo:academic:
+** DONE Hugo Academic でダーク・ライト両モードに対応した Chroma によるシンタックスハイライト :emacs:chroma:hugo:academic:
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
 :EXPORT_DATE:        2020-01-24
