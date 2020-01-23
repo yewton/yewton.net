@@ -11,14 +11,14 @@
 #+macro: end_alert @@hugo:{{</ alert >}}@@
 
 
-* Inbox                                                                :@未分類:
+* Inbox                                                             :@未分類:
 :LOGBOOK:
 nil:END:
 
 ** TODO この記事を訳す
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-15
+:EXPORT_DATE:        2020-01-23
 :DIR:                images/2020-01-15_test-optional-with-xctest
 :EXPORT_HUGO_BUNDLE: 2020-01-15_test-optional-with-xctest
 :EXPORT_HUGO_SLUG:   test-optional-with-xctest
@@ -35,78 +35,11 @@ https://www.swiftbysundell.com/articles/avoiding-force-unwrapping-in-swift-unit-
 :EXPORT_HUGO_SLUG: emacs-info
 :END:
 
-** DRAFT ox-hugo alias
-:PROPERTIES:
-:EXPORT_FILE_NAME: index
-:EXPORT_DATE: 2020-01-10
-:DIR:      images/2020-01-10_hugo-aliases
-:EXPORT_HUGO_BUNDLE: 2020-01-10_hugo-aliases
-:EXPORT_HUGO_SLUG: hugo-aliases
-:END:
-
-#+begin_example
-  :EXPORT_HUGO_ALIASES: /2019/01/happy-new-year/
-#+end_example
-
-
-** DRAFT hugo-academic のデフォが removePathAccents=true な注意
-:PROPERTIES:
-:EXPORT_FILE_NAME: index
-:EXPORT_DATE: 2020-01-10
-:DIR:      images/2020-01-10_hugo-academic-dakuten
-:EXPORT_HUGO_BUNDLE: 2020-01-10_hugo-academic-dakuten
-:EXPORT_HUGO_SLUG: hugo-academic-dakuten
-:END:
-
-サーチコンソール
-ゲーム感想 → ケーム感想になってた
-
-** DRAFT org-mode で祝日とか
-:PROPERTIES:
-:EXPORT_FILE_NAME: index
-:EXPORT_DATE: 2020-01-10
-:DIR:      images/2020-01-10_org-mode-holidays-anniversaries
-:EXPORT_HUGO_BUNDLE: 2020-01-10_org-mode-holidays-anniversaries
-:EXPORT_HUGO_SLUG: org-mode-holidays-anniversaries
-:END:
-
-#+begin_src org
-  ,* 記念日 
-  ,#+CATEGORY: omochi
-  %%(org-date 2020 1 8) omochi 記念日
-  %%(diary-anniversary 1 8 2019) omochi %d 歳記念日
-#+end_src
-
-
-** DRAFT ox-hugo の src block caption はどこから来てるのか
-:PROPERTIES:
-:EXPORT_FILE_NAME: index
-:EXPORT_DATE: 2020-01-10
-:DIR:      images/2020-01-10_ox-hugo-src-block-caption
-:EXPORT_HUGO_BUNDLE: 2020-01-10_ox-hugo-src-block-caption
-:EXPORT_HUGO_SLUG: ox-hugo-src-block-caption
-:END:
-
-[[file:~/.emacs.d/var/el-get/org-mode/lisp/ox.el::("Listing" ("ar" :default "برنامج") ("cs" :default "Program") ("da" :default "Program") ("de" :default "Programmlisting") ("es" :default "Listado de programa") ("et" :default "Loend") ("fr" :default "Programme" :html "Programme") ("it" :default "Listato") ("ja" :default "ソースコード")][koko]]
-
-** DRAFT org-mode column view で clock した結果を集計
-:PROPERTIES:
-:EXPORT_FILE_NAME: index
-:EXPORT_DATE: 2020-01-09
-:DIR:      images/2020-01-09_columns-clocksum
-:EXPORT_HUGO_BUNDLE: 2020-01-09_columns-clocksum
-:EXPORT_HUGO_SLUG: columns-clocksum
-:END:
-
-#+begin_src org
-  ,#+COLUMNS:  %40ITEM %TODO %CLOCKSUM %JIRA
-#+end_src
-
-* 雑記                                                                    :@雑記:
+* 雑記                                                                :@雑記:
 :PROPERTIES:
 nil:END:
 
-** DONE 久々の更新                                            :emacs:hugo:ox_hugo:
+** DONE 久々の更新                                      :emacs:hugo:ox_hugo:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 2020-01-02_happy_new_year
@@ -156,7 +89,7 @@ Hugo 0.55.0 以降で動かなくなってしまっていたり、 Deprecated Wa
 
 org-mode で書けるようになったことだし、少しは記事を書いていきたい所だが、まずは Hugo の最新版に追従する作業が待っている…。
 
-** DONE #MadeWithAcademic                                  :academic:ox_hugo:
+** DONE #MadeWithAcademic                                 :academic:ox_hugo:
 :PROPERTIES:
 :EXPORT_HUGO_BUNDLE: 2020-01-06_academic
 :EXPORT_HUGO_SLUG: made-with-academic
@@ -183,72 +116,8 @@ org-mode で書けるようになったことだし、少しは記事を書い�
 - ダークテーマ対応のシンタックスハイライトのやりかた
 - conf-toml-mode を [[https://ox-hugo.scripter.co/doc/custom-front-matter/#front-matter-extra][Front-matter Extra]] で使う方法
 
-** DRAFT 久々の更新2                                          :emacs:hugo:ox_hugo:
-:PROPERTIES:
-:EXPORT_FILE_NAME: index
-:EXPORT_HUGO_BUNDLE: 2020-01-05_random
-:EXPORT_HUGO_SLUG: random
-:EXPORT_DATE: 2019-01-05
-:END:
-
-org-mode ではタグにハイフンを付けられない。
-
-=ox_hugo= ~hoge~
-
-conf-toml がある https://github.com/dryman/toml-mode.el/issues/14
-
-#+begin_src emacs-lisp
-  (use-package ox-hugo
-    :after ox
-    :init
-    (defalias 'toml-mode 'conf-toml-mode)
-    :config 
-    (setq org-hugo-use-code-for-kbd t))
-#+end_src
-
-#+begin_src sh
-  hugo gen chromastyles --style=monokai > pbcopy
-  hugo gen chromastyles --style=monokailight > pbcopy
-#+end_src
-
-https://css2sass.herokuapp.com/
-
-=.np= とか、light にしか無いやつを消した(暫定)
-
-https://gohugo.io/getting-started/configuration-markup#highlight
-
-#+begin_src toml
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = false
-    style = "emacs"
-    tabWidth = 4
-#+end_src
-
-https://github.com/sourcethemes/academic-scripts に page bunlde 化するスクリプトがある。
-
-#+begin_src sh
-  asdf plugin add hugo https://github.com/beardix/asdf-hugo
-#+end_src
-
-=baseurl= を設定しないと Twitter Card などが表示されないので気をつけよう
-
-#+begin_src toml
-  # The URL of your site.
-  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-  baseurl = "https://www.yewton.net/"
-#+end_src
-
-=google_tag_manager= が設定されていると Google Analytics のコードが埋め込まれない
-https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803-663f-4b38-8d6f-bc645935da26?authed=true
-
-* 買ったモノ                                                              :@買ったモノ:
-** DONE Lenovo Tab M8 が案外良かった                               :Lenovo__Tab__M8:
+* 買ったモノ                                                    :@買ったモノ:
+** DONE Lenovo Tab M8 が案外良かった                       :Lenovo__Tab__M8:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 2020-01-08_lenovo-tab-m8
@@ -315,7 +184,47 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 {{{unsplash(Featured image background by, estherrj, Esther Jiao)}}}
 
 * Emacs                                                              :@Emacs:
-** DONE org-mode に Chrome で開いてるページへのリンクを貼りたい                :emacs:org__mode:
+** DRAFT org-mode column view で clock した結果を集計
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-09
+:DIR:      images/2020-01-09_columns-clocksum
+:EXPORT_HUGO_BUNDLE: 2020-01-09_columns-clocksum
+:EXPORT_HUGO_SLUG: columns-clocksum
+:END:
+
+#+begin_src org
+  ,#+COLUMNS:  %40ITEM %TODO %CLOCKSUM %JIRA
+#+end_src
+
+** DRAFT ox-hugo の src block caption はどこから来てるのか
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-10
+:DIR:      images/2020-01-10_ox-hugo-src-block-caption
+:EXPORT_HUGO_BUNDLE: 2020-01-10_ox-hugo-src-block-caption
+:EXPORT_HUGO_SLUG: ox-hugo-src-block-caption
+:END:
+
+[[file:~/.emacs.d/var/el-get/org-mode/lisp/ox.el::("Listing" ("ar" :default "برنامج") ("cs" :default "Program") ("da" :default "Program") ("de" :default "Programmlisting") ("es" :default "Listado de programa") ("et" :default "Loend") ("fr" :default "Programme" :html "Programme") ("it" :default "Listato") ("ja" :default "ソースコード")][koko]]
+
+** DRAFT org-mode で祝日とか
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-10
+:DIR:      images/2020-01-10_org-mode-holidays-anniversaries
+:EXPORT_HUGO_BUNDLE: 2020-01-10_org-mode-holidays-anniversaries
+:EXPORT_HUGO_SLUG: org-mode-holidays-anniversaries
+:END:
+
+#+begin_src org
+  ,* 記念日 
+  ,#+CATEGORY: omochi
+  %%(org-date 2020 1 8) omochi 記念日
+  %%(diary-anniversary 1 8 2019) omochi %d 歳記念日
+#+end_src
+
+** DONE org-mode に Chrome で開いてるページへのリンクを貼りたい :emacs:org__mode:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_DATE: 2020-01-10
@@ -504,7 +413,7 @@ If the current buffer now contains an empty file that you just visited
 
 https://superuser.com/questions/208488/how-do-i-re-open-a-file-in-emacs
 
-** DRAFT emacs-plus で入れた Emacs が Spotlight 検索に引っかからない       :emacs:spotlight:
+** DRAFT emacs-plus で入れた Emacs が Spotlight 検索に引っかからない :emacs:spotlight:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_DATE: 2020-01-09
@@ -516,6 +425,252 @@ https://superuser.com/questions/208488/how-do-i-re-open-a-file-in-emacs
 https://qiita.com/delphinus/items/438046d2bbeb3e63f8fa
 
 * Webサイト運用                                              :@Webサイト運用:
+** DRAFT Academic テーマへの移行手順                    :emacs:hugo:ox_hugo:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 2020-01-25_migrate-to-hugo-academic
+:EXPORT_HUGO_SLUG: random
+:EXPORT_DATE: 2019-01-05
+:END:
+
+org-mode ではタグにハイフンを付けられない。
+
+=ox_hugo= ~hoge~
+
+conf-toml がある https://github.com/dryman/toml-mode.el/issues/14
+
+#+begin_src emacs-lisp
+  (use-package ox-hugo
+    :after ox
+    :init
+    (defalias 'toml-mode 'conf-toml-mode)
+    :config 
+    (setq org-hugo-use-code-for-kbd t))
+#+end_src
+
+https://github.com/sourcethemes/academic-scripts に page bunlde 化するスクリプトがある。
+
+#+begin_src sh
+  asdf plugin add hugo https://github.com/beardix/asdf-hugo
+#+end_src
+
+
+=baseurl= を設定しないと Twitter Card などが表示されないので気をつけよう
+
+#+begin_src toml
+  # The URL of your site.
+  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+  baseurl = "https://www.yewton.net/"
+#+end_src
+
+=google_tag_manager= が設定されていると Google Analytics のコードが埋め込まれない
+https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803-663f-4b38-8d6f-bc645935da26?authed=true
+
+*** ox-hugo alias
+
+#+begin_example
+  :EXPORT_HUGO_ALIASES: /2019/01/happy-new-year/
+#+end_example
+
+
+*** hugo-academic のデフォが removePathAccents=true な注意
+
+サーチコンソール
+ゲーム感想 → ケーム感想になってた
+** DRAFT Hugo Academic でダーク・ライト両モードに対応した Chroma によるシンタックスハイライト
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-23
+:DIR:                images/2020-01-23_hugo-academic-dark-light-code-block
+:EXPORT_HUGO_BUNDLE: 2020-01-23_hugo-academic-dark-light-code-block
+:EXPORT_HUGO_SLUG:   hugo-academic-dark-light-code-block
+:END:
+
+*** 前提
+
+[[https://sourcethemes.com/academic/][Academic テーマ]] のデフォルト設定は 
+
+#+begin_src emacs-lisp
+  (defvar modi/org-version-select 'dev
+    "Variable to choose the version of Org to be loaded.
+  Valid values are `dev', `elpa' and `emacs'.
+
+  When set to `dev', the development version of Org built locally
+  is loaded.
+  When set to `elpa', Org is installed and loaded from Org Elpa.
+  When set to `emacs', the Org version shipped with Emacs is used.
+
+  The value is defaulted to `elpa' as few things in this config
+  need Org version to be at least 9.x.")
+
+  (defvar modi/default-lisp-directory "/your/emacs/share/dir/version/lisp/"
+    "Directory containing lisp files for the Emacs installation.
+
+  This value must match the path to the lisp/ directory of your
+  Emacs installation.  If Emacs is installed using
+  --prefix=\"${PREFIX_DIR}\" this value would typically be
+  \"${PREFIX_DIR}/share/emacs/<VERSION>/lisp/\".")
+
+  (defvar org-dev-lisp-directory "/value/of/lispdir/in/local.mk"
+    "Directory containing lisp files for dev version of Org.
+
+  This value must match the `lispdir' variable in the Org local.mk.
+  By default the value is \"$prefix/emacs/site-lisp/org\", where
+  `prefix' must match that in local.mk too.")
+
+  (defvar org-dev-info-directory "/value/of/infodir/in/local.mk"
+    "Directory containing Info manual file for dev version of Org.
+
+  This value must match the `infodir' variable in the Org local.mk.")
+
+  (when (and org-dev-lisp-directory
+             org-dev-info-directory)
+    (with-eval-after-load 'package
+      ;; If `modi/org-version-select' is *not* `emacs', remove the Emacs
+      ;; version of Org from the `load-path'.
+      (unless (eq modi/org-version-select 'emacs)
+        ;; Remove Org that ships with Emacs from the `load-path'.
+        (let ((default-org-path (expand-file-name "org" modi/default-lisp-directory)))
+          (setq load-path (delete default-org-path load-path))))
+
+      (>=e "25.0" ;`directory-files-recursively' is not available in older emacsen
+          ;; If `modi/org-version-select' is *not* `elpa', remove the Elpa
+          ;; version of Org from the `load-path'.
+          (unless (eq modi/org-version-select 'elpa)
+            (dolist (org-elpa-install-path (directory-files-recursively
+                                            package-user-dir
+                                            "\\`org\\(-plus-contrib\\)*-[0-9.]+\\'"
+                                            :include-directories))
+              (setq load-path (delete org-elpa-install-path load-path))
+              ;; Also ensure that the associated path is removed from Info
+              ;; search list.
+              (setq Info-directory-list (delete org-elpa-install-path Info-directory-list)))))
+
+      (let ((dev-org-path (directory-file-name org-dev-lisp-directory))
+            (dev-org-info (directory-file-name org-dev-info-directory)))
+        (if (eq modi/org-version-select 'dev)
+            (progn
+              (add-to-list 'load-path dev-org-path)
+              ;; It's possible that `org-dev-info-directory' is set to an
+              ;; unconventional value, in which case, it will not be
+              ;; automatically added to `Info-directory-alist'. So to ensure
+              ;; that the correct Org Info is used, add it to
+              ;; `Info-directory-alist' manually.
+              (add-to-list 'Info-directory-list dev-org-info))
+          ;; If `modi/org-version-select' is *not* `dev', remove the
+          ;; development version of Org from the `load-path'.
+          (setq load-path (delete dev-org-path load-path))
+          (with-eval-after-load 'info
+            ;; Also ensure that the associated path is removed from Info search
+            ;; list.
+            (setq Info-directory-list (delete dev-org-info Info-directory-list)))))))
+  (require 's)
+  (defun ytn-new-post-template ()
+    (let* ((slug (read-string "Slug: "))
+           (now (current-time))
+           (export-date (format-time-string "%Y-%m-%d" now))
+           (id (format "%s_%s" export-date slug)))
+      (s-lex-format "\
+  ,* DRAFT %?
+  :PROPERTIES:
+  :EXPORT_FILE_NAME:   index
+  :EXPORT_DATE:        ${export-date}
+  :DIR:                images/${id}
+  :EXPORT_HUGO_BUNDLE: ${id}
+  :EXPORT_HUGO_SLUG:   ${slug}
+  :END:
+
+  ,#+begin_src yaml :front_matter_extra t
+    image:
+      caption: Background image by
+  ,#+end_src
+  ")))
+
+#+end_src
+
+#+begin_src yaml :front_matter_extra t
+  image:
+    caption: Background image by <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@markusspiske?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Markus Spiske"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Markus Spiske</span></a>
+#+end_src
+
+#+begin_src sh
+  hugo gen chromastyles --style=monokai > pbcopy
+  hugo gen chromastyles --style=monokailight > pbcopy
+#+end_src
+
+https://css2sass.herokuapp.com/
+
+academic の pre code が勝たないようにする
+
+#+begin_src scss
+    code {
+        background-color: #f8f8f8;
+    }
+#+end_src
+
+https://gohugo.io/getting-started/configuration-markup#highlight
+
+#+begin_src toml
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = "emacs"
+    tabWidth = 4
+#+end_src
+
+NabeBuiltin があるやつ
+ライト
+https://xyproto.github.io/splash/docs/abap.html
+https://xyproto.github.io/splash/docs/algol.html
+https://xyproto.github.io/splash/docs/algol_nu.html
+https://xyproto.github.io/splash/docs/arduino.html
+https://xyproto.github.io/splash/docs/autumn.html
+https://xyproto.github.io/splash/docs/colorful.html
+https://xyproto.github.io/splash/docs/emacs.html
+https://xyproto.github.io/splash/docs/friendly.html
+https://xyproto.github.io/splash/docs/github.html
+https://xyproto.github.io/splash/docs/lovelace.html
+https://xyproto.github.io/splash/docs/manni.html
+https://xyproto.github.io/splash/docs/murphy.html
+https://xyproto.github.io/splash/docs/pastie.html
+https://xyproto.github.io/splash/docs/perldoc.html
+https://xyproto.github.io/splash/docs/pygments.html
+https://xyproto.github.io/splash/docs/rainbow_dash.html
+https://xyproto.github.io/splash/docs/solarized-light.html
+https://xyproto.github.io/splash/docs/tango.html
+https://xyproto.github.io/splash/docs/trac.html
+https://xyproto.github.io/splash/docs/vim.html
+https://xyproto.github.io/splash/docs/xcode.html
+
+NG
+https://xyproto.github.io/splash/docs/borland.html
+https://xyproto.github.io/splash/docs/bw.html
+https://xyproto.github.io/splash/docs/igor.html
+https://xyproto.github.io/splash/docs/monokailight.html
+https://xyproto.github.io/splash/docs/paraiso-light.html
+https://xyproto.github.io/splash/docs/vs.html
+
+ダーク
+https://xyproto.github.io/splash/docs/api.html
+https://xyproto.github.io/splash/docs/dracula.html
+https://xyproto.github.io/splash/docs/native.html
+https://xyproto.github.io/splash/docs/solarized-dark.html
+https://xyproto.github.io/splash/docs/solarized-dark256.html
+https://xyproto.github.io/splash/docs/swapoff.html
+
+NG
+
+https://xyproto.github.io/splash/docs/fruity.html
+https://xyproto.github.io/splash/docs/monokai.html
+https://xyproto.github.io/splash/docs/paraiso-dark.html
+https://xyproto.github.io/splash/docs/rrt.html
+
+
 ** DONE 無料でいい感じのバナー用背景素材をダウンロード出来るフリー画像サービス 3 選
 :PROPERTIES:
 :EXPORT_FILE_NAME: index

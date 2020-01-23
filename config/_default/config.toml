@@ -60,7 +60,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
     lineNos = false
     lineNumbersInTable = true
     noClasses = false
-    style = "emacs"
+    style = "monokai"
     tabWidth = 4
   [markup.tableOfContents]
     startLevel = 2
