@@ -1,8 +1,8 @@
 ---
 title: "Hugo Academic でダーク・ライト両モードに対応した Chroma によるシンタックスハイライト"
 author: ["yewton"]
-date: 2020-01-24
-mylastmod: 2020-01-24T08:28:51+09:00
+date: 2020-01-24T08:37:00+09:00
+mylastmod: 2020-01-24T08:37:59+09:00
 slug: "hugo-academic-dark-light-code-block"
 tags: ["emacs", "chroma", "hugo", "academic"]
 categories: ["Webサイト運用"]

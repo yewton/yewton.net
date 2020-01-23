@@ -10,7 +10,6 @@
 #+macro: begin_alert @@hugo:{{< alert $1 >}}@@
 #+macro: end_alert @@hugo:{{</ alert >}}@@
 
-
 * Inbox                                                             :@未分類:
 :LOGBOOK:
 nil:END:
@@ -41,15 +40,6 @@ https://unix.stackexchange.com/q/21852 辺りのはなし
 :END:
 
 https://www.swiftbysundell.com/articles/avoiding-force-unwrapping-in-swift-unit-tests/#sticking-with-optionals
-
-** DRAFT Emacs の info の使い方いつも忘れる
-:PROPERTIES:
-:EXPORT_FILE_NAME: index
-:EXPORT_DATE: 2020-01-10
-:DIR:      images/2020-01-10_emacs-info
-:EXPORT_HUGO_BUNDLE: 2020-01-10_emacs-info
-:EXPORT_HUGO_SLUG: emacs-info
-:END:
 
 * 雑記                                                                :@雑記:
 :PROPERTIES:
@@ -200,6 +190,32 @@ org-mode で書けるようになったことだし、少しは記事を書い�
 {{{unsplash(Featured image background by, estherrj, Esther Jiao)}}}
 
 * Emacs                                                              :@Emacs:
+** DRAFT Emacs の info の使い方いつも忘れる
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-10
+:DIR:      images/2020-01-10_emacs-info
+:EXPORT_HUGO_BUNDLE: 2020-01-10_emacs-info
+:EXPORT_HUGO_SLUG: emacs-info
+:END:
+
+** TODO ox-hugo と academic の素晴らしさ
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-01-24
+:DIR:                images/2020-01-24_ox-hugo-academic
+:EXPORT_HUGO_BUNDLE: 2020-01-24_ox-hugo-academic
+:EXPORT_HUGO_SLUG:   ox-hugo-academic
+:END:
+
+logdone 入れないと当日公開に出来ないかも？
+ https://ox-hugo.scripter.co/doc/dates/#date
+
+#+begin_src yaml :front_matter_extra t
+  image:
+    caption: Background image by
+#+end_src
+
 ** DRAFT org-mode column view で clock した結果を集計
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
@@ -494,9 +510,10 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 サーチコンソール
 ゲーム感想 → ケーム感想になってた
 ** DONE Hugo Academic でダーク・ライト両モードに対応した Chroma によるシンタックスハイライト :emacs:chroma:hugo:academic:
+CLOSED: [2020-01-24 金 08:37]
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-24
+:EXPORT_DATE:        2020-01-23
 :DIR:                images/2020-01-23_hugo-academic-dark-light-code-block
 :EXPORT_HUGO_BUNDLE: 2020-01-23_hugo-academic-dark-light-code-block
 :EXPORT_HUGO_SLUG:   hugo-academic-dark-light-code-block
