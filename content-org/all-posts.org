@@ -188,6 +188,245 @@ org-mode で書けるようになったことだし、少しは記事を書い�
 {{{end_alert}}}
 
 {{{unsplash(Featured image background by, estherrj, Esther Jiao)}}}
+* 技術系                                                            :@技術系:
+
+** DONE MacBook Pro (Retina, 15-inch, Mid 2012) で macOS と Xubuntu 19.10 Eoan Ermine をデュアルブートする :macos:ubuntu:xubuntu:xfce:hidpi:
+CLOSED: [2020-02-13 木 07:01]
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-02-13
+:DIR:                images/2020-02-13_macbookpro10-xubuntu
+:EXPORT_HUGO_BUNDLE: 2020-02-13_macbookpro10-xubuntu
+:EXPORT_HUGO_SLUG:   macbookpro10-xubuntu
+:END:
+
+#+begin_src yaml :front_matter_extra t
+  image:
+    caption: Background image by <a href="https://pixabay.com/users/bharathsiddamjetix37-3810891/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1844603">Bharat Siddam</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1844603">Pixabay</a>
+#+end_src
+
+#+toc: headlines 2
+
+*** 前提
+
+- MacBook Pro の種類は [[https://support.apple.com/kb/SP653?locale=ja_JP][15インチMacBook Pro Retinaディスプレイモデル：2.6GHz]]
+  - OS は [[https://support.apple.com/ja-jp/HT206886][OS X El Capitan]]
+- Xubuntu は [[https://xubuntu.org/news/xubuntu-19-10-released/][Xubuntu 19.10 Eoan Ermine]]
+  - 目玉は =improved HiDPI support=
+
+*** パーティションの分割
+
+まず *[[https://support.apple.com/ja-jp/HT204837][FileVault]] が有効な状態ではパーティション操作が出来ない* ので、システム設定から解除する。
+解除するだけで数時間かかるので気長に待つ。
+
+FileVault の無効化が済んだら、 [[https://support.apple.com/ja-jp/guide/disk-utility/welcome/mac][Mac 用ディスクユーティリティ]] を使って Xubuntu インストール用のパーティションを用意する。
+
+初期状態だとパーティション作成メニューが選択出来ないので、
+[[https://apple.stackexchange.com/questions/304131/no-partition-scheme-option-when-erasing-a-usb-disk-in-macos-high-sierra][No partition scheme option when erasing a USB disk in MacOS High Sierra? - Ask Different]] を参考に
+全てのデバイスを表示し、 *ボリュームではなくディスクを選択* する。
+
+今回は単純に半分を mac に、もう半分を Xubuntu で使うように二等分した。
+パーティション追加時の初期状態のまま。
+
+このパーティション分割も数時間かかるので気長に待つ。
+
+*** 起動用USBドライブの作成
+
+=xubuntu-19.10-desktop-amd64.iso= を [[https://xubuntu.org/download][Xubuntu 公式サイト]] からダウンロードする。
+
+[[https://ubuntu.com/tutorials/tutorial-create-a-usb-stick-on-macos][Create a bootable USB stick on macOS | Ubuntu]] を参考に、 [[https://www.balena.io/etcher/][Etcher]] で上記の OS イメージを焼く。
+
+用意したのは容量 2GB という骨董品レベルの USB スティックドライブだったが、問題なく動いた。
+
+*** Xubuntu インストール
+
+[[https://support.apple.com/ja-jp/HT202796][Startup Manager]] を起動し、上記の起動USBドライブを挿入する。
+
+すると下の画像のように黄色い =EFI Boot= という名前のドライブが出現するので、
+これを選択する。
+
+何故か二つ出現することがあるのだが、どちらを選んでも大丈夫そうだった。
+
+#+ATTR_ORG: :width 500
+[[file:images/2020-02-13_macbookpro10-xubuntu/2020-02-13_04-45-56_startup-manager.jpg]]
+
+*初期状態では Wi-Fi が使えない* はずなので、 [[https://amzn.to/2OPxvW3][Rankie の有線LAN アダプタ]] など
+ドライバのインストール不要な適当な USB イーサネットアダプタを用意しておく必要がある。
+
+インストール時に
+=グラフィックスとWi-Fiハードウェアと追加のメディアフォーマットのサードパーティ製ソフトウェアをインストールする= をチェックしておくと、
+初回起動時から Wi-Fi が使えるようになる模様。
+
+いずれにしても有線環境は必要。
+
+[[https://help.ubuntu.com/community/SwapFaq][SwapFaq - Community Help Wiki]] を参考に以下のように =swap= パーティションだけ用意したが、
+別に要らなかったかもしれない。あとから [[https://wiki.archlinux.org/index.php/Swap#Swap_file][SwapFile]] を追加することも出来るようだし。
+
+=ブートローダをインストールするデバイス= は Xubuntu のルートパーティションを選択した。
+
+#+ATTR_ORG: :width 1000
+[[file:images/2020-02-13_macbookpro10-xubuntu/2020-02-13_04-47-05_IMG_20200211_045148.jpg]]
+
+インストール完了後はデフォルトで Xubuntu が起動するようになる。
+
+変えたくなったら再び Startup Manager を起動すればよい。
+
+*** Xubuntu 初期設定
+
+**** キーテーマをEmacs風(macOS風)にする
+
+#+begin_src sh
+xfconf-query -c xsettings -p /Gtk/KeyThemeName -s Emacs
+#+end_src
+
+**** タッチパッドの設定(ナチュラルスクロール、水平スクロール)
+
+以下のようなシェルスクリプトを作成し、 =セッションと起動= メニューからログイン時に実行するように設定する。
+
+#+CAPTION: =fix_scroll.sh=
+#+begin_src sh
+#!/usr/bin/env bash
+
+synclient VertScrollDelta=-$(synclient | grep VertScrollDelta | awk '{print $3}')
+synclient HorizTwoFingerScroll=1
+synclient HorizScrollDelta=-$(synclient | grep HorizScrollDelta | awk '{print $3}')
+#+end_src
+
+**** キーボードの設定(ファンクションキーの有効化)
+
+#+begin_src sh
+echo 'options hid_apple fnmode=2' | sudo tee -a /etc/modprobe.d/hid_apple.conf
+#+end_src
+
+**** macOS Dock 風のランチャ(Plank)
+
+シンプルな Dock 風のランチャ [[https://launchpad.net/plank][Plank]] をインストールし、 =セッションと起動= メニューからログイン時に実行するように設定する。
+
+#+begin_src sh
+sudo apt install plank
+#+end_src
+
+**** Alfred, Spotlight 風のランチャ(Albert)
+
+[[https://www.alfredapp.com/][Alfred]] や [[https://support.apple.com/ja-jp/HT204014][Spotlight]] のような使い心地のランチャ [[https://albertlauncher.github.io/][Albert]] をインストールし、 =セッションと起動= メニューからログイン時に実行するように設定する。
+
+#+begin_src sh
+curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
+echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_19.10/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
+apt update
+apt install albert
+#+end_src
+
+**** Cica フォントの追加
+
+[[https://github.com/miiton/Cica][miiton/Cica: プログラミング用日本語等幅フォント Cica(シカ)]] をインストールする。
+
+#+begin_src sh
+wget [https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip](https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip)
+unzip Cica_v5.0.1_with_emoji.zip
+sudo mv *.ttf /usr/local/share/fonts/
+sudo fc-cache -fv
+#+end_src
+
+**** asdf のインストールと設定
+
+[[https://asdf-vm.com/#/core-manage-asdf-vm][asdf]] をインストールし、プラグインに必要なパッケージをインストールする。
+
+#+begin_src sh
+sudo apt install \
+  automake autoconf libreadline-dev \
+  libncurses-dev libssl-dev libyaml-dev \
+  libxslt-dev libffi-dev libtool unixodbc-dev \
+  unzip curl \
+  libbz2-dev libreadline-dev libsqlite3-dev -y
+#+end_src
+
+**** Emacs のインストールと設定
+
+[[https://www.gnu.org/software/emacs/][GNU Emacs]] をインスールし、利用するパッケージをインストールする。
+
+#+begin_src sh
+sudo apt install build-essential texinfo aspell ripgrep cmigemo -y
+sudo snap install emacs --classic
+#+end_src
+
+**** ターミナル関連の設定
+
+#+begin_src sh
+bot.gpg.key](https://apt.thoughtbot.com/thoughtbot.gpg.key) | sudo apt-key add -
+echo "deb [https://apt.thoughtbot.com/debian/](https://apt.thoughtbot.com/debian/) stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
+sudo apt-get update
+sudo apt install rcm curl fzf fasd tmux powerline -y
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+#+end_src
+
+fzf は =/usr/share/doc/fzf/README.Debian= にある指示に従う。
+
+**** git の認証ヘルパ設定
+
+#+begin_src sh
+sudo apt-get install libsecret-1-0 libsecret-1-dev
+(cd /usr/share/doc/git/contrib/credential/libsecret/ && sudo make)
+echo -e "\n[credential]\n helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret\n" >> ~/.gitconfig.local
+#+end_src
+
+**** HiDPI への対応
+
+***** 全般
+
+=外観= メニューで =設定= タブの =ウィンドウ拡大縮小= を =2倍= に設定する。
+
+#+ATTR_ORG: :width 500
+[[file:images/2020-02-13_macbookpro10-xubuntu/2020-02-13_06-59-55_%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2020-02-13_06-59-30.png]]
+
+=/etc/environment= に以下を追記する。
+
+#+begin_src sh
+GDK_SCALE=2
+QT_AUTO_SCREEN_SCALE_FACTOR=0
+QT_SCALE_FACTOR=2
+#+end_src
+
+***** Emacs
+
+フォントサイズが小さいままなので、サイズ指定を倍にすることで暫定対応。
+
+ただ、画像やモードラインの高さなどが小さいままなので、対応検討中。
+
+***** GIMP
+
+テーマ設定でフォントを大きくするしかない。
+
+#+begin_src sh
+cp -r /usr/share/gimp/2.0/themes/Dark ~/.config/GIMP/2.10/themes/MyDark
+#+end_src
+
+等で元になるテーマをコピーし、以下のような指定を追記(コメントアウトを解除)する。
+
+#+begin_src conf
+gtk-font-name = "Noto Sans Regular 18"
+font_name = "Noto Sans Regular 18"
+#+end_src
+
+*** 参考にしたリンク集
+
+- [[https://apple.stackexchange.com/questions/304131/no-partition-scheme-option-when-erasing-a-usb-disk-in-macos-high-sierra][No partition scheme option when erasing a USB disk in MacOS High Sierra? - Ask Different]]
+- [[https://blog.b-shock.org/2018/03/03/Xubuntu-MacBook-Air/][MacBook AirをXubuntuとのデュアルブートにした。 | b-shock. Fortress]]
+- [[https://ubuntu.com/tutorials/tutorial-create-a-usb-stick-on-macos][Create a bootable USB stick on macOS | Ubuntu]]
+- [[https://wiki.archlinux.org/index.php/HiDPI][HiDPI - ArchWiki]]
+- [[https://wiki.archlinux.org/index.php/MacBookPro10,x][MacBookPro10,x - ArchWiki]]
+- [[http://esperas.info/index.php?QBlog-20180312-2][macでUSB起動したxubuntuでWiFiを使えた！ - そよ風ブログ - esperas! エスペラントの世界]]
+- [[https://help.ubuntu.com/community/SwapFaq][SwapFaq - Community Help Wiki]]
+- [[https://www.maketecheasier.com/install-dual-boot-ubuntu-mac/][How to Install and Dual-Boot Ubuntu on Mac - Make Tech Easier]]
+- [[https://askubuntu.com/questions/149971/how-do-you-remap-a-key-to-the-caps-lock-key-in-xubuntu][How do you remap a key to the Caps Lock key in Xubuntu? - Ask Ubuntu]]
+- [[https://www.ubuntuupdates.org/ppa/google_chrome][UbuntuUpdates - PPA: Google Chrome]]
+- [[https://askubuntu.com/questions/690512/how-to-enable-natural-scrolling-in-xfce4][xubuntu - How to enable natural scrolling in xfce4? - Ask Ubuntu]]
+- [[https://bugzilla.xfce.org/show_bug.cgi?id=11193][11193 – GTK3 apps don't understand natural scrolling]]
+- [[https://askubuntu.com/questions/440670/how-do-i-enable-horizontal-scroll-on-lubuntu-desktop][touchpad - How do I enable horizontal scroll on lubuntu desktop - Ask Ubuntu]]
+- [[https://docs.xfce.org/apps/terminal/dropdown][apps:terminal:dropdown [Xfce Docs]​]]
+- [[https://qiita.com/yuji38kwmt/items/cffc3507e0cbd0b76454][Xubuntu: `xdg-user-dirs-gtk-update`でユーザーディレクトリが英語名になったけど、なぜか`デスクトップ`ディレクトリが英語にならない - Qiita]]
+- [[https://github.com/albertlauncher/albert/issues/793][Ubuntu 19.04 package · Issue #793 · albertlauncher/albert]]
+- [[https://unix.stackexchange.com/questions/121395/on-an-apple-keyboard-under-linux-how-do-i-make-the-function-keys-work-without-t][On an Apple Keyboard under Linux, how do I make the Function keys work without the fn modifier key? - Unix & Linux Stack Exchange]]
 
 * Emacs                                                              :@Emacs:
 ** DRAFT Emacs の info の使い方いつも忘れる

@@ -1,13 +1,13 @@
-+++
-title = "Lenovo Tab M8 が案外良かった"
-author = ["yewton"]
-date = 2020-01-11
-mylastmod = 2020-01-21T06:07:00+09:00
-slug = "lenovo-tab-m8"
-tags = ["Lenovo Tab M8"]
-categories = ["買ったモノ"]
-draft = false
-+++
+---
+title: "Lenovo Tab M8 が案外良かった"
+author: ["yewton"]
+date: 2020-01-11
+mylastmod: 2020-02-13T03:58:32+09:00
+slug: "lenovo-tab-m8"
+tags: ["Lenovo Tab M8"]
+categories: ["買ったモノ"]
+draft: false
+---
 
 {{< lastmod >}}
 
