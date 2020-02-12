@@ -2,7 +2,7 @@
 title: "MacBook Pro (Retina, 15-inch, Mid 2012) で macOS と Xubuntu 19.10 Eoan Ermine をデュアルブートする"
 author: ["yewton"]
 date: 2020-02-13T07:01:00+09:00
-mylastmod: 2020-02-13T07:01:19+09:00
+mylastmod: 2020-02-13T08:25:28+09:00
 slug: "macbookpro10-xubuntu"
 tags: ["macos", "ubuntu", "xubuntu", "xfce", "hidpi"]
 categories: ["技術系"]
@@ -225,7 +225,7 @@ echo -e "\n[credential]\n helper = /usr/share/doc/git/contrib/credential/libsecr
 
 `外観` メニューで `設定` タブの `ウィンドウ拡大縮小` を `2倍` に設定する。
 
-{{< figure src="images/2020-02-13_macbookpro10-xubuntu/2020-02-13_06-59-55_%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2020-02-13_06-59-30.png" >}}
+{{< figure src="2020-02-13_06-59-55_Screenshot_2020-02-13_06-59-30.png" >}}
 
 `/etc/environment` に以下を追記する。
 
