@@ -2,8 +2,9 @@
 title: "Ivy (Swiper) で雑に migemo を使う"
 author: ["yewton"]
 date: 2020-05-21T04:50:00+09:00
-mylastmod: 2020-05-21T04:50:11+09:00
+mylastmod: 2020-05-21T04:58:11+09:00
 slug: "migemo-ivy"
+tags: ["ivy", "migemo", "swiper", "emacs"]
 categories: ["Emacs"]
 draft: false
 ---

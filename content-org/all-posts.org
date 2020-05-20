@@ -429,7 +429,7 @@ font_name = "Noto Sans Regular 18"
 - [[https://unix.stackexchange.com/questions/121395/on-an-apple-keyboard-under-linux-how-do-i-make-the-function-keys-work-without-t][On an Apple Keyboard under Linux, how do I make the Function keys work without the fn modifier key? - Unix & Linux Stack Exchange]]
 
 * Emacs                                                              :@Emacs:
-** DONE Ivy (Swiper) で雑に migemo を使う
+** DONE Ivy (Swiper) で雑に migemo を使う          :ivy:migemo:swiper:emacs:
 CLOSED: [2020-05-21 木 04:50]
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
