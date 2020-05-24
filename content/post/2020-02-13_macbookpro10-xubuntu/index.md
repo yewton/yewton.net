@@ -165,7 +165,7 @@ apt install albert
 [miiton/Cica: プログラミング用日本語等幅フォント Cica(シカ)](https://github.com/miiton/Cica) をインストールする。
 
 ```sh
-wget [https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip](https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip)
+wget https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip
 unzip Cica_v5.0.1_with_emoji.zip
 sudo mv *.ttf /usr/local/share/fonts/
 sudo fc-cache -fv
@@ -199,8 +199,8 @@ sudo snap install emacs --classic
 ### ターミナル関連の設定 {#ターミナル関連の設定}
 
 ```sh
-bot.gpg.key](https://apt.thoughtbot.com/thoughtbot.gpg.key) | sudo apt-key add -
-echo "deb [https://apt.thoughtbot.com/debian/](https://apt.thoughtbot.com/debian/) stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
+wget -qO - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
+echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
 sudo apt-get update
 sudo apt install rcm curl fzf fasd tmux powerline -y
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
