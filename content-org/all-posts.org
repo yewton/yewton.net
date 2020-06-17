@@ -123,6 +123,309 @@ org-mode で書けるようになったことだし、少しは記事を書い�
 - conf-toml-mode を [[https://ox-hugo.scripter.co/doc/custom-front-matter/#front-matter-extra][Front-matter Extra]] で使う方法
 
 * 買ったモノ                                                    :@買ったモノ:
+** DONE 中古で12,800円の激安ノートPC(Jumper Ezbook 2)にXubuntu 20.04 LTS (Focal Fossa)を入れて幸せになる :xubuntu:jumper:ezbook:
+CLOSED: [2020-06-18 木 06:18]
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2020-06-15
+:DIR:                images/2020-06-15_jumper-ezbook2-xubuntu
+:EXPORT_HUGO_BUNDLE: 2020-06-15_jumper-ezbook2-xubuntu
+:EXPORT_HUGO_SLUG:   jumper-ezbook2-xubuntu
+:END:
+
+#+toc: headlines 2
+
+*** 経緯
+
+先日近所のブックオフでこんなものを見つけた。
+
+#+ATTR_ORG: :width 200
+[[file:images/2020-06-15_jumper-ezbook2-xubuntu/2020-06-15_06-23-44_IMG_20200131_142511.jpg]]
+
+値札によると、 Jumper の Ezbook というものらしい。
+多分 [[https://garumax.com/jumper-ezbook-2-review][こちらで紹介されてる]] もの。
+
+珍しく英語配列キーボードで、 Windows 10 もついて Windows 10 単体より安い。
+ということで購入を決めた。
+
+実際 [[http://www.jp.square-enix.com/ffvii-pc-jp/][FINAL FANTASY VII INTERNATIONAL for PC]] が快適に動かせる程度のスペックはあった。
+
+とはいえ Windows は普段遣いするモノではない(≒ Emacs を快適に使えない)ので、 Xubuntu を入れることにした。
+
+優秀なスペックとは言えないので快適というワケにはいかないが、
+このブログ記事を Emacs で書きながら hugo を立ち上げ、 Gimp で画像編集をしつつ記事をプレビューする、
+くらいのことは普通に出来ている。
+
+ただキーボードの反応が悪いのはいかんともしがたい。
+Ctrl(Caps Lock)とスペースをよく押し損じる。
+真ん中のところを押すように意識すればいいので、慣れてくれば、まあ使えないこともない…。
+
+珍しく 14 インチで、そこそこ軽いというのもあり、
+雑に持ち歩けるエディタ環境という点では一定の価値があるかなー、という感じ。
+
+以下、使えるようにするまでの道程を紹介する。
+
+*** インストール用 SSD の外付け
+
+せっかく Windows 10 が入ってるので、それは活かしておきたい。
+
+ということで、昔使っていたノート PC に入っていた [[https://amzn.to/2AF9cpO][TOSHIBA の SSD]] を、
+[[https://amzn.to/30RRxpF][玄人志向 HDDケース]] で外付けドライブ化して使うことにした。
+
+相当不恰好にはなるが、適当な面ファスナーで背面に貼り付けている。
+
+#+ATTR_ORG: :width 500
+[[file:images/2020-06-15_jumper-ezbook2-xubuntu/2020-06-17_03-58-14_IMG_20200617_035604.jpg]]
+
+USB 3.0 ポートを使っているからか、それほどパフォーマンスの問題は感じない。
+元々、期待するようなスペックではないというのが大きいが…。
+
+ちなみに最初は、 SSD なら何でも良かろうと思って [[https://amzn.to/3fu9DCb][コンパクトなエレコムの外付けSSD]] で試したが、
+こちらは速度が遅くて使いものにならなかった。 Xubuntu のインストールに丸一日かかるレベル。
+
+*** Xubuntu インストール
+
+起動用の USB ドライブの作り方は [[/2020/02/13/macbookpro10-xubuntu/][以前の記事]] と同様。
+
+作成した USB ドライブから起動出来るようにするには BIOS の設定を変える必要がある。
+
+起動直後の以下の画面で =ESC= を押す。
+
+#+ATTR_ORG: :width 400
+[[file:images/2020-06-15_jumper-ezbook2-xubuntu/boot.jpg]]
+
+すると BIOS 設定画面が開くので、 =→= キーで =Boot= タブを開く。
+
+#+ATTR_ORG: :width 400
+[[file:images/2020-06-15_jumper-ezbook2-xubuntu/bios.jpg]]
+
+=Boot Option Priorities= というのが起動順を指定する設定。
+=#1= を選択して USB ドライブを指定する。
+
+後は、普通にインストール。
+パーティション指定は面倒だったので、外付けドライブ全てを =/= にした。
+これでも特に問題は無さそう。
+
+*** Ezbook 用の Tweak
+
+Ezbook は実はトラックパッドに特殊なキー操作が割り当たっていて、意図せず暴発するのでこれを無効にする。
+具体的には上端から下へスワイプすると =Super+Down= が押下されたことになる。
+これがデフォルトでは =Tile window to the bottom= に割り当たっているので、
+=xfwm4-settings= を立ち上げてショートカットを削除する。
+
+ちなみに、右端から左へのスワイプは =Super+A= に、
+下端から上へスワイプは =Super+B= に、
+左端から右へスワイプは =Super+TAB= にそれぞれ割り当てられている。
+これらのキーはデフォルトでは特にアサインされていなさそう。
+
+次に、 [[https://wiki.archlinux.org/index.php/Xmodmap#Turn_CapsLock_into_Control][xmodmap - ArchWiki]] を参考にキーマップを修正する。
+
+Ezbook に限らず、 Caps Lock は Ctrl に割り当てたいので以下を =~/.Xmodmap= に設定する:
+
+#+begin_example
+clear lock
+clear control
+keycode 66 = Control_L
+add control = Control_L Control_R
+#+end_example
+
+即反映するには =xmodmap ~/.Xmodmap= する。
+
+また、 Ezbook では MacBook で =/= があるところに =Delete= があり、
+MacBook で =option= があるところに =\= があり使い辛くてしょうがないので、
+=Delete= を =/= にする設定をする:
+
+#+begin_example
+keycode 119 = backslash bar backslash bar
+#+end_example
+
+最後に、トラックパッドのスクロール方向が直感に反するので、 =xfce4-mouse-settings= を立ち上げ、
+=Reverse scroll direction= にチェックを入れる。
+
+*** Xubuntu の初期設定
+
+まずはターミナルから Emacs キーバインドを有効にする:
+
+#+begin_src sh
+xfconf-query --channel xsettings --property /Gtk/KeyThemeName --set Emacs
+#+end_src
+
+キーボードショートカットでいつでもターミナルを出せるようにしておく:
+
+#+begin_src sh
+xfconf-query --channel xfce4-keyboard-shortcuts --property '/commands/custom/<Primary>minus' --create --type string --set 'xfce4-terminal --drop-down --hide-menubar --hide-toolbar --hide-scrollbar'
+#+end_src
+
+キーリピート設定をする:
+
+#+begin_src sh
+xfconf-query --channel keyboards --property '/Default/KeyRepeat/Delay' --create --type int --set 350
+xfconf-query --channel keyboards --property '/Default/KeyRepeat/Rate' --create --type int --set 20
+#+end_src
+
+[[http://manpages.ubuntu.com/manpages/trusty/man1/numlockx.1.html][numlockx]] の設定をする:
+
+#+begin_src sh
+  echo NUMLOCK=off | sudo tee /etc/default/numlockx
+#+end_src
+
+[[https://docs.brew.sh/Homebrew-on-Linux][Linuxbrew]] を入れる:
+
+#+begin_src sh
+  sudo add-apt-repository ppa:git-core/ppa -y
+  sudo apt update
+  sudo apt install curl git -y
+
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  sudo apt-get install build-essential -y
+  echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ${HOME}/.profile
+  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+  brew install gcc
+#+end_src
+
+zsh を入れる:
+
+#+begin_src sh
+brew install zsh
+#+end_src
+
+Git の認証ヘルパー等の設定をする:
+
+#+begin_src sh
+  sudo apt-get install libsecret-1-0 libsecret-1-dev -y
+  (cd /usr/share/doc/git/contrib/credential/libsecret/ && sudo make)
+  git config --file ~/.gitconfig.local user.name yewton
+  git config --file ~/.gitconfig.local user.email yewton@gmail.com
+  git config --file ~/.gitconfig.local credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+#+end_src
+
+ターミナル環境の必需品([[https://github.com/thoughtbot/rcm][rcm]] , [[https://github.com/junegunn/fzf][fzf]] , [[https://github.com/clvv/fasd][fasd]] , [[https://github.com/tmux/tmux/wiki][tmux]] , [[https://github.com/powerline/powerline][powerline]] , [[https://github.com/astrand/xclip][xclip]]) を入れる:
+
+#+begin_src sh
+  wget -qO - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
+  echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
+  sudo apt-get update
+
+  sudo apt install rcm fzf fasd tmux powerline xclip -y
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+
+  echo 'source /usr/share/doc/fzf/examples/key-bindings.zsh' >> ${HOME}/.fzf.zsh
+  echo 'source /usr/share/doc/fzf/examples/completion.zsh' >> ${HOME}/.fzf.zshls
+#+end_src
+
+[[https://github.com/miiton/Cica][プログラミング用日本語等幅フォント Cica(シカ)]] をインストール:
+
+#+begin_src sh
+  wget https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip
+  unzip Cica_v5.0.1_with_emoji.zip
+  sudo mv *.ttf /usr/local/share/fonts/
+  sudo fc-cache -fv
+#+end_src
+
+[[https://github.com/yewton/.dotfiles][.dotfiles]] を入れ、シェルを変更し、一度ログアウトする:
+
+#+begin_src sh
+  git clone https://github.com/yewton/.dotfiles.git
+  RCRC=~/.dotfiles/rcrc rcup
+  rcup -t ubuntu
+
+  echo $(which zsh) | sudo tee -a /etc/shells
+  chsh -s $(which zsh)
+#+end_src
+
+[[http://www.orgzly.com/][Orgzly]] のノートを [[https://syncthing.net/][Syncthing]] で同期しているので、 Syncthing をインストールする。
+=syncthing-gtk= を入れると自動起動の設定が楽:
+
+#+begin_src sh
+  curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+  echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+  sudo apt update
+  sudo apt install syncthing syncthing-gtk -y
+#+end_src
+
+[[https://app-updates.agilebits.com/product_history/CLI][1Password CLI]] をインストール:
+
+#+begin_src sh
+  wget https://cache.agilebits.com/dist/1P/op/pkg/v1.1.0/op_linux_amd64_v1.1.0.zip
+  unzip op_linux_amd64_v1.0.0.zip
+  mv op ~/bin/
+  eval $(op signin my)
+#+end_src
+
+1Password CLI の JSON を扱うのに便利な [[https://github.com/Blacksmoke16/oq][Blacksmoke16/oq]] を入れる:
+
+#+begin_src sh
+  snap oq
+#+end_src
+
+Firefox アカウントを取得するにはこんな感じ:
+
+#+begin_src sh
+  op get item 'Firefox Account' | oq -r '.details.fields[]|select(.name=="username")|.value' | tr -d '\n' | pbcopy
+  op get item 'Firefox Account' | oq -r '.details.fields[]|select(.name=="password")|.value' | tr -d '\n' | pbcopy
+  op get totp 'Firefox Account' | pbcopy
+#+end_src
+
+[[https://www.gnu.org/software/emacs/][GNU Emacs]] と関連パッケージをインストール:
+
+#+begin_src sh
+  sudo apt install build-essential texinfo aspell ripgrep cmigemo -y
+  sudo add-apt-repository ppa:kelleyk/emacs -y
+  sudo apt update
+  sudo apt install emacs26 -y
+#+end_src
+
+[[https://github.com/yewton/.emacs.d][.emacs.d]] や個人設定をインストールする:
+
+#+begin_src sh
+  git clone https://github.com/yewton/.emacs.d.git
+  echo -e "(setq custom-file \"~/.emacs.local/init.el\")\n(load custom-file)" > ~/.emacs.d/custom.el
+#+end_src
+
+Emacs 外での日本語入力のため [[https://github.com/google/mozc][Mozc]] をインストールして設定:
+
+#+begin_src sh
+  sudo apt install -y fcitx-mozc
+  im-config -n fcitx
+
+  sudo reboot # 一度再起動する
+
+  fcitx-config-gtk3 # 設定 GUI が立ち上がる
+#+end_src
+
+[[https://asdf-vm.com/#/][asdf vm]] 本体とプラグインをインストール:
+
+#+begin_src sh
+  brew install asdf
+  asdf plugin add ruby
+  asdf plugin add python
+  asdf plugin add nodejs
+  asdf plugin add golang
+  asdf plugin add hugo https://github.com/beardix/asdf-hugo
+  bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+  asdf install
+#+end_src
+
+素敵なアイコンテーマ [[https://github.com/numixproject/numix-icon-theme-circle][numix-icon-theme-circle]] をインストール:
+
+#+begin_src sh
+sudo apt install numix-icon-theme-circle
+#+end_src
+
+アイコンテーマ以外も含めて、全部 [[https://numixproject.github.io/][Numix]] にするとよろしい:
+
+#+begin_src sh
+  xfce4-appearance-settings
+  xfwm4-settings
+  sudo lightdm-gtk-greeter-settings
+#+end_src
+
+[[https://github.com/dylanaraps/neofetch][dylanaraps/neofetch]] をインストール:
+
+#+begin_src sh
+  sudo apt install neofetch
+#+end_src
+
 ** DONE Lenovo Tab M8 が案外良かった                       :Lenovo__Tab__M8:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
