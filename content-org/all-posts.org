@@ -256,6 +256,12 @@ xfconf-query --channel xsettings --property /Gtk/KeyThemeName --set Emacs
 xfconf-query --channel xfce4-keyboard-shortcuts --property '/commands/custom/<Primary>minus' --create --type string --set 'xfce4-terminal --drop-down --hide-menubar --hide-toolbar --hide-scrollbar'
 #+end_src
 
+簡易 Spotlight 的な:
+
+#+begin_src sh
+xfconf-query --channel xfce4-keyboard-shortcuts --property '/commands/custom/<Primary><Alt>space' --create --type string --set 'xfce4-appfinder -c'
+#+end_src
+
 キーリピート設定をする:
 
 #+begin_src sh
@@ -299,18 +305,18 @@ Git の認証ヘルパー等の設定をする:
   git config --file ~/.gitconfig.local credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 #+end_src
 
-ターミナル環境の必需品([[https://github.com/thoughtbot/rcm][rcm]] , [[https://github.com/junegunn/fzf][fzf]] , [[https://github.com/clvv/fasd][fasd]] , [[https://github.com/tmux/tmux/wiki][tmux]] , [[https://github.com/powerline/powerline][powerline]] , [[https://github.com/astrand/xclip][xclip]]) を入れる:
+ターミナル環境の必需品([[https://github.com/zplug/zplug][zplug]], [[https://github.com/thoughtbot/rcm][rcm]] , [[https://github.com/junegunn/fzf][fzf]] , [[https://github.com/clvv/fasd][fasd]] , [[https://github.com/tmux/tmux/wiki][tmux]] , [[https://github.com/powerline/powerline][powerline]] , [[https://github.com/astrand/xclip][xclip]], [[https://github.com/direnv/direnv][direnv]]) を入れる:
 
 #+begin_src sh
   wget -qO - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
   echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
   sudo apt-get update
 
-  sudo apt install rcm fzf fasd tmux powerline xclip -y
+  sudo apt install rcm fzf fasd tmux powerline xclip direnv -y
   curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
   echo 'source /usr/share/doc/fzf/examples/key-bindings.zsh' >> ${HOME}/.fzf.zsh
-  echo 'source /usr/share/doc/fzf/examples/completion.zsh' >> ${HOME}/.fzf.zshls
+  echo 'source /usr/share/doc/fzf/examples/completion.zsh' >> ${HOME}/.fzf.zsh
 #+end_src
 
 [[https://github.com/miiton/Cica][プログラミング用日本語等幅フォント Cica(シカ)]] をインストール:
@@ -347,7 +353,7 @@ Git の認証ヘルパー等の設定をする:
 
 #+begin_src sh
   wget https://cache.agilebits.com/dist/1P/op/pkg/v1.1.0/op_linux_amd64_v1.1.0.zip
-  unzip op_linux_amd64_v1.0.0.zip
+  unzip op_linux_amd64_v1.1.0.zip
   mv op ~/bin/
   eval $(op signin my)
 #+end_src
@@ -369,7 +375,7 @@ Firefox アカウントを取得するにはこんな感じ:
 [[https://www.gnu.org/software/emacs/][GNU Emacs]] と関連パッケージをインストール:
 
 #+begin_src sh
-  sudo apt install build-essential texinfo aspell ripgrep cmigemo -y
+  sudo apt install build-essential texinfo aspell ripgrep cmigemo sqlite3 -y
   sudo add-apt-repository ppa:kelleyk/emacs -y
   sudo apt update
   sudo apt install emacs26 -y
@@ -423,7 +429,7 @@ sudo apt install numix-icon-theme-circle
 [[https://github.com/dylanaraps/neofetch][dylanaraps/neofetch]] をインストール:
 
 #+begin_src sh
-  sudo apt install neofetch
+  sudo apt install neofetch -y
 #+end_src
 
 ** DONE Lenovo Tab M8 が案外良かった                       :Lenovo__Tab__M8:
