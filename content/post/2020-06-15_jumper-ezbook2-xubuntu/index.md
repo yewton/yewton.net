@@ -2,7 +2,7 @@
 title: "中古で12,800円の激安ノートPC(Jumper Ezbook 2)にXubuntu 20.04 LTS (Focal Fossa)を入れて幸せになる"
 author: ["yewton"]
 date: 2020-06-18T06:18:00+09:00
-mylastmod: 2020-06-18T06:18:38+09:00
+mylastmod: 2020-07-09T03:13:22+09:00
 slug: "jumper-ezbook2-xubuntu"
 tags: ["xubuntu", "jumper", "ezbook"]
 categories: ["買ったモノ"]
@@ -145,6 +145,12 @@ xfconf-query --channel xsettings --property /Gtk/KeyThemeName --set Emacs
 xfconf-query --channel xfce4-keyboard-shortcuts --property '/commands/custom/<Primary>minus' --create --type string --set 'xfce4-terminal --drop-down --hide-menubar --hide-toolbar --hide-scrollbar'
 ```
 
+簡易 Spotlight 的な:
+
+```sh
+xfconf-query --channel xfce4-keyboard-shortcuts --property '/commands/custom/<Primary><Alt>space' --create --type string --set 'xfce4-appfinder -c'
+```
+
 キーリピート設定をする:
 
 ```sh
@@ -188,18 +194,18 @@ git config --file ~/.gitconfig.local user.email yewton@gmail.com
 git config --file ~/.gitconfig.local credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 ```
 
-ターミナル環境の必需品([rcm](https://github.com/thoughtbot/rcm) , [fzf](https://github.com/junegunn/fzf) , [fasd](https://github.com/clvv/fasd) , [tmux](https://github.com/tmux/tmux/wiki) , [powerline](https://github.com/powerline/powerline) , [xclip](https://github.com/astrand/xclip)) を入れる:
+ターミナル環境の必需品([zplug](https://github.com/zplug/zplug), [rcm](https://github.com/thoughtbot/rcm) , [fzf](https://github.com/junegunn/fzf) , [fasd](https://github.com/clvv/fasd) , [tmux](https://github.com/tmux/tmux/wiki) , [powerline](https://github.com/powerline/powerline) , [xclip](https://github.com/astrand/xclip), [direnv](https://github.com/direnv/direnv)) を入れる:
 
 ```sh
 wget -qO - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
 echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
 sudo apt-get update
 
-sudo apt install rcm fzf fasd tmux powerline xclip -y
+sudo apt install rcm fzf fasd tmux powerline xclip direnv -y
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 echo 'source /usr/share/doc/fzf/examples/key-bindings.zsh' >> ${HOME}/.fzf.zsh
-echo 'source /usr/share/doc/fzf/examples/completion.zsh' >> ${HOME}/.fzf.zshls
+echo 'source /usr/share/doc/fzf/examples/completion.zsh' >> ${HOME}/.fzf.zsh
 ```
 
 [プログラミング用日本語等幅フォント Cica(シカ)](https://github.com/miiton/Cica) をインストール:
@@ -236,7 +242,7 @@ sudo apt install syncthing syncthing-gtk -y
 
 ```sh
 wget https://cache.agilebits.com/dist/1P/op/pkg/v1.1.0/op_linux_amd64_v1.1.0.zip
-unzip op_linux_amd64_v1.0.0.zip
+unzip op_linux_amd64_v1.1.0.zip
 mv op ~/bin/
 eval $(op signin my)
 ```
@@ -258,7 +264,7 @@ op get totp 'Firefox Account' | pbcopy
 [GNU Emacs](https://www.gnu.org/software/emacs/) と関連パッケージをインストール:
 
 ```sh
-sudo apt install build-essential texinfo aspell ripgrep cmigemo -y
+sudo apt install build-essential texinfo aspell ripgrep cmigemo sqlite3 -y
 sudo add-apt-repository ppa:kelleyk/emacs -y
 sudo apt update
 sudo apt install emacs26 -y
@@ -312,5 +318,5 @@ sudo lightdm-gtk-greeter-settings
 [dylanaraps/neofetch](https://github.com/dylanaraps/neofetch) をインストール:
 
 ```sh
-sudo apt install neofetch
+sudo apt install neofetch -y
 ```
