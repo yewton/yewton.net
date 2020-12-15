@@ -1,5 +1,5 @@
 +++
-lastmod = 2020-01-13T06:57:03+09:00
+lastmod = 2020-12-16T02:19:01+09:00
 weight = 3007
 # Accomplishments widget.
 widget = "blank"  # See https://sourcethemes.com/academic/docs/page-builder/
@@ -62,6 +62,4 @@ Open API を活用する好事例だった。
 シニア的な立場になってきたころ、全員の「よいコード」の認識を揃えるべく、 [CODE COMPLETE](https://amzn.to/35lI48z) を題材にした勉強会を行なった。
 そのときの資料は今でも指針として利用されている。
 
-持ちネタとして活用出来ている。
-
-_(今は社内限な感じになってしまっているので、無難な内容にしてそのうち一般公開したい)_
+2020 年に、 〈完全なプログラミング〉を目指す会 2020 と題し、過去資料をリファインした上で公開した( <https://yewton.github.io/kanpro/> )。

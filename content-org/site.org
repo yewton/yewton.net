@@ -336,18 +336,18 @@ title = "オープン職務経歴書"
     description = "※2020年1月時点"
 #+end_src
 
-| 名称        | 業務経験 | レベル感                                                                          |
-|-------------+----------+-----------------------------------------------------------------------------------|
-| Ruby        | 5年      | RoR アプリを一人で開発出来るし、指導もできる                                  |
-| JavaScript  | 2年      | React で基本的な実装や Lambda で Node.js の適当な機能は作れる                     |
-| Objective-C | 2年      | 一人で開発は進められるけれどそんなに自信は無い                                    |
-| Swift       | 2年      | 同上                                                                              |
-| Kotlin      | 2年      | Android に関しては同上。サーバーサイドに関しては Spring Boot でそこそこ出来るはず |
-| Java        | 2年      | Lambda や Stream を使ってテストも書きつつ一人で Spring Boot 開発出来る            |
-| Scala       | 2年      | Play! で基本的には一人で開発出来る。Scalazとかは怪しい                            |
-| Python      | 2年      | Fabric 等で薄く触ってる程度                                                       |
-| PHP         | 5年      | PHP 6 の時代まで。もう忘れた                                                      |
-| Emacs Lisp  | 10年     | https://github.com/yewton/.emacs.d を見てください                                 |
+| 名称        | 業務経験 | レベル感                                                                                                           |
+|-------------+----------+--------------------------------------------------------------------------------------------------------------------|
+| Ruby        | 5年      | RoR アプリを一人で開発出来るし、指導もできる                                                                   |
+| JavaScript  | 2年      | React で基本的な実装や Lambda で Node.js の適当な機能は作れる                                                      |
+| Objective-C | 3年      | 実践的な実装スキルはあるが、プラットフォーム自体の知識はそこそこで、モダンなライブラリを豊富に使った開発経験も無い |
+| Swift       | 3年      | 同上                                                                                                               |
+| Kotlin      | 2年      | Android に関しては同上。サーバーサイドに関しては Spring Boot でそこそこ出来るはず                                  |
+| Java        | 2年      | Lambda や Stream を使ってテストも書きつつ一人で Spring Boot 開発出来る                                             |
+| Scala       | 2年      | Play! で基本的には一人で開発出来る。Scalazとかは怪しい                                                             |
+| Python      | 2年      | Fabric 等で薄く触ってる程度                                                                                        |
+| PHP         | 5年      | PHP 6 の時代まで。もう忘れた                                                                                       |
+| Emacs Lisp  | 10年     | https://github.com/yewton/.emacs.d を見てください                                                                  |
 
 *** middleware skills
 :PROPERTIES:
@@ -418,119 +418,133 @@ title = "オープン職務経歴書"
 :END:
 
 #+begin_src toml :front_matter_extra t
-  # Experience widget.
-  widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
-  headless = true  # This file represents a page section.
-  active = true  # Activate this widget? true/false
+# Experience widget.
+widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
 
-  title = "職務要約"
-  subtitle = ""
+title = "職務要約"
+subtitle = ""
 
-  # Date format for experience
-  #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
-  date_format = "2006年1月"
+# Date format for experience
+#   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
+date_format = "2006年1月"
 
-  # Experiences.
-  #   Add/remove as many `[[experience]]` blocks below as you like.
-  #   Required fields are `title`, `company`, and `date_start`.
-  #   Leave `date_end` empty if it's your current employer.
-  #   Begin/end multi-line descriptions with 3 quotes `"""`.
+# Experiences.
+#   Add/remove as many `[[experience]]` blocks below as you like.
+#   Required fields are `title`, `company`, and `date_start`.
+#   Leave `date_end` empty if it's your current employer.
+#   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 
-  [[experience]]
-    title = "入社"
-    company = "株式会社D"
-    date_start = "2010-04-01"
-    date_end = "2010-07-01"
-    description = "PHPによるシステム開発研修を受講"
+[[experience]]
+  title = "入社"
+  company = "株式会社D"
+  date_start = "2010-04-01"
+  date_end = "2010-07-01"
+  description = "PHPによるシステム開発研修を受講"
 
-  [[experience]]
-    title = "テレビ実況システムバックエンド開発"
-    company = "株式会社D"
-    date_start = "2010-07-01"
-    date_end = "2010-08-01"
-    description = "PHP (独自フレームワーク) 製。メンバーとして参加"
+[[experience]]
+  title = "テレビ実況システムバックエンド開発"
+  company = "株式会社D"
+  date_start = "2010-07-01"
+  date_end = "2010-08-01"
+  description = "PHP (独自フレームワーク) 製。メンバーとして参加"
 
-  [[experience]]
-    title = "ニュースサイト開発"
-    company = "株式会社D"
-    date_start = "2010-08-01"
-    date_end = "2011-11-01"
-    description = "PHP (独自フレームワーク) 製。メンバーとして参加"
+[[experience]]
+  title = "ニュースサイト開発"
+  company = "株式会社D"
+  date_start = "2010-08-01"
+  date_end = "2011-11-01"
+  description = "PHP (独自フレームワーク) 製。メンバーとして参加"
 
-  [[experience]]
-    title = "動画投稿・変換システム開発"
-    company = "株式会社D"
-    date_start = "2011-11-01"
-    date_end = "2013-12-01"
-    description = "PHP (ノンフレームワーク) 製。メンバーとして参加し、2012年5月以降は開発リーダーを務める"
+[[experience]]
+  title = "動画投稿・変換システム開発"
+  company = "株式会社D"
+  date_start = "2011-11-01"
+  date_end = "2013-12-01"
+  description = "PHP (ノンフレームワーク) 製。メンバーとして参加し、2012年5月以降は開発リーダーを務める"
 
-  [[experience]]
-    title = "PUSH 通知システム開発"
-    company = "株式会社D"
-    date_start = "2013-12-01"
-    date_end = "2015-09-01"
-    description = "Play! Scala 製。プロジェクトリーダーとして参加"
+[[experience]]
+  title = "PUSH 通知システム開発"
+  company = "株式会社D"
+  date_start = "2013-12-01"
+  date_end = "2015-09-01"
+  description = "Play! Scala 製。プロジェクトリーダーとして参加"
 
-  [[experience]]
-    title = "システム間連携システム開発"
-    company = "株式会社D"
-    date_start = "2014-11-01"
-    date_end = "2015-09-01"
-    description = "Play! Scala 製。プロジェクトリーダーとして参加"
+[[experience]]
+  title = "システム間連携システム開発"
+  company = "株式会社D"
+  date_start = "2014-11-01"
+  date_end = "2015-09-01"
+  description = "Play! Scala 製。プロジェクトリーダーとして参加"
 
-  [[experience]]
-    title = "PUSH 通知・システム間連携システム課"
-    company = "株式会社D"
-    date_start = "2015-02-01"
-    date_end = "2015-09-01"
-    description = "課長に就任。メンバーのマネジメントを行なう"
+[[experience]]
+  title = "PUSH 通知・システム間連携システム課"
+  company = "株式会社D"
+  date_start = "2015-02-01"
+  date_end = "2015-09-01"
+  description = "課長に就任。メンバーのマネジメントを行なう"
 
-  [[experience]]
-    title = "レシピ閲覧サイトバックエンド開発"
-    company = "株式会社R"
-    date_start = "2015-09-01"
-    date_end = ""
-    description = "Ruby on Rails 製。開発メンバーとして参加。2017年4月以降はiOS、Android アプリのエンハンス開発も担当"
+[[experience]]
+  title = "レシピ閲覧サイトバックエンド開発"
+  company = "株式会社R"
+  date_start = "2015-09-01"
+  date_end = "2018-01-01"
+  description = "Ruby on Rails 製。開発メンバーとして参加。2017年4月以降はiOS、Android アプリのエンハンス開発も担当"
 
-  [[experience]]
-    title = "学生向け学習時間管理支援システムバックエンド開発"
-    company = "株式会社R"
-    date_start = "2018-01-01"
-    date_end = "2018-04-01"
-    description = "Ruby on Rails 製。開発メンバーとして参加。"
+[[experience]]
+  title = "学生向け学習時間管理支援システムバックエンド開発"
+  company = "株式会社R"
+  date_start = "2018-01-01"
+  date_end = "2018-04-01"
+  description = "Ruby on Rails 製。開発メンバーとして参加。"
 
-  [[experience]]
-    title = "マッチングサービス開発"
-    company = "株式会社R"
-    date_start = "2018-04-01"
-    date_end = "2019-04-01"
-    description = "Spring Boot 製。スクラムマスター。2018年9月以降はテックリードとして技術課題の解消に注力"
+[[experience]]
+  title = "マッチングサービス開発"
+  company = "株式会社R"
+  date_start = "2018-04-01"
+  date_end = "2019-04-01"
+  description = "Spring Boot 製。スクラムマスター。2018年9月以降はテックリードとして技術課題の解消に注力"
 
-  [[experience]]
-    title = "挙式支援サービスiOS開発"
-    company = "株式会社R"
-    date_start = "2019-04-01"
-    date_end = ""
-    description = "開発メンバーとして参加"
+[[experience]]
+  title = "挙式支援サービスiOS開発"
+  company = "株式会社R"
+  date_start = "2019-04-01"
+  date_end = "2020-04-01"
+  description = "開発メンバーとして参加"
 
-  [[experience]]
-    title = "個人事業主として開業"
-    company = "YAGNI ワーク"
-    date_start = "2017-10-01"
-    date_end = ""
-    description = """
-  知り合いから声を掛けられて副業を開始。
-  その頃ちょうど `.work` ドメインが安売りされていて [yagni.work](https://yagni.work) というドメインを安く取れたので、
-  屋号を YAGNI ワークとした。
-  """
+[[experience]]
+  title = "挙式支援サービスモバイルアプリ開発"
+  company = "株式会社R"
+  date_start = "2020-04-01"
+  date_end = "2020-09-01"
+  description = "Nexus チーム(2チーム)のスクラムマスターに就任。プロセス整備とメンバー装着を行う。"
 
-  [[experience]]
-    title = "BtoB動画マニュアル管理ツール開発"
-    company = "株式会社S"
-    date_start = "2017-10-01"
-    date_end = ""
-    description = "Ruby on Rails 製。個人事業主として開発全般の業務委託を請け負う"
+[[experience]]
+  title = "挙式支援サービスモバイルアプリ開発"
+  company = "株式会社R"
+  date_start = "2020-09-01"
+  date_end = ""
+  description = "技術チーフに就任。プロダクト全体の技術的な意思決定に責任を持つと共に、横断での開発プロセス改善を進める。"
+
+[[experience]]
+  title = "個人事業主として開業"
+  company = "YAGNI ワーク"
+  date_start = "2017-10-01"
+  date_end = ""
+  description = """
+知り合いから声を掛けられて副業を開始。
+その頃ちょうど `.work` ドメインが安売りされていて [yagni.work](https://yagni.work) というドメインを安く取れたので、
+屋号を YAGNI ワークとした。
+"""
+
+[[experience]]
+  title = "BtoB動画マニュアル管理ツール開発"
+  company = "株式会社S"
+  date_start = "2017-10-01"
+  date_end = ""
+  description = "Ruby on Rails 製。個人事業主として開発全般の業務委託を請け負う"
 #+end_src
 
 *** accomplishments
@@ -631,6 +645,4 @@ Open API を活用する好事例だった。
 シニア的な立場になってきたころ、全員の「よいコード」の認識を揃えるべく、 [[https://amzn.to/35lI48z][CODE COMPLETE]] を題材にした勉強会を行なった。
 そのときの資料は今でも指針として利用されている。
 
-持ちネタとして活用出来ている。
-
-/(今は社内限な感じになってしまっているので、無難な内容にしてそのうち一般公開したい)/
+2020 年に、 〈完全なプログラミング〉を目指す会 2020 と題し、過去資料をリファインした上で公開した( https://yewton.github.io/kanpro/ )。

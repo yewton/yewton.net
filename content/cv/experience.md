@@ -1,5 +1,5 @@
 +++
-lastmod = 2020-01-13T06:57:02+09:00
+lastmod = 2020-12-16T02:01:37+09:00
 weight = 3005
 # Experience widget.
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
@@ -73,7 +73,7 @@ date_format = "2006年1月"
   title = "レシピ閲覧サイトバックエンド開発"
   company = "株式会社R"
   date_start = "2015-09-01"
-  date_end = ""
+  date_end = "2018-01-01"
   description = "Ruby on Rails 製。開発メンバーとして参加。2017年4月以降はiOS、Android アプリのエンハンス開発も担当"
 
 [[experience]]
@@ -94,8 +94,22 @@ date_format = "2006年1月"
   title = "挙式支援サービスiOS開発"
   company = "株式会社R"
   date_start = "2019-04-01"
-  date_end = ""
+  date_end = "2020-04-01"
   description = "開発メンバーとして参加"
+
+[[experience]]
+  title = "挙式支援サービスモバイルアプリ開発"
+  company = "株式会社R"
+  date_start = "2020-04-01"
+  date_end = "2020-09-01"
+  description = "Nexus チーム(2チーム)のスクラムマスターに就任。プロセス整備とメンバー装着を行う。"
+
+[[experience]]
+  title = "挙式支援サービスモバイルアプリ開発"
+  company = "株式会社R"
+  date_start = "2020-09-01"
+  date_end = ""
+  description = "技術チーフに就任。プロダクト全体の技術的な意思決定に責任を持つと共に、横断での開発プロセス改善を進める。"
 
 [[experience]]
   title = "個人事業主として開業"
