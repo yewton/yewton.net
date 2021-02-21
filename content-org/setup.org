@@ -1,5 +1,5 @@
 #+hugo_base_dir: ../
 #+hugo_auto_set_lastmod: t
-#+startup: indent logdone
+#+startup: noindent logdone
 #+author: yewton
 #+options: H:5 ^:nil

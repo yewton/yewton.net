@@ -123,6 +123,139 @@ org-mode で書けるようになったことだし、少しは記事を書い�
 - conf-toml-mode を [[https://ox-hugo.scripter.co/doc/custom-front-matter/#front-matter-extra][Front-matter Extra]] で使う方法
 
 * 買ったモノ                                                    :@買ったモノ:
+** DONE Chromebook Acer Spin 311 に Emacs を入れて幸せになる
+CLOSED: [2021-02-21 Sun 23:24]
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2021-02-21
+:DIR:                images/2021-02-21_acer-spin-311-emacs
+:EXPORT_HUGO_BUNDLE: 2021-02-21_acer-spin-311-emacs
+:EXPORT_HUGO_SLUG:   acer-spin-311-emacs
+:EXPORT_HUGO_TAGS:   chromebook emacs acer
+:END:
+
+#+toc: headlines 2
+
+[[https://amzn.to/2ZBcsLU][Chromebook Acer Spin 311]] を半ば衝動買いした。
+
+当初の目的としては、電子書籍を [[https://play.google.com/store/apps/details?id=com.flyersoft.moonreaderp][Moon+ Reader Pro]] で読みつつ、
+[[https://play.google.com/store/apps/details?id=com.orgzly][Orgzly]] でメモを取り、それを [[https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid][Syncthing]] で共有する、というような
+Android でのユースケースを、キーボード付きのデバイスでやりたいな、というくらいだった。
+
+実際購入してみたところ、 Linux (Debian) をシュッと立ち上げて使えるということだったので、
+それならばと Emacs を使えるようにしよう、と相成った。
+
+この Linux は本当に Debian なので、実は Chromebook 特有の何かというのはあまりなかったのだけれど、
+備忘録として作業内容を記録しておく。
+
+*** Emacs のインストール
+
+Linux コンテナを立ち上げたらまずは更新をかける:
+
+#+begin_src sh
+sudo apt update
+sudo apt upgrade
+#+end_src
+
+日本語ロケールが設定されていないので、設定しておく:
+
+#+begin_src sh
+sudo dpkg-reconfigure locales
+#+end_src
+
+Emacs や開発系のツールは新し目のを使いたいので、 nix で導入する。
+
+こういう場合に snap や flatpak 等で入れると、
+Emacs 内からリンクを開く際に既存のブラウザインスタンスが使われなかったり等の
+変な挙動をするので、 nix を使うようにしている
+(参考: [[https://www.reddit.com/r/emacs/comments/dj3abj/opening_urls_from_emacs_in_firefox/f4lctw7?utm_source=share&utm_medium=web2x&context=3][Opening urls from emacs in firefox : r/emacs]])。
+
+そして、現状の ChromeOS 特有の問題として、
+nix のインストールに失敗する、という物がある(参考: [[https://github.com/NixOS/nix/issues/4107][can't install nix-2.3.7 on ChromeOS linux container: operation not permitted mounting /proc · Issue #4107 · NixOS/nix]])。
+ここに記載の通りワークアラウンドとして以下を実行する:
+
+#+begin_src sh
+sudo umount /proc/{cpuinfo,diskstats,meminfo,stat,uptime}
+#+end_src
+
+これで nix のインストールが出来るようになる:
+
+#+begin_src sh
+curl -L https://nixos.org/nix/install | sh
+#+end_src
+
+Emacs のインストールは以下の通り:
+
+#+begin_src sh
+nix-env -i emacs-27.1
+#+end_src
+
+インストールしたアプリを ChromeOS 側から見えるように、
+以下のように設定する(参考: [[https://nixos.wiki/wiki/Installing_Nix_on_Crostini][Installing Nix on Crostini - NixOS Wiki]]):
+
+#+begin_src sh
+mkdir -p ~/.config/systemd/user/cros-garcon.service.d/
+cat > ~/.config/systemd/user/cros-garcon.service.d/override.conf <<EOF
+[Service]
+Environment="PATH=%h/.nix-profile/bin:/usr/local/sbin:/usr/local/bin:/usr/local/games:/usr/sbin:/usr/bin:/usr/games:/sbin:/bin"
+Environment="XDG_DATA_DIRS=%h/.nix-profile/share:%h/.local/share:/usr/local/share:/usr/share"
+EOF
+#+end_src
+
+これで一度再起動すれば、もう普通に使えるようになってしまう。
+
+*** (おまけ)git の credential helper を設定する
+
+GitHub のプライベートリポジトリを利用する場合等には、
+パーソナルアクセストークンによる認証が必要になる。
+
+Chromebook でも =gnome-keyring= を入れれば libsecret による認証ヘルパーを利用出来る。
+
+#+begin_src sh
+sudo apt install gnome-keyring -y
+(cd ~/.nix-profile/share/git/contrib/credential/libsecret/ && sudo make)
+git config --file ~/.gitconfig.local credential.helper ~/.nix-profile/share/git/contrib/credential/libsecret/git-credential-libsecret
+#+end_src
+
+これで、認証が必要なリポジトリをクローンしようとすると、
+以下のようなダイアログが出てくるようになる:
+
+#+ATTR_ORG: :width 500
+[[file:images/2021-02-21_acer-spin-311-emacs/2021-02-21_22-11-22_screenshot.png]]
+
+*** (おまけ)スクリーンショットの利用
+
+上記のようなスクリーンショットは Chromebook 側で撮影したあとに
+クリップボードに送信することで、 Linux 側からも =xclip= 等で普通に使えるようになる。
+
+*** (おまけ)arm 版 hugo-extended を作る
+
+せっかく Emacs が使えるようになったので、
+ブログも Chromebook で書いてしまおうと思い、
+Hugo をインストールしようとした所で引っ掛かってしまった。
+
+現在利用しているテーマ( [[https://wowchemy.com/][Wowchemy]] )では、 Hugo の Extended 版が必要なのだが、
+Spin 311 の CPU は arm であり、また Hugo 公式では arm 用の Extended バイナリを配布していない
+(参考: [[https://discourse.gohugo.io/t/extended-version-for-arm/23762][Extended Version for ARM - support - HUGO]])。
+
+そこで、 [[https://apoorv.blog/posts/install-update-hugo-extended-for-arm.html][Install Update Hugo Extended for ARM in Ubuntu | Apoorv Blog]] を参考にしつつ
+(と言っても、 arm 版 go を入れて =go build --tags extended= しましょう、というだけだが…)、
+ソースからビルドすることで対応した。
+
+なお、 go 自体のインストールは [[https://github.com/asdf-vm/asdf][asdf]] の [[https://github.com/kennyp/asdf-golang][Go プラグイン]] を利用した。
+
+*** 終わりに
+
+Moon+ Reader で電子書籍を読みつつ、 Emacs でメモを取り、
+Android の Syncthing で同期する、という面白い環境が出来上がった。
+
+ついでにブログ執筆環境も整えることが出来た。
+サクサク、というわけには行かないが、それほどストレスなく利用出来るし、
+キーボードも案外打ち易い。
+この記事自体も Chromebook で書いている。
+
+なかなか良い買い物だったと思う。
+
 ** DONE 中古で12,800円の激安ノートPC(Jumper Ezbook 2)にXubuntu 20.04 LTS (Focal Fossa)を入れて幸せになる :xubuntu:jumper:ezbook:
 CLOSED: [2020-06-18 木 06:18]
 :PROPERTIES:
