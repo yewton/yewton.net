@@ -19,9 +19,6 @@ copyright = "&copy; 2016-{year} yewton"
 ## Advanced options below ##
 ############################
 
-# Name of Academic theme folder in `themes/`.
-theme = "academic"
-
 # Get last modified date for content from Git?
 enablnneGitInfo = false
 
@@ -109,3 +106,9 @@ disableLatLong = false
 
 [permalinks]
   post = ":year/:month/:day/:slug/"
+
+[module]
+  [[module.imports]]
+    path = "github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms"
+  [[module.imports]]
+    path = "github.com/wowchemy/wowchemy-hugo-modules/wowchemy"

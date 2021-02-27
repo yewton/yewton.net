@@ -14,7 +14,7 @@ title = "WordPressをHTTP/2+HHVMで動かす環境をdocker-composeで構築し�
 (要 [バージョン 1.6.0 以上](https://github.com/docker/compose/releases/tag/1.6.0))。
 その後 `open "https://$(docker-machine ip default)"` すると、ブラウザでWordPressが立ち上がります。
 
-![デモ](/img/2016-02-21_224951/wordpress.png)
+![デモ](/media/2016-02-21_224951/wordpress.png)
 
 ## 動機 ##
 
@@ -25,7 +25,7 @@ WordPressをHHVMで動かしたら超速くなった!やったぜ!!という記�
 
 ## HHVM ##
 
-![HHVM](/img/2016-02-21_224951/hugo.png)
+![HHVM](/media/2016-02-21_224951/hugo.png)
 
 [HHVM](https://hhvm.com/)は、Facebookがオープンソースとして開発している仮想実行環境で、
 [PHP](https://php.net/)と[Hack](https://hacklang.org/)を動かすための環境らしいです。
@@ -72,7 +72,7 @@ iniファイルに設定書いていくのは何だかしんどそうです。
 今回はとにかくお手軽に手元で動かしてみたかったので、諸々Dockerで動かすことにしました。
 雑に図解すると以下のような感じです:
 
-![構成図](/img/2016-02-21_224951/structure.png)
+![構成図](/media/2016-02-21_224951/structure.png)
 
 FrontとかBackはDockerの[ユーザー定義ネットワーク](https://docs.docker.com/engine/userguide/networking/dockernetworks/#user-defined-networks)です。
 [Docker 1.10.0](https://github.com/docker/docker/blob/master/CHANGELOG.md#1100-2016-02-04)で link に代わるものとして導入されたような気がします。
@@ -92,7 +92,7 @@ FastCGIはUnixソケットで通信した方が速いと思うんですが、
 nginxやHHVMの設定はほぼデフォルトのままいじってないので、本気で動かすなら細かいチューニングは必要です。
 が、全体の構成は実環境でもこのようになると思います。
 
-![デモ](/img/2016-02-21_224951/wordpress.png)
+![デモ](/media/2016-02-21_224951/wordpress.png)
 
 ## 終わりに ##
 

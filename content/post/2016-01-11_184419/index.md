@@ -10,9 +10,9 @@ mylastmod = 2020-01-13T15:43:21+09:00
 
 {{< lastmod >}}
 
-{{< alert note >}}
+{{< callout note >}}
 2020年1月現在は、 [Netlify を使っています](/2020/01/13/hugo-netlify/) 。
-{{< /alert >}}
+{{< /callout >}}
 
 
 ## はじめに ##
@@ -55,7 +55,7 @@ GitHub Pages や類似のサービスを使えば無料で利用できますね�
 
 ## Hugo ##
 
-![Hugoのロゴ](/img/2016-01-11_184419/hugo.png)
+![Hugoのロゴ](/media/2016-01-11_184419/hugo.png)
 
 [Hugo](https://gohugo.io/) は超高速でシンプルかつ柔軟な静的サイトジェネレータだそうです。
 Go言語で書かれていて、インストールはとってもカンタン。すぐに使えます。

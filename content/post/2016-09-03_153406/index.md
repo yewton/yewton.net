@@ -17,7 +17,7 @@ title = "Atlassian から無料でTシャツをもらう方法、あるいはド
 
 せっかくもらえるもんなら、とドラゴン退治をすることにした。
 
-{{% alert note %}}
+{{% callout note %}}
 **2017/1/20 時点の注意**
 
 どうやら現在、 **Tシャツを要求するためのページが 404 になってしまっている** ようす
@@ -26,14 +26,14 @@ title = "Atlassian から無料でTシャツをもらう方法、あるいはド
 。
 
 せっかくやってもTシャツはもらえないかもしれないので注意。
-{{% /alert %}}
+{{% /callout %}}
 
-{{% alert note %}}
+{{% callout note %}}
 **2017/2/5 時点の情報**
 
 どうやらサイトが復旧したようす
 [You Slayed the Dragon \| Atlassian](https://www.atlassian.com/you-slayed-the-dragon)
-{{% /alert %}}
+{{% /callout %}}
 
 ## 環境要件 ##
 

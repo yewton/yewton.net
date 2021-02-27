@@ -116,7 +116,7 @@ contact_links = [
 ## Social
 ############################
 
-# Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
+# Default image for social sharing and search engines. Place image in `static/media/` folder and specify image name here.
 sharing_image = "icon.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
@@ -199,7 +199,7 @@ plugins_js  = []
   #   0: Disabled
   #   1: Disqus (https://disqus.com)
   #   2: Commento (https://commento.io)
-  engine = 1
+  provider = "disqus"
 
   # Which page types are commentable?
   commentable = {page = true, post = true, docs = true, project = true, publication = true, talk = true}
@@ -222,7 +222,7 @@ plugins_js  = []
   #   0: No search engine
   #   1: Academic (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine = 1
+  provider = "wowchemy"
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
@@ -250,7 +250,7 @@ plugins_js  = []
   #   1: Google Maps
   #   2: OpenStreetMap (Mapnik)
   #   3: OpenStreetMap (Mapbox)
-  engine = 2
+  provider = ""
   api_key = ""
   zoom = 15
 
@@ -260,3 +260,15 @@ plugins_js  = []
 [marketing]
   google_analytics = "UA-72312909-1"
 #  google_tag_manager = "GTM-WRWPP44"
+
+# PLACE THIS NEW [CMS] CONFIG SECTION AT THE END OF THE FILE
+
+# Content Management System
+[cms]
+ # Enable the admin panel. See https://wowchemy.com/docs/install/
+ netlify_cms = true
+ branch = "master"
+
+# Icon Pack Extensions
+[icon.pack]
+ ai = true  # Enable the Academicons icon pack https://jpswalsh.github.io/academicons/
