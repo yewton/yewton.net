@@ -2,7 +2,7 @@
 title: "Academic 4.8.0 から Wowchemy 5.0.0 へのアップデート記録"
 author: ["yewton"]
 date: 2021-02-28T00:37:00+09:00
-mylastmod: 2021-03-03T21:44:04+09:00
+mylastmod: 2021-03-03T21:56:22+09:00
 slug: "academic4-to-wowchemy5"
 categories: ["Webサイト運用"]
 draft: false
@@ -103,6 +103,7 @@ hugo mod tidy
 [cms]
  # Enable the admin panel. See https://wowchemy.com/docs/install/
  branch = "master"
+ local_backend = false
 
 # Icon Pack Extensions
 [icon.pack]
