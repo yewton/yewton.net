@@ -1444,7 +1444,8 @@ https://qiita.com/delphinus/items/438046d2bbeb3e63f8fa
 
 * Webサイト運用                                              :@Webサイト運用:
 
-** Wowchemy 5.0.0 から 5.2.0 へのアップデート記録
+** DONE Wowchemy 5.0.0 から 5.2.0 へのアップデート記録
+CLOSED: [2021-06-02 Wed 00:44]
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
 :EXPORT_DATE:        2021-06-02

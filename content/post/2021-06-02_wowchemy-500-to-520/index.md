@@ -1,8 +1,8 @@
 ---
 title: "Wowchemy 5.0.0 から 5.2.0 へのアップデート記録"
 author: ["yewton"]
-date: 2021-06-02
-mylastmod: 2021-06-02T00:41:33+09:00
+date: 2021-06-02T00:44:00+09:00
+mylastmod: 2021-06-02T00:44:05+09:00
 slug: "wowchemy-500-to-520"
 categories: ["Webサイト運用"]
 draft: false
