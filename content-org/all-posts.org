@@ -1443,6 +1443,48 @@ https://superuser.com/questions/208488/how-do-i-re-open-a-file-in-emacs
 https://qiita.com/delphinus/items/438046d2bbeb3e63f8fa
 
 * Webサイト運用                                              :@Webサイト運用:
+
+** Wowchemy 5.0.0 から 5.2.0 へのアップデート記録
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2021-06-02
+:DIR:                images/2021-06-02_wowchemy-500-to-520
+:EXPORT_HUGO_BUNDLE: 2021-06-02_wowchemy-500-to-520
+:EXPORT_HUGO_SLUG:   wowchemy-500-to-520
+:END:
+
+*** 背景
+
+[[https://wowchemy.com/blog/v5.1.0/][2021年5月4日に 5.1.0]] が、[[https://wowchemy.com/blog/v5.2.0/][同年5月26日に 5.2.0]] が、それぞれ発表された。
+
+[[/2021/02/28/academic4-to-wowchemy5/][前回]] で [[https://gohugo.io/hugo-modules/][Hugo Modules]] への対応が済んでいるので、サクッとアップデート出来るようになった。
+
+多少、後方互換性の無い変更があるので、対応の記録を残す。
+
+*** アップデート手順
+
+まず、 Hugo 自体を、対応最新バージョンである v0.83.1 に上げる
+( [[https://github.com/wowchemy/wowchemy-hugo-modules/releases/tag/v5.2.0][リリースノート]] によると、 =Hugo Extended v0.81.0-v0.83.1= に対応している模様 )。
+
+=netlify.toml= の変更も忘れずに。
+
+その後、リリースノートに記載の通り以下を実行する:
+
+#+begin_src sh
+hugo mod get github.com/wowchemy/wowchemy-hugo-modules/wowchemy@89d079b
+hugo mod get github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms@89d079b
+#+end_src
+
+これだけだと、 =go.sum= にゴミが残るので、更に [[https://gohugo.io/commands/hugo_mod_tidy/][hugo mod tidy]] しておくとよい。
+
+[[https://wowchemy.com/blog/v5.1.0/#apply-breaking-changes][Wowchemy v5.1.0 の Apply Breaking Changes]] に従い、以下を行う:
+
+- =assets/images/= を =assets/media/= にリネーム
+- デフォルトソーシャルシェア用画像の名前を =assets/media/sharing.*= に設定し、 =sharing_image= の設定を =config.yaml= から削除
+- =static/media/= 以下のメディアファイルを、 Hugo のメディア処理システムの対象になるように =assets/media/= に移動する
+
+以上で、アップデートは完了となる。簡単!
+
 ** DONE Academic 4.8.0 から Wowchemy 5.0.0 へのアップデート記録
 CLOSED: [2021-02-28 Sun 00:37]
 :PROPERTIES:
