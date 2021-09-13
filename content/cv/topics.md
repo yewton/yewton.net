@@ -1,18 +1,25 @@
 +++
-lastmod = 2020-12-16T02:19:01+09:00
-weight = 3007
+lastmod = 2021-09-13T23:05:36+09:00
+weight = 3002
 # Accomplishments widget.
 widget = "blank"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 
-title = "トピック"
+title = "やってきたこと"
 subtitle = ""
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
   columns = "1"
 +++
+
+## 完全なプログラミング勉強会 {#完全なプログラミング勉強会}
+
+シニア的な立場になってきたころ、全員の「よいコード」の認識を揃えるべく、 [CODE COMPLETE](https://amzn.to/35lI48z) を題材にした勉強会を行なった。そのときの資料は今でも指針として利用されている。
+
+2020 年に、 〈完全なプログラミング〉を目指す会 2020 と題し、過去資料を [リファインした上で公開](https://yewton.github.io/kanpro/) した。
+
 
 ## 動画サムネイルシークの開発 {#動画サムネイルシークの開発}
 
@@ -27,13 +34,11 @@ FFmpeg のシーンチェンジ検出結果を保存、配信し、それをネ�
 
 ## メディアコンテンツ投稿・変換・配信システムのエンハンス開発 {#メディアコンテンツ投稿-変換-配信システムのエンハンス開発}
 
-S3 にファイルを直接アップロードすることによる負荷軽減や、 [imgix](https://www.imgix.com/) と連携した画像配信、
-複数ファイルの非同期並列アップロード対応などのエンハンスを行った。
+S3 にファイルを直接アップロードすることによる負荷軽減や、 [imgix](https://www.imgix.com/) と連携した画像配信、複数ファイルの非同期並列アップロード対応などのエンハンスを行った。
 
 素の JS のままでは並列的な処理を書くのがしんどかったため、 React でリライトした。
 
-それまで単一ファイルのみ受け付けていたものを複数対応させるには Rails モデルのリアーキテクトも必要だった。
-無停止で機能をリリースするため、事前に用意した新たなデータ構造に徐々に移行するという段取りを立て、実行を主導した。
+それまで単一ファイルのみ受け付けていたものを複数対応させるには Rails モデルのリアーキテクトも必要だった。無停止で機能をリリースするため、事前に用意した新たなデータ構造に徐々に移行するという段取りを立て、実行を主導した。
 
 
 ## Keen IO -> BigQuery 連携 {#keen-io-bigquery-連携}
@@ -49,17 +54,8 @@ Keen が S3 にローデータを配置するのをトリガーとして Lambda 
 
 ## Grape + OpenAPI による高速開発推進 {#grape-plus-openapi-による高速開発推進}
 
-3ヶ月で開発を完了させなければならず、極力無駄を省くために、 [Grape::Entity](https://github.com/ruby-grape/grape-entity) と [grape-swagger](https://github.com/ruby-grape/grape-swagger) を採用し、実装と同時に API 定義を生成し、
-クライアント側はその定義を元にライブラリを自動生成して実装を進める、というアプローチで開発を進めた。
+3ヶ月で開発を完了させなければならず、極力無駄を省くために、 [Grape::Entity](https://github.com/ruby-grape/grape-entity) と [grape-swagger](https://github.com/ruby-grape/grape-swagger) を採用し、実装と同時に API 定義を生成し、クライアント側はその定義を元にライブラリを自動生成して実装を進める、というアプローチで開発を進めた。
 
 結果として上手くいき、無事に期間内にサービスインすることが出来た。
 
 Open API を活用する好事例だった。
-
-
-## 完全なプログラミング勉強会 {#完全なプログラミング勉強会}
-
-シニア的な立場になってきたころ、全員の「よいコード」の認識を揃えるべく、 [CODE COMPLETE](https://amzn.to/35lI48z) を題材にした勉強会を行なった。
-そのときの資料は今でも指針として利用されている。
-
-2020 年に、 〈完全なプログラミング〉を目指す会 2020 と題し、過去資料をリファインした上で公開した( <https://yewton.github.io/kanpro/> )。

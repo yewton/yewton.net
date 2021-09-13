@@ -1,6 +1,6 @@
 +++
-lastmod = 2020-12-16T02:01:37+09:00
-weight = 3005
+lastmod = 2021-09-13T23:03:09+09:00
+weight = 3003
 # Experience widget.
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
@@ -91,31 +91,31 @@ date_format = "2006年1月"
   description = "Spring Boot 製。スクラムマスター。2018年9月以降はテックリードとして技術課題の解消に注力"
 
 [[experience]]
-  title = "挙式支援サービスiOS開発"
+  title = "ブライダルメディアサービスiOS開発"
   company = "株式会社R"
   date_start = "2019-04-01"
   date_end = "2020-04-01"
   description = "開発メンバーとして参加"
 
 [[experience]]
-  title = "挙式支援サービスモバイルアプリ開発"
+  title = "ブライダルメディアサービスモバイルアプリ開発"
   company = "株式会社R"
   date_start = "2020-04-01"
   date_end = "2020-09-01"
   description = "Nexus チーム(2チーム)のスクラムマスターに就任。プロセス整備とメンバー装着を行う。"
 
 [[experience]]
-  title = "挙式支援サービスモバイルアプリ開発"
+  title = "ブライダルメディアサービスモバイルアプリ開発"
   company = "株式会社R"
   date_start = "2020-09-01"
-  date_end = ""
+  date_end = "2021-04-01"
   description = "技術チーフに就任。プロダクト全体の技術的な意思決定に責任を持つと共に、横断での開発プロセス改善を進める。"
 
 [[experience]]
   title = "個人事業主として開業"
   company = "YAGNI ワーク"
   date_start = "2017-10-01"
-  date_end = ""
+  date_end = "2021-01-01"
   description = """
 知り合いから声を掛けられて副業を開始。
 その頃ちょうど `.work` ドメインが安売りされていて [yagni.work](https://yagni.work) というドメインを安く取れたので、
@@ -126,6 +126,13 @@ date_format = "2006年1月"
   title = "BtoB動画マニュアル管理ツール開発"
   company = "株式会社S"
   date_start = "2017-10-01"
-  date_end = ""
+  date_end = "2021-01-01"
   description = "Ruby on Rails 製。個人事業主として開発全般の業務委託を請け負う"
+
+[[experience]]
+  title = "ブライダルメディアサービス開発"
+  company = "株式会社R"
+  date_start = "2021-04-01"
+  date_end = ""
+  description = "グループマネージャに就任。モバイルアプリ開発チームのマネジメントと、サービス全体の技術ガバナンス強化を推進。"
 +++

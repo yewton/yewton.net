@@ -1,6 +1,6 @@
 +++
-lastmod = 2020-01-13T06:57:01+09:00
-weight = 3004
+lastmod = 2021-09-13T23:04:07+09:00
+weight = 3006
 # A Skills section created with the Featurette widget.
 widget = "featurette-l"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
