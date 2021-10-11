@@ -9,55 +9,56 @@
 #+macro: lastmod @@hugo:{{< lastmod >}}@@
 #+macro: begin_alert @@hugo:{{< callout $1 >}}@@
 #+macro: end_alert @@hugo:{{</ callout >}}@@
+#+macro: toc @@html:{{< toc >}}@@
 
-* Inbox                                                             :@未分類:
+* Inbox                                                                :@未分類:
 :LOGBOOK:
-:END:
+nil:END:
 
 ** TODO =-= の歴史を知りたい
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-24
-:DIR:                images/2020-01-24_hyphen-as-option
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-24
+:DIR:      images/2020-01-24_hyphen-as-option
 :EXPORT_HUGO_BUNDLE: 2020-01-24_hyphen-as-option
-:EXPORT_HUGO_SLUG:   hyphen-as-option
+:EXPORT_HUGO_SLUG: hyphen-as-option
 :END:
 
 #+begin_src yaml :front_matter_extra t
-  image:
-    caption: Background image by
+image:
+  caption: Background image by
 #+end_src
 
 https://unix.stackexchange.com/q/21852 辺りのはなし
 
 ** TODO この記事を訳す
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-23
-:DIR:                images/2020-01-15_test-optional-with-xctest
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-23
+:DIR:      images/2020-01-15_test-optional-with-xctest
 :EXPORT_HUGO_BUNDLE: 2020-01-15_test-optional-with-xctest
-:EXPORT_HUGO_SLUG:   test-optional-with-xctest
+:EXPORT_HUGO_SLUG: test-optional-with-xctest
 :END:
 
 https://www.swiftbysundell.com/articles/avoiding-force-unwrapping-in-swift-unit-tests/#sticking-with-optionals
 
-* 雑記                                                                :@雑記:
+* 雑記                                                                    :@雑記:
 :PROPERTIES:
-:END:
+nil:END:
 
 ** DONE スーパーマリオ64 Behind Camera Anywhere とは
-CLOSED: [2021-06-07 Mon 00:30]
+CLOSED: [2021-06-07 月 00:30]
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2021-06-06
-:DIR:                images/2021-06-06_mario64-behind-camera-anywhere
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2021-06-06
+:DIR:      images/2021-06-06_mario64-behind-camera-anywhere
 :EXPORT_HUGO_BUNDLE: 2021-06-06_mario64-behind-camera-anywhere
-:EXPORT_HUGO_SLUG:   mario64-behind-camera-anywhere
+:EXPORT_HUGO_SLUG: mario64-behind-camera-anywhere
 :END:
 
 #+begin_src yaml :front_matter_extra t
-  image:
-    caption: Photo by <a href="https://unsplash.com/@claudiolcastro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cláudio Luiz Castro</a> on <a href="https://unsplash.com/s/photos/mario-64?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+image:
+  caption: Photo by <a href="https://unsplash.com/@claudiolcastro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cláudio Luiz Castro</a> on <a href="https://unsplash.com/s/photos/mario-64?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 #+end_src
 
 *** 背景
@@ -149,7 +150,7 @@ PBH を利用するには必ず被弾する為の敵が必要になるが、
 - [[https://www.youtube.com/user/pannenkeok2012][pannenkoek2012 氏のセカンダリチャンネル]]
 - [[https://trap.jp/post/555/][スーパーマリオ64学入門【アドベントカレンダー2018　32日目】 | 東京工業大学デジタル創作同好会traP]]
 
-** DONE 久々の更新                                      :emacs:hugo:ox_hugo:
+** DONE 久々の更新                                            :emacs:hugo:ox_hugo:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 2020-01-02_happy_new_year
@@ -178,7 +179,7 @@ Hugo 0.55.0 以降で動かなくなってしまっていたり、 Deprecated Wa
 [[https://bitbucket.org/mgladdish/asdf-gohugo][asdf-gohugo]] を入れて、少しずつバージョンを上げながら確認していった。
 
 #+begin_src sh
-  asdf plugin add hugo https://bitbucket.org/mgladdish/asdf-gohugo
+asdf plugin add hugo https://bitbucket.org/mgladdish/asdf-gohugo
 #+end_src
 
 *そして、そもそも Hugo の使い方を忘れていた。*
@@ -199,7 +200,7 @@ Hugo 0.55.0 以降で動かなくなってしまっていたり、 Deprecated Wa
 
 org-mode で書けるようになったことだし、少しは記事を書いていきたい所だが、まずは Hugo の最新版に追従する作業が待っている…。
 
-** DONE #MadeWithAcademic                                 :academic:ox_hugo:
+** DONE #MadeWithAcademic                                  :academic:ox_hugo:
 :PROPERTIES:
 :EXPORT_HUGO_BUNDLE: 2020-01-06_academic
 :EXPORT_HUGO_SLUG: made-with-academic
@@ -226,16 +227,421 @@ org-mode で書けるようになったことだし、少しは記事を書い�
 - ダークテーマ対応のシンタックスハイライトのやりかた
 - conf-toml-mode を [[https://ox-hugo.scripter.co/doc/custom-front-matter/#front-matter-extra][Front-matter Extra]] で使う方法
 
-* 買ったモノ                                                    :@買ったモノ:
-** DONE Chromebook Acer Spin 311 に Emacs を入れて幸せになる
-CLOSED: [2021-02-21 Sun 23:24]
+* 買ったモノ                                                              :@買ったモノ:
+** DONE Dell Latitude 3420 - Build Your Own で Ubuntu プリインストールなノート PC を楽しむ
+CLOSED: [2021-10-11 月 23:44]
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2021-02-21
-:DIR:                images/2021-02-21_acer-spin-311-emacs
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2021-10-07
+:DIR:      images/2021-10-07_dell-latitude-3420-byo-ubuntu
+:EXPORT_HUGO_BUNDLE: 2021-10-07_dell-latitude-3420-byo-ubuntu
+:EXPORT_HUGO_SLUG: dell-latitude-3420-byo-ubuntu
+:EXPORT_HUGO_TAGS: dell xubuntu ubuntu xfce
+:CREATED:  [2021-10-11 月 23:44]
+:END:
+
+{{{toc}}}
+
+*** 経緯
+:PROPERTIES:
+:CREATED:  [2021-10-07 木 21:42]
+:END:
+
+過去には、
+[[file:/2020/02/13/macbookpro10-xubuntu/][MacBook Pro (Retina, 15-inch, Mid 2012) で macOS と Xubuntu 19.10 Eoan Ermine をデュアルブートする]] や、
+[[file:/2020/06/18/jumper-ezbook2-xubuntu/][中古で12,800円の激安ノートPC(Jumper Ezbook 2)にXubuntu 20.04 LTS (Focal Fossa)を入れて幸せになる]] 、
+[[file:/2021/02/21/acer-spin-311-emacs/][Chromebook Acer Spin 311 に Emacs を入れて幸せになる]] に於いて、
+手元の型落ち品や安価な PC を調達しての Ubuntu ノート PC 化を行なってきたが、
+それなりのスペックで、 GNU/Linux 搭載前提の PC を調達したい欲が高まっていた。
+
+そんな折、 Dell からなら Ubuntu プリインストールなノート PC を調達出来ることを
+[[https://ubuntu84.blogspot.com/2020/05/dellubuntu-2020531.html][Linuxノートパソコンが買える DELL製9機種 2021/09/25更新 - 全部楽しもう]] で知ったので、
+購入を決めた。
+
+*** 調達
+:PROPERTIES:
+:CREATED:  [2021-10-07 木 21:40]
+:END:
+
+**** 構成
+:PROPERTIES:
+:CREATED:  [2021-10-07 木 21:55]
+:END:
+
+今回購入したのは、14 インチの [[https://japancatalog.dell.com/pd/latitude-3420.html][Latitude 3420]] 。
+
+OS を *Ubuntu Linux 20.04* にし、
+CPU は *Core i5-1135G7* に変更、メモリは *8 GB (1 X 8 GB) 3200MHz DDR4 非-ECC* 、
+電源ユニットを *65W Type-C アダプター* に変更、
+また、 *電源ボタンを指紋リーダー付き* に、
+キーボードを *US 配列(バックライト付き)* にそれぞれ変更した。
+
+なお、バックライト付きキーボードは US 配列でないと選択出来ない。
+US 配列使いでよかったと思う瞬間である。
+
+さらに奮発すると、 *タッチディスプレイにも出来る* ようだったが、
+今回はそこまではやらなかった。
+
+注文時点(2021年8月2日)では上記の構成で税抜き140,500円、クーポン適用で23,183円引きの119,426円となり、
+最終的に *税込131,368円* となった。
+
+特段、お安いワケではない。
+
+なお重量は *1.52 kg 前後* 。
+
+MacBook Air(M1, 2020) が 1.29 kg、
+13 インチ MacBook Pro(M1, 2020) が 1.4 kg、
+16 インチ MacBook Pro が 2.0 kg ということなので、
+いいセン行っているのではなかろうか。
+
+**** 配送期間
+:PROPERTIES:
+:CREATED:  [2021-10-07 木 22:00]
+:END:
+
+2021年8月2日に購入し、その時点では出荷予定日11月1日、到着予定が11月12日とあったが、
+実際には9月8日に出荷され、9月22日に到着した。
+
+昨今の情勢影響もあろうが、 *注文から到着まで 2ヶ月弱* かかっていたことになる。
+元々の予定では3ヶ月以上待つことになっていたので、大分短縮されて有り難いことではある。
+
+*** セットアップ
+:PROPERTIES:
+:CREATED:  [2021-10-07 木 21:40]
+:END:
+
+今回のポイントは *指紋認証を有効にする* 部分である。
+
+それ以外は普通に Ubuntu をセットアップをすればのだが、
+いつもは最初から Xubuntu を入れていたところ、今回は *後から Xubuntu 化* する、というのが異なる点。
+
+**** Xubuntu 化
+:PROPERTIES:
+:CREATED:  [2021-10-07 木 22:26]
+:END:
+
+まずは、パッケージを最新化:
+
+#+begin_src sh
+sudo apt update -y && sudo apt upgrade -y
+#+end_src
+
+次に、 Xubuntu を入れる。
+
+#+begin_src sh
+sudo apt install -y --auto-remove xubuntu-desktop xserver-xorg-input-synaptics- light-locker-
+#+end_src
+
+Display manager は [[https://github.com/canonical/lightdm][lightdm]] を選択した。
+
+[[https://freedesktop.org/wiki/Software/libinput/][libinput]] と競合して、ウインドウによってナチュラルスクロールが効かくなるといった弊害があるので、
+[[https://cgit.freedesktop.org/xorg/driver/xf86-input-synaptics/][synaptics]] は最初から入れないようにする。
+
+また、 [[https://docs.xfce.org/apps/screensaver/start][xfce4-screensaver]] と [[https://github.com/the-cavalry/light-locker][light-locker]] も競合するので、light-locker の方を除外する。
+
+xfce4-screensaver のロック画面の方が、指紋認証後直ちにロック解除されるのに対し、
+light-locker の方は認証後に Unlock ボタンを押下する必要がある([[https://github.com/Xubuntu/lightdm-gtk-greeter][lightdm-gtk-greeter]] と同じ挙動)という、
+細かい挙動の違いがある模様。
+
+続いて、タッチパッドのオプション設定を行う:
+
+#+begin_src sh
+sudo mkdir /etc/X11/xorg.conf.d/
+sudo tee /etc/X11/xorg.conf.d/30-touchpad.conf <<EOF
+Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        Option "Tapping" "on"
+        Option "TappingDrag" "on"
+        Option "TappingDragLock" "on"
+        Option "NaturalScrolling" "on"
+        Option "DisableWhileTyping" "on"
+        Option "ClickMethod" "clickfinger"
+EndSection
+EOF
+#+end_src
+
+オプション詳細は [[https://manned.org/libinput.4][libinput の man(4)]] を参照。
+
+続いて、キーボード設定を行う:
+
+#+begin_src sh
+sudo localectl --no-convert set-x11-keymap us pc105 '' ctrl:nocaps
+#+end_src
+
+オプション詳細は [[https://manned.org/keyboard.5][keyboard の man(5)]] を参照。
+
+ここまでで一旦再起動する。再起動後には Xubuntu 化されている。
+
+#+begin_src sh
+sudo reboot
+#+end_src
+
+**** 指紋認証の設定
+:PROPERTIES:
+:CREATED:  [2021-10-07 木 23:23]
+:END:
+
+本 PC に搭載されている指紋リーダーは以下の Goodix 製のもの:
+
+#+begin_src sh
+lsusb | grep -i goodix
+#+end_src
+
+#+begin_example
+Bus 003 Device 002: ID 27c6:639c Shenzhen Goodix Technology Co.,Ltd. Goodix USB2.0 MISC
+#+end_example
+
+これは、比較的最近の [[https://gitlab.freedesktop.org/libfprint/libfprint/-/releases/v1.90.7][2020年12月にリリースされた libfprint v1.90.7]] で対応されたばかり。
+
+[[https://launchpad.net/ubuntu/focal/+source/libfprint][Focal Fossa (20.04) 向けリリース]] での最新は 1.90.2 だったので、そのままでは使えない。
+
+[[https://launchpad.net/ubuntu/hirsute/+source/libfprint][Hirsute Hippo (21.04) 向けリリース]] に丁度 1.90.7 が上がっていたので、これをダウンロードして使ってしまう:
+
+#+begin_src sh
+cd /tmp
+wget http://launchpadlibrarian.net/530881082/libfprint-2-2_1.90.7+git20210222+tod1-0ubuntu2_amd64.deb
+sudo apt install ./libfprint-2-2_1.90.7+git20210222+tod1-0ubuntu2_amd64.deb
+#+end_src
+
+インストール後、 =fprintd-enroll= を実行し、指紋を登録する。
+
+https://askubuntu.com/a/1040609 を参考に、 =pam-auth-update= を実行し、 =/etc/pam.d/common-auth= を変更する。
+
+このファイルは以下を実行すると分かる通り、共通設定になっている:
+
+#+begin_src sh :results verbatim :exports both :eval no-export
+rg -l '@include common-auth'  /etc/pam.d/ | column
+#+end_src
+
+#+RESULTS:
+#+begin_example
+/etc/pam.d/su			/etc/pam.d/sudo
+/etc/pam.d/gnome-screensaver	/etc/pam.d/login
+/etc/pam.d/xfce4-screensaver	/etc/pam.d/ppp
+/etc/pam.d/chsh			/etc/pam.d/polkit-1
+/etc/pam.d/other		/etc/pam.d/lightdm
+/etc/pam.d/cups			/etc/pam.d/chfn
+/etc/pam.d/cron			/etc/pam.d/gdm-password
+#+end_example
+
+#+ATTR_ORG: :width 500
+[[file:images/2021-10-07_dell-latitude-3420-byo-ubuntu/2021-10-11_22-34-46_screenshot.png]]
+
+こんな画面が表示されたら、 =Fingerprint authentication= にチェックを入れて(スペースキー押下)、 =<Ok>= する( =TAB= で項目移動出来る )。
+
+この操作により、以下のような記述が追加されることになる:
+
+#+begin_src sh :results verbatim :exports both :exports both :eval no-export
+grep fprint -C 1 /etc/pam.d/common-auth
+#+end_src
+
+#+RESULTS:
+#+begin_example
+# here are the per-package modules (the "Primary" block)
+auth	[success=2 default=ignore]	pam_fprintd.so max_tries=1 timeout=10 # debug
+auth	[success=1 default=ignore]	pam_unix.so nullok try_first_pass
+#+end_example
+
+以上で、ログイン時や =sudo= する時など、大概の場面で指紋認証を使えるようになる。
+
+注意点として、まず前述の通り起動後ログイン画面(greeter)では、 *認証成功後に Unlock ボタンを押下する必要がある* 。
+
+そして、その「認証成功」のフィードバックが分かり辛い。
+パスワード入力フィールドが無くなって、 Unlock 出来そうな雰囲気になったことを察知するしかない。
+
+次に、 *キーリングのロック解除には相変わらずパスワードが必要になる* 。
+
+これは、 [[https://gitlab.gnome.org/GNOME/gdm/-/issues/613][After login in with Fingerprint reader on Lenovo Thinkpad prompted to enter password for unlocking the Keyring (#613) · Issues · GNOME / gdm · GitLab]] で
+議論されている通り、基本的にはセキュリティ上意図された挙動な模様。
+起動直後の一度きりの入力で済む話ではあるので、当座は受け入れている。
+
+また、 *指紋認証待ちである事のアピールが結構弱い* ので、タイムアウトしがちである。
+
+例えば、 =sudo= 時は標準出力に =Place your finger on the fingerprint reader= と控えめに出力されるだけだし、
+Emacs で [[https://www.gnu.org/software/tramp/#Using-su_002c-sudo_002c-doas-and-sg][TRAMP を使い root 権限でファイルを開く]] ときに至っては、何も出力されない。
+
+以上のような多少の不都合はあるものの、目を瞑れる程度ではないかと思う。
+
+**** その他のセットアップ
+:PROPERTIES:
+:CREATED:  [2021-10-11 月 23:16]
+:END:
+
+以降は、特に本機だから行うというワケではないが、記録の為に残しておく。
+
+まず何よりも先に、キーテーマを Emacs に設定する:
+
+#+begin_src sh
+xfconf-query --channel xsettings --property /Gtk/KeyThemeName --set Emacs
+#+end_src
+
+最低限のキーボードショートカットを設定する:
+
+#+begin_src sh
+xfconf-query --channel xfce4-keyboard-shortcuts --property '/commands/custom/<Primary>minus' --create --type string --set 'xfce4-terminal --drop-down --hide-menubar --hide-toolbar --hide-scrollbar'
+xfconf-query --channel xfce4-keyboard-shortcuts --property '/commands/custom/<Primary><Alt>space' --create --type string --set 'xfce4-appfinder'
+xfconf-query --channel xfce4-keyboard-shortcuts --property '/commands/custom/<Primary><Shift><Alt>dollar' --create --type string --set 'xfce4-screenshooter --clipboard --region'
+#+end_src
+
+キーリピート設定を変更する:
+
+#+begin_src sh
+xfconf-query --channel keyboards --property '/Default/KeyRepeat/Delay' --create --type int --set 350
+xfconf-query --channel keyboards --property '/Default/KeyRepeat/Rate' --create --type int --set 20
+#+end_src
+
+主に Emacs とコマンドライン系ツールの導入用に、 [[https://guix.gnu.org/][Guix]] を導入していく:
+
+#+begin_src sh
+sudo apt install nscd -y
+sudo su -
+cd /tmp/
+wget https://git.savannah.gnu.org/cgit/guix.git/plain/etc/guix-install.sh
+chmod +x guix-install.sh && ./guix-install.sh
+#+end_src
+
+初回はめちゃくちゃ時間かかるので、進捗確認しやすくする為にプレゼンテーションモード(自動画面オフやロックをしない)にしておく:
+
+#+begin_src sh
+xfconf-query --channel xfce4-power-manager --property /xfce4-power-manager/presentation-mode --create --type bool --set true
+#+end_src
+
+初回アップデート & 設定:
+
+#+begin_src sh
+guix pull && \
+    systemctl daemon-reload && \
+    systemctl restart guix-daemon.service && \
+    guix archive --authorize < /root/.config/guix/current/share/guix/bordeaux.guix.gnu.org.pub && \
+    guix package -u && \
+    guix install glibc-locales && \
+    service lightdm restart
+#+end_src
+
+ここからは通常ユーザーでの作業。
+
+引き続き Guix のアップデートと初期設定:
+
+#+begin_src sh
+guix pull && guix package -u
+guix install glibc-locales nss-certs curl
+. ~/.guix-profile/etc/profile
+#+end_src
+
+コマンドラインツール群を導入:
+
+#+begin_src sh
+guix install zsh git git:credential-libsecret rcm ripgrep fzf fasd tmux xclip direnv
+. ~/.guix-profile/etc/profile
+sudo apt install powerline -y
+wget https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh -O ${HOME}/.fzf.zsh
+git clone https://github.com/yewton/.dotfiles.git
+cd .dotfiles/
+RCRC=~/.dotfiles/rcrc rcup
+rcup -t ubuntu
+echo $(which zsh) | sudo tee -a /etc/shells
+chsh -s $(which zsh)
+#+end_src
+
+ここで一旦ログアウト:
+
+#+begin_src sh
+xfce4-session-logout --logout
+#+end_src
+
+ログイン後、Git の設定を行う:
+
+#+begin_src sh
+git config --file ~/.gitconfig.local user.name yewton
+git config --file ~/.gitconfig.local user.email yewton@gmail.com
+git config --file ~/.gitconfig.local credential.helper = ${HOME}/.guix-profile/bin/git-credential-libsecret
+#+end_src
+
+Emacs のインストール & 設定:
+
+#+begin_src sh
+guix install coreutils findutils texinfo emacs
+. ~/.guix-profile/etc/profile
+sudo apt install cmigemo -y
+mkdir ~/.local/share/fonts
+(export VER=2.5.1 && wget https://github.com/yuru7/HackGen/releases/download/v${VER}/HackGenNerd_v${VER}.zip &&
+     unzip HackGenNerd_v${VER}.zip &&
+     mv ./HackGenNerd_v${VER}/*.ttf ~/.local/share/fonts/ &&
+     rm -fr ./HackGenNerd_v${VER}* &&
+     fc-cache -fv)
+git clone https://github.com/yewton/.emacs.d.git
+#+end_src
+
+[[https://support.1password.com/install-linux/][Get the 1Password for Linux app]] に従い、 1Password のインストール:
+
+#+begin_src sh
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
+sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
+curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
+sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
+curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
+sudo apt update && sudo apt install 1password -y
+#+end_src
+
+[[https://asdf-vm.com/][asdf]] のインストール:
+
+#+begin_src sh
+guix install gcc-toolchain readline zlib openssl libyaml
+. ~/.guix-profile/etc/profile
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
+. $HOME/.asdf/asdf.sh
+for i in ruby nodejs golang; do asdf plugin-add $i; done
+asdf plugin-add hugo https://github.com/beardix/asdf-hugo.git
+asdf install
+#+end_src
+
+テーマを [[https://numixproject.github.io/][Numix]] に:
+
+#+begin_src sh
+sudo add-apt-repository ppa:numix/ppa
+sudo apt install numix-blue-gtk-theme numix-icon-theme-circle -y
+xfconf-query --channel xsettings --property /Net/ThemeName --set 'NumixBlue'
+xfconf-query --channel xsettings --property /Net/IconThemeName --set 'Numix-Circle'
+xfconf-query --channel xfwm4 --property /general/theme --set 'NumixBlue'
+#+end_src
+
+[[https://github.com/google/mozc][Mozc]] 導入:
+
+#+begin_src sh
+sudo apt install fcitx-mozc -y
+im-config -n fcitx
+sudo reboot
+#+end_src
+
+[[https://docs.xfce.org/panel-plugins/xfce4-clipman-plugin/start][xfce4-clipman-plugin]] 導入:
+
+#+begin_src sh
+sudo apt intall xfce4-clipman-plugin -y
+#+end_src
+
+*** 終わりに
+:PROPERTIES:
+:CREATED:  [2021-10-11 月 23:39]
+:END:
+
+ガッツリ作業にも使えるメイン Xubuntu 機を調達出来て満足。
+
+今回の経験で問題無く使いものになることは分かったので、次回調達の機会があれば、
+さらにスペックを上げたり、タッチディスプレイにすることにも検討したい。
+
+** DONE Chromebook Acer Spin 311 に Emacs を入れて幸せになる
+CLOSED: [2021-02-21 日 23:24]
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2021-02-21
+:DIR:      images/2021-02-21_acer-spin-311-emacs
 :EXPORT_HUGO_BUNDLE: 2021-02-21_acer-spin-311-emacs
-:EXPORT_HUGO_SLUG:   acer-spin-311-emacs
-:EXPORT_HUGO_TAGS:   chromebook emacs acer
+:EXPORT_HUGO_SLUG: acer-spin-311-emacs
+:EXPORT_HUGO_TAGS: chromebook emacs acer
 :END:
 
 #+toc: headlines 2
@@ -324,7 +730,7 @@ git config --file ~/.gitconfig.local credential.helper ~/.nix-profile/share/git/
 これで、認証が必要なリポジトリをクローンしようとすると、
 以下のようなダイアログが出てくるようになる:
 
-#+ATTR_ORG: :width 500
+#+attr_org: :width 500
 [[file:images/2021-02-21_acer-spin-311-emacs/2021-02-21_22-11-22_screenshot.png]]
 
 *** (おまけ)スクリーンショットの利用
@@ -363,11 +769,11 @@ Android の Syncthing で同期する、という面白い環境が出来上が�
 ** DONE 中古で12,800円の激安ノートPC(Jumper Ezbook 2)にXubuntu 20.04 LTS (Focal Fossa)を入れて幸せになる :xubuntu:jumper:ezbook:
 CLOSED: [2020-06-18 木 06:18]
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-06-15
-:DIR:                images/2020-06-15_jumper-ezbook2-xubuntu
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-06-15
+:DIR:      images/2020-06-15_jumper-ezbook2-xubuntu
 :EXPORT_HUGO_BUNDLE: 2020-06-15_jumper-ezbook2-xubuntu
-:EXPORT_HUGO_SLUG:   jumper-ezbook2-xubuntu
+:EXPORT_HUGO_SLUG: jumper-ezbook2-xubuntu
 :END:
 
 #+toc: headlines 2
@@ -376,7 +782,7 @@ CLOSED: [2020-06-18 木 06:18]
 
 先日近所のブックオフでこんなものを見つけた。
 
-#+ATTR_ORG: :width 200
+#+attr_org: :width 200
 [[file:images/2020-06-15_jumper-ezbook2-xubuntu/2020-06-15_06-23-44_IMG_20200131_142511.jpg]]
 
 値札によると、 Jumper の Ezbook というものらしい。
@@ -411,7 +817,7 @@ Ctrl(Caps Lock)とスペースをよく押し損じる。
 
 相当不恰好にはなるが、適当な面ファスナーで背面に貼り付けている。
 
-#+ATTR_ORG: :width 500
+#+attr_org: :width 500
 [[file:images/2020-06-15_jumper-ezbook2-xubuntu/2020-06-17_03-58-14_IMG_20200617_035604.jpg]]
 
 USB 3.0 ポートを使っているからか、それほどパフォーマンスの問題は感じない。
@@ -422,18 +828,18 @@ USB 3.0 ポートを使っているからか、それほどパフォーマンス
 
 *** Xubuntu インストール
 
-起動用の USB ドライブの作り方は [[/2020/02/13/macbookpro10-xubuntu/][以前の記事]] と同様。
+起動用の USB ドライブの作り方は [[file:/2020/02/13/macbookpro10-xubuntu/][以前の記事]] と同様。
 
 作成した USB ドライブから起動出来るようにするには BIOS の設定を変える必要がある。
 
 起動直後の以下の画面で =ESC= を押す。
 
-#+ATTR_ORG: :width 400
+#+attr_org: :width 400
 [[file:images/2020-06-15_jumper-ezbook2-xubuntu/boot.jpg]]
 
 すると BIOS 設定画面が開くので、 =→= キーで =Boot= タブを開く。
 
-#+ATTR_ORG: :width 400
+#+attr_org: :width 400
 [[file:images/2020-06-15_jumper-ezbook2-xubuntu/bios.jpg]]
 
 =Boot Option Priorities= というのが起動順を指定する設定。
@@ -509,21 +915,21 @@ xfconf-query --channel keyboards --property '/Default/KeyRepeat/Rate' --create -
 [[http://manpages.ubuntu.com/manpages/trusty/man1/numlockx.1.html][numlockx]] の設定をする:
 
 #+begin_src sh
-  echo NUMLOCK=off | sudo tee /etc/default/numlockx
+echo NUMLOCK=off | sudo tee /etc/default/numlockx
 #+end_src
 
 [[https://docs.brew.sh/Homebrew-on-Linux][Linuxbrew]] を入れる:
 
 #+begin_src sh
-  sudo add-apt-repository ppa:git-core/ppa -y
-  sudo apt update
-  sudo apt install curl git -y
+sudo add-apt-repository ppa:git-core/ppa -y
+sudo apt update
+sudo apt install curl git -y
 
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  sudo apt-get install build-essential -y
-  echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ${HOME}/.profile
-  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-  brew install gcc
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+sudo apt-get install build-essential -y
+echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ${HOME}/.profile
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+brew install gcc
 #+end_src
 
 zsh を入れる:
@@ -535,118 +941,118 @@ brew install zsh
 Git の認証ヘルパー等の設定をする:
 
 #+begin_src sh
-  sudo apt-get install libsecret-1-0 libsecret-1-dev -y
-  (cd /usr/share/doc/git/contrib/credential/libsecret/ && sudo make)
-  git config --file ~/.gitconfig.local user.name yewton
-  git config --file ~/.gitconfig.local user.email yewton@gmail.com
-  git config --file ~/.gitconfig.local credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+sudo apt-get install libsecret-1-0 libsecret-1-dev -y
+(cd /usr/share/doc/git/contrib/credential/libsecret/ && sudo make)
+git config --file ~/.gitconfig.local user.name yewton
+git config --file ~/.gitconfig.local user.email yewton@gmail.com
+git config --file ~/.gitconfig.local credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 #+end_src
 
 ターミナル環境の必需品([[https://github.com/zplug/zplug][zplug]], [[https://github.com/thoughtbot/rcm][rcm]] , [[https://github.com/junegunn/fzf][fzf]] , [[https://github.com/clvv/fasd][fasd]] , [[https://github.com/tmux/tmux/wiki][tmux]] , [[https://github.com/powerline/powerline][powerline]] , [[https://github.com/astrand/xclip][xclip]], [[https://github.com/direnv/direnv][direnv]]) を入れる:
 
 #+begin_src sh
-  wget -qO - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
-  echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
-  sudo apt-get update
+wget -qO - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
+echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
+sudo apt-get update
 
-  sudo apt install rcm fzf fasd tmux powerline xclip direnv -y
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+sudo apt install rcm fzf fasd tmux powerline xclip direnv -y
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
-  echo 'source /usr/share/doc/fzf/examples/key-bindings.zsh' >> ${HOME}/.fzf.zsh
-  echo 'source /usr/share/doc/fzf/examples/completion.zsh' >> ${HOME}/.fzf.zsh
+echo 'source /usr/share/doc/fzf/examples/key-bindings.zsh' >> ${HOME}/.fzf.zsh
+echo 'source /usr/share/doc/fzf/examples/completion.zsh' >> ${HOME}/.fzf.zsh
 #+end_src
 
 [[https://github.com/miiton/Cica][プログラミング用日本語等幅フォント Cica(シカ)]] をインストール:
 
 #+begin_src sh
-  wget https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip
-  unzip Cica_v5.0.1_with_emoji.zip
-  sudo mv *.ttf /usr/local/share/fonts/
-  sudo fc-cache -fv
+wget https://github.com/miiton/Cica/releases/download/v5.0.1/Cica_v5.0.1_with_emoji.zip
+unzip Cica_v5.0.1_with_emoji.zip
+sudo mv *.ttf /usr/local/share/fonts/
+sudo fc-cache -fv
 #+end_src
 
 [[https://github.com/yewton/.dotfiles][.dotfiles]] を入れ、シェルを変更し、一度ログアウトする:
 
 #+begin_src sh
-  git clone https://github.com/yewton/.dotfiles.git
-  RCRC=~/.dotfiles/rcrc rcup
-  rcup -t ubuntu
+git clone https://github.com/yewton/.dotfiles.git
+RCRC=~/.dotfiles/rcrc rcup
+rcup -t ubuntu
 
-  echo $(which zsh) | sudo tee -a /etc/shells
-  chsh -s $(which zsh)
+echo $(which zsh) | sudo tee -a /etc/shells
+chsh -s $(which zsh)
 #+end_src
 
 [[http://www.orgzly.com/][Orgzly]] のノートを [[https://syncthing.net/][Syncthing]] で同期しているので、 Syncthing をインストールする。
 =syncthing-gtk= を入れると自動起動の設定が楽:
 
 #+begin_src sh
-  curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
-  echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
-  sudo apt update
-  sudo apt install syncthing syncthing-gtk -y
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list
+sudo apt update
+sudo apt install syncthing syncthing-gtk -y
 #+end_src
 
 [[https://app-updates.agilebits.com/product_history/CLI][1Password CLI]] をインストール:
 
 #+begin_src sh
-  wget https://cache.agilebits.com/dist/1P/op/pkg/v1.1.0/op_linux_amd64_v1.1.0.zip
-  unzip op_linux_amd64_v1.1.0.zip
-  mv op ~/bin/
-  eval $(op signin my)
+wget https://cache.agilebits.com/dist/1P/op/pkg/v1.1.0/op_linux_amd64_v1.1.0.zip
+unzip op_linux_amd64_v1.1.0.zip
+mv op ~/bin/
+eval $(op signin my)
 #+end_src
 
 1Password CLI の JSON を扱うのに便利な [[https://github.com/Blacksmoke16/oq][Blacksmoke16/oq]] を入れる:
 
 #+begin_src sh
-  snap oq
+snap oq
 #+end_src
 
 Firefox アカウントを取得するにはこんな感じ:
 
 #+begin_src sh
-  op get item 'Firefox Account' | oq -r '.details.fields[]|select(.name=="username")|.value' | tr -d '\n' | pbcopy
-  op get item 'Firefox Account' | oq -r '.details.fields[]|select(.name=="password")|.value' | tr -d '\n' | pbcopy
-  op get totp 'Firefox Account' | pbcopy
+op get item 'Firefox Account' | oq -r '.details.fields[]|select(.name=="username")|.value' | tr -d '\n' | pbcopy
+op get item 'Firefox Account' | oq -r '.details.fields[]|select(.name=="password")|.value' | tr -d '\n' | pbcopy
+op get totp 'Firefox Account' | pbcopy
 #+end_src
 
 [[https://www.gnu.org/software/emacs/][GNU Emacs]] と関連パッケージをインストール:
 
 #+begin_src sh
-  sudo apt install build-essential texinfo aspell ripgrep cmigemo sqlite3 -y
-  sudo add-apt-repository ppa:kelleyk/emacs -y
-  sudo apt update
-  sudo apt install emacs26 -y
+sudo apt install build-essential texinfo aspell ripgrep cmigemo sqlite3 -y
+sudo add-apt-repository ppa:kelleyk/emacs -y
+sudo apt update
+sudo apt install emacs26 -y
 #+end_src
 
 [[https://github.com/yewton/.emacs.d][.emacs.d]] や個人設定をインストールする:
 
 #+begin_src sh
-  git clone https://github.com/yewton/.emacs.d.git
-  echo -e "(setq custom-file \"~/.emacs.local/init.el\")\n(load custom-file)" > ~/.emacs.d/custom.el
+git clone https://github.com/yewton/.emacs.d.git
+echo -e "(setq custom-file \"~/.emacs.local/init.el\")\n(load custom-file)" > ~/.emacs.d/custom.el
 #+end_src
 
 Emacs 外での日本語入力のため [[https://github.com/google/mozc][Mozc]] をインストールして設定:
 
 #+begin_src sh
-  sudo apt install -y fcitx-mozc
-  im-config -n fcitx
+sudo apt install -y fcitx-mozc
+im-config -n fcitx
 
-  sudo reboot # 一度再起動する
+sudo reboot # 一度再起動する
 
-  fcitx-config-gtk3 # 設定 GUI が立ち上がる
+fcitx-config-gtk3 # 設定 GUI が立ち上がる
 #+end_src
 
 [[https://asdf-vm.com/#/][asdf vm]] 本体とプラグインをインストール:
 
 #+begin_src sh
-  brew install asdf
-  asdf plugin add ruby
-  asdf plugin add python
-  asdf plugin add nodejs
-  asdf plugin add golang
-  asdf plugin add hugo https://github.com/beardix/asdf-hugo
-  bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
-  asdf install
+brew install asdf
+asdf plugin add ruby
+asdf plugin add python
+asdf plugin add nodejs
+asdf plugin add golang
+asdf plugin add hugo https://github.com/beardix/asdf-hugo
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+asdf install
 #+end_src
 
 素敵なアイコンテーマ [[https://github.com/numixproject/numix-icon-theme-circle][numix-icon-theme-circle]] をインストール:
@@ -658,18 +1064,18 @@ sudo apt install numix-icon-theme-circle
 アイコンテーマ以外も含めて、全部 [[https://numixproject.github.io/][Numix]] にするとよろしい:
 
 #+begin_src sh
-  xfce4-appearance-settings
-  xfwm4-settings
-  sudo lightdm-gtk-greeter-settings
+xfce4-appearance-settings
+xfwm4-settings
+sudo lightdm-gtk-greeter-settings
 #+end_src
 
 [[https://github.com/dylanaraps/neofetch][dylanaraps/neofetch]] をインストール:
 
 #+begin_src sh
-  sudo apt install neofetch -y
+sudo apt install neofetch -y
 #+end_src
 
-** DONE Lenovo Tab M8 が案外良かった                       :Lenovo__Tab__M8:
+** DONE Lenovo Tab M8 が案外良かった                               :Lenovo__Tab__M8:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 2020-01-08_lenovo-tab-m8
@@ -678,7 +1084,7 @@ sudo apt install numix-icon-theme-circle
 :DIR:      images/2020-01-08_lenovo-tab-m8
 :END:
 
-{{{lastmod}}}
+@@hugo:{{< lastmod >}}@@
 
 さすがにもう [[file:/2017/04/09/grouper-beanstalk/][Nexus 7 2012]] でやっていくのはしんどくなってきたので、手軽なタブレットを探していたら、
 2019 年の 11 月に Lenovo から [[https://hb.afl.rakuten.co.jp/hgc/1a0d625b.bdb81d38.1a0d625c.bf0332b2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiccamera%2F4580550700484%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbiccamera%2Fi%2F12780179%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjB9][Lenovo Tab M8 (ZA5G0084JP)]] が発売されていたのを知った。
@@ -728,27 +1134,27 @@ sudo apt install numix-icon-theme-circle
 #+caption: 横画面になる度に表示されるうっとうしいダイアログ
 [[file:images/2020-01-08_lenovo-tab-m8/2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg]]
 
-{{{begin_alert(note)}}}
+@@hugo:{{< callout note >}}@@
 2020年1月20日に配信されたアップデートを適用したところ、
 少なくとも =Lenovo Launcher が停止しました= のダイアログは出なくなっていた。
-{{{end_alert}}}
+@@hugo:{{</ callout >}}@@
 
-{{{unsplash(Featured image background by, estherrj, Esther Jiao)}}}
-* 技術系                                                            :@技術系:
+@@hugo:{{< unsplash leading="Featured image background by" id=" estherrj" name=" Esther Jiao" >}}@@
+* 技術系                                                                  :@技術系:
 
 ** DONE MacBook Pro (Retina, 15-inch, Mid 2012) で macOS と Xubuntu 19.10 Eoan Ermine をデュアルブートする :macos:ubuntu:xubuntu:xfce:hidpi:
 CLOSED: [2020-02-13 木 07:01]
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-02-13
-:DIR:                images/2020-02-13_macbookpro10-xubuntu
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-02-13
+:DIR:      images/2020-02-13_macbookpro10-xubuntu
 :EXPORT_HUGO_BUNDLE: 2020-02-13_macbookpro10-xubuntu
-:EXPORT_HUGO_SLUG:   macbookpro10-xubuntu
+:EXPORT_HUGO_SLUG: macbookpro10-xubuntu
 :END:
 
 #+begin_src yaml :front_matter_extra t
-  image:
-    caption: Background image by <a href="https://pixabay.com/users/bharathsiddamjetix37-3810891/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1844603">Bharat Siddam</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1844603">Pixabay</a>
+image:
+  caption: Background image by <a href="https://pixabay.com/users/bharathsiddamjetix37-3810891/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1844603">Bharat Siddam</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1844603">Pixabay</a>
 #+end_src
 
 #+toc: headlines 2
@@ -793,7 +1199,7 @@ FileVault の無効化が済んだら、 [[https://support.apple.com/ja-jp/guide
 
 何故か二つ出現することがあるのだが、どちらを選んでも大丈夫そうだった。
 
-#+ATTR_ORG: :width 500
+#+attr_org: :width 500
 [[file:images/2020-02-13_macbookpro10-xubuntu/2020-02-13_04-45-56_startup-manager.jpg]]
 
 *初期状態では Wi-Fi が使えない* はずなので、 [[https://amzn.to/2OPxvW3][Rankie の有線LAN アダプタ]] など
@@ -810,7 +1216,7 @@ FileVault の無効化が済んだら、 [[https://support.apple.com/ja-jp/guide
 
 =ブートローダをインストールするデバイス= は Xubuntu のルートパーティションを選択した。
 
-#+ATTR_ORG: :width 1000
+#+attr_org: :width 1000
 [[file:images/2020-02-13_macbookpro10-xubuntu/2020-02-13_04-47-05_IMG_20200211_045148.jpg]]
 
 インストール完了後はデフォルトで Xubuntu が起動するようになる。
@@ -829,7 +1235,7 @@ xfconf-query -c xsettings -p /Gtk/KeyThemeName -s Emacs
 
 以下のようなシェルスクリプトを作成し、 =セッションと起動= メニューからログイン時に実行するように設定する。
 
-#+CAPTION: =fix_scroll.sh=
+#+caption: =fix_scroll.sh=
 #+begin_src sh
 #!/usr/bin/env bash
 
@@ -922,7 +1328,7 @@ echo -e "\n[credential]\n helper = /usr/share/doc/git/contrib/credential/libsecr
 
 =外観= メニューで =設定= タブの =ウィンドウ拡大縮小= を =2倍= に設定する。
 
-#+ATTR_ORG: :width 500
+#+attr_org: :width 500
 [[file:images/2020-02-13_macbookpro10-xubuntu/2020-02-13_06-59-55_Screenshot_2020-02-13_06-59-30.png]]
 
 =/etc/environment= に以下を追記する。
@@ -975,37 +1381,37 @@ font_name = "Noto Sans Regular 18"
 - [[https://unix.stackexchange.com/questions/121395/on-an-apple-keyboard-under-linux-how-do-i-make-the-function-keys-work-without-t][On an Apple Keyboard under Linux, how do I make the Function keys work without the fn modifier key? - Unix & Linux Stack Exchange]]
 
 * Emacs                                                              :@Emacs:
-** DONE avy で migemo る (avy-migemo を使わずに)          :migemo:avy:emacs:
+** DONE avy で migemo る (avy-migemo を使わずに)                  :migemo:avy:emacs:
 CLOSED: [2020-05-31 日 05:31]
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-05-31
-:DIR:                images/2020-05-31_avy-migemo
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-05-31
+:DIR:      images/2020-05-31_avy-migemo
 :EXPORT_HUGO_BUNDLE: 2020-05-31_avy-migemo
-:EXPORT_HUGO_SLUG:   avy-migemo
+:EXPORT_HUGO_SLUG: avy-migemo
 :END:
 
 *** TL;DR
 
 #+begin_src emacs-lisp
-  (require 'avy)
-  (require 'migemo)
+(require 'avy)
+(require 'migemo)
 
-  (defun avy-goto-migemo-timer (&optional arg)
-    (interactive "P")
-    (let ((avy-all-windows (if arg
-                               (not avy-all-windows)
-                             avy-all-windows)))
-      (avy-with avy-goto-migemo-timer
-        (setq avy--old-cands (avy--read-candidates #'migemo-get-pattern))
-        (avy-process avy--old-cands))))
-  (add-to-list 'avy-styles-alist '(avy-goto-migemo-timer . pre))
-  (global-set-key (kbd "C-M-'") 'avy-goto-migemo-timer)
+(defun avy-goto-migemo-timer (&optional arg)
+  (interactive "P")
+  (let ((avy-all-windows (if arg
+                             (not avy-all-windows)
+                           avy-all-windows)))
+    (avy-with avy-goto-migemo-timer
+      (setq avy--old-cands (avy--read-candidates #'migemo-get-pattern))
+      (avy-process avy--old-cands))))
+(add-to-list 'avy-styles-alist '(avy-goto-migemo-timer . pre))
+(global-set-key (kbd "C-M-'") 'avy-goto-migemo-timer)
 #+end_src
 
 *** 背景
 
-[[/2020/05/21/migemo-ivy/][以前の記事]] を書いた時点では [[https://github.com/abo-abo/avy][avy]] を使っていなかったが、改めて調べると超絶便利だったので使うことにした。
+[[file:/2020/05/21/migemo-ivy/][以前の記事]] を書いた時点では [[https://github.com/abo-abo/avy][avy]] を使っていなかったが、改めて調べると超絶便利だったので使うことにした。
 
 そして当然の帰結として、 [[http://0xcc.net/migemo/][Migemo]] に対応させたくなった。
 
@@ -1053,14 +1459,14 @@ The window scope is determined by `avy-all-windows' (ARG negates it)."
 というわけで冒頭の独自関数を定義する:
 
 #+begin_src emacs-lisp
-  (defun avy-goto-migemo-timer (&optional arg)
-    (interactive "P")
-    (let ((avy-all-windows (if arg
-                               (not avy-all-windows)
-                             avy-all-windows)))
-      (avy-with avy-goto-migemo-timer
-        (setq avy--old-cands (avy--read-candidates #'migemo-get-pattern))
-        (avy-process avy--old-cands))))
+(defun avy-goto-migemo-timer (&optional arg)
+  (interactive "P")
+  (let ((avy-all-windows (if arg
+                             (not avy-all-windows)
+                           avy-all-windows)))
+    (avy-with avy-goto-migemo-timer
+      (setq avy--old-cands (avy--read-candidates #'migemo-get-pattern))
+      (avy-process avy--old-cands))))
 #+end_src
 
 =avy-goto-char-timer= をほんの一部書き換えただけ。
@@ -1076,22 +1482,22 @@ migemo で引っ掛けたいような文字は入力した文字とは異なる�
 ** DONE counsel-rg と migemo を組み合わせて ripgrep でもローマ字検索 :migemo:ripgrep:ivy:emacs:
 CLOSED: [2020-05-25 月 06:51]
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-05-24
-:DIR:                images/2020-05-24_counsel-rg-migemo
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-05-24
+:DIR:      images/2020-05-24_counsel-rg-migemo
 :EXPORT_HUGO_BUNDLE: 2020-05-24_counsel-rg-migemo
-:EXPORT_HUGO_SLUG:   counsel-rg-migemo
+:EXPORT_HUGO_SLUG: counsel-rg-migemo
 :END:
 
-[[/2020/05/21/migemo-ivy/][Ivy (Swiper) で雑に migemo を使う]] の続編。併せて参照のコト。
+[[file:/2020/05/21/migemo-ivy/][Ivy (Swiper) で雑に migemo を使う]] の続編。併せて参照のコト。
 
 *** TL;DR
 
 #+begin_src emacs-lisp
-  (setq migemo-options '("--quiet" "--nonewline" "--emacs"))
-  (setq ivy-re-builders-alist '((t . ivy--regex-plus)
-                                (counsel-rg . ytn-ivy-migemo-re-builder)
-                                (swiper . ytn-ivy-migemo-re-builder)))
+(setq migemo-options '("--quiet" "--nonewline" "--emacs"))
+(setq ivy-re-builders-alist '((t . ivy--regex-plus)
+                              (counsel-rg . ytn-ivy-migemo-re-builder)
+                              (swiper . ytn-ivy-migemo-re-builder)))
 #+end_src
 
 *** counsel-rg の仕組み
@@ -1122,7 +1528,7 @@ $ cmigemo -d '/usr/local/Cellar/cmigemo/20110227/share/migemo/utf-8/migemo-dict'
      character that represents a syntax code: thus, ‘w’ for word
      constituent, ‘-’ for whitespace, ‘(’ for open parenthesis, etc.  To
      represent whitespace syntax, use either ‘-’ or a space character.
-     *Note Syntax Class Table::, for a list of syntax codes and the
+     ,*Note Syntax Class Table::, for a list of syntax codes and the
      characters that stand for them.
 #+end_example
 #+end_quote
@@ -1142,7 +1548,7 @@ PCRE では =\s= がホワイトスペースにマッチするので(参考: [[h
 
 #+begin_quote
 #+begin_example
-  -n --nonewline        Don't use newline match.
+-n --nonewline        Don't use newline match.
 #+end_example
 #+end_quote
 
@@ -1154,7 +1560,7 @@ cmigemo -d '/usr/local/Cellar/cmigemo/20110227/share/migemo/utf-8/migemo-dict' -
 #+end_example
 
 あとは、このオプションを =migemo-options= に指定すればよい:
- 
+
 #+begin_src emacs-lisp
 (setq migemo-options '("--quiet" "--nonewline" "--emacs"))
 #+end_src
@@ -1162,40 +1568,40 @@ cmigemo -d '/usr/local/Cellar/cmigemo/20110227/share/migemo/utf-8/migemo-dict' -
 なお、すでに =migemo-init= している場合は反映されないので、その場合は一度 =migemo-kill= する必要がある。
 
 
-** DONE Ivy (Swiper) で雑に migemo を使う          :ivy:migemo:swiper:emacs:
+** DONE Ivy (Swiper) で雑に migemo を使う                 :ivy:migemo:swiper:emacs:
 CLOSED: [2020-05-21 木 04:50]
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-05-21
-:DIR:                images/2020-05-21_migemo-ivy
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-05-21
+:DIR:      images/2020-05-21_migemo-ivy
 :EXPORT_HUGO_BUNDLE: 2020-05-21_migemo-ivy
-:EXPORT_HUGO_SLUG:   migemo-ivy
+:EXPORT_HUGO_SLUG: migemo-ivy
 :END:
 
-{{{lastmod}}}
+@@hugo:{{< lastmod >}}@@
 
-{{{begin_alert(note)}}}
-[[/2020/05/24/counsel-rg-migemo/][counsel-rg と migemo を組み合わせて ripgrep でもローマ字検索]] も併せて参照。
-{{{end_alert}}}
+@@hugo:{{< callout note >}}@@
+[[file:/2020/05/24/counsel-rg-migemo/][counsel-rg と migemo を組み合わせて ripgrep でもローマ字検索]] も併せて参照。
+@@hugo:{{</ callout >}}@@
 
 *** TL;DR
 
 #+begin_src emacs-lisp
-  (reqiure 'dash)
-  (require 's)
+(reqiure 'dash)
+(require 's)
 
-  (defun ytn-ivy-migemo-re-builder (str)
-    (let* ((sep " \\|\\^\\|\\.\\|\\*")
-           (splitted (--map (s-join "" it)
-                            (--partition-by (s-matches-p " \\|\\^\\|\\.\\|\\*" it)
-                                            (s-split "" str t)))))
-      (s-join "" (--map (cond ((s-equals? it " ") ".*?")
-                              ((s-matches? sep it) it)
-                              (t (migemo-get-pattern it)))
-                        splitted))))
+(defun ytn-ivy-migemo-re-builder (str)
+  (let* ((sep " \\|\\^\\|\\.\\|\\*")
+         (splitted (--map (s-join "" it)
+                          (--partition-by (s-matches-p " \\|\\^\\|\\.\\|\\*" it)
+                                          (s-split "" str t)))))
+    (s-join "" (--map (cond ((s-equals? it " ") ".*?")
+                            ((s-matches? sep it) it)
+                            (t (migemo-get-pattern it)))
+                      splitted))))
 
-  (setq ivy-re-builders-alist '((t . ivy--regex-plus)
-                                (swiper . ytn-ivy-migemo-re-builder)))
+(setq ivy-re-builders-alist '((t . ivy--regex-plus)
+                              (swiper . ytn-ivy-migemo-re-builder)))
 #+end_src
 
 *** 背景
@@ -1291,19 +1697,19 @@ Swiper はスペースで区切って雑に絞り込んでいけるというの�
 
 ** TODO ox-hugo と academic の素晴らしさ
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-24
-:DIR:                images/2020-01-24_ox-hugo-academic
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-24
+:DIR:      images/2020-01-24_ox-hugo-academic
 :EXPORT_HUGO_BUNDLE: 2020-01-24_ox-hugo-academic
-:EXPORT_HUGO_SLUG:   ox-hugo-academic
+:EXPORT_HUGO_SLUG: ox-hugo-academic
 :END:
 
 logdone 入れないと当日公開に出来ないかも？
  https://ox-hugo.scripter.co/doc/dates/#date
 
 #+begin_src yaml :front_matter_extra t
-  image:
-    caption: Background image by
+image:
+  caption: Background image by
 #+end_src
 
 ** DRAFT org-mode column view で clock した結果を集計
@@ -1316,7 +1722,7 @@ logdone 入れないと当日公開に出来ないかも？
 :END:
 
 #+begin_src org
-  ,#+COLUMNS:  %40ITEM %TODO %CLOCKSUM %JIRA
+,#+COLUMNS:  %40ITEM %TODO %CLOCKSUM %JIRA
 #+end_src
 
 ** DRAFT ox-hugo の src block caption はどこから来てるのか
@@ -1340,13 +1746,13 @@ logdone 入れないと当日公開に出来ないかも？
 :END:
 
 #+begin_src org
-  ,* 記念日 
-  ,#+CATEGORY: omochi
-  %%(org-date 2020 1 8) omochi 記念日
-  %%(diary-anniversary 1 8 2019) omochi %d 歳記念日
+,* 記念日 
+,#+CATEGORY: omochi
+%%(org-date 2020 1 8) omochi 記念日
+%%(diary-anniversary 1 8 2019) omochi %d 歳記念日
 #+end_src
 
-** DONE org-mode に Chrome で開いてるページへのリンクを貼りたい :emacs:org__mode:
+** DONE org-mode に Chrome で開いてるページへのリンクを貼りたい                :emacs:org__mode:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_DATE: 2020-01-10
@@ -1372,13 +1778,13 @@ Now, escaping mechanism uses the usual backslash character, according to the fol
 
 #+caption[=org-mode=]: (参考) =org-mode= 9.3 でのエスケープ実装
 #+begin_src emacs-lisp
-  (defun org-link-unescape (link)
-    "Remove escaping backslash characters from string LINK."
-    (replace-regexp-in-string
-     (rx (group (one-or-more "\\")) (or string-end (any "[]")))
-     (lambda (_)
-       (concat (make-string (/ (- (match-end 1) (match-beginning 1)) 2) ?\\)))
-     link nil t 1))
+(defun org-link-unescape (link)
+  "Remove escaping backslash characters from string LINK."
+  (replace-regexp-in-string
+   (rx (group (one-or-more "\\")) (or string-end (any "[]")))
+   (lambda (_)
+     (concat (make-string (/ (- (match-end 1) (match-beginning 1)) 2) ?\\)))
+   link nil t 1))
 #+end_src
 
 こういう背景もあり、 =org-mode= の外で工夫して =org-mode= 形式のリンクを生成するよりは、
@@ -1393,7 +1799,7 @@ Now, escaping mechanism uses the usual backslash character, according to the fol
 以下のように改行区切りでコピーするような設定を追加します:
 
 #+begin_example
-  %text%%newline%%url%
+%text%%newline%%url%
 #+end_example
 
 CreateLink の =%text%= は改行をスペースに変換する仕様になっているので、区切り文字として改行を利用するのは安全なハズです。
@@ -1401,14 +1807,14 @@ CreateLink の =%text%= は改行をスペースに変換する仕様になっ�
 そして、以下のような独自関数を定義します:
 
 #+begin_src emacs-lisp
-  (require 's)
+(require 's)
 
-  (defun ytn-org-insert-weblink ()
-    (interactive)
-    (let* ((pair (s-split "\n" (with-temp-buffer (clipboard-yank) (buffer-string))))
-           (desc (first pair))
-           (link (second pair)))
-      (insert (org-make-link-string link desc))))
+(defun ytn-org-insert-weblink ()
+  (interactive)
+  (let* ((pair (s-split "\n" (with-temp-buffer (clipboard-yank) (buffer-string))))
+         (desc (first pair))
+         (link (second pair)))
+    (insert (org-make-link-string link desc))))
 #+end_src
 
 単純に改行で区切って =org-make-link-string= に渡すだけです。
@@ -1416,7 +1822,7 @@ CreateLink の =%text%= は改行をスペースに変換する仕様になっ�
 これを、個人的には ~M-L~ にアサインしています([[https://github.com/jwiegley/use-package][use-package]] の =bind-key= を利用しています):
 
 #+begin_src emacs-lisp
-  (bind-key "M-L" #'ytn-org-insert-weblink org-mode-map)
+(bind-key "M-L" #'ytn-org-insert-weblink org-mode-map)
 #+end_src
 
 以上、ちょっとした小ネタでした。
@@ -1432,8 +1838,8 @@ CreateLink の =%text%= は改行をスペースに変換する仕様になっ�
 
 #+caption: .dir-locals.el
 #+begin_src emacs-lisp
-  ((nil . ((eval git-auto-commit-mode 1)
-           (gac-automatically-push-p . t))))
+((nil . ((eval git-auto-commit-mode 1)
+         (gac-automatically-push-p . t))))
 #+end_src
 
 =git-auto-commit-mode= は autoload されるので、 autoload が適切に扱われていれば =require= は不要。
@@ -1448,49 +1854,49 @@ CreateLink の =%text%= は改行をスペースに変換する仕様になっ�
 :END:
 
 #+begin_src emacs-lisp
-  (use-package org-download
-    :after org
-    :functions (org-link-escape)
-    :config
-    (setq org-download-method 'attach)
-    (setq org-download-link-format-function
-          (lambda (filename)
-            (format org-download-link-format
-                    (org-link-escape
-                     (funcall org-download-abbreviate-filename-function filename)))))
-    (setq org-download-annotate-function
-          (lambda (link)
-            (format "#+DOWNLOADED: %s @ %s\n#+ATTR_ORG: :width 500\n"
-                    (if (equal link org-download-screenshot-file)
-                        "screenshot"
-                      link)
-                    (format-time-string "%Y-%m-%d %H:%M:%S"))))
-    (add-hook 'dired-mode-hook 'org-download-enable))
+(use-package org-download
+  :after org
+  :functions (org-link-escape)
+  :config
+  (setq org-download-method 'attach)
+  (setq org-download-link-format-function
+        (lambda (filename)
+          (format org-download-link-format
+                  (org-link-escape
+                   (funcall org-download-abbreviate-filename-function filename)))))
+  (setq org-download-annotate-function
+        (lambda (link)
+          (format "#+DOWNLOADED: %s @ %s\n#+ATTR_ORG: :width 500\n"
+                  (if (equal link org-download-screenshot-file)
+                      "screenshot"
+                    link)
+                  (format-time-string "%Y-%m-%d %H:%M:%S"))))
+  (add-hook 'dired-mode-hook 'org-download-enable))
 
-  (use-package org
-    :config
-    (setq org-use-property-inheritance '("DIR")))
+(use-package org
+  :config
+  (setq org-use-property-inheritance '("DIR")))
 
-  (require 's)
-  (defun ytn-new-post-template ()
-    (let* ((slug (read-string "Slug: "))
-           (now (current-time))
-           (export-date (format-time-string "%Y-%m-%d" now))
-           (id (format "%s_%s" export-date slug)))
-      (s-lex-format "\
-  ,* DRAFT %?
-  :PROPERTIES:
-  :EXPORT_FILE_NAME:   index
-  :EXPORT_DATE:        ${export-date}
-  :DIR:                images/${id}
-  :EXPORT_HUGO_BUNDLE: ${id}
-  :EXPORT_HUGO_SLUG:   ${slug}
-  :END:")))
+(require 's)
+(defun ytn-new-post-template ()
+  (let* ((slug (read-string "Slug: "))
+         (now (current-time))
+         (export-date (format-time-string "%Y-%m-%d" now))
+         (id (format "%s_%s" export-date slug)))
+    (s-lex-format "\
+,* DRAFT %?
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        ${export-date}
+:DIR:                images/${id}
+:EXPORT_HUGO_BUNDLE: ${id}
+:EXPORT_HUGO_SLUG:   ${slug}
+:END:")))
 
-  (setq org-capture-templates '(("n" "サイト用")
-                                ("np" "New post" entry (file+headline "~/Projects/yewton.net/content-org/all-posts.org" "Inbox")
-                                 (function ytn-new-post-template) :empty-lines 1 :prepend t)
-                                ))
+(setq org-capture-templates '(("n" "サイト用")
+                              ("np" "New post" entry (file+headline "~/Projects/yewton.net/content-org/all-posts.org" "Inbox")
+                               (function ytn-new-post-template) :empty-lines 1 :prepend t)
+                              ))
 #+end_src
 
 ** DRAFT Emacs で文字列補間(String interpolation)したい
@@ -1515,14 +1921,14 @@ https://emacs.stackexchange.com/questions/7377/named-string-substitution
 :END:
 
 #+begin_src emacs-lisp
-  ;; -*- lexical-binding: t; -*-
+;; -*- lexical-binding: t; -*-
 #+end_src
 
 #+begin_src emacs-lisp
-  ;; Local Variables:
-  ;; flycheck-disabled-checkers: (emacs-lisp emacs-lisp-checkdoc)
-  ;; no-byte-compile: t
-  ;; End:
+;; Local Variables:
+;; flycheck-disabled-checkers: (emacs-lisp emacs-lisp-checkdoc)
+;; no-byte-compile: t
+;; End:
 #+end_src
 
 =find-alternate-file=
@@ -1535,7 +1941,7 @@ If the current buffer now contains an empty file that you just visited
 
 https://superuser.com/questions/208488/how-do-i-re-open-a-file-in-emacs
 
-** DRAFT emacs-plus で入れた Emacs が Spotlight 検索に引っかからない :emacs:spotlight:
+** DRAFT emacs-plus で入れた Emacs が Spotlight 検索に引っかからない       :emacs:spotlight:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_DATE: 2020-01-09
@@ -1546,23 +1952,23 @@ https://superuser.com/questions/208488/how-do-i-re-open-a-file-in-emacs
 
 https://qiita.com/delphinus/items/438046d2bbeb3e63f8fa
 
-* Webサイト運用                                              :@Webサイト運用:
+* Webサイト運用                                                        :@Webサイト運用:
 
 ** DONE Wowchemy 5.0.0 から 5.2.0 へのアップデート記録
-CLOSED: [2021-06-02 Wed 00:44]
+CLOSED: [2021-06-02 水 00:44]
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2021-06-02
-:DIR:                images/2021-06-02_wowchemy-500-to-520
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2021-06-02
+:DIR:      images/2021-06-02_wowchemy-500-to-520
 :EXPORT_HUGO_BUNDLE: 2021-06-02_wowchemy-500-to-520
-:EXPORT_HUGO_SLUG:   wowchemy-500-to-520
+:EXPORT_HUGO_SLUG: wowchemy-500-to-520
 :END:
 
 *** 背景
 
 [[https://wowchemy.com/blog/v5.1.0/][2021年5月4日に 5.1.0]] が、[[https://wowchemy.com/blog/v5.2.0/][同年5月26日に 5.2.0]] が、それぞれ発表された。
 
-[[/2021/02/28/academic4-to-wowchemy5/][前回]] で [[https://gohugo.io/hugo-modules/][Hugo Modules]] への対応が済んでいるので、サクッとアップデート出来るようになった。
+[[file:/2021/02/28/academic4-to-wowchemy5/][前回]] で [[https://gohugo.io/hugo-modules/][Hugo Modules]] への対応が済んでいるので、サクッとアップデート出来るようになった。
 
 多少、後方互換性の無い変更があるので、対応の記録を残す。
 
@@ -1591,13 +1997,13 @@ hugo mod get github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms@89d079b
 以上で、アップデートは完了となる。簡単!
 
 ** DONE Academic 4.8.0 から Wowchemy 5.0.0 へのアップデート記録
-CLOSED: [2021-02-28 Sun 00:37]
+CLOSED: [2021-02-28 日 00:37]
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2021-02-27
-:DIR:                images/2021-02-27_academic4-to-wowchemy5
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2021-02-27
+:DIR:      images/2021-02-27_academic4-to-wowchemy5
 :EXPORT_HUGO_BUNDLE: 2021-02-27_academic4-to-wowchemy5
-:EXPORT_HUGO_SLUG:   academic4-to-wowchemy5
+:EXPORT_HUGO_SLUG: academic4-to-wowchemy5
 :END:
 
 #+toc: headlines 2
@@ -1730,7 +2136,7 @@ hugo server -DF --bind 0.0.0.0
 とはいえ、公式ドキュメントだけだと若干引っ掛かる部分もあったので、
 この記録が誰かの役に立てば幸い。
 
-** DRAFT Academic テーマへの移行手順                    :emacs:hugo:ox_hugo:
+** DRAFT Academic テーマへの移行手順                              :emacs:hugo:ox_hugo:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 2020-01-25_migrate-to-hugo-academic
@@ -1745,27 +2151,27 @@ org-mode ではタグにハイフンを付けられない。
 conf-toml がある https://github.com/dryman/toml-mode.el/issues/14
 
 #+begin_src emacs-lisp
-  (use-package ox-hugo
-    :after ox
-    :init
-    (defalias 'toml-mode 'conf-toml-mode)
-    :config 
-    (setq org-hugo-use-code-for-kbd t))
+(use-package ox-hugo
+  :after ox
+  :init
+  (defalias 'toml-mode 'conf-toml-mode)
+  :config 
+  (setq org-hugo-use-code-for-kbd t))
 #+end_src
 
 https://github.com/sourcethemes/academic-scripts に page bunlde 化するスクリプトがある。
 
 #+begin_src sh
-  asdf plugin add hugo https://github.com/beardix/asdf-hugo
+asdf plugin add hugo https://github.com/beardix/asdf-hugo
 #+end_src
 
 
 =baseurl= を設定しないと Twitter Card などが表示されないので気をつけよう
 
 #+begin_src toml
-  # The URL of your site.
-  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-  baseurl = "https://www.yewton.net/"
+# The URL of your site.
+# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+baseurl = "https://www.yewton.net/"
 #+end_src
 
 =google_tag_manager= が設定されていると Google Analytics のコードが埋め込まれない
@@ -1774,7 +2180,7 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 *** ox-hugo alias
 
 #+begin_example
-  :EXPORT_HUGO_ALIASES: /2019/01/happy-new-year/
+:EXPORT_HUGO_ALIASES: /2019/01/happy-new-year/
 #+end_example
 
 
@@ -1785,16 +2191,16 @@ https://spectrum.chat/academic/help/google-analytics-not-working-for-me~3e802803
 ** DONE Hugo Academic でダーク・ライト両モードに対応した Chroma によるシンタックスハイライト :emacs:chroma:hugo:academic:
 CLOSED: [2020-01-24 金 08:37]
 :PROPERTIES:
-:EXPORT_FILE_NAME:   index
-:EXPORT_DATE:        2020-01-23
-:DIR:                images/2020-01-23_hugo-academic-dark-light-code-block
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2020-01-23
+:DIR:      images/2020-01-23_hugo-academic-dark-light-code-block
 :EXPORT_HUGO_BUNDLE: 2020-01-23_hugo-academic-dark-light-code-block
-:EXPORT_HUGO_SLUG:   hugo-academic-dark-light-code-block
+:EXPORT_HUGO_SLUG: hugo-academic-dark-light-code-block
 :END:
 
 #+begin_src yaml :front_matter_extra t
-  image:
-    caption: Background image by <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@markusspiske?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Markus Spiske"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Markus Spiske</span></a>
+image:
+  caption: Background image by <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@markusspiske?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Markus Spiske"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Markus Spiske</span></a>
 #+end_src
 
 #+toc: headlines 2
@@ -1815,21 +2221,21 @@ DocString 中のクオテーションといった EmacsLisp 方言には対応�
 
 [[https://codepen.io/yewton/pen/RwNvdBz][CodePen]] と [[https://swapoff.org/chroma/playground/][Chroma Playground]] とでそれぞれの出力結果を比べてみるとよく分かります:
 
-#+CAPTION: 元のコード
+#+caption: 元のコード
 #+begin_src emacs-lisp
-  (defvar hoge "fuga"
-    "Doc String 中の `QUOTE' はどうなるかな？")
+(defvar hoge "fuga"
+  "Doc String 中の `QUOTE' はどうなるかな？")
 
-  (with-eval-after-load 'foo
-    (unless (eq t nil) "EmacsLisp 独自キーワードはどうなるかな？")
+(with-eval-after-load 'foo
+  (unless (eq t nil) "EmacsLisp 独自キーワードはどうなるかな？")
 #+end_src
 
-#+ATTR_ORG: :width 500
-#+CAPTION: highlight.js w/ GitHub style
+#+attr_org: :width 500
+#+caption: highlight.js w/ GitHub style
 [[file:images/2020-01-23_hugo-academic-dark-light-code-block/2020-01-24_05-59-12_貼り付けた画像_2020_01_24_5_58.png]]
 
-#+ATTR_ORG: :width 500
-#+CAPTION: Chroma w/ GitHub style
+#+attr_org: :width 500
+#+caption: Chroma w/ GitHub style
 [[file:images/2020-01-23_hugo-academic-dark-light-code-block/2020-01-24_05-56-58_貼り付けた画像_2020_01_24_5_56.png]]
 
 そこで、 *Academic を使いつつ、 Hugo 標準のハイライトの仕組みを使いたい* というのが動機となります。
@@ -1841,7 +2247,7 @@ DocString 中のクオテーションといった EmacsLisp 方言には対応�
 
 [[https://sourcethemes.com/academic/][Academic Kickstart]] をベースにしている場合、 =params.toml= で以下のように設定します:
 
-#+CAPTION: =params.toml=
+#+caption: =params.toml=
 #+begin_src toml
 # Enable source code highlighting? true/false
 # Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
@@ -1854,16 +2260,16 @@ highlight = false
 Hugo のコードハイライトが無効にされていると思います:
 
 #+begin_src toml
-  [markup.highlight]
-    codeFences = false  # Disable Hugo's code highlighter as it conflicts with Academic's highligher.
+[markup.highlight]
+  codeFences = false  # Disable Hugo's code highlighter as it conflicts with Academic's highligher.
 #+end_src
 
 これを以下のように変更します:
 
 #+begin_src toml
-  [markup.highlight]
-    codeFences = true
-    noClasses = false
+[markup.highlight]
+  codeFences = true
+  noClasses = false
 #+end_src
 
 =noClasses = false= としているのは、 *ダーク・ライトの両方のモードに対応させるため* です。
@@ -1942,9 +2348,9 @@ CSS クラスだけを HTML に埋め込んでもらうようにします。
 スタイルを決めたら以下のように CSS を生成します。
 生成された CSS は標準出力に吐き出されるため、適当なファイルにリダイレクトするか、 =pbcopy= 等にパイプしてクリップボードに格納しましょう:
 
-#+Begin_src sh
-  hugo gen chromastyles --style=pygments
-  hugo gen chromastyles --style=native
+#+begin_src sh
+hugo gen chromastyles --style=pygments
+hugo gen chromastyles --style=native
 #+end_src
 
 この後多少手を加える必要があるので、やりやすいように [[https://css2sass.herokuapp.com/][CSS 2 SASS/SCSS CONVERTER]] 等で SCSS に変換しておくとよいです。
@@ -1968,10 +2374,10 @@ Chroma が生成したスタイル指定をそのまま組込むと若干コン�
 最終的に以下のようになります:
 
 #+begin_src scss
-  pre.chroma, .chroma code {
+pre.chroma, .chroma code {
 
-      background-color: #f5f5f5;
-      color: #4a4a4a;
+    background-color: #f5f5f5;
+    color: #4a4a4a;
 #+end_src
 
 次にダークモード時のスタイルについては、
@@ -1991,8 +2397,8 @@ Chroma が生成したスタイル指定をそのまま組込むと若干コン�
 :END:
 
 #+begin_src yaml :front_matter_extra t
-  image:
-    caption: Image by <a href="https://pixabay.com/users/Sambeetarts-1339110/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Sambeet D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Pixabay</a>
+image:
+  caption: Image by <a href="https://pixabay.com/users/Sambeetarts-1339110/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Sambeet D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1732847">Pixabay</a>
 #+end_src
 
 記事のバナー、アイキャッチ画像([[https://sourcethemes.com/academic/][Academic]] 的には [[https://sourcethemes.com/academic/docs/managing-content/#featured-image][Featured image]])があると書く時のテンションが上がるので、
@@ -2010,7 +2416,7 @@ Chroma が生成したスタイル指定をそのまま組込むと若干コン�
 
 #+attr_org: :width 500
 [[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-13_11-43-22_ash-edmonds-0aWZdK8nK2I-unsplash.jpg]]
-{{{unsplash(Image by,badashphotos,Ash Edmonds)}}}
+@@hugo:{{< unsplash leading="Image by" id="badashphotos" name="Ash Edmonds" >}}@@
 
 [[https://unsplash.com/license][License | Unsplash]]
 
@@ -2024,7 +2430,7 @@ The photos on Unsplash are free to use and can be used for most commercial, pers
 
 #+attr_org: :width 500
 [[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-13_11-46-07_abstract-architecture-building-exterior-geometric-593158.jpg]]
-{{{pexels(Photo by,scottwebb,Webb from Pexels)}}}
+@@hugo:{{< pexels leading="Photo by" id="scottwebb" name="Webb from Pexels">}}@@
 
 [[https://www.pexels.com/photo-license/][License of our free stock photos - Pexels]]
 
@@ -2040,9 +2446,9 @@ Yes, all photos and videos are free for commercial use. You can use them on your
 
 *** Pixabay
 
-#+ATTR_ORG: :width 500
+#+attr_org: :width 500
 [[file:images/2020-01-13_unsplash-pexels-pixabay/2020-01-23_04-30-34_social-3064515_1280.jpg]]
-{{{pixabay(Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3064515">Gerd Altmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3064515">Pixabay</a>)}}}
+@@hugo:{{< pixabay >}}Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3064515">Gerd Altmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3064515">Pixabay</a>{{< /pixabay >}}@@
 
 [[https://pixabay.com/service/license/][Pixabay License]]
 
@@ -2068,14 +2474,14 @@ You can copy, modify, distribute, and use the images, even for commercial purpos
 :END:
 
 #+begin_src yaml :front_matter_extra t
-  image:
-    caption: Background image by <a href="https://pixabay.com/users/PIRO4D-2707530/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">PIRO4D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">Pixabay</a>
+image:
+  caption: Background image by <a href="https://pixabay.com/users/PIRO4D-2707530/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">PIRO4D</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1687319">Pixabay</a>
 #+end_src
 
-[[/2016/02/02/blog-with-hugo/][この記事にあるとおり]] 、当初このサイトは [[https://pages.github.com/][GitHub Pages]] でホストされ、
+[[file:/2016/02/02/blog-with-hugo/][この記事にあるとおり]] 、当初このサイトは [[https://pages.github.com/][GitHub Pages]] でホストされ、
 [[https://www.cloudflare.com/][Cloudflare CDN]] を利用して配信していた。
 
-だが先日 [[/2020/01/06/made-with-academic/][テーマを変えた]] ときに、既に使われていないリソースがそのまま残ってしまっていることに気がついた。
+だが先日 [[file:/2020/01/06/made-with-academic/][テーマを変えた]] ときに、既に使われていないリソースがそのまま残ってしまっていることに気がついた。
 単純に =/public= 以下を =git add -a= しているだけなので、明示的に消さなければ反映されなくて当然だった。
 
 デプロイスクリプトを見直してもよかったが、 [[https://gohugo.io/][Hugo]] 自体が [[https://www.netlify.com/][Netlify]] でホストされているし、
@@ -2089,10 +2495,10 @@ You can copy, modify, distribute, and use the images, even for commercial purpos
 
 [[https://gohugo.io/hosting-and-deployment/hosting-on-netlify/][公式ドキュメント]] を超ざっくり要約すると、
 
-1.  [[https://app.netlify.com/][Netlify でアカウント作成]]
-2.  [[https://gohugo.io/hosting-and-deployment/hosting-on-netlify/#configure-hugo-version-in-netlify][=netlify.toml=]] をドキュメントを参考に配置
-3.  連携する GitHub リポジトリを選択
-4.  =Deploy site= ボタンをポチる
+1. [[https://app.netlify.com/][Netlify でアカウント作成]]
+2. [[https://gohugo.io/hosting-and-deployment/hosting-on-netlify/#configure-hugo-version-in-netlify][=netlify.toml=]] をドキュメントを参考に配置
+3. 連携する GitHub リポジトリを選択
+4. =Deploy site= ボタンをポチる
 
 *以上。*
 
@@ -2106,8 +2512,8 @@ DNS レコードの設定をする必要がある。
 [[https://www.cloudflare.com/][Cloudflare]] の場合は、以下のように Cloudflare のダッシュボードで、
 各ドメインが Netlify への =CNAME= となるように設定する。
 
-#+DOWNLOADED: file:/Users/yewton/Downloads/cloudflare.png @ 2020-01-13 15:37:38
-#+ATTR_ORG: :width 500
+#+downloaded: file:/Users/yewton/Downloads/cloudflare.png @ 2020-01-13 15:37:38
+#+attr_org: :width 500
 [[file:images/2020-01-13_hugo-netlify/2020-01-13_15-37-38_cloudflare.png]]
 
 
@@ -2150,10 +2556,10 @@ https://yewton-net.netlify.com/* https://www.yewton.net/:splat 301!
 
 ただこれはあんまり理解しないで書かれてる通りやっただけなところがあるので、いつか改めて記事にしたい。
 
-#+ATTR_ORG: :width 500
+#+attr_org: :width 500
 [[file:images/2020-01-13_hugo-netlify/2020-01-13_15-12-54_securityheaders.png]]
 
-#+ATTR_ORG: :width 500
+#+attr_org: :width 500
 [[file:images/2020-01-13_hugo-netlify/2020-01-13_15-15-03_qualys.png]]
 
 # Local Variables:
