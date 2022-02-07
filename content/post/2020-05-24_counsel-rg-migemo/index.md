@@ -2,7 +2,7 @@
 title: "counsel-rg と migemo を組み合わせて ripgrep でもローマ字検索"
 author: ["yewton"]
 date: 2020-05-25T06:51:00+09:00
-mylastmod: 2020-05-25T06:51:43+09:00
+mylastmod: 2022-02-07T22:18:29+09:00
 slug: "counsel-rg-migemo"
 tags: ["migemo", "ripgrep", "ivy", "emacs"]
 categories: ["Emacs"]
