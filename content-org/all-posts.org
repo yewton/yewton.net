@@ -236,6 +236,7 @@ CLOSED: [2022-02-19 土 21:51]
 :DIR:                images/2022-02-19_dell-latitude-3420-memory
 :EXPORT_HUGO_BUNDLE: 2022-02-19_dell-latitude-3420-memory
 :EXPORT_HUGO_SLUG:   dell-latitude-3420-memory
+:EXPORT_HUGO_TAGS: dell latitude
 :END:
 
 [[/2021/10/11/dell-latitude-3420-byo-ubuntu/][以前の記事]] で書いた [[https://japancatalog.dell.com/pd/latitude-3420.html][Dell Latitude 3420]] だが、
@@ -340,7 +341,7 @@ CLOSED: [2021-10-11 月 23:44]
 :DIR:      images/2021-10-07_dell-latitude-3420-byo-ubuntu
 :EXPORT_HUGO_BUNDLE: 2021-10-07_dell-latitude-3420-byo-ubuntu
 :EXPORT_HUGO_SLUG: dell-latitude-3420-byo-ubuntu
-:EXPORT_HUGO_TAGS: dell xubuntu ubuntu xfce
+:EXPORT_HUGO_TAGS: dell xubuntu ubuntu xfce latitude
 :CREATED:  [2021-10-11 月 23:44]
 :END:
 

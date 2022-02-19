@@ -2,9 +2,9 @@
 title: "Dell Latitude 3420 - Build Your Own で Ubuntu プリインストールなノート PC を楽しむ"
 author: ["yewton"]
 date: 2021-10-11T23:44:00+09:00
-mylastmod: 2021-10-11T23:44:59+09:00
+mylastmod: 2022-02-19T21:53:32+09:00
 slug: "dell-latitude-3420-byo-ubuntu"
-tags: ["dell", "xubuntu", "ubuntu", "xfce"]
+tags: ["dell", "xubuntu", "ubuntu", "xfce", "latitude"]
 categories: ["買ったモノ"]
 draft: false
 ---
