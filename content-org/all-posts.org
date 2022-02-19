@@ -228,6 +228,110 @@ org-mode で書けるようになったことだし、少しは記事を書い�
 - conf-toml-mode を [[https://ox-hugo.scripter.co/doc/custom-front-matter/#front-matter-extra][Front-matter Extra]] で使う方法
 
 * 買ったモノ                                                              :@買ったモノ:
+** DONE Dell Latitude 3420 にメモリを増設する
+CLOSED: [2022-02-19 土 21:51]
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2022-02-19
+:DIR:                images/2022-02-19_dell-latitude-3420-memory
+:EXPORT_HUGO_BUNDLE: 2022-02-19_dell-latitude-3420-memory
+:EXPORT_HUGO_SLUG:   dell-latitude-3420-memory
+:END:
+
+[[/2021/10/11/dell-latitude-3420-byo-ubuntu/][以前の記事]] で書いた [[https://japancatalog.dell.com/pd/latitude-3420.html][Dell Latitude 3420]] だが、
+普段使いに支障は無いものの、本格的に開発作業をしようと思うと
+いささかメモリが心許ない( 8GiB )為、メモリを増設することにした。
+
+今回購入したのは、 [[https://amzn.to/34T6Jr1][Crucial 16GB DDR4-3200 SODIMM CT16G4SFRA32A]] 。
+[[https://www.crucial.jp/compatible-upgrade-for/dell/latitude-14-(3420)][Crucial のページ]] に Latitude 3420 との互換性が謳われていたのできっと安心。
+
+[[https://www.dell.com/support/kbdoc/ja-jp/000185381/][Dell の公式ページ]] に、分解方法の解説がある為、これに従い分解していく。
+
+まずはサービスモードに入る必要がある。
+
+公式ページ記載の通りに、 =B= キーを押しながら電源投入でいい…のだが、
+ずっと押しっぱなしにしていると連打している扱いになるらしく、
+確認画面などをすっ飛ばして直ぐ様
+ビープ音を鳴らしつつサービスモードに入ってしまう。
+
+特に問題は無いと思うのだけれど、知らないとビックリするので注意。
+
+=B= を押しながら電源を入れ、3〜5 秒程度で離すと、
+上手くいくと以下のように =OWNER TAG= という文字列が表示される。
+
+#+attr_org: :width 300px
+[[file:images/2022-02-19_dell-latitude-3420-memory/2022-02-19_21-00-38_PXL_20220218_081810718.jpg]]
+
+更に AC アダプタの接続有無に関わらず、以下のような注意文言が表示され…
+
+#+begin_quote
+Please Remove AC Adapter
+
+Press Any Key To Continue...
+#+end_quote
+
+#+attr_org: :width 300px
+[[file:images/2022-02-19_dell-latitude-3420-memory/2022-02-19_21-02-53_PXL_20220218_081832378.jpg]]
+
+最後に以下のような説明が出力され、
+「カッカッ」とドキッとするようなビープ音が3回流れて電源が落ちる。
+
+#+begin_quote
+System Ready For Service After 3 Short Beeps (OR Wait 2 Seconds).
+
+After The Service Is Completed,
+Plug In AC And Press And Hold The Power Button For 2 Seconds
+To Resume Normal Operations.
+
+Press Any Key To Continue...
+#+end_quote
+
+#+attr_org: :width 300px
+[[file:images/2022-02-19_dell-latitude-3420-memory/2022-02-19_21-03-43_PXL_20220218_081846897.jpg]]
+
+この後、公式ページ記載の通りに底面のベースカバーのネジを外す。
+
+そしてベースカバーを外せばいい…のだが、すんなりとはいかなかった。
+どうやったら外せたのかよく分かっていないのだが、
+おそらくヒンジ側中央部分の引っかかりをうまいこと外せれば、
+あとは持ち上げるだけで外せる…ハズ。
+
+上手く外せたら、以下の部分にメモリを差し込む。
+元々 8GiB のが差さっているので、その反対側になる。
+
+#+attr_org: :width 300px
+[[file:images/2022-02-19_dell-latitude-3420-memory/2022-02-19_21-18-28_photo1.jpg]]
+
+[[https://www.iodata.jp/product/memory/info/tips/#list2][メモリーの増設方法 | IODATA アイ・オー・データ機器]] 等を参考に、
+斜め 35 度くらいに差し込み、奥までいったら下に押し込む。
+
+カチッとハマッたら、再びベースカバーをネジ止めして、AC アダプタに接続する。
+
+サービスモードに入るときの説明では、
+AC アダプタ接続後に電源ボタンを押す的なことが書いてあったが、
+自分の場合は接続後すぐに起動した。
+
+起動後は以下のような画面が表示される。
+
+#+begin_quote
+Alert! The amount of system memory has changed.
+#+end_quote
+
+#+attr_org: :width 300px
+[[file:images/2022-02-19_dell-latitude-3420-memory/2022-02-19_21-30-58_PXL_20220218_085238190.jpg]]
+
+[[https://www.dell.com/support/kbdoc/ja-jp/000137726/][Dell のサポート技術文書]] によれば、無視して構わないとのこと。
+
+#+begin_quote
+メモリを増設または取り外した場合、このメッセージは単なる通知として無視して構いません
+#+end_quote
+
+以上で無事、既存の 8 GiB + 16 GiB で 24 GiB に RAM を増強出来た 🎉
+
+#+attr_org: :width 300px
+[[file:images/2022-02-19_dell-latitude-3420-memory/2022-02-19_21-41-36_screenshot.png]]
+
+
 ** DONE Dell Latitude 3420 - Build Your Own で Ubuntu プリインストールなノート PC を楽しむ
 CLOSED: [2021-10-11 月 23:44]
 :PROPERTIES:
