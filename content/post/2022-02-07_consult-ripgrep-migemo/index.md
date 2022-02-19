@@ -2,7 +2,7 @@
 title: "consult-ripgrep と migemo を組み合わせて ripgrep でもローマ字日本語検索"
 author: ["yewton"]
 date: 2022-02-07T23:29:00+09:00
-mylastmod: 2022-02-07T23:29:06+09:00
+mylastmod: 2022-02-19T21:56:08+09:00
 slug: "consult-ripgrep-migemo"
 tags: ["migemo", "ripgrep", "consult", "emacs"]
 categories: ["Emacs"]
@@ -15,6 +15,8 @@ draft: false
 ## TL;DR {#tl-dr}
 
 ```emacs-lisp
+;; -*- lexical-binding: t -*-
+
 (defun consult--migemo-regexp-compiler (input type)
   (setq input (mapcar #'migemo-get-pattern (consult--split-escaped input)))
   (cons (mapcar (lambda (x) (consult--convert-regexp x type)) input)
@@ -24,6 +26,10 @@ draft: false
 (setq migemo-options '("--quiet" "--nonewline" "--emacs"))
 (setq consult--regexp-compiler #'consult--migemo-regexp-compiler)
 ```
+
+{{% callout warning %}}
+[Lexical Binding](https://www.gnu.org/software/emacs/manual/html%5Fnode/elisp/Lexical-Binding.html) が有効でないとエラーになります。
+{{% /callout %}}
 
 
 ## `cosult-ripgrep` の仕組み {#cosult-ripgrep-の仕組み}

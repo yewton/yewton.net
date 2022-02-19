@@ -1501,6 +1501,8 @@ CLOSED: [2022-02-07 月 23:29]
 *** TL;DR
 
 #+begin_src emacs-lisp
+;; -*- lexical-binding: t -*-
+
 (defun consult--migemo-regexp-compiler (input type)
   (setq input (mapcar #'migemo-get-pattern (consult--split-escaped input)))
   (cons (mapcar (lambda (x) (consult--convert-regexp x type)) input)
@@ -1510,6 +1512,10 @@ CLOSED: [2022-02-07 月 23:29]
 (setq migemo-options '("--quiet" "--nonewline" "--emacs"))
 (setq consult--regexp-compiler #'consult--migemo-regexp-compiler)
 #+end_src
+
+{{{begin_callout(warning)}}}
+[[https://www.gnu.org/software/emacs/manual/html_node/elisp/Lexical-Binding.html][Lexical Binding]] が有効でないとエラーになります。
+{{{end_callout}}}
 
 *** =cosult-ripgrep= の仕組み
 
