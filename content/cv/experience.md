@@ -1,5 +1,5 @@
 +++
-lastmod = 2021-09-13T23:03:09+09:00
+lastmod = 2022-04-18T22:12:14+09:00
 weight = 3003
 # Experience widget.
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
@@ -133,6 +133,13 @@ date_format = "2006年1月"
   title = "ブライダルメディアサービス開発"
   company = "株式会社R"
   date_start = "2021-04-01"
-  date_end = ""
+  date_end = "2021-03-31"
   description = "グループマネージャに就任。モバイルアプリ開発チームのマネジメントと、サービス全体の技術ガバナンス強化を推進。"
+
+[[experience]]
+  title = "美容サロンメディアサービス開発"
+  company = "株式会社R"
+  date_start = "2022-04-01"
+  date_end = ""
+  description = "開発メンバーとして参加"
 +++

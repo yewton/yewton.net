@@ -14,16 +14,32 @@
   weight = 20
 
 [[main]]
+  name = "Taxonomies"
+  weight = 30
+
+[[main]]
   name = "Categories"
   url = "/categories/"
   weight = 30
+  parent = "Taxonomies"
 
 [[main]]
   name = "Tags"
   url = "/tags/"
   weight = 40
+  parent = "Taxonomies"
 
 [[main]]
   name = "Curriculum Vitae"
   url = "/cv/"
   weight = 60
+
+[[main]]
+  name = ".emacs.d"
+  url = "https://github.com/yewton/.emacs.d"
+  weight = 80
+
+[[main]]
+  name = "kanpro"
+  url = "https://github.com/yewton/kanpro"
+  weight = 90
