@@ -46,6 +46,54 @@ https://www.swiftbysundell.com/articles/avoiding-force-unwrapping-in-swift-unit-
 :PROPERTIES:
 nil:END:
 
+** DONE Ubuntu で Bluetooth マウスが使えない時にやるといいかもしれないこと
+CLOSED: [2022-05-29 日 23:28]
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2022-05-29
+:DIR:                images/2022-05-29_ubuntu-bluetooth-troubleshoot
+:EXPORT_HUGO_BUNDLE: 2022-05-29_ubuntu-bluetooth-troubleshoot
+:EXPORT_HUGO_SLUG:   ubuntu-bluetooth-troubleshoot
+:EXPORT_HUGO_TAGS: ubuntu bluetooth mouse
+:END:
+
+#+begin_src yaml :front_matter_extra t
+image:
+  caption: Background image by <a href="https://pixabay.com/ja/users/0fjd125gk87-51581/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=517497">0fjd125gk87</a> from <a href="https://pixabay.com/ja/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=517497">Pixabay</a>
+#+end_src
+
+[[/2021/10/11/dell-latitude-3420-byo-ubuntu/][以前購入した Dell Latitude 3420]] ( Xubuntu 入り )をクラムシェルで使うときに、マウスが入り用になった。
+
+元々 [[https://amzn.to/3wZm0kh][ロジクール M337]] を持っていたので、これを使えばいいと思っていたのだけれど、何故か検出されない。
+具体的には =blueman-manager= から、マウスが見えない。
+
+検索してみると [[https://ubuntuforums.org/showthread.php?t=2390542][[SOLVED] Bluetooth Mouse Won't Connect after Reboot - Ubuntu 18.04 LTS]] が見つかった。
+
+理屈は分からないのだけれど、 [[http://www.bluez.org/][BlueZ]] の =bluetoothctl= を使わないと接続出来ない機器があるらしい。
+
+#+begin_src shell
+bluetoothctl
+#+end_src
+
+で、対話モードになる。この状態で
+
+#+begin_example
+scan on
+#+end_example
+
+を実行すると、 =Bluetooth Mouse M336/M337/M535= として検出された
+( この時点で =blueman-manager= の方でも表示されるようになっていた )。
+
+そして、デバイスの MAC アドレスを指定して、
+
+#+begin_example
+pair XX:XX:XX:XX:XX:XX
+connect XX:XX:XX:XX:XX:XX
+trust XX:XX:XX:XX:XX:XX
+#+end_example
+
+と実行すれば、ペアリングと接続が完了し、次回以降はマウス側から再接続も出来るようになった。
+
 ** DONE スーパーマリオ64 Behind Camera Anywhere とは
 CLOSED: [2021-06-07 月 00:30]
 :PROPERTIES:
