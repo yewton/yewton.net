@@ -112,3 +112,14 @@ disableLatLong = false
     path = "github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms"
   [[module.imports]]
     path = "github.com/wowchemy/wowchemy-hugo-modules/wowchemy"
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+[[related.indices]]
+  name = 'tags'
+  weight = 100
+[[related.indices]]
+  name = 'date'
+  weight = 10
