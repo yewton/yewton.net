@@ -1295,6 +1295,37 @@ sudo apt install neofetch -y
 @@hugo:{{< unsplash leading="Featured image background by" id=" estherrj" name=" Esther Jiao" >}}@@
 * 技術系                                                                  :@技術系:
 
+** DONE タスクランナー Task の紹介スライドを書いた :task:taskfile:make:
+CLOSED: [2022-11-24 木 22:04]
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2022-11-23
+:DIR:                images/2022-11-23_task
+:EXPORT_HUGO_BUNDLE: 2022-11-23_task
+:EXPORT_HUGO_SLUG:   task
+:END:
+
+#+begin_src yaml :front_matter_extra t
+url_slides: https://yewton.github.io/my-marp-slides/2022-11_task/PITCHME.html
+#+end_src
+
+[[https://amzn.to/3TSpkqM][Spring Microservices in Action, Second Edition]] の独習用に、 https://github.com/yewton/my-smia というリポジトリで、実際に AWS に Terraform で環境構築してデプロイするところまでをやっている。
+
+その際に利用したタスクランナー [[https://taskfile.dev/][Task]] が、丁度いい感じに使えて良かった為、紹介するためのスライドを作った:
+
+@@markdown:{{< icon name="external-link-alt" pack="fas" >}}@@ [[https://yewton.github.io/my-marp-slides/2022-11_task/PITCHME.html][タスクランナー Task の紹介]]
+
+スライドにも書いたが、以下の点が特に気に入っている:
+
+1. 環境変数の設定・切り替えが簡単
+2. [[https://pkg.go.dev/text/template][Go Template]] が使える
+3. タスクの構造化が簡単・直感的
+4. 無駄な実行を防ぐのが簡単
+5. [[https://github.com/SchemaStore/schemastore/blob/master/src/schemas/json/taskfile.json][JSON スキーマが公開されており]] 入力支援が効く
+
+その他のツールとして YAML テンプレーティングツール [[https://carvel.dev/ytt/docs/latest/][ytt]] も便利だった。
+こちらについてもその内紹介したい。
+
 ** DONE MacBook Pro (Retina, 15-inch, Mid 2012) で macOS と Xubuntu 19.10 Eoan Ermine をデュアルブートする :macos:ubuntu:xubuntu:xfce:hidpi:
 CLOSED: [2020-02-13 木 07:01]
 :PROPERTIES:
