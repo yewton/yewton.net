@@ -2,7 +2,7 @@
 title: "Spring Boot でプロファイルに応じて読み込む設定ファイルの設定値をテストする"
 author: ["yewton"]
 date: 2022-12-29T23:53:00+09:00
-mylastmod: 2022-12-29T23:53:02+09:00
+mylastmod: 2022-12-30T00:06:35+09:00
 slug: "spring-boot-config-test"
 tags: ["spring", "spring-boot", "kotest", "Java", "Kotlin"]
 categories: ["技術系"]
