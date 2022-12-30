@@ -123,3 +123,10 @@ disableLatLong = false
 [[related.indices]]
   name = 'date'
   weight = 10
+
+[security.exec]
+osEnv = [
+  '(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$',
+  '^ASDF_DIR$',
+  '^HOME$'
+]
