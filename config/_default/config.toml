@@ -11,10 +11,6 @@ title = "yewton.net"
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "http://localhost:1313/"
 
-# Enter a copyright notice to display in the site footer.
-# To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
-copyright = "&copy; 2016-{year} yewton"
-
 ############################
 ## Advanced options below ##
 ############################
@@ -32,6 +28,21 @@ paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+############################
+## Page options
+############################
+
+[[cascade]]
+# Blog post options
+_target = { path = "/post/**" }
+pager = true
+editable = false
+reading_time = true
+commentable = true
+show_related = true
+show_breadcrumb = true
+share = true
 
 [outputs]
   home = [ "HTML", "RSS", "JSON", "WebAppManifest" ]
@@ -124,9 +135,14 @@ disableLatLong = false
   name = 'date'
   weight = 10
 
+[security]
+_merge = "deep"
 [security.exec]
 osEnv = [
   '(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$',
   '^ASDF_DIR$',
   '^HOME$'
 ]
+
+[sitemap]
+_merge = "deep"

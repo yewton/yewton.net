@@ -1,1 +1,1 @@
-<p class="mylastmod">{{ .Page.Params.mylastmod | dateFormat site.Params.date_format }} {{ i18n "last_updated" }}</p>
+<p class="mylastmod">{{ .Page.Params.mylastmod | dateFormat site.Params.locale.date_format }} {{ i18n "last_updated" }}</p>
