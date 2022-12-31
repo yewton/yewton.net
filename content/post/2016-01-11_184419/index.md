@@ -4,7 +4,7 @@ categories = ["技術系"]
 tags = ["github", "hugo", "cloudflare", "ssl", "dns"]
 title = "Hugo + GitHub Pages でお手軽にブログを始めよう"
 slug = "blog-with-hugo"
-banner = "banners/hugo.jpg"
+
 mylastmod = 2020-01-13T15:43:21+09:00
 +++
 

@@ -1,5 +1,5 @@
 +++
-banner = "banners/dvvb.jpg"
+
 categories = ["技術系"]
 date = "2016-02-19T00:00:00+09:00"
 slug = "save-storage-space-by-moving-vm-related-files-to-ex-storage"

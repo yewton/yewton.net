@@ -1,5 +1,5 @@
 +++
-banner = "img/2016-05-04_160945_setsuna/setsuna.jpg"
+
 categories = ["ゲーム感想"]
 date = "2016-05-04T16:10:11+09:00"
 slug = "setsuna"

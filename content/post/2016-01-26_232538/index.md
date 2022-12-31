@@ -1,5 +1,5 @@
 +++
-banner = "banners/emacs.jpg"
+
 categories = ["Emacs"]
 date = "2016-01-26T23:25:40+09:00"
 slug = "hugo-el"

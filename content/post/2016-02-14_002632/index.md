@@ -1,5 +1,5 @@
 +++
-banner = "banners/default.jpg"
+
 categories = ["雑記"]
 date = "2016-02-14T00:26:33+09:00"
 slug = "diary"

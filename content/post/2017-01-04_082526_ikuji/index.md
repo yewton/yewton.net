@@ -1,5 +1,5 @@
 +++
-banner = "banners/default.jpg"
+
 draft = true
 categories = [
   "妊娠・出産・育児"

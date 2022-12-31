@@ -1,5 +1,5 @@
 +++
-banner = "banners/scrumprimer.jpg"
+
 categories = ["雑記"]
 date = "2016-01-31T23:18:29+09:00"
 slug = "diary"

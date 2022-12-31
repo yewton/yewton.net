@@ -1,5 +1,5 @@
 +++
-banner = "banners/nxwphhvmd.jpg"
+
 categories = ["技術系"]
 date = "2016-02-21T22:49:52+09:00"
 slug = "wordpress-http2-hhvm"

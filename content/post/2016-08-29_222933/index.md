@@ -1,5 +1,5 @@
 +++
-banner = "banners/default.jpg"
+
 categories = ["雑記"]
 date = "2016-08-29T22:29:35+09:00"
 draft = false

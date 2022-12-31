@@ -1,5 +1,5 @@
 +++
-banner = "banners/emacs.jpg"
+
 categories = ["Emacs"]
 date = "2016-01-20T22:40:16+09:00"
 slug = "markdown-mode-skk-kakutei"

@@ -1,6 +1,6 @@
 +++
 slug = "mbp-accesories"
-banner = "banners/default.jpg"
+
 draft = true
 categories = [
   "雑記",
