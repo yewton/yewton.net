@@ -160,6 +160,4 @@
     </div>
   </div>
 </div>
-{{define "addscripts"}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-{{end}}
+{{ $.Scratch.Add "page_js" (slice "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js") }}
