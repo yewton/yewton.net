@@ -1652,6 +1652,72 @@ font_name = "Noto Sans Regular 18"
 - [[https://unix.stackexchange.com/questions/121395/on-an-apple-keyboard-under-linux-how-do-i-make-the-function-keys-work-without-t][On an Apple Keyboard under Linux, how do I make the Function keys work without the fn modifier key? - Unix & Linux Stack Exchange]]
 
 * Emacs                                                              :@Emacs:
+** DONE Org Mode でリンク種別に応じたプレフィクスを表示する
+CLOSED: [2023-04-01 土 22:47]
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2023-04-01
+:DIR:                images/2023-04-01_org-link-prefix
+:EXPORT_HUGO_BUNDLE: 2023-04-01_org-link-prefix
+:EXPORT_HUGO_SLUG:   org-link-prefix
+:EXPORT_HUGO_TAGS: org-mode emacs org-link emoji
+:END:
+
+*** TL;DR
+
+https://github.com/yewton/.emacs.d/blob/86b2642b1210f1c43489aa6b1e12d1c70856f8df/lisp/toncs-config-org.org#org-link
+
+上記のような設定で、上の画像のような表示になる。
+
+*** 背景
+
+org-roam で色々な情報を集約している時に、リンク先が org-mode のノートなのか、
+それとも外部リンクなのか、等が =org-link-descriptive= が有効な場合( デフォルト )に一見して分からない。
+
+=org-toggle-link-display= を使って一時的に全体を表示させたり、
+[[https://github.com/awth13/org-appear][org-appear]] でカーソルを合わせた時に全体を表示させたり、
+=help-at-pt-display-when-idle= を有効にして、カーソルを合わせた時にエコーエリアにリンク先を表示させたり、
+等々の一手間を掛ければ対処出来るが、その一手間が惜しかった。
+
+*** 解決策
+
+=org-link-set-parameters= を使い、 =org-link-parameters= に登録されている全てのリンク種別 ( =org-link-types= で取得する ) に対し、リンク種別を先頭にオーバーレイ表示する  =:activate-func= を登録する。
+
+=:activate-func= は、リンクがリンクとして判定され、有効になる際に実行される関数。
+これを使うと、リンクの開始・終了位置を元にした任意の処理を実行出来る。
+
+この仕組みを使って、リンクの位置全体に対してオーバーレイを設定する。
+=before-string= オーバーレイプロパティに任意の文字列を設定すれば、簡単に prefix 表示が実現出来る。
+
+ただ、これだけでは若干問題があり、リンクの近辺で編集を行うと、その度に =:activate-fun= が実行され、 *何重にもオーバーレイが表示される* ことになってしまう。
+
+その為、 =:activate-fun= 実行時に既存のオーバーレイを削除する必要がある。
+適当なオーバーレイプロパティ ( =org-link-prefix= 等 ) に値 =t= を設定し、
+オーバーレイ作成処理の前に =remove-overlays= を実行、前述のプロパティを条件に削除を行うようにする。
+
+これで、リンク近辺の編集によってオーバーレイが無限増殖する自体は避けられるが、まだ問題がある。
+
+リンクの開始位置を変更するような編集 ( リンクの前にスペースを入力する等 ) を行うと、
+*元の位置に対して設定されたオーバーレイが消されず* ( 新しいリンク位置の範囲外になる為 )、
+*いつまでも残り続けてしまう* 。
+
+この対策には、 =insert-in-front-hooks= オーバーレイプロパティを使う。
+このプロパティには、オーバーレイの開始位置での編集に対して作用する関数群を登録出来る。
+引数にはオーバーレイオブジェクトが渡される為、 =delete-overlay= で削除すればよい。
+
+最後に、 =evaporate= プロパティに =t= を設定すれば、
+オーバーレイ範囲が空になった際に自動で削除されるようになる。
+
+以上の設定により、リンク近辺の編集にも支障を来さずに、リンク種別のプレフィクスを表示することが出来る。
+
+*** おわりに
+
+リンクのプレフィクスとして設定する文字列は何でも良いが、
+上部画像のように絵文字を設定しておくと見た目にも楽しくて良い。
+
+[[https://github.com/yewton/.emacs.d/blob/86b2642b1210f1c43489aa6b1e12d1c70856f8df/lisp/toncs-config.org#%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88][この設定]] 等を参考にすると、絵文字に対応したフォントセット設定が可能。
+
+
 ** DONE consult-ripgrep と migemo を組み合わせて ripgrep でもローマ字日本語検索 :migemo:ripgrep:consult:emacs:
 CLOSED: [2022-02-07 月 23:29]
 :PROPERTIES:
