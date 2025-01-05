@@ -274,6 +274,156 @@ org-mode で書けるようになったことだし、少しは記事を書い�
 - conf-toml-mode を [[https://ox-hugo.scripter.co/doc/custom-front-matter/#front-matter-extra][Front-matter Extra]] で使う方法
 
 * 買ったモノ                                                              :@買ったモノ:
+
+** DONE Dell Latitude 3420 の SSD をより大容量の SSD に Clonezilla でクローンし換装する
+CLOSED: [2025-01-06 月 01:05]
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2025-01-05
+:DIR:                images/2025-01-05_dell-latitude-3420-storage
+:EXPORT_HUGO_BUNDLE: 2025-01-05_dell-latitude-3420-storage
+:EXPORT_HUGO_SLUG:   dell-latitude-3420-storage
+:EXPORT_HUGO_TAGS: dell latitude clonezilla
+:END:
+
+#+toc: headlines 1
+
+*** はじめに
+
+[[/2022/02/19/dell-latitude-3420-memory/][以前の記事]] では [[https://japancatalog.dell.com/pd/latitude-3420.html][Dell Latitude 3420]] にメモリを増設したが、今回は SSD を換装した。
+
+Docker イメージやら IDE やら何やらで 256 GiB でも心許なくなってきた為、 1 TiB の SSD に換装した。
+
+せっかくなので、ついでにメモリも追加で購入し、 8 GiB + 16 GiB の 24 GiB から 16 GiB × 2 で 32 GiB に。
+
+今回購入した SSD は、 [[https://amzn.to/3DHMFZP][キオクシア ( KIOXIA ) の EXCERIA PRO NVMe™ M.2 Type 2280-S2-M SSD 1TB]] 。
+[[https://www.dell.com/support/kbdoc/en-us/000185381/dell-latitude-3420-notebook-teardown-removal-guide-for-customer-replaceable-units-crus?lwp=rt][Dell Latitude 3420 Notebook Teardown removal guide for customer replaceable units (CRUS) | Dell US]] に
+M.2 SSD 2280 card slot の記載があるので問題ないハズ。
+
+この SSD を [[https://amzn.to/40jZ5jc][ロジテック ( Logitec ) の SSD ケース LGB-PNV02UC]] にセットして、データのクローンを行った。
+
+メモリは [[https://amzn.to/405kHhX][Crucial 16GB DDR4-3200 SODIMM D4N3200CM-16GQ]] を購入。
+
+*** Clonezilla による SSD クローン
+
+クローンには [[https://clonezilla.org/][Clonezilla]] を利用した。
+
+まずは [[https://clonezilla.org///liveusb.php][Clonezilla Live on USB]] に従って Live USB を作成する。
+
+今回はたまたま余っていた [[https://amzn.to/3PJ2Fh3][エレコム 外付けポータブルSSD ESD-ED0120GBK 120GB]] を利用したが、  500 MiB あれば何でもよいハズ。
+
+手順に従い、 FAT でフォーマットした後に =unzip= で配置して完成。
+
+この Live USB と、クローン先の SSD を収めたケースを接続した上で、 [[https://www.dell.com/support/manuals/ja-jp/latitude-14-3420-laptop/latitude_3420_cyborg_sm/%E3%83%96%E3%83%BC%E3%83%88%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC?guid=guid-493feb0b-5f68-470b-83ef-b8a975eb6e9d&lang=ja-jp#:~:text=%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E6%9C%89%E5%8A%B9%E3%81%AA%E8%B5%B7%E5%8B%95,%E3%82%92%E6%8A%BC%E3%81%97%E3%81%BE%E3%81%99%E3%80%82][Latitude 3420 サービス マニュアル | Dell 日本]] に従い、起動後 Dell のロゴが表示されたときに =<F12>= を押してブートメニューに入り、 Clonezilla の Live USB を選択する。
+
+その後は [[https://clonezilla.org///fine-print-live-doc.php?path=clonezilla-live/doc/03_Disk_to_disk_clone][Clonezilla Live Doc の Disk to disk clone のページ]] に従っていけばよい。
+
+#+caption: Start Clonezilla を選択する
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-05_23-51-16_screenshot.png]]
+
+#+caption: device-device を選択する
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-05_23-52-43_screenshot.png]]
+
+
+元々単一のパーティションにしていたので、今回は [[https://clonezilla.org/clonezilla-live/doc/03_Disk_to_disk_clone/advanced/05-advanced-param.php][Clonezilla - Advanced Mode]] に従いパーティションも含めてよしなに拡張するオプションを有効化する為、 =Expert= を選択する。
+
+#+caption: Expert を選択する
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-05_23-57-51_screenshot.png]]
+
+
+#+caption: disk_to_local_disk を選択する
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-05_23-58-30_screenshot.png]]
+
+
+#+caption: クローン元のディスクを選択する
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-04-16_screenshot.png]]
+
+#+caption: クローン先のディスクを選択する(元のデータは全消去される)
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-10-00_screenshot.png]]
+
+
+#+caption: advanced extra parameters はデフォルトのまま
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-11-37_screenshot.png]]
+
+
+#+caption: ファイルシステムのチェックはスキップ(デフォルト)
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-12-26_screenshot.png]]
+
+
+#+caption: ここで -k1 Create partition table proportionally を選択する
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-13-22_screenshot.png]]
+
+
+#+caption: 終了後の挙動はその時に選択することにして、進める
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-14-18_screenshot.png]]
+
+#+caption: とても熱心に確認してくれるので、覚悟を決めて y する
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-15-15_screenshot.png]]
+
+
+10 分程で完了するので、ここで電源オフ。
+
+続けて、クローンした SSD に換装する。
+
+*** SSD の換装
+
+[[/2022/02/19/dell-latitude-3420-memory/][以前の記事]] 同様にサービスモードに入り、ベースカバーを外して作業していく
+( 今回気づいた点は以前の記事側に注記を入れた )。
+
+元々は M.2 type2242 が使われていた為、以下の部分でネジ止めされていた。
+
+#+caption: 元々ネジ止めされていた部分
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-32-06_screenshot.png]]
+
+換装するのは M.2 type2280 の為、この部品自体を移動する必要があった。
+
+#+caption: ネジを外して固定金具自体を移動する
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-36-59_screenshot.png]]
+
+この後、 SSD を接続して金具に固定し、 SSD の換装は完了。
+
+*** メモリの換装
+
+ついでの作業だが記録として。
+
+取り付けは [[/2022/02/19/dell-latitude-3420-memory/][以前の記事]] 同様だが、今回は元々入っていた 8 GiB メモリと交換する必要がある為、まず取り外す必要がある。
+
+以下の固定金具部分を外側に押し広げるような感じにすると、バインッと外れた。
+
+#+caption: 固定金具。右側は隠れてしまっているが同じ箇所にある。
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-42-26_screenshot.png]]
+
+外したあとは、 [[/2022/02/19/dell-latitude-3420-memory/][以前の記事]] 同様に新しいメモリをセットして完了。
+
+#+caption: 追加分。こちら側は向きを逆にする必要があった。
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_00-50-01_screenshot.png]]
+
+*** 動作確認
+
+SSD、メモリのセットが完了したので、ベースカバーを閉じて通電、起動を確認する。
+
+今回は以前と異なり、電源投入後に数分間無反応でヒヤヒヤしたが、その後問題無く起動し、追加のストレージ・RAM も問題無く認識された 🎉
+
+#+caption: Memory: 31.10 GiB 、 Disk (/): 907.06 GiB となっている
+#+attr_org: :width 300px
+[[file:images/2025-01-05_dell-latitude-3420-storage/2025-01-06_01-02-47_screenshot.png]]
+
+
 ** DONE Dell Latitude 3420 にメモリを増設する
 CLOSED: [2022-02-19 土 21:51]
 :PROPERTIES:
@@ -309,6 +459,10 @@ CLOSED: [2022-02-19 土 21:51]
 #+attr_org: :width 300px
 [[file:images/2022-02-19_dell-latitude-3420-memory/2022-02-19_21-00-38_PXL_20220218_081810718.jpg]]
 
+{{{begin_callout(info)}}}
+2025-01-06 追記: 次へ進むにはキーボードの任意のキーを押す必要がある。
+{{{end_callout(info)}}}
+
 更に AC アダプタの接続有無に関わらず、以下のような注意文言が表示され…
 
 #+begin_quote
@@ -343,6 +497,10 @@ Press Any Key To Continue...
 おそらくヒンジ側中央部分の引っかかりをうまいこと外せれば、
 あとは持ち上げるだけで外せる…ハズ。
 
+{{{begin_callout(info)}}}
+2025-01-06 追記: 左右のヒンジ部分を押し込むような感じに力を入れると外し易い。
+{{{end_callout(info)}}}
+
 上手く外せたら、以下の部分にメモリを差し込む。
 元々 8GiB のが差さっているので、その反対側になる。
 
@@ -353,6 +511,10 @@ Press Any Key To Continue...
 斜め 35 度くらいに差し込み、奥までいったら下に押し込む。
 
 カチッとハマッたら、再びベースカバーをネジ止めして、AC アダプタに接続する。
+
+{{{begin_callout(info)}}}
+2025-01-06 追記: ヒンジ側を先にしっかり嵌め込んでネジ止めし、その後に残りをネジ止めするとやり易い。
+{{{end_callout(info)}}}
 
 サービスモードに入るときの説明では、
 AC アダプタ接続後に電源ボタンを押す的なことが書いてあったが、
@@ -1292,6 +1454,184 @@ sudo apt install neofetch -y
 
 @@hugo:{{< unsplash leading="Featured image background by" id=" estherrj" name=" Esther Jiao" >}}@@
 * 技術系                                                                  :@技術系:
+
+** DRAFT Elastic Common Schema と OpenTelemetry Semantic Convention を通して Structured Logging について学んだ
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2025-01-03
+:DIR:                images/2025-01-03_structured-logging-ecs-otel-semconv
+:EXPORT_HUGO_BUNDLE: 2025-01-03_structured-logging-ecs-otel-semconv
+:EXPORT_HUGO_SLUG:   structured-logging-ecs-otel-semconv
+:EXPORT_HUGO_TAGS: "Spring Boot" "Structured logging" "Elastic Common Schema" "OpenTelemetry Semantic Convention"
+:END:
+
+#+begin_src yaml :front_matter_extra t
+  image:
+    caption: Background image generated by Grok
+#+end_src
+
+#+toc: headlines 1
+
+*** 背景
+
+[[https://spring.io/blog/2024/08/23/structured-logging-in-spring-boot-3-4][Structured logging in Spring Boot 3.4]] で、 Structured logging のサポートが発表されていた。
+
+Spring Boot として提供される機能は分かったが、そもそもの Structured logging、構造化ロギングについて理解出来ていなかったので、調べることにした。
+
+とっかかりとして、 Spring Boot がサポートする Structured logging フォーマットとしていの一番に挙げられている [[https://www.elastic.co/guide/en/ecs/8.11/ecs-reference.html][Elastic Common Schema (ECS)]] を通して調べたことをまとめる。
+
+*** Structured logging とは
+
+[[https://www.elastic.co/guide/en/ecs/current/ecs-getting-started.html][Getting Started | Elastic Common Schema (ECS) Reference [8.16] | Elastic]] には以下のようにある:
+
+#+begin_quote
+ECS enables and encourages users to normalize event data in order to better analyze, visualize, and correlate their events. Collected events can be normalized at ingest time, consistently searched across indices, and visualized predictably.
+
+Note that when adopting an Elastic solution, such as [[https://www.elastic.co/observability][Observability]] or [[https://www.elastic.co/security][Security]], all events will map to ECS out of the box. Elastic provides an extensive set of [[https://www.elastic.co/security][integrations]] to simplify ingesting your data sources.
+#+end_quote
+
+特に後半は特定の Elastic ソリューションとの連携について語られているので、一見すると Spring Boot が Elastic 製品特化の機能をサポートしたかのように思えてしまうかもしれない。
+
+しかし、イベントデータの標準化によって Observability 等で一貫性の恩恵を得られるのは、何も Elastic 製品利用時に限ったことではないはず。
+
+Elastic スタックと共に語られる事の多い [[https://grafana.com/][Grafana]] の分散トレーシングソリューションである [[https://grafana.com/docs/tempo/latest/traceql/trace-structure/][Tempo のドキュメント]] には、vendor-agnositc な Observability フレームワークである [[https://opentelemetry.io/][OpenTelemetry]] が提供する [[https://opentelemetry.io/docs/specs/semconv/][OpenTelemetry Semantic Conventions 1.29.0 | OpenTelemetry]] について言及されている。
+
+OpenTelemetry Semantic Conventions に従うことの恩恵は以下のように述べられている:
+
+#+begin_quote
+The benefit to using Semantic Conventions is in following a common naming scheme that can be standardized across a codebase, libraries, and platforms. This allows easier correlation and consumption of data.
+#+end_quote
+
+異なるシステム間のデータでも共通の規約に従ってさえいれば、突合などし易いし便利だよね、というのは、 ECS と同様に見える。
+
+目指すものは同じということで、実際 *ECS と OTel SemConv は統合していく* ことが発表されている。
+
+**** Elastic Common Schema と OpenTelemetry Semantic Convention の統合
+
+両者の関係は [[https://github.com/open-telemetry/oteps/blob/main/text/0199-support-elastic-common-schema-in-opentelemetry.md#scope-and-overlap-of-ecs-and-otel-semconv][oteps/text/0199-support-elastic-common-schema-in-opentelemetry.md at main · open-telemetry/oteps]] の図を見ると分かり易い。
+
+提供価値被ってるし、統合した方がよいよね、ということで Elastic と OpenTelemetry からそれぞれ以下のアナウンスがあった:
+
+- [[https://opentelemetry.io/blog/2023/ecs-otel-semconv-convergence/][Announcing the Elastic Common Schema (ECS) and OpenTelemetry Semantic Convention Convergence | OpenTelemetry]]
+- [[https://www.elastic.co/blog/ecs-elastic-common-schema-otel-opentelemetry-announcement][Elastic contributes Elastic Common Schema (ECS) to OpenTelemetry project, helping accelerate adoption of OTel-based observability and security | Elastic Blog]]
+
+[[https://opentelemetry.io/community/roadmap/][OpenTelemetry Project Roadmap | OpenTelemetry]] にはログが優先度高く挙げられている為、そう遠くない将来には統合が実現すると思われるが、安定して利用出来る具体的な成果物はまだ無いように見える。
+
+どちらかがいつか使えなくなるような破壊的な統合というわけではなさそうなので、今のところはこの両者があり、相反するものではなくいずれ統合される予定、ということを認識しておくだけで問題無さそう。
+
+*** Spring Boot での Elastic Common Schema 利用
+
+先に挙げた [[https://spring.io/blog/2024/08/23/structured-logging-in-spring-boot-3-4][Structured logging in Spring Boot 3.4]] に拠れば、 =logging.structured.format.console=ecs= と設定するだけで以下のようなログが出力されるようになる:
+
+#+begin_src js
+{
+  "@timestamp": "2024-07-30T08:41:10.561295200Z",
+  "log.level": "INFO",
+  "process.pid": 67455,
+  "process.thread.name": "main",
+  "service.name": "structured-logging-demo",
+  "log.logger": "com.example.structured_logging_demo.StructuredLoggingDemoApplication",
+  "message": "Started StructuredLoggingDemoApplication in 0.329 seconds (process running for 0.486)",
+  "ecs.version": "8.11"
+}
+#+end_src
+
+実は [[https://github.com/elastic/ecs-logging-java/tree/v1.6.0?tab=readme-ov-file][elastic/ecs-logging-java at v1.6.0]]
+
+
+*** Spring Boot での OpenTelemetry 利用
+
+統合作業は今まさに進行中という感じで、 [[https://github.com/open-telemetry/community#specification-sigs][open-telemetry/community: OpenTelemetry community content]] から辿れる [[https://docs.google.com/document/d/1BKjQWP32FXL9g1cGbyj7DMXV1Uq_RL8_78rWaMBhN0A/edit?tab=t.0][OpenTelemetry Log SIG - Google ドキュメント]] にて、 [[https://github.com/open-telemetry/semantic-conventions/issues/1651][Logs/Events guidance on what to put to attributes vs body · Issue #1651 · open-telemetry/semantic-conventions]] が挙げられていた事からも、活発に議論がされているようす。
+
+
+https://opentelemetry.io/docs/specs/otel/logs/data-model-appendix/#elastic-common-schema
+
+https://opentelemetry.io/docs/specs/otel/logs/data-model/#log-and-event-record-definition
+
+https://opentelemetry.io/docs/languages/java/instrumentation/#log-instrumentation
+
+*** memo
+
+https://github.com/elastic/ecs-logging-java/blob/v1.6.0/logback-ecs-encoder/src/main/java/co/elastic/logging/logback/EcsEncoder.java
+
+https://github.com/spring-projects/spring-boot/blob/v3.4.1/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/logging/structured/ElasticCommonSchemaProperties.java
+
+https://github.com/spring-projects/spring-boot/blob/v3.4.1/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/logging/logback/ElasticCommonSchemaStructuredLogFormatter.java
+
+
+
+https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/v2.11.0/VERSIONING.md
+
+エラー
+https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/v2.11.0/instrumentation/logback/logback-appender-1.0/library/src/main/java/io/opentelemetry/instrumentation/logback/appender/v1_0/internal/LoggingEventMapper.java#L145-L155
+
+https://www.elastic.co/guide/en/ecs/8.16/ecs-error.html に対応
+
+#+begin_src js
+{
+  "@timestamp": "2024-07-30T08:41:10.561295200Z",
+  "log.level": "INFO",
+  "process.pid": 67455,
+  "process.thread.name": "main",
+  "service.name": "structured-logging-demo",
+  "log.logger": "com.example.structured_logging_demo.StructuredLoggingDemoApplication",
+  "message": "Started StructuredLoggingDemoApplication in 0.329 seconds (process running for 0.486)",
+  "ecs.version": "8.11"
+}
+#+end_src
+
+#+begin_src js
+{
+  "body": "Started PetclinicApplicationKt in 4.534 seconds (process running for 4.958)",
+  "severity": "INFO",
+  "attributes": {
+    "code.filepath": "StartupInfoLogger.java",
+    "code.function": "logStarted",
+    "code.lineno": 59,
+    "code.namespace": "org.springframework.boot.StartupInfoLogger",
+    "process.pid": "388042",
+    "thread.name": "restartedMain"
+  },
+  "resources": {
+    "service.name": "petclinic-fullstack",
+    "telemetry.sdk.language": "java",
+    "telemetry.sdk.name": "opentelemetry",
+    "telemetry.sdk.version": "1.43.0"
+  },
+  "instrumentation_scope": {
+    "name": "net.yewton.petclinic.PetclinicApplicationKt"
+  }
+}
+#+end_src
+
+#+begin_example
+ResourceLog #0
+Resource SchemaURL: 
+Resource attributes:
+     -> service.name: Str(petclinic-fullstack)
+     -> telemetry.sdk.language: Str(java)
+     -> telemetry.sdk.name: Str(opentelemetry)
+     -> telemetry.sdk.version: Str(1.43.0)
+ScopeLogs #3
+ScopeLogs SchemaURL: 
+InstrumentationScope net.yewton.petclinic.PetclinicApplicationKt 
+LogRecord #0
+ObservedTimestamp: 2025-01-04 13:41:59.821289163 +0000 UTC
+Timestamp: 2025-01-04 13:41:59.820892799 +0000 UTC
+SeverityText: INFO
+SeverityNumber: Info(9)
+Body: Str(Started PetclinicApplicationKt in 4.534 seconds (process running for 4.958))
+Attributes:
+     -> code.filepath: Str(StartupInfoLogger.java)
+     -> code.function: Str(logStarted)
+     -> code.lineno: Int(59)
+     -> code.namespace: Str(org.springframework.boot.StartupInfoLogger)
+     -> process.pid: Str(388042)
+     -> thread.name: Str(restartedMain)
+Trace ID: 
+Span ID: 
+Flags: 0
+#+end_example
 
 ** DONE Rust で GBA 開発のとっかかり
 CLOSED: [2024-05-12 日 00:02]
