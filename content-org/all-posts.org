@@ -1455,7 +1455,8 @@ sudo apt install neofetch -y
 @@hugo:{{< unsplash leading="Featured image background by" id=" estherrj" name=" Esther Jiao" >}}@@
 * 技術系                                                                  :@技術系:
 
-** DRAFT Elastic Common Schema と OpenTelemetry Semantic Convention を通して Structured Logging について学んだ
+** DONE Elastic Common Schema と OpenTelemetry Semantic Convention を通して Structured Logging について学んだ
+CLOSED: [2025-01-08 水 23:35]
 :PROPERTIES:
 :EXPORT_FILE_NAME:   index
 :EXPORT_DATE:        2025-01-03
@@ -1515,9 +1516,13 @@ The benefit to using Semantic Conventions is in following a common naming scheme
 - [[https://opentelemetry.io/blog/2023/ecs-otel-semconv-convergence/][Announcing the Elastic Common Schema (ECS) and OpenTelemetry Semantic Convention Convergence | OpenTelemetry]]
 - [[https://www.elastic.co/blog/ecs-elastic-common-schema-otel-opentelemetry-announcement][Elastic contributes Elastic Common Schema (ECS) to OpenTelemetry project, helping accelerate adoption of OTel-based observability and security | Elastic Blog]]
 
-[[https://opentelemetry.io/community/roadmap/][OpenTelemetry Project Roadmap | OpenTelemetry]] にはログが優先度高く挙げられている為、そう遠くない将来には統合が実現すると思われるが、安定して利用出来る具体的な成果物はまだ無いように見える。
+以下のように、 ECS への追加は OTel SemConv からのバックポートとして行うようなことが案内されていたり、
 
-どちらかがいつか使えなくなるような破壊的な統合というわけではなさそうなので、今のところはこの両者があり、相反するものではなくいずれ統合される予定、ということを認識しておくだけで問題無さそう。
+https://github.com/elastic/ecs/blob/main/CONTRIBUTING.md#ecs-donation-to-opentelemetry
+
+[[https://opentelemetry.io/community/roadmap/][OpenTelemetry Project Roadmap | OpenTelemetry]] には Further Stabilizing Semantic Conventions が most important major initiatives として挙げられているので、統合に向けて確実に進んでいるようではあるが、現在のところは安定して利用出来る具体的な成果物はまだ無いようだ。
+
+どちらかがいつか使えなくなるような破壊的な統合というわけではなさそうなので、今のところはこの両者があり、相反するものではなくいずれ統合される予定、ということを認識しておくだけで問題無さそうである。
 
 *** Spring Boot での Elastic Common Schema 利用
 
@@ -1536,49 +1541,57 @@ The benefit to using Semantic Conventions is in following a common naming scheme
 }
 #+end_src
 
-実は [[https://github.com/elastic/ecs-logging-java/tree/v1.6.0?tab=readme-ov-file][elastic/ecs-logging-java at v1.6.0]]
+これらのフィールドは以下のように ECS で定義されている:
 
+- [[https://www.elastic.co/guide/en/ecs/current/ecs-base.html#field-timestamp][@timestamp]]
+- [[https://www.elastic.co/guide/en/ecs/current/ecs-log.html#field-log-level][log.level]]
+- [[https://www.elastic.co/guide/en/ecs/current/ecs-process.html#field-process-pid][process.pid]]
+- [[https://www.elastic.co/guide/en/ecs/current/ecs-process.html#field-process-thread-name][process.thread.name]]
+- [[https://www.elastic.co/guide/en/ecs/current/ecs-service.html#field-service-name][service.name]]
+- [[https://www.elastic.co/guide/en/ecs/current/ecs-log.html#field-log-logger][log.logger]]
+- [[https://www.elastic.co/guide/en/ecs/current/ecs-base.html#field-message][message]]
+
+実は Elastic 提供の [[https://github.com/elastic/ecs-logging-java/tree/v1.6.0?tab=readme-ov-file][elastic/ecs-logging-java at v1.6.0]] というものもあるのだが、 Spring Boot はこれを使っているわけ *ではない* 。
+[[https://github.com/spring-projects/spring-boot/blob/v3.4.1/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/logging/logback/ElasticCommonSchemaStructuredLogFormatter.java#L52-L72][独自に実装している]] 。
+
+ecs-logging-java の方には =process.*= のフィールドは含まれないなど、出力項目にも違いがある模様。
+
+ただし、いずれもフィールド名は ECS に則っている。
+
+{{{begin_callout(info)}}}
+ecs-logging-java の Logback 版には、以下の issue が報告されている:
+[[https://github.com/elastic/ecs-logging-java/issues/49][Support structured logging with Logback · Issue #49 · elastic/ecs-logging-java]]
+
+この対応は Spring Boot の実装版には入っているようす。
+
+他にも、依存している Logback のバージョンが ecs-logging-java は UNMAINTAINED な 1.2 系だったりもするので、
+Spring Boot を使うならば、 ecs-logging-java ではなく、組込みの機能を使っておいた方がよさそうだ。
+{{{end_callout}}}
 
 *** Spring Boot での OpenTelemetry 利用
 
-統合作業は今まさに進行中という感じで、 [[https://github.com/open-telemetry/community#specification-sigs][open-telemetry/community: OpenTelemetry community content]] から辿れる [[https://docs.google.com/document/d/1BKjQWP32FXL9g1cGbyj7DMXV1Uq_RL8_78rWaMBhN0A/edit?tab=t.0][OpenTelemetry Log SIG - Google ドキュメント]] にて、 [[https://github.com/open-telemetry/semantic-conventions/issues/1651][Logs/Events guidance on what to put to attributes vs body · Issue #1651 · open-telemetry/semantic-conventions]] が挙げられていた事からも、活発に議論がされているようす。
+ECS と OTel SemConv 統合作業は今まさに進行中という感じで、ログに関しても [[https://github.com/open-telemetry/community#specification-sigs][open-telemetry/community: OpenTelemetry community content]] から辿れる [[https://docs.google.com/document/d/1BKjQWP32FXL9g1cGbyj7DMXV1Uq_RL8_78rWaMBhN0A/edit?tab=t.0][OpenTelemetry Log SIG - Google ドキュメント]] にて、 [[https://github.com/open-telemetry/semantic-conventions/issues/1651][Logs/Events guidance on what to put to attributes vs body · Issue #1651 · open-telemetry/semantic-conventions]] が挙げられていた事からも、活発に議論がされているようす。
 
+いずれ ECS と OTel SemConv は同等になっていくと思われるので、目下は ECS を利用しておけば問題はなさそうだが、統合先となる OTel SemConv を今から使っていく、ということは出来るのだろうか。
 
-https://opentelemetry.io/docs/specs/otel/logs/data-model-appendix/#elastic-common-schema
+以下の議論を見る限り、 OTel SemConv への対応は消極的？
 
-https://opentelemetry.io/docs/specs/otel/logs/data-model/#log-and-event-record-definition
+[[https://github.com/spring-projects/spring-boot/issues/34132][Micrometer Tracing with OTEL Bridge does not honour Semantic Conventions · Issue #34132 · spring-projects/spring-boot]]
+[[https://github.com/micrometer-metrics/tracing/issues/929][Implement OTel HTTP semantic conventions · Issue #929 · micrometer-metrics/tracing]]
 
-https://opentelemetry.io/docs/languages/java/instrumentation/#log-instrumentation
+Java の artifact がまだ alpha 状態であることが理由だそう。
+確かに、 stable な spec に対する artifact でも [[https://search.maven.org/artifact/io.opentelemetry.semconv/opentelemetry-semconv/1.29.0-alpha/jar?eh][1.29.0-alpha]] のようなバージョニングになっている。
 
-*** memo
+ただし、上記はメトリクスの命名規約の文脈なので、 ECS 対応のように独自実装で対応されることはあるのかもしれない。
 
-https://github.com/elastic/ecs-logging-java/blob/v1.6.0/logback-ecs-encoder/src/main/java/co/elastic/logging/logback/EcsEncoder.java
+現状でも、 OpenTelemetry の Appender を利用することは可能。
+https://docs.spring.io/spring-boot/reference/actuator/loggers.html#actuator.loggers.opentelemetry
 
-https://github.com/spring-projects/spring-boot/blob/v3.4.1/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/logging/structured/ElasticCommonSchemaProperties.java
+これは [[https://opentelemetry.io/docs/specs/otlp/][OpenTelemetry Protocol (OTLP)]] に従って、 gRPC や HTTP などで [[https://opentelemetry.io/docs/specs/otel/][OpenTelemetry Specification]] に則ったデータを送信する機能で、 OTel SemConv のような標準規格というよりは OpenTelemetry という実装に特化した機能。
 
-https://github.com/spring-projects/spring-boot/blob/v3.4.1/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/logging/logback/ElasticCommonSchemaStructuredLogFormatter.java
+これで利用される [[https://opentelemetry.io/docs/specs/otel/logs/data-model/][Logs Data Model]] は OTel SemConv に則って定義されていたりするので、無関係というわけではない。
 
-
-
-https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/v2.11.0/VERSIONING.md
-
-エラー
-https://github.com/open-telemetry/opentelemetry-java-instrumentation/blob/v2.11.0/instrumentation/logback/logback-appender-1.0/library/src/main/java/io/opentelemetry/instrumentation/logback/appender/v1_0/internal/LoggingEventMapper.java#L145-L155
-
-https://www.elastic.co/guide/en/ecs/8.16/ecs-error.html に対応
-
-#+begin_src js
-{
-  "@timestamp": "2024-07-30T08:41:10.561295200Z",
-  "log.level": "INFO",
-  "process.pid": 67455,
-  "process.thread.name": "main",
-  "service.name": "structured-logging-demo",
-  "log.logger": "com.example.structured_logging_demo.StructuredLoggingDemoApplication",
-  "message": "Started StructuredLoggingDemoApplication in 0.329 seconds (process running for 0.486)",
-  "ecs.version": "8.11"
-}
-#+end_src
+実際に先程のような Spring Boot 起動ログを OTLP で送信した内容を JSON で表現すると以下のようになる:
 
 #+begin_src js
 {
@@ -1603,6 +1616,44 @@ https://www.elastic.co/guide/en/ecs/8.16/ecs-error.html に対応
   }
 }
 #+end_src
+
+構造が入れ子になっていたりするが、末端のフィールド名は OTel SemConv に準拠している。
+
+- [[https://opentelemetry.io/docs/specs/semconv/attributes-registry/code/#code-filepath][code.filepath]]
+- [[https://opentelemetry.io/docs/specs/semconv/attributes-registry/code/#code-function][code.function]]
+- [[https://opentelemetry.io/docs/specs/semconv/attributes-registry/code/#code-lineno][code.lineno]]
+- [[https://opentelemetry.io/docs/specs/semconv/attributes-registry/code/#code-namespace][code.namespace]]
+- [[https://opentelemetry.io/docs/specs/semconv/attributes-registry/process/#process-pid][process.pid]]
+- [[https://opentelemetry.io/docs/specs/semconv/attributes-registry/thread/#thread-name][thread.name]]
+- [[https://opentelemetry.io/docs/specs/semconv/attributes-registry/service/#service-name][service.name]]
+- [[https://opentelemetry.io/docs/specs/semconv/attributes-registry/telemetry/#telemetry-sdk-language][telemetry.sdk.language]]
+- [[https://opentelemetry.io/docs/specs/semconv/attributes-registry/telemetry/#telemetry-sdk-name][telemetry.sdk.name]]
+- [[https://opentelemetry.io/docs/specs/semconv/attributes-registry/telemetry/#telemetry-sdk-version][telemetry.sdk.version]]
+
+https://github.com/yewton/petclinic/tree/otlp に確認に利用したプロジェクトがある。
+
+{{{begin_callout(note)}}}
+以下で述べられているように、このように適切に構造化してデータ連携する場合は OTLP で直接送信するのがお手軽だが、
+この方式はアプリケーションプロセスから通信処理をする為、オーバーヘッドがある。
+
+ファイルや標準出力に吐いたログを別プロセスで収集する方が当然パフォーマンスメリットはあるが、その為に
+いい感じに構造化・シリアライズしてログ出力し、それを OTLP で送信するような機構は提供されていない。
+
+https://opentelemetry.io/docs/languages/java/instrumentation/#log-instrumentation
+
+実際には Fluent Bit などのログ収集ソリューションと併用することになりそう。
+
+https://docs.fluentbit.io/manual/pipeline/outputs/opentelemetry
+{{{end_callout}}}
+
+{{{begin_callout(note)}}}
+2025年1月8日現在は、 appender 群も alpha バージョンであることにも注意。
+
+- https://central.sonatype.com/artifact/io.opentelemetry.instrumentation/opentelemetry-logback-appender-1.0/versios
+- https://central.sonatype.com/artifact/io.opentelemetry.instrumentation/opentelemetry-log4j-appender-2.17/versions
+{{{end_callout}}}
+
+参考までに、上記の JSON は OTLP で収集したデータを加工したもので、実際は以下のようなデータが送信されている:
 
 #+begin_example
 ResourceLog #0
@@ -1632,6 +1683,16 @@ Trace ID:
 Span ID: 
 Flags: 0
 #+end_example
+
+*** 終わりに
+
+ECS や OTel SemConv といった標準的なスキーマが定まっていく動きはとてもありがたい。
+
+長期的には OTel SemConv がデファクトスタンダードになっていきそうな勢いではあるが、
+現在の状況はかなり流動的な為、実装としては Spring Boot でもサポートされる ECS を採用しておけば問題なさそう。
+
+規約に則ってさえいれば、可観測性やセキュリティといった非機能要件はこうしておけば OK!
+…というような知見が今後貯まっていくはずなので期待。
 
 ** DONE Rust で GBA 開発のとっかかり
 CLOSED: [2024-05-12 日 00:02]
