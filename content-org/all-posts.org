@@ -62,7 +62,7 @@ CLOSED: [2025-12-07 日 22:30]
 
 *** TL;DR
 
-Ubuntu 24.04 (Noble) で PDF を小冊子 (Booklet) 印刷用に加工するには、 =pdfbook2= が便利。
+Ubuntu 24.04 (Noble) で PDF を小冊子 (Booklet) 印刷用に加工するには、 =pdfbook2= が便利です。
 
 #+begin_src shell
   # pdfbook2 は texlive-extra-utils に含まれる
@@ -73,37 +73,37 @@ Ubuntu 24.04 (Noble) で PDF を小冊子 (Booklet) 印刷用に加工するに�
   # -> input-book-le.pdf が生成される
 #+end_src
 
-あとは生成された PDF を「長辺とじ」で両面印刷すれば、中綴じ可能な小冊子用プリントが出力される。
+あとは生成された PDF を「長辺とじ」で両面印刷すれば、中綴じ可能な小冊子用プリントが出力されます。
 
 *** 背景
 
-息子が誕生日に [[https://amzn.to/4oDjvg4][完全爆弾解除マニュアル:Keep Talking and Nobody Explodes]] を欲しがった。
-このゲームは、爆弾処理担当とマニュアル担当に分かれて協力するゲームで、マニュアル担当には紙のマニュアルが必要不可欠だ（雰囲気を出すためにも）。
+息子が誕生日に [[https://amzn.to/4oDjvg4][完全爆弾解除マニュアル:Keep Talking and Nobody Explodes]] を欲しがりました。
+このゲームは、爆弾処理担当とマニュアル担当に分かれて協力するゲームで、マニュアル担当には紙のマニュアルが必要不可欠です（雰囲気を出すためにも）。
 
-せっかくなので、それらしく、かつコンパクトにする為に小冊子印刷 (ブックレット印刷) をしたかった。
+せっかくなので、それらしく、かつコンパクトにする為に小冊子印刷 (ブックレット印刷) をしたくなりました。
 
 *** 試行錯誤の記録
 
-「Ubuntu 小冊子印刷」などで検索すると、いくつかの方法が見つかったが、簡単にはいかなかった。
+「Ubuntu 小冊子印刷」などで検索すると、いくつかの方法が見つかりましたが、簡単にはいきませんでした。
 
 **** 標準のプリンタ設定
 
-[[https://help.ubuntu.com/stable/ubuntu-help/printing-booklet-duplex.html.ja][公式ヘルプ]] には、「ページ番号を 4, 1, 2, 3 の順に入力して……」といった気の遠くなるような手動指定方法が記載されていた。ページ数が多いマニュアルでこれをやるのは現実的ではない。
+[[https://help.ubuntu.com/stable/ubuntu-help/printing-booklet-duplex.html.ja][公式ヘルプ]] には、「ページ番号を 4, 1, 2, 3 の順に入力して……」といった気の遠くなるような手動指定方法が記載されていました。ページ数が多いマニュアルでこれをやるのは現実的ではありません。
 
 **** 既存ツール (失敗)
 
-1. **mkbookpdf**: Rust 製のツール。試してみたが、以下のようなエラーで panic して動かなかった。
+1. **mkbookpdf**: Rust 製のツール。試してみましたが、以下のようなエラーで panic して動きませんでした。
    #+begin_example
    thread 'main' panicked at library/core/src/panicking.rs:225:5:
    attempted to leave type `linked_hash_map::Node<alloc::vec::Vec<u8>, object::Object>` uninitialized, which is invalid
    #+end_example
 
-2. **boomaga**: 仮想プリンタツール。PPA を追加しようとしたが、Ubuntu 24.04 (Noble) 向けのリリースが見つからず 404 エラーとなった。
+2. **boomaga**: 仮想プリンタツール。PPA を追加しようとしましたが、Ubuntu 24.04 (Noble) 向けのリリースが見つからず 404 エラーとなりました。
 
 *** 解決策: pdfbook2
 
-最終的にたどり着いたのが [[https://github.com/jenom/pdfbook2][pdfbook2]] 。
-Python 製だが、Ubuntu では `texlive-extra-utils` パッケージの一部として提供されていることが分かった。
+最終的にたどり着いたのが [[https://github.com/jenom/pdfbook2][pdfbook2]] です。
+Python 製ですが、Ubuntu では `texlive-extra-utils` パッケージの一部として提供されていることが分かりました。
 
 **** インストール
 
@@ -111,7 +111,7 @@ Python 製だが、Ubuntu では `texlive-extra-utils` パッケージの一部�
   sudo apt install texlive-extra-utils
 #+end_src
 
-TexLive 関連の依存パッケージが大量にインストールされるため、環境によっては時間がかかる（手元では 2 分弱）。
+TexLive 関連の依存パッケージが大量にインストールされるため、環境によっては時間がかかります（手元では 2 分弱でした）。
 
 **** 使い方
 
@@ -119,7 +119,7 @@ TexLive 関連の依存パッケージが大量にインストールされるた
   pdfbook2 KeepTalkingAndNobodyExplodes-BombDefusalManual-v1-ja.pdf
 #+end_src
 
-これだけで、 =KeepTalkingAndNobodyExplodes-BombDefusalManual-v1-ja-book.pdf= というファイルが生成される。このファイルを PDF ビューワで開き、プリンタの設定で「両面印刷（長辺とじ）」を指定して印刷すれば完了だ。
+これだけで、 =KeepTalkingAndNobodyExplodes-BombDefusalManual-v1-ja-book.pdf= というファイルが生成されます。このファイルを PDF ビューワで開き、プリンタの設定で「両面印刷（長辺とじ）」を指定して印刷すれば完了です。
 
 ** DONE Ubuntu で Bluetooth マウスが使えない時にやるといいかもしれないこと
 CLOSED: [2022-05-29 日 23:28]
