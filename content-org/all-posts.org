@@ -44,6 +44,83 @@ https://www.swiftbysundell.com/articles/avoiding-force-unwrapping-in-swift-unit-
 :PROPERTIES:
 nil:END:
 
+** DONE 完全爆弾解除マニュアルのマニュアルPDFをいい感じに印刷する、または Ubuntu で小冊子印刷をする方法
+CLOSED: [2025-12-07 日 22:30]
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2025-12-07
+:DIR:                images/2025-12-07_ubuntu-booket-printing-pdfbook2
+:EXPORT_HUGO_BUNDLE: 2025-12-07_ubuntu-booket-printing-pdfbook2
+:EXPORT_HUGO_SLUG:   ubuntu-booket-printing-pdfbook2
+:EXPORT_HUGO_TAGS: ubuntu pdf printing booklet
+:END:
+
+#+begin_src yaml :front_matter_extra t
+  image:
+    caption: Background image by
+#+end_src
+
+*** TL;DR
+
+Ubuntu 24.04 (Noble) で PDF を小冊子 (Booklet) 印刷用に加工するには、 =pdfbook2= が便利。
+
+#+begin_src shell
+  # pdfbook2 は texlive-extra-utils に含まれる
+  sudo apt install texlive-extra-utils
+  
+  # 変換
+  pdfbook2 input.pdf
+  # -> input-book-le.pdf が生成される
+#+end_src
+
+あとは生成された PDF を「長辺とじ」で両面印刷すれば、中綴じ可能な小冊子用プリントが出力される。
+
+*** 背景
+
+息子が誕生日に [[https://amzn.to/4oDjvg4][完全爆弾解除マニュアル:Keep Talking and Nobody Explodes]] を欲しがった。
+このゲームは、爆弾処理担当とマニュアル担当に分かれて協力するゲームで、マニュアル担当には紙のマニュアルが必要不可欠だ（雰囲気を出すためにも）。
+
+せっかくなので、それらしく、かつコンパクトにする為に小冊子印刷 (ブックレット印刷) をしたかった。
+
+*** 試行錯誤の記録
+
+「Ubuntu 小冊子印刷」などで検索すると、いくつかの方法が見つかったが、簡単にはいかなかった。
+
+**** 標準のプリンタ設定
+
+[[https://help.ubuntu.com/stable/ubuntu-help/printing-booklet-duplex.html.ja][公式ヘルプ]] には、「ページ番号を 4, 1, 2, 3 の順に入力して……」といった気の遠くなるような手動指定方法が記載されていた。ページ数が多いマニュアルでこれをやるのは現実的ではない。
+
+**** 既存ツール (失敗)
+
+1. **mkbookpdf**: Rust 製のツール。試してみたが、以下のようなエラーで panic して動かなかった。
+   #+begin_example
+   thread 'main' panicked at library/core/src/panicking.rs:225:5:
+   attempted to leave type `linked_hash_map::Node<alloc::vec::Vec<u8>, object::Object>` uninitialized, which is invalid
+   #+end_example
+
+2. **boomaga**: 仮想プリンタツール。PPA を追加しようとしたが、Ubuntu 24.04 (Noble) 向けのリリースが見つからず 404 エラーとなった。
+
+*** 解決策: pdfbook2
+
+最終的にたどり着いたのが [[https://github.com/jenom/pdfbook2][pdfbook2]] 。
+Python 製だが、Ubuntu では `texlive-extra-utils` パッケージの一部として提供されていることが分かった。
+
+**** インストール
+
+#+begin_src shell
+  sudo apt install texlive-extra-utils
+#+end_src
+
+TexLive 関連の依存パッケージが大量にインストールされるため、環境によっては時間がかかる（手元では 2 分弱）。
+
+**** 使い方
+
+#+begin_src shell
+  pdfbook2 KeepTalkingAndNobodyExplodes-BombDefusalManual-v1-ja.pdf
+#+end_src
+
+これだけで、 =KeepTalkingAndNobodyExplodes-BombDefusalManual-v1-ja-book.pdf= というファイルが生成される。このファイルを PDF ビューワで開き、プリンタの設定で「両面印刷（長辺とじ）」を指定して印刷すれば完了だ。
+
 ** DONE Ubuntu で Bluetooth マウスが使えない時にやるといいかもしれないこと
 CLOSED: [2022-05-29 日 23:28]
 :PROPERTIES:
