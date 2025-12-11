@@ -16,7 +16,7 @@
 ## Project Conventions
 
 ### Content Workflow
-1. **執筆**: `content-org/` 内の `.org` ファイルを編集します。
+1. **執筆**: `content-org/` 内の `.org` ファイルを編集します。 `Done` にするのは人間がやります。
 2. **生成**: Org-mode のエクスポート機能 (`ox-hugo`) を使用して、`content/` 配下に Markdown ファイルを生成します。
     - **禁止事項**: `content/` 配下の Markdown ファイルを直接編集してはいけません。
 3. **デプロイ**: Git にプッシュすると Netlify が自動的にビルド・デプロイします。
