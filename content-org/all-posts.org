@@ -66,8 +66,9 @@ Ubuntu 24.04 (Noble) で PDF を小冊子 (Booklet) 印刷用に加工するに�
 
 #+begin_src shell
   # pdfbook2 は texlive-extra-utils に含まれる
+  # ディスク容量に注意（後述）
   sudo apt install texlive-extra-utils
-  
+
   # 変換
   pdfbook2 input.pdf
   # -> input-book-le.pdf が生成される
@@ -112,14 +113,28 @@ Python 製ですが、Ubuntu では `texlive-extra-utils` パッケージの一�
 #+end_src
 
 TexLive 関連の依存パッケージが大量にインストールされるため、環境によっては時間がかかります（手元では 2 分弱でした）。
+また、ディスク容量も消費します（手元の環境では `/usr/share/texlive` 全体で約 2.8GB ありました）。ストレージ残量には十分注意してください。
 
 **** 使い方
 
 #+begin_src shell
-  pdfbook2 KeepTalkingAndNobodyExplodes-BombDefusalManual-v1-ja.pdf
+  pdfbook2 input.pdf
 #+end_src
 
-これだけで、 =KeepTalkingAndNobodyExplodes-BombDefusalManual-v1-ja-book.pdf= というファイルが生成されます。このファイルを PDF ビューワで開き、プリンタの設定で「両面印刷（長辺とじ）」を指定して印刷すれば完了です。
+これを実行すると、 =input-book-le.pdf= というファイルが生成されます。
+=pdfbook2= は、入力された PDF のお隣同士のページを 1 枚の紙に並べる面付け (Imposition) 処理を行ってくれます (A4 用紙に A5 サイズ 2 ページを印刷するイメージです)。
+
+このファイルを PDF ビューワで開き、プリンタの設定で **「両面印刷（長辺とじ: Long-edge binding）」** を指定して印刷すれば完了です。
+プリンタや紙の向きによっては「短辺とじ」にする必要がある場合もあるため、印刷プレビューでページの向きを確認することをお勧めします。
+
+**** 応用: 余白の調整
+
+もし印刷結果の余白が気になる場合は、 =--inner-margin= などのオプションで調整が可能です。
+
+#+begin_src shell
+  # コンテンツを用紙の端に寄せる例
+  pdfbook2 --inner-margin=0 --outer-margin=0 --top-margin=0 --bottom-margin=0 input.pdf
+#+end_src
 
 ** DONE Ubuntu で Bluetooth マウスが使えない時にやるといいかもしれないこと
 CLOSED: [2022-05-29 日 23:28]
