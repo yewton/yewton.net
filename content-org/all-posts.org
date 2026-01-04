@@ -1560,6 +1560,7 @@ sudo apt install neofetch -y
 :DIR:                images/2026-01-04_agent-client-protocol
 :EXPORT_HUGO_BUNDLE: 2026-01-04_agent-client-protocol
 :EXPORT_HUGO_SLUG:   agent-client-protocol
+:EXPORT_HUGO_TAGS:   ACP Agent LSP Emacs agent-shell
 :END:
 
 #+begin_src yaml :front_matter_extra t
@@ -1567,15 +1568,54 @@ sudo apt install neofetch -y
     caption: Background image by
 #+end_src
 
-Agent Client Protocol ( https://agentclientprotocol.com/overview/introduction ) について、自分なりの理解を解説する記事。
+#+toc: headlines 2
 
-具体的な仕様は公式サイトにあるのでそこは深く語らず、実際に agent-shell.el で試してみて、実際の通信内容と共に利用例を載せたい。
+*** はじめに
+Agent Client Protocol (ACP) は、AI エージェントとクライアント（エディタなど）が対話するための標準プロトコルです。この記事では、ACP の概要と、その背景、具体的な利用例、そして将来性について、私自身の理解を元に解説します。
 
-また、標準成立に至る背景や、 Zed や JetBrains の関わりにも触れ、一過性の流行ではないことを語りたい。
+公式ドキュメントは [[https://agentclientprotocol.com/overview/introduction][こちら]] にあります。
 
-GitHub Copilot CLI にも、ドキュメントにはまだ載っていないが実は =acp= オプションが追加されており、 agent-shell の設定をすれば動くことを示して、将来性の根拠としたい。
+*** 背景: なぜ ACP が必要なのか
+LSP (Language Server Protocol) がプログラミング言語ごとの開発体験の差異を吸収したように、ACP は乱立する AI エージェントとそのクライアント間の通信を標準化することを目指しています。
 
-そして、掲載中のドラフトの内、特に Forking of existing sessions と Proxy Chains については、サブエージェントの活用や Agent Skills  ( https://agentskills.io/home ) への対応へと繋がりそうなので個人的に期待していることを伝えたい。
+この標準化の動きは、[[https://zed.dev/][Zed]] や [[https://www.jetbrains.com/][JetBrains]] といった主要な開発ツールベンダーも支持を表明しており、一過性の流行ではないことが伺えます。本セクションでは、ACP が登場するに至った経緯と、その重要性について掘り下げます。
+
+*** 主な特徴とコンセプト
+ACP は、タスクの実行、進捗の報告、対話的なデータ交換など、エージェントとのやり取りに必要な一連の機能を定義しています。具体的な仕様は公式サイトに譲りますが、ここでは特に重要と思われる以下のコンセプトについて触れます。
+
+- エージェントのライフサイクル管理
+- タスクの委任と実行コンテキスト
+- ストリーミングレスポンスと非同期処理
+
+*** 実践: =agent-shell.el= での利用例
+ACP の具体的な動作を理解するために、Emacs のクライアント実装である [[https://github.com/simon-katz/agent-shell][agent-shell.el]] を使って、実際の通信内容を見ていきます。
+
+ここでは、簡単なタスクをエージェントに依頼し、その際の ACP メッセージ（リクエストとレスポンス）をキャプチャして、プロトコルの使われ方を具体的に示します。
+（このセクションは、実際の通信例のキャプチャを挿入する想定です）
+
+*** 将来性
+ACP はまだ発展途上のプロトコルですが、その将来性は非常に大きいと考えています。
+
+**** GitHub Copilot CLI でのサポート
+まだ公式ドキュメントには記載されていませんが、[[https://github.com/github/gh-copilot][GitHub Copilot CLI]] には、ACP を利用するための `=--acp=` オプションが実験的に追加されています。
+これにより、将来的には Copilot も ACP 準拠のエージェントとして、様々なクライアントから統一的に利用できるようになる可能性があります。
+
+**** ドラフト仕様の展望
+現在議論されているドラフト仕様の中でも、特に以下の 2 つはエージェントの能力を飛躍的に向上させる可能性を秘めています。
+
+- *Forking of existing sessions*: 既存のセッションを複製し、異なるコンテキストでタスクを並行実行させる機能。
+- *Proxy Chains*: 複数のエージェントを連携させ、より複雑なタスクを分業させる仕組み。
+
+これらの機能は、[[https://agentskills.io/home][Agent Skills]] のような外部スキルセットとの連携や、特定のタスクに特化したサブエージェントの活用といった、より高度なエージェントアーキテクチャへの道を開くものと期待しています。
+
+*** まとめ
+Agent Client Protocol は、AI エージェント開発の未来を形作る重要なプロトコルです。LSP が開発環境にもたらしたような変革を、ACP が AI エージェントとの連携にもたらすことを期待しています。
+本記事が、ACP への理解を深める一助となれば幸いです。
+
+*** 参考資料
+- [[https://agentclientprotocol.com/][Agent Client Protocol Official Site]]
+- [[https://github.com/simon-katz/agent-shell][simon-katz/agent-shell: An Emacs experiment in building an Agent Client Protocol client]]
+- [[https://github.com/github/gh-copilot][github/gh-copilot: GitHub Copilot CLI]]
 
 ** DONE Elastic Common Schema と OpenTelemetry Semantic Convention を通して Structured Logging について学んだ
 CLOSED: [2025-01-08 水 23:35]
