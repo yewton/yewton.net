@@ -1553,6 +1553,30 @@ sudo apt install neofetch -y
 @@hugo:{{< unsplash leading="Featured image background by" id=" estherrj" name=" Esther Jiao" >}}@@
 * 技術系                                                                  :@技術系:
 
+** DRAFT Agent Client Protocol を理解する
+:PROPERTIES:
+:EXPORT_FILE_NAME:   index
+:EXPORT_DATE:        2026-01-04
+:DIR:                images/2026-01-04_agent-client-protocol
+:EXPORT_HUGO_BUNDLE: 2026-01-04_agent-client-protocol
+:EXPORT_HUGO_SLUG:   agent-client-protocol
+:END:
+
+#+begin_src yaml :front_matter_extra t
+  image:
+    caption: Background image by
+#+end_src
+
+Agent Client Protocol ( https://agentclientprotocol.com/overview/introduction ) について、自分なりの理解を解説する記事。
+
+具体的な仕様は公式サイトにあるのでそこは深く語らず、実際に agent-shell.el で試してみて、実際の通信内容と共に利用例を載せたい。
+
+また、標準成立に至る背景や、 Zed や JetBrains の関わりにも触れ、一過性の流行ではないことを語りたい。
+
+GitHub Copilot CLI にも、ドキュメントにはまだ載っていないが実は =acp= オプションが追加されており、 agent-shell の設定をすれば動くことを示して、将来性の根拠としたい。
+
+そして、掲載中のドラフトの内、特に Forking of existing sessions と Proxy Chains については、サブエージェントの活用や Agent Skills  ( https://agentskills.io/home ) への対応へと繋がりそうなので個人的に期待していることを伝えたい。
+
 ** DONE Elastic Common Schema と OpenTelemetry Semantic Convention を通して Structured Logging について学んだ
 CLOSED: [2025-01-08 水 23:35]
 :PROPERTIES:
