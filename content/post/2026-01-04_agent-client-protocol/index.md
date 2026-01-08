@@ -2,7 +2,7 @@
 title: "Agent Client Protocol を理解する"
 author: ["yewton"]
 date: 2026-01-04
-mylastmod: 2026-01-07T23:49:39+09:00
+mylastmod: 2026-01-08T13:49:56+09:00
 slug: "agent-client-protocol"
 tags: ["ACP", "Agent", "LSP", "Emacs", "agent-shell"]
 categories: ["技術系"]
@@ -33,8 +33,7 @@ image:
 
 ## はじめに {#はじめに}
 
-Agent Client Protocol (ACP) は、AI エージェントとクライアント（エディタなど）が対話する際の標準を定義するプロトコルです。
-この記事では、ACP の概要と、その背景や具体的な利用例、そして将来性について、自身の理解を元に解説します。
+Agent Client Protocol (ACP) は、AI エージェントとクライアント（エディタなど）が対話する際の標準を定義するプロトコルです。この記事では、ACP の概要と、その背景や具体的な利用例、そして将来性について、自身の理解を元に解説します。
 
 公式ドキュメントは [こちら](https://agentclientprotocol.com/overview/introduction) にあります。
 
@@ -49,16 +48,9 @@ Agent Client Protocol (ACP) は、AI エージェントとクライアント（�
 
 [JetBrains × Zed: Open Interoperability for AI Coding Agents in Your IDE | The JetBrains AI Blog](https://blog.jetbrains.com/ai/2025/10/jetbrains-zed-open-interoperability-for-ai-coding-agents-in-your-ide/)
 
-同年12月5日に発表された [Bring your own AI agent to JetBrains IDEs | The JetBrains AI Blog](https://blog.jetbrains.com/ai/2025/12/bring-your-own-ai-agent-to-jetbrains-ides/#behind-the-closed-doors) では、こんなことが語られています:
+同年12月5日に発表された [Bring your own AI agent to JetBrains IDEs | The JetBrains AI Blog](https://blog.jetbrains.com/ai/2025/12/bring-your-own-ai-agent-to-jetbrains-ides/#behind-the-closed-doors) で語られているところによると、当初から「エディタ非依存の標準」というような高尚な目標があったわけではなく、
+JetBrains が自社エージェント統合用のプロトコルを公開しようとしたタイミングで Zed も同様の動きを見せていたため、規格の乱立を避けるべく協力することになった、というのが実情のようです。
 
-> \## Behind the closed doors
->
-> Before we wrap up, I want to share a bit of behind-the-scenes context on how JetBrains came to ACP. Real life is a bit different, and I think it’s always nice to pull back the curtain and show you how it works from the inside. So, here we go.
->
-> This summer we started working on bringing Junie (it’s a coding agent developed by JetBrains) into the same UI that we had for the AI chat. After some debates, we built a protocol that allowed us to communicate between IDE and local and remote versions of Junie. We were about to publish that work to the internet, but almost at the same time, [Zed](https://zed.dev/) announced its own protocol. We chatted with lovely Zed people and agreed that instead of bringing two competitive standards to the market, we’d join our efforts on building a single one.
-
-JetBrains のブログ記事では、ACP 策定の経緯について率直に語られています。
-当初から「エディタ非依存の標準」というような高尚な目標があったわけではなく、JetBrains が自社エージェント統合用のプロトコルを公開しようとしたタイミングで Zed も同様の動きを見せていたため、規格の乱立を避けるべく協力することになった、というのが実情のようです。
 各ベンダーが「エージェントを効率よく統合したい」という現実的な課題を持っていたタイミングが重なったことが、結果として標準化を加速させたと言えるでしょう。
 
 LSP (Language Server Protocol) がプログラミング言語ごとの開発体験の差異を吸収したように、ACP は乱立する AI エージェントとそのクライアント間の通信を標準化することを目指しています。
@@ -67,17 +59,17 @@ LSP (Language Server Protocol) がプログラミング言語ごとの開発体�
 ## 主な特徴とコンセプト {#主な特徴とコンセプト}
 
 ACP は、タスクの実行、進捗の報告、対話的なデータ交換など、エージェントとのやり取りに必要な一連の機能を定義しています。
-具体的な仕様は公式サイトに譲りますが、ここでは特に重要と思われる以下のコンセプトについて触れます。
 
--   エージェントのライフサイクル管理
--   タスクの委任と実行コンテキスト
--   ストリーミングレスポンスと非同期処理
+具体的な仕様は [公式サイト](https://agentclientprotocol.com/overview/introduction) を見れば分かりますが、ざっくり以下のような流れになっています:
 
-TBW シーケンス図載せる
-<https://agentclientprotocol.com/protocol/overview#message-flow> 引用
+1.  Initialization
+    -   接続の確立や、ベンダーの認証処理
+2.  Session Setup
+    -   新規セッションを始めるか、既存セッションを復元する
+3.  Prompt Turn
+    -   ここから実際のやりとりループが始まる
 
-Protocol 配下全部並列で分かりづらいが、
-init, settup, prompt までが、 overview のメッセージフローに対応、 Schema はその通りスキーマ定義、それ以外は個々のコンセプトの説明。
+公式サイトの構成は Protocol 配下が全部並列で分かりづらいですが、まず Initialization, Session Setup, Prompt Turn が Overview で述べられちる上記のメッセージフローに対応しています。、 Schema はその通りスキーマ定義、それ以外は個々のコンセプトの説明。
 
 
 ## 実践: `agent-shell.el` での利用例 {#実践-agent-shell-dot-el-での利用例}
@@ -409,8 +401,7 @@ ACP はまだ発展途上のプロトコルですが、その将来性は非常�
 
 ### GitHub Copilot CLI でのサポート {#github-copilot-cli-でのサポート}
 
-2026年1月7日現在、まだ公式ドキュメントには記載されていませんが、[GitHub Copilot CLI](https://github.com/github/gh-copilot) には、ACP を利用するための \`=--acp=\` オプションが実験的に追加されています。
-これにより、将来的には Copilot も ACP 準拠のエージェントとして、様々なクライアントから統一的に利用できるようになる可能性があります。
+2026年1月7日現在、まだ公式ドキュメントには記載されていませんが、[GitHub Copilot CLI](https://github.com/github/gh-copilot) には、ACP を利用するための \`=--acp=\` オプションが実験的に追加されています。これにより、将来的には Copilot も ACP 準拠のエージェントとして、様々なクライアントから統一的に利用できるようになる可能性があります。
 
 [Support for ACP (Agent Client Protocol) #222](https://github.com/github/copilot-cli/issues/222)
 
@@ -427,5 +418,4 @@ ACP はまだ発展途上のプロトコルですが、その将来性は非常�
 
 ## まとめ {#まとめ}
 
-Agent Client Protocol は、AI エージェント開発の未来を形作る重要なプロトコルです。LSP が開発環境にもたらしたような変革を、ACP が AI エージェントとの連携にもたらすことを期待しています。
-本記事が、ACP への理解を深める一助となれば幸いです。
+Agent Client Protocol は、AI エージェント開発の未来を形作る重要なプロトコルです。LSP が開発環境にもたらしたような変革を、ACP が AI エージェントとの連携にもたらすことを期待しています。本記事が、ACP への理解を深める一助となれば幸いです。
