@@ -2,8 +2,14 @@
   publish = "public"
   command = "hugo --gc --minify"
 
-[context.production.environment]
+[build.environment]
+  DART_SASS_VERSION = "1.97.1"
+  GO_VERSION = "1.25.5"
   HUGO_VERSION = "0.101.0"
+  NODE_VERSION = "24.12.0"
+  TZ = "Asia/Tokyo"
+
+[context.production.environment]
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "false"
 
@@ -11,14 +17,10 @@
   command = "hugo --gc --minify --enableGitInfo"
 
 [context.split1.environment]
-  HUGO_VERSION = "0.101.0"
   HUGO_ENV = "production"
 
 [context.deploy-preview]
   command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
-
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.101.0"
 
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
