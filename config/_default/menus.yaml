@@ -1,0 +1,26 @@
+main:
+  - name: Home
+    url: "/#hero"
+    weight: 10
+  - name: Blog
+    url: "/blog/"
+    weight: 20
+  - name: Taxonomies
+    weight: 30
+  - name: Categories
+    url: "/categories/"
+    weight: 30
+    parent: Taxonomies
+  - name: Tags
+    url: "/tags/"
+    weight: 40
+    parent: Taxonomies
+  - name: Curriculum Vitae
+    url: "/cv/"
+    weight: 60
+  - name: .emacs.d
+    url: "https://github.com/yewton/.emacs.d"
+    weight: 80
+  - name: kanpro
+    url: "https://github.com/yewton/kanpro"
+    weight: 90

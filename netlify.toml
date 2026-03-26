@@ -4,8 +4,8 @@
 
 [build.environment]
   DART_SASS_VERSION = "1.97.1"
-  GO_VERSION = "1.25.5"
-  HUGO_VERSION = "0.101.0"
+  GO_VERSION = "1.24.3"
+  HUGO_VERSION = "0.123.3"
   NODE_VERSION = "24.12.0"
   TZ = "Asia/Tokyo"
 
@@ -26,7 +26,7 @@
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.101.0"
+  HUGO_VERSION = "0.123.3"
 
 [context.next.environment]
   HUGO_ENABLEGITINFO = "false"
