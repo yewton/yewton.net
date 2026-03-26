@@ -1,0 +1,22 @@
+Watching for changes in /app/{assets,content,data,layouts,static}
+Watching for config changes in /app/config/_default, /app/go.mod
+Start building sites …
+hugo v0.123.3+extended linux/amd64 BuildDate=unknown
+
+
+                   | JA
+-------------------+------
+  Pages            | 313
+  Paginator pages  |  20
+  Non-page files   |  98
+  Static files     |  47
+  Processed images | 341
+  Aliases          | 114
+  Cleaned          |   0
+
+Built in 5729 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 0.0.0.0)
+Press Ctrl+C to stop
