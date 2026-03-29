@@ -1,0 +1,2 @@
+# github.com/HugoBlox/kit/modules/blox v0.11.0
+# github.com/HugoBlox/kit/modules/analytics v0.3.1
