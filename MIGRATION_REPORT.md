@@ -8,7 +8,7 @@ HugoBlox を Bootstrap ベース (v5.9.7) から最新の Tailwind CSS ベース
 - `go.mod`: モジュール参照を `blox-bootstrap` から `blox` へ変更。
 - `config/_default/hugo.yaml`: モジュールインポートのパスを更新。
 - `.tool-versions` / `netlify.toml`: Hugo バージョンを `0.159.1` へ更新。
-- **注意**: ビルドには `tailwindcss` CLI と `@tailwindcss/typography` などの依存パッケージが実行環境に必要です。
+- **注意**: ビルドには `tailwindcss` CLI と `@tailwindcss/typography` などの依存パッケージが必要です。これらを管理するため、リポジトリに `package.json` と `package-lock.json` を追加しました。
 
 ## 判明した主な問題点 (破壊的変更)
 
