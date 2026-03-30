@@ -6,7 +6,7 @@ mylastmod: 2026-03-30T00:00:00+09:00
 slug: "wowchemy-to-hugoblox"
 tags: ["Hugo", "HugoBlox", "Wowchemy", "Tailwind CSS", "Netlify"]
 categories: ["技術系"]
-draft: false
+draft: true
 ---
 
 <div class="ox-hugo-toc toc">
