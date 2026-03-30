@@ -4,7 +4,7 @@ defaultContentLanguage: ja
 hasCJKLanguage: true
 
 cascade:
-  - _target:
+  - target:
       path: /post/**
     commentable: true
     show_related: true
