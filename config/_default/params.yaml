@@ -17,9 +17,14 @@ hugoblox:
       shortname: yewton
   header:
     align: l
+    search: true
   content:
     math:
       enable: false
   analytics:
     google:
       measurement_id: "G-SJ7FG3D0T4"
+  search:
+    enable: true
+    suggestions: []      # Optional: trending searches
+    quick_actions: []    # Optional: quick links in modal
