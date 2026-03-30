@@ -2,6 +2,13 @@ title: yewton.net
 baseURL: http://localhost:1313/
 defaultContentLanguage: ja
 hasCJKLanguage: true
+
+cascade:
+  - _target:
+      path: /post/**
+    commentable: true
+    show_related: true
+    show_breadcrumb: true
 pagination:
   pagerSize: 10
 enableEmoji: true
