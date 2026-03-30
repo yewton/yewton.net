@@ -8,6 +8,27 @@ name:
 role: ソフトウェアエンジニア
 bio: 父親兼エンジニア
 
+email: "yewton@gmail.com"
+
+birthday: "1986-06-11"
+
+anniversary:
+  - prefix: "結婚"
+    date: "2010-11-30"
+    suffix: "目"
+  - prefix: "付き合って"
+    date: "2007-11-30"
+    suffix: "目"
+  - prefix: "社会人"
+    date: "2010-04-01"
+    suffix: "目"
+  - prefix: "現職勤続"
+    date: "2015-09-01"
+    suffix: ""
+  - prefix: "父親歴"
+    date: "2016-12-09"
+    suffix: ""
+
 links:
   - icon: brands/github
     url: https://github.com/yewton
