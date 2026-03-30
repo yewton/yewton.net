@@ -1,0 +1,213 @@
+schema: hugoblox/author/v1
+slug: admin
+is_owner: true
+
+name:
+  display: yewton
+
+role: ソフトウェアエンジニア
+bio: 父親兼エンジニア
+
+email: "yewton@gmail.com"
+
+birthday: "1986-06-11"
+
+anniversary:
+  - prefix: "結婚"
+    date: "2010-11-30"
+    suffix: "目"
+  - prefix: "付き合って"
+    date: "2007-11-30"
+    suffix: "目"
+  - prefix: "社会人"
+    date: "2010-04-01"
+    suffix: "目"
+  - prefix: "現職勤続"
+    date: "2015-09-01"
+    suffix: ""
+  - prefix: "父親歴"
+    date: "2016-12-09"
+    suffix: ""
+
+links:
+  - icon: brands/github
+    url: https://github.com/yewton
+  - icon: brands/x
+    url: https://twitter.com/yewton
+  - icon: brands/linkedin
+    url: https://linkedin.com/in/yewton
+  - icon: brands/facebook
+    url: https://facebook.com/yewton
+  - icon: rss
+    url: /index.xml
+
+experience:
+  - role: 入社
+    org: 株式会社D
+    start: "2010-04-01"
+    end: "2010-07-01"
+    summary: PHPによるシステム開発研修を受講
+  - role: テレビ実況システムバックエンド開発
+    org: 株式会社D
+    start: "2010-07-01"
+    end: "2010-08-01"
+    summary: "PHP (独自フレームワーク) 製。メンバーとして参加"
+  - role: ニュースサイト開発
+    org: 株式会社D
+    start: "2010-08-01"
+    end: "2011-11-01"
+    summary: "PHP (独自フレームワーク) 製。メンバーとして参加"
+  - role: 動画投稿・変換システム開発
+    org: 株式会社D
+    start: "2011-11-01"
+    end: "2013-12-01"
+    summary: "PHP (ノンフレームワーク) 製。メンバーとして参加し、2012年5月以降は開発リーダーを務める"
+  - role: PUSH 通知システム開発
+    org: 株式会社D
+    start: "2013-12-01"
+    end: "2015-09-01"
+    summary: "Play! Scala 製。プロジェクトリーダーとして参加"
+  - role: システム間連携システム開発
+    org: 株式会社D
+    start: "2014-11-01"
+    end: "2015-09-01"
+    summary: "Play! Scala 製。プロジェクトリーダーとして参加"
+  - role: PUSH 通知・システム間連携システム課
+    org: 株式会社D
+    start: "2015-02-01"
+    end: "2015-09-01"
+    summary: 課長に就任。メンバーのマネジメントを行なう
+  - role: レシピ閲覧サイトバックエンド開発
+    org: 株式会社R
+    start: "2015-09-01"
+    end: "2018-01-01"
+    summary: "Ruby on Rails 製。開発メンバーとして参加。2017年4月以降はiOS、Android アプリのエンハンス開発も担当"
+  - role: 学生向け学習時間管理支援システムバックエンド開発
+    org: 株式会社R
+    start: "2018-01-01"
+    end: "2018-04-01"
+    summary: "Ruby on Rails 製。開発メンバーとして参加。"
+  - role: マッチングサービス開発
+    org: 株式会社R
+    start: "2018-04-01"
+    end: "2019-04-01"
+    summary: "Spring Boot 製。スクラムマスター。2018年9月以降はテックリードとして技術課題の解消に注力"
+  - role: ブライダルメディアサービスiOS開発
+    org: 株式会社R
+    start: "2019-04-01"
+    end: "2020-04-01"
+    summary: 開発メンバーとして参加
+  - role: ブライダルメディアサービスモバイルアプリ開発 (スクラムマスター)
+    org: 株式会社R
+    start: "2020-04-01"
+    end: "2020-09-01"
+    summary: Nexus チーム(2チーム)のスクラムマスターに就任。プロセス整備とメンバー定着を行う。
+  - role: ブライダルメディアサービスモバイルアプリ開発 (技術チーフ)
+    org: 株式会社R
+    start: "2020-09-01"
+    end: "2021-04-01"
+    summary: 技術チーフに就任。プロダクト全体の技術的な意思決定に責任を持つと共に、横断での開発プロセス改善を進める。
+  - role: 個人事業主として開業
+    org: YAGNI ワーク
+    start: "2017-10-01"
+    end: "2021-01-01"
+    summary: |
+      知り合いから声を掛けられて副業を開始。
+      その頃ちょうど `.work` ドメインが安売りされていて [yagni.work](https://yagni.work) というドメインを安く取れたので、屋号を YAGNI ワークとした。
+  - role: BtoB動画マニュアル管理ツール開発
+    org: 株式会社S
+    start: "2017-10-01"
+    end: "2021-01-01"
+    summary: "Ruby on Rails 製。個人事業主として開発全般の業務委託を請け負う"
+  - role: ブライダルメディアサービス開発 (グループマネージャ)
+    org: 株式会社R
+    start: "2021-04-01"
+    end: "2022-03-31"
+    summary: グループマネージャに就任。モバイルアプリ開発チームのマネジメントと、サービス全体の技術ガバナンス強化を推進。
+  - role: 美容サロンメディアサービス開発
+    org: 株式会社R
+    start: "2022-04-01"
+    summary: 開発メンバーとして参加
+
+skills:
+  - name: プログラミング言語
+    items:
+      - label: Ruby
+        icon: devicon/ruby
+        level: 4
+        description: "**業務5年** | RoR アプリを一人で開発出来るし、指導もできる"
+      - label: JavaScript
+        icon: devicon/javascript
+        level: 2
+        description: "**業務2年** | React / Node.js (Lambda)"
+      - label: Java
+        icon: devicon/java
+        level: 2
+        description: "**業務2年** | Spring Boot を一人で開発できる"
+      - label: Kotlin
+        icon: devicon/kotlin
+        level: 2
+        description: "**業務2年** | Android および Spring Boot"
+      - label: Scala
+        icon: devicon/scala
+        level: 2
+        description: "**業務2年** | Play! フレームワーク"
+      - label: Swift
+        icon: devicon/swift
+        level: 3
+        description: "**業務3年** | iOS ネイティブ開発"
+      - label: Objective-C
+        level: 3
+        description: "**業務3年** | iOS ネイティブ開発"
+      - label: Python
+        icon: devicon/python
+        level: 2
+        description: "**業務2年** | Fabric 等で薄く"
+      - label: PHP
+        icon: devicon/php
+        level: 4
+        description: "**業務5年** | PHP 6 時代まで"
+      - label: Emacs Lisp
+        icon: devicon/emacs
+        level: 5
+        description: "**業務10年+** | 個人設定を10年以上管理"
+  - name: ミドルウェア
+    items:
+      - label: MySQL / MariaDB
+        icon: devicon/mysql
+        level: 5
+        description: "**業務10年** | レプリケーション・バックアップ・パフォーマンスチューニング・Galera クラスター"
+      - label: PostgreSQL
+        icon: devicon/postgresql
+        level: 2
+        description: "**業務2年** | Heroku 環境での利用"
+      - label: Redis
+        icon: devicon/redis
+        level: 4
+        description: "**業務5年** | キャッシュとして当たり前に運用"
+      - label: Elasticsearch
+        icon: devicon/elasticsearch
+        level: 2
+        description: "**業務2年** | 日本語インクリメンタルサーチ・表記揺れ対応"
+      - label: Docker
+        icon: devicon/docker
+        level: 4
+        description: "**業務5年** | 開発環境・一部本番運用"
+  - name: クラウド
+    items:
+      - label: AWS
+        icon: devicon/amazonwebservices-wordmark
+        level: 4
+        description: "**業務5年** | Webアプリ開発に必要な一通りの運用経験"
+      - label: GCP
+        icon: devicon/googlecloud
+        level: 2
+        description: "**業務2年** | BigQuery・Vision API 等"
+
+awards:
+  - title: "Certified ScrumMaster®"
+    awarder: Scrum Alliance
+    date: "2015-11-16"
+    url: "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"
+    certificate_url: "https://www.scrumalliance.org/community/profile/ysasaki"
+    summary: 更新はしてないです…

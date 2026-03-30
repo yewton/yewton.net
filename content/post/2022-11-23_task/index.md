@@ -7,7 +7,9 @@ slug: "task"
 tags: ["task", "taskfile", "make"]
 categories: ["技術系"]
 draft: false
-url_slides: https://yewton.github.io/my-marp-slides/2022-11_task/PITCHME.html
+links:
+  - type: slides
+    url: https://yewton.github.io/my-marp-slides/2022-11_task/PITCHME.html
 ---
 
 [Spring Microservices in Action, Second Edition](https://amzn.to/3TSpkqM) の独習用に、 <https://github.com/yewton/my-smia> というリポジトリで、実際に AWS に Terraform で環境構築してデプロイするところまでをやっている。

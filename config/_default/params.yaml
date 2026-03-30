@@ -1,56 +1,30 @@
-# SITE SETUP
-appearance:
-  theme_day: minimal
-  theme_night: minimal
-  font: minimal
-  font_size: M
-
-features:
-  syntax_highlighter:
-    theme_light: pygments
-    theme_dark: native
-  math:
-    enable: false
-  privacy_pack:
-    enable: false
-  repository:
-    url: "https://github.com/yewton/yewton.net"
-    content_dir: content
-    branch: master
-  avatar:
-    gravatar: true
-    shape: circle
-  comment:
+hugoblox:
+  locale:
+    date_format: "2006年1月2日"
+    time_format: "3:04 PM"
+    address_format: en-us
+  identity:
+    type: Person
+    social:
+      twitter: yewton
+  copyright:
+    notice: "© 2016-{year} yewton"
+  layout:
+    avatar_shape: circle
+  comments:
     provider: disqus
     disqus:
       shortname: yewton
-      show_count: false
-  search:
-    provider: hugoblox
-  map:
-    provider: ""
-
-locale:
-  date_format: "2006年1月2日"
-  time_format: "3:04 PM"
-  address_format: en-us
-
-header:
-  navbar:
+  header:
     align: l
-    show_logo: true
-
-footer:
-  copyright:
-    notice: "© 2016-{year} yewton"
-
-marketing:
-  seo:
-    site_type: Person
-    twitter: yewton
+    search: true
+  content:
+    math:
+      enable: false
   analytics:
-    google_analytics: "G-SJ7FG3D0T4"
-
-extensions:
-  academicons:
+    google:
+      measurement_id: "G-SJ7FG3D0T4"
+  search:
     enable: true
+    suggestions: []      # Optional: trending searches
+    quick_actions: []    # Optional: quick links in modal

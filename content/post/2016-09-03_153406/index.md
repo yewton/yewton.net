@@ -17,23 +17,21 @@ title = "Atlassian から無料でTシャツをもらう方法、あるいはド
 
 せっかくもらえるもんなら、とドラゴン退治をすることにした。
 
-{{% callout note %}}
-**2017/1/20 時点の注意**
+> [!NOTE]
+> **2017/1/20 時点の注意**
+>
+> どうやら現在、 **Tシャツを要求するためのページが 404 になってしまっている** ようす
+> (
+> [Dragon slayed, but can't get t\-shirt? \- Atlassian Answers](https://answers.atlassian.com/questions/43114478/dragon-slayed-but-cant-get-t-shirt) )
+> 。
+>
+> せっかくやってもTシャツはもらえないかもしれないので注意。
 
-どうやら現在、 **Tシャツを要求するためのページが 404 になってしまっている** ようす
-(
-[Dragon slayed, but can't get t\-shirt? \- Atlassian Answers](https://answers.atlassian.com/questions/43114478/dragon-slayed-but-cant-get-t-shirt) )
-。
-
-せっかくやってもTシャツはもらえないかもしれないので注意。
-{{% /callout %}}
-
-{{% callout note %}}
-**2017/2/5 時点の情報**
-
-どうやらサイトが復旧したようす
-[You Slayed the Dragon \| Atlassian](https://www.atlassian.com/you-slayed-the-dragon)
-{{% /callout %}}
+> [!NOTE]
+> **2017/2/5 時点の情報**
+>
+> どうやらサイトが復旧したようす
+> [You Slayed the Dragon \| Atlassian](https://www.atlassian.com/you-slayed-the-dragon)
 
 ## 環境要件 ##
 

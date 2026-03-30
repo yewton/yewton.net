@@ -5,7 +5,7 @@
 [build.environment]
   DART_SASS_VERSION = "1.97.1"
   GO_VERSION = "1.24.3"
-  HUGO_VERSION = "0.123.3"
+  HUGO_VERSION = "0.159.1"
   NODE_VERSION = "24.12.0"
   TZ = "Asia/Tokyo"
 
@@ -14,19 +14,19 @@
   HUGO_ENABLEGITINFO = "false"
 
 [context.split1]
-  command = "hugo --gc --minify --enableGitInfo"
+  command = "hugo --gc --minify --enableGitInfo && npx pagefind --source 'public'"
 
 [context.split1.environment]
   HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL && npx pagefind --source 'public'"
 
 [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL && npx pagefind --source 'public'"
 
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.123.3"
+  HUGO_VERSION = "0.159.1"
 
 [context.next.environment]
   HUGO_ENABLEGITINFO = "false"
