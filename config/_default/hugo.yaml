@@ -3,6 +3,10 @@ baseURL: http://localhost:1313/
 defaultContentLanguage: ja
 hasCJKLanguage: true
 
+build:
+  buildStats:
+    enable: true
+
 cascade:
   - target:
       path: /post/**
