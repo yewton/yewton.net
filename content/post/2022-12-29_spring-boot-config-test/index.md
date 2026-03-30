@@ -64,19 +64,18 @@ class ProductionConfigTest(env: ConfigurableEnvironment) : FunSpec({
 
 設定値は [`ConfigurableEnvironment`](https://docs.spring.io/spring-framework/docs/6.0.3/javadoc-api/org/springframework/core/env/ConfigurableEnvironment.html) を autowire して取得する。
 
-{{% callout info %}}
-`ConfigurableEnvironment` は、 内部的に複数の [`PropertySource`](https://docs.spring.io/spring-framework/docs/6.0.3/javadoc-api/org/springframework/core/env/PropertySource.html) を保持しており、これらを使ってプロパティの値を解決する。
-
-試しにデバッガで見てみると、読み込まれているファイル群を確認出来る:
-
-{{< figure src="2022-12-29_23-31-26_screenshot.png" >}}
-
-ちなみに各 `PropertySource#source` に、 `Map` として設定値が格納されている:
-
-{{< figure src="2022-12-29_23-48-03_screenshot.png" >}}
-
-これを利用して、設定キーの一覧を作成したりすることも可能。
-{{% /callout %}}
+> [!NOTE]
+> `ConfigurableEnvironment` は、 内部的に複数の [`PropertySource`](https://docs.spring.io/spring-framework/docs/6.0.3/javadoc-api/org/springframework/core/env/PropertySource.html) を保持しており、これらを使ってプロパティの値を解決する。
+>
+> 試しにデバッガで見てみると、読み込まれているファイル群を確認出来る:
+>
+> {{< figure src="2022-12-29_23-31-26_screenshot.png" >}}
+>
+> ちなみに各 `PropertySource#source` に、 `Map` として設定値が格納されている:
+>
+> {{< figure src="2022-12-29_23-48-03_screenshot.png" >}}
+>
+> これを利用して、設定キーの一覧を作成したりすることも可能。
 
 ```kotlin
 env.getProperty("spring.r2dbc.url") shouldContain "prod.yewton.net:5432"

@@ -11,9 +11,8 @@ draft: false
 
 {{< lastmod >}}
 
-{{< callout note >}}
-[counsel-rg と migemo を組み合わせて ripgrep でもローマ字検索](/2020/05/24/counsel-rg-migemo/) も併せて参照。
-{{</ callout >}}
+> [!NOTE]
+> [counsel-rg と migemo を組み合わせて ripgrep でもローマ字検索](/2020/05/24/counsel-rg-migemo/) も併せて参照。
 
 
 ## TL;DR {#tl-dr}

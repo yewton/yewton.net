@@ -10,9 +10,8 @@ mylastmod = 2020-01-13T15:43:21+09:00
 
 {{< lastmod >}}
 
-{{< callout note >}}
-2020年1月現在は、 [Netlify を使っています](/2020/01/13/hugo-netlify/) 。
-{{< /callout >}}
+> [!NOTE]
+> 2020年1月現在は、 [Netlify を使っています](/2020/01/13/hugo-netlify/) 。
 
 
 ## はじめに ##

@@ -542,11 +542,10 @@ agent-shell では以下のように設定すると動かせます ( `--acp` フ
              :install-instructions "See TBW for installation.")))
 ```
 
-{{% callout note %}}
-なお、 Gemini CLI もそうですが GitHub Copilot も [session/set_model](https://agentclientprotocol.com/protocol/draft/schema#session%2Fset_model) ( agent-shell 的には `default-model-id` )には現時点で対応していません。
-
-Claude Code など一部のエージェントは対応しており、半分デファクトスタンダードのようですが、プロトコル上はまだ未定義であり `UNSTABLE` とされています。
-{{% /callout %}}
+> [!NOTE]
+> なお、 Gemini CLI もそうですが GitHub Copilot も [session/set_model](https://agentclientprotocol.com/protocol/draft/schema#session%2Fset_model) ( agent-shell 的には `default-model-id` )には現時点で対応していません。
+>
+> Claude Code など一部のエージェントは対応しており、半分デファクトスタンダードのようですが、プロトコル上はまだ未定義であり `UNSTABLE` とされています。
 
 将来的には Copilot も ACP 準拠のエージェントとして、様々なクライアントから統一的に利用できるようになる可能性があります。
 

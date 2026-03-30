@@ -1,0 +1,57 @@
+.src-block-caption {
+    display: block;
+    margin-top: 0.75em;
+    margin-bottom: 1.65rem;
+    line-height: 1.4;
+    font-size: 0.76rem;
+    text-align: center;
+}
+
+.featured-image-credit {
+    display: block;
+    margin-top: 0.75em;
+    margin-bottom: 1.65rem;
+    line-height: 1.4;
+    font-size: 0.76rem;
+    font-style: italic;
+    color: rgb(122, 122, 122);
+    margin-left: 1rem;
+}
+
+.ox-hugo-toc .heading {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.ox-hugo-toc ul {
+    padding-left: 0;
+    border-left: 1px solid #eee;
+    list-style: none;
+}
+
+.ox-hugo-toc ul li a {
+    display: block;
+    padding: .125rem 1.5rem;
+    color: #99979c;
+    font-size: 0.7rem;
+}
+
+.mylastmod {
+    line-height: 1.4;
+    font-size: 0.76rem;
+    font-style: italic;
+    color: rgb(122, 122, 122);
+    margin-left: 1rem;
+}
+
+pre.chroma, .chroma code {
+    background-color: #f5f5f5;
+    color: #4a4a4a;
+    padding: 0.5em;
+    display: block;
+}
+
+.dark pre.chroma, .dark .chroma code {
+    color: #d0d0d0;
+    background-color: #202020;
+}

@@ -42,8 +42,7 @@ draft: false
 
 {{< figure src="2020-01-08_06-36-20_Screenshot_2020-01-08-01-02-37-802.jpeg" caption="&#22259;3:  横画面になる度に表示されるうっとうしいダイアログ" >}}
 
-{{< callout note >}}
-2020年1月20日に配信されたアップデートを適用したところ、少なくとも `Lenovo Launcher が停止しました` のダイアログは出なくなっていた。
-{{</ callout >}}
+> [!NOTE]
+> 2020年1月20日に配信されたアップデートを適用したところ、少なくとも `Lenovo Launcher が停止しました` のダイアログは出なくなっていた。
 
 {{< unsplash leading="Featured image background by" id=" estherrj" name=" Esther Jiao" >}}

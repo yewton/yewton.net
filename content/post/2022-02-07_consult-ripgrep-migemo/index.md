@@ -27,9 +27,8 @@ draft: false
 (setq consult--regexp-compiler #'consult--migemo-regexp-compiler)
 ```
 
-{{% callout warning %}}
-[Lexical Binding](https://www.gnu.org/software/emacs/manual/html%5Fnode/elisp/Lexical-Binding.html) が有効でないとエラーになります。
-{{% /callout %}}
+> [!WARNING]
+> [Lexical Binding](https://www.gnu.org/software/emacs/manual/html%5Fnode/elisp/Lexical-Binding.html) が有効でないとエラーになります。
 
 
 ## `cosult-ripgrep` の仕組み {#cosult-ripgrep-の仕組み}
@@ -74,7 +73,6 @@ expression, which can be `basic', `extended', `emacs' or `pcre'."
 
 ということで、冒頭のような設定を行い、 migemo 対応版の `consult--regexp-compiler` を指定してやればよい。
 
-{{% callout warning %}}
-`consult--regexp-compiler` はその命名からも分かる通り、あくまで内部変数のようである。
-その為、今後の更新によって使えなくなる可能性も十分にある。
-{{% /callout %}}
+> [!WARNING]
+> `consult--regexp-compiler` はその命名からも分かる通り、あくまで内部変数のようである。
+> その為、今後の更新によって使えなくなる可能性も十分にある。
