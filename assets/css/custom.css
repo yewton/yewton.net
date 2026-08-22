@@ -44,14 +44,53 @@
     margin-left: 1rem;
 }
 
-pre.chroma, .chroma code {
+/*
+ * callout (`{{% callout %}}` / `> [!NOTE]` 等) は `.callout` が display:flex で
+ * アイコンとコンテンツを横並びにしている。flex アイテムは既定で min-width: auto
+ * のため、コンテンツ側に幅の広い pre (コードブロック) があると、それがそのまま
+ * callout 全体を押し広げてしまい、右側の目次カラムに重なって表示される。
+ */
+.callout-content {
+    min-width: 0;
+}
+
+.callout-body pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/*
+ * HugoBlox の `.prose code:not(:where(pre *))::before/::after { content: none }` は
+ * `@layer components` に属しており、Tailwind Typography が `@utility prose` として
+ * `@layer utilities` に生成するバッククォート付与ルール (content: "`") より
+ * レイヤー優先度が低いため無効化されている (utilities > components)。
+ * このファイルは @layer で囲んでいない (レイヤー未指定) ため、レイヤー順位に関係なく
+ * 常に最優先で適用され、確実に打ち消せる。
+ */
+.prose code:not(:where(pre *))::before,
+.prose code:not(:where(pre *))::after {
+    content: none;
+}
+
+/*
+ * HugoBlox 本体の `.prose .chroma, .prose pre` / `.dark .prose .chroma, .dark .prose pre`
+ * (詳細度 0,2,0 / 0,3,0) は下記より詳細度が低いセレクタでは上書きできない
+ * (`pre.chroma` は 0,1,1、`.dark pre.chroma` は 0,2,1 で負ける)。
+ * `.prose` を含めて詳細度で確実に上回るようにしている。
+ */
+.prose pre.chroma {
     background-color: #f5f5f5;
     color: #4a4a4a;
     padding: 0.5em;
+}
+
+.chroma code {
+    background-color: transparent;
+    padding: 0;
     display: block;
 }
 
-.dark pre.chroma, .dark .chroma code {
+.dark .prose pre.chroma {
     color: #d0d0d0;
     background-color: #202020;
 }
