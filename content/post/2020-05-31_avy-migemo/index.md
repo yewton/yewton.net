@@ -2,7 +2,6 @@
 title: "avy で migemo る (avy-migemo を使わずに)"
 author: ["yewton"]
 date: 2020-05-31T05:31:00+09:00
-mylastmod: 2020-05-31T05:33:32+09:00
 slug: "avy-migemo"
 tags: ["migemo", "avy", "emacs"]
 categories: ["Emacs"]

@@ -2,7 +2,6 @@
 title: "Dell Latitude 3420 の SSD をより大容量の SSD に Clonezilla でクローンし換装する"
 author: ["yewton"]
 date: 2025-01-06T01:05:00+09:00
-mylastmod: 2025-01-06T01:09:21+09:00
 slug: "dell-latitude-3420-storage"
 tags: ["dell", "latitude", "clonezilla"]
 categories: ["買ったモノ"]

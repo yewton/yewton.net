@@ -2,7 +2,6 @@
 title: "MacBook Pro (Retina, 15-inch, Mid 2012) で macOS と Xubuntu 19.10 Eoan Ermine をデュアルブートする"
 author: ["yewton"]
 date: 2020-02-13T07:01:00+09:00
-mylastmod: 2020-02-13T08:25:28+09:00
 slug: "macbookpro10-xubuntu"
 tags: ["macos", "ubuntu", "xubuntu", "xfce", "hidpi"]
 categories: ["技術系"]

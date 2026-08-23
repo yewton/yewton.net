@@ -12,8 +12,11 @@ Markdown as Hugo page bundles and published via Hugo + [HugoBlox](https://hugobl
 ## Content workflow (critical)
 
 New articles are written and edited directly in Markdown — the Emacs Org-mode / `ox-hugo` pipeline
-is no longer used for authoring. (Legacy articles still carry Org sources under `content-org/*.org`;
-those are kept for reference only and are not the source of truth for new work.)
+is no longer used for authoring. (Legacy articles still carry Org sources in
+`content-org/all-posts.org`; that file is kept for reference only and is not the source of truth for
+new work. The Org sources for site pages and author data are gone — top-level pages are
+`content/_index.md` / `content/blog/_index.md` / `content/cv/_index.md`, and author data is
+`data/authors/<slug>.yaml`.)
 
 - **Where content lives**: each post is a Hugo page bundle at `content/post/<YYYY-MM-DD_slug>/index.md`,
   with images and other assets in the same directory. Edit `index.md` directly; there is no Org export
@@ -49,8 +52,10 @@ those are kept for reference only and are not the source of truth for new work.)
   alert syntax (`> [!NOTE]`, `> [!WARNING]`), not the legacy `{{% callout %}}` shortcode. For image
   credits and embeds, call the Hugo shortcodes directly (`{{< unsplash ... >}}`, `{{< pexels ... >}}`,
   `{{< pixabay >}}...{{< /pixabay >}}`) — the `{{{...}}}` Org macros are not available in Markdown.
-- **Compatibility**: the `{{< lastmod >}}` shortcode and the `mylastmod` front matter key are kept for
-  older articles that still use them; do not use them in new posts.
+- **No `mylastmod`**: the legacy `mylastmod` front matter key and the `{{< lastmod >}}` shortcode that
+  rendered it are gone. `lastmod` is the only last-updated field. (`content-org/all-posts.org` still
+  contains the ox-hugo directive that produced `mylastmod`, so re-exporting from Org would reintroduce
+  it — another reason that file is reference-only.)
 
 ## Commands
 
@@ -101,7 +106,7 @@ touching theme/config internals, as it documents many non-obvious HugoBlox behav
 - **Block/partial overrides**: local overrides of HugoBlox blocks live under
   `layouts/_partials/hbx/blocks/<block-name>/block.html` (currently `resume-awards`,
   `resume-biography`). Custom shortcodes live in `layouts/shortcodes/`
-  (`lastmod`, `pexels`, `pixabay`, `unsplash`).
+  (`pexels`, `pixabay`, `unsplash`).
 - **Config layout**: `config/_default/` holds the base config (`hugo.yaml`, `menus.yaml`,
   `params.yaml`); `config/production/config.toml` only overrides `baseURL` for production.
 

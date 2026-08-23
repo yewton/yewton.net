@@ -2,7 +2,6 @@
 title: "スーパーマリオ64 Behind Camera Anywhere とは"
 author: ["yewton"]
 date: 2021-06-07T00:30:00+09:00
-mylastmod: 2021-06-07T00:30:21+09:00
 slug: "mario64-behind-camera-anywhere"
 categories: ["雑記"]
 draft: false

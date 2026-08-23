@@ -2,7 +2,6 @@
 title: "Wowchemy から HugoBlox (Tailwind CSS 版) への移行記"
 author: ["yewton"]
 date: 2026-03-30T00:00:00+09:00
-mylastmod: 2026-03-30T00:00:00+09:00
 slug: "wowchemy-to-hugoblox"
 tags: ["Hugo", "HugoBlox", "Wowchemy", "Tailwind CSS", "Netlify"]
 categories: ["技術系"]

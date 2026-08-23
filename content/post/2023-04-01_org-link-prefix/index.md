@@ -2,7 +2,6 @@
 title: "Org Mode でリンク種別に応じたプレフィクスを表示する"
 author: ["yewton"]
 date: 2023-04-01T22:47:00+09:00
-mylastmod: 2023-04-01T22:47:16+09:00
 slug: "org-link-prefix"
 tags: ["org-mode", "emacs", "org-link", "emoji"]
 categories: ["Emacs"]

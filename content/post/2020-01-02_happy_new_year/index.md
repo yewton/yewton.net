@@ -3,7 +3,6 @@ title = "久々の更新"
 author = ["yewton"]
 date = 2020-01-02
 aliases = ["/2019/01/happy-new-year/"]
-mylastmod = 2020-01-12T06:40:09+09:00
 slug = "happy-new-year"
 tags = ["emacs", "hugo", "ox-hugo"]
 categories = ["雑記"]

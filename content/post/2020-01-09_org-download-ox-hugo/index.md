@@ -2,7 +2,6 @@
 title = "org-download と ox-hugo を組み合わせて記事への画像挿入を快適にする"
 author = ["yewton"]
 date = 2020-01-09
-mylastmod = 2020-01-13T16:02:47+09:00
 slug = "org-download-ox-hugo"
 tags = ["emacs", "ox hugo", "org download", "org attach"]
 categories = ["Emacs"]

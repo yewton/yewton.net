@@ -2,14 +2,12 @@
 title: "Lenovo Tab M8 が案外良かった"
 author: ["yewton"]
 date: 2020-01-11
-mylastmod: 2021-02-27T21:59:36+09:00
+lastmod: 2021-02-27T21:59:36+09:00
 slug: "lenovo-tab-m8"
 tags: ["Lenovo Tab M8"]
 categories: ["買ったモノ"]
 draft: false
 ---
-
-{{< lastmod >}}
 
 さすがにもう [Nexus 7 2012](/2017/04/09/grouper-beanstalk/) でやっていくのはしんどくなってきたので、手軽なタブレットを探していたら、
 2019 年の 11 月に Lenovo から [Lenovo Tab M8 (ZA5G0084JP)](https://hb.afl.rakuten.co.jp/hgc/1a0d625b.bdb81d38.1a0d625c.bf0332b2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbiccamera%2F4580550700484%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbiccamera%2Fi%2F12780179%2F&link%5Ftype=hybrid%5Furl&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjB9) が発売されていたのを知った。

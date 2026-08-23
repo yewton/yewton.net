@@ -2,7 +2,6 @@
 title: "タスクランナー Task の紹介スライドを書いた"
 author: ["yewton"]
 date: 2022-11-24T22:04:00+09:00
-mylastmod: 2022-11-24T22:04:55+09:00
 slug: "task"
 tags: ["task", "taskfile", "make"]
 categories: ["技術系"]
