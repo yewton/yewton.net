@@ -2,7 +2,7 @@
 title: "無料でいい感じのバナー用背景素材をダウンロード出来るフリー画像サービス 3 選"
 author: ["yewton"]
 date: 2020-01-13
-mylastmod: 2020-01-23T05:00:48+09:00
+lastmod: 2020-01-23T05:00:48+09:00
 slug: "unsplash-pexels-pixabay"
 categories: ["Webサイト運用"]
 draft: false

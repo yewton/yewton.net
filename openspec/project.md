@@ -5,22 +5,26 @@
 主な目的は、技術的な知見や個人の思考を記録・発信することです。
 
 ## Tech Stack
-- **Content Master**: [Emacs Org-mode](https://orgmode.org/)
-    - 全ての記事は `content-org/` 配下の `.org` ファイルで執筆・管理されます。
-- **Static Site Generator**: [Hugo Extended](https://gohugo.io/) (v0.101.0)
-    - `ox-hugo` を使用して Org-mode ファイルから Markdown を生成し、Hugo でビルドします。
-- **Theme**: [Wowchemy](https://wowchemy.com/) (v5.7.0)
+- **Content Format**: Markdown（Hugo のページバンドル）
+    - 新規記事は `content/post/<YYYY-MM-DD_slug>/index.md` を直接執筆・編集します。
+    - 旧記事の Org ソース（`content-org/*.org`）は参照用として残していますが、新規執筆の正ではありません。
+- **Static Site Generator**: [Hugo Extended](https://gohugo.io/)（`.tool-versions` で 0.159.1 に固定）
+- **Theme**: [HugoBlox](https://hugoblox.com/)（Tailwind CSS 版）を Hugo Modules で取得
+    （`github.com/HugoBlox/kit/modules/blox`）。旧 Wowchemy/Bootstrap テーマから移行済み。
 - **Hosting**: Netlify
-- **Language**: Go (v1.16) - Hugo の依存として
+- **Language**: Go（`.tool-versions` で 1.24.3 に固定）- Hugo Modules と HugoBlox の依存として
 
 ## Project Conventions
 
 ### Content Workflow
-1. **執筆**: `content-org/` 内の `.org` ファイルを編集します。 `Done` にするのは人間がやります。
-    - Org-mode なので code 表記するには `~` で括り、その他 verbatim 表記には `=` で括ります。バッククォートではないので注意。
-2. **生成**: Org-mode のエクスポート機能 (`ox-hugo`) を使用して、`content/` 配下に Markdown ファイルを生成します。
-    - **禁止事項**: `content/` 配下の Markdown ファイルを直接編集してはいけません。
-3. **デプロイ**: Git にプッシュすると Netlify が自動的にビルド・デプロイします。
+1. **執筆**: `content/post/<YYYY-MM-DD_slug>/index.md` を直接編集します。画像などのアセットは同ディレクトリに置きます。
+    - Markdown なので code 表記はバッククォート（`` `code` ``）を使います。
+    - 公開状態は front matter の `draft` で制御します。`draft: false`（公開）にするのは人間が判断します。
+2. **更新日**: 内容を意図的に更新したときだけ、標準の `lastmod:`（ISO 8601）を手動付与します。
+   機械的・軽微な修正では更新日を動かしません（`enableGitInfo` は使いません）。
+3. **目次・装飾**: 目次は HugoBlox が見出しから自動生成します（手書きしない）。注意喚起は Markdown alert
+   構文（`> [!NOTE]` / `> [!WARNING]`）、画像クレジット等は Hugo ショートコード（`{{< unsplash … >}}` 等）を直接使います。
+4. **デプロイ**: Git にプッシュすると Netlify が自動的にビルド・デプロイします。
 
 ### Writing Style & Tone
 - **文体**: 原則として「です・ます」調を使用します。
@@ -28,7 +32,7 @@
     - 専門的な内容は論理的かつ簡潔に記述します。
     - 個人の意見や感想を含む場合は、客観的な事実と区別できるよう記述します。
     - 一人称は「私」を基本としますが、文脈により省略することもあります。
-- **構成**: Org-mode の構造化機能（見出し、リスト、タグなど）を積極的に活用します。
+- **構成**: Markdown の構造化機能（見出し、リスト、front matter のタグ／カテゴリなど）を積極的に活用します。
 
 ### Git Workflow
 - `main` ブランチへのプッシュで本番環境へデプロイされます。
@@ -47,5 +51,5 @@
 - 時折、育児や生活に関する雑記も含まれます。
 
 ## External Dependencies
-- **Netlify**: ホスティングおよび CMS 機能（現在は Org-mode 中心のため CMS は補助的利用か未使用）。
+- **Netlify**: ホスティングおよびビルド・デプロイ（`hugo` ビルド後に Pagefind で検索インデックスを生成）。
 - **Disqus**: コメント機能（必要に応じて）。

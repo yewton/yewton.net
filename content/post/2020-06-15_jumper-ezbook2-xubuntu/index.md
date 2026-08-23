@@ -2,7 +2,7 @@
 title: "中古で12,800円の激安ノートPC(Jumper Ezbook 2)にXubuntu 20.04 LTS (Focal Fossa)を入れて幸せになる"
 author: ["yewton"]
 date: 2020-06-18T06:18:00+09:00
-mylastmod: 2020-07-09T03:13:22+09:00
+lastmod: 2020-07-09T03:13:22+09:00
 slug: "jumper-ezbook2-xubuntu"
 tags: ["xubuntu", "jumper", "ezbook"]
 categories: ["買ったモノ"]
