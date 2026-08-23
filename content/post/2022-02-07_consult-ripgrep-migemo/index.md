@@ -2,7 +2,7 @@
 title: "consult-ripgrep と migemo を組み合わせて ripgrep でもローマ字日本語検索"
 author: ["yewton"]
 date: 2022-02-07T23:29:00+09:00
-mylastmod: 2022-02-19T21:56:08+09:00
+lastmod: 2022-02-19T21:56:08+09:00
 slug: "consult-ripgrep-migemo"
 tags: ["migemo", "ripgrep", "consult", "emacs"]
 categories: ["Emacs"]

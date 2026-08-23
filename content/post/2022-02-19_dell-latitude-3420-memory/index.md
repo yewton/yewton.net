@@ -2,7 +2,7 @@
 title: "Dell Latitude 3420 にメモリを増設する"
 author: ["yewton"]
 date: 2022-02-19T21:51:00+09:00
-mylastmod: 2025-01-06T00:25:03+09:00
+lastmod: 2025-01-06T00:25:03+09:00
 slug: "dell-latitude-3420-memory"
 tags: ["dell", "latitude"]
 categories: ["買ったモノ"]

@@ -2,7 +2,7 @@
 title: "GitHub Pages + Cloudflare から Netlify に移行した"
 author: ["yewton"]
 date: 2020-01-13
-mylastmod: 2020-01-23T04:19:50+09:00
+lastmod: 2020-01-23T04:19:50+09:00
 slug: "hugo-netlify"
 tags: ["Hugo", "Netlify", "Cloudflare", "GitHub Pages"]
 categories: ["Webサイト運用"]
