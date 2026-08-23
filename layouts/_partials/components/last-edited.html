@@ -1,0 +1,22 @@
+{{/*
+  HugoBlox の components/last-edited.html をローカルオーバーライドする。
+
+  モジュール既定は `.Lastmod` が真なら常に「最終更新」を表示するが、Hugo の `.Lastmod` は
+  front matter の `lastmod:` 未指定時に `date` へフォールバックするため、未更新の記事でも
+  「最終更新 = 公開日」が重複表示されてしまう。
+
+  このサイトでは `lastmod:` を「内容を意図的に更新したとき」だけ手動付与する運用のため、
+  `.Lastmod` が `.Date` より後のときだけ表示する。表示しない場合も、下部の余白は
+  既定と同じく確保する。
+*/}}
+{{- $last_updated := T "last_updated" -}}
+
+{{- if and (.Params.show_date_updated | default true) (.Lastmod.After .Date) -}}
+  {{ $datetime := (time.Format "2006-01-02T15:04:05.000Z" .Lastmod) }}
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="{{ $datetime }}">
+    <span>{{ $last_updated }}</span>
+    {{ .Lastmod | time.Format (site.Params.hugoblox.locale.date_format | default ":date_long") -}}
+  </time>
+{{- else -}}
+  <div class="mt-16"></div>
+{{- end -}}
