@@ -2,7 +2,6 @@
 title: "Ubuntu で Bluetooth マウスが使えない時にやるといいかもしれないこと"
 author: ["yewton"]
 date: 2022-05-29T23:28:00+09:00
-mylastmod: 2022-05-29T23:29:12+09:00
 slug: "ubuntu-bluetooth-troubleshoot"
 tags: ["ubuntu", "bluetooth", "mouse"]
 categories: ["雑記"]

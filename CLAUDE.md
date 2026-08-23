@@ -52,8 +52,10 @@ new work. The Org sources for site pages and author data are gone — top-level 
   alert syntax (`> [!NOTE]`, `> [!WARNING]`), not the legacy `{{% callout %}}` shortcode. For image
   credits and embeds, call the Hugo shortcodes directly (`{{< unsplash ... >}}`, `{{< pexels ... >}}`,
   `{{< pixabay >}}...{{< /pixabay >}}`) — the `{{{...}}}` Org macros are not available in Markdown.
-- **Compatibility**: the `{{< lastmod >}}` shortcode and the `mylastmod` front matter key are kept for
-  older articles that still use them; do not use them in new posts.
+- **No `mylastmod`**: the legacy `mylastmod` front matter key and the `{{< lastmod >}}` shortcode that
+  rendered it are gone. `lastmod` is the only last-updated field. (`content-org/all-posts.org` still
+  contains the ox-hugo directive that produced `mylastmod`, so re-exporting from Org would reintroduce
+  it — another reason that file is reference-only.)
 
 ## Commands
 
@@ -104,7 +106,7 @@ touching theme/config internals, as it documents many non-obvious HugoBlox behav
 - **Block/partial overrides**: local overrides of HugoBlox blocks live under
   `layouts/_partials/hbx/blocks/<block-name>/block.html` (currently `resume-awards`,
   `resume-biography`). Custom shortcodes live in `layouts/shortcodes/`
-  (`lastmod`, `pexels`, `pixabay`, `unsplash`).
+  (`pexels`, `pixabay`, `unsplash`).
 - **Config layout**: `config/_default/` holds the base config (`hugo.yaml`, `menus.yaml`,
   `params.yaml`); `config/production/config.toml` only overrides `baseURL` for production.
 

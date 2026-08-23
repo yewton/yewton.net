@@ -3,7 +3,6 @@ title = "#MadeWithAcademic"
 author = ["yewton"]
 date = 2020-01-06
 aliases = ["/2019/01/made-with-academic/"]
-mylastmod = 2020-01-13T14:19:29+09:00
 slug = "made-with-academic"
 tags = ["academic", "ox-hugo"]
 categories = ["雑記"]

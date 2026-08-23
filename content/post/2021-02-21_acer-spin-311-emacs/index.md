@@ -2,7 +2,6 @@
 title: "Chromebook Acer Spin 311 に Emacs を入れて幸せになる"
 author: ["yewton"]
 date: 2021-02-21T23:24:00+09:00
-mylastmod: 2021-02-21T23:24:37+09:00
 slug: "acer-spin-311-emacs"
 tags: ["chromebook", "emacs", "acer"]
 categories: ["買ったモノ"]

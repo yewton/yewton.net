@@ -45,14 +45,6 @@
     line-break: strict;
 }
 
-.mylastmod {
-    line-height: 1.4;
-    font-size: 0.76rem;
-    font-style: italic;
-    color: rgb(122, 122, 122);
-    margin-left: 1rem;
-}
-
 /*
  * callout (`{{% callout %}}` / `> [!NOTE]` 等) は `.callout` が display:flex で
  * アイコンとコンテンツを横並びにしている。flex アイテムは既定で min-width: auto

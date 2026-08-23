@@ -2,7 +2,6 @@
 title: "完全爆弾解除マニュアルのマニュアルPDFをいい感じに印刷する、または Ubuntu で小冊子印刷をする方法"
 author: ["yewton"]
 date: 2025-12-11T22:00:00+09:00
-mylastmod: 2025-12-11T22:00:24+09:00
 slug: "ubuntu-booket-printing-pdfbook2"
 tags: ["ubuntu", "pdf", "printing", "booklet"]
 categories: ["雑記"]

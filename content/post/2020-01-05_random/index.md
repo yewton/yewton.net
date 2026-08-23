@@ -2,7 +2,6 @@
 title: "Academic"
 author: ["yewton"]
 date: 2019-01-05
-mylastmod: 2020-01-23T06:08:03+09:00
 slug: "random"
 tags: ["emacs", "hugo", "ox-hugo"]
 categories: ["雑記"]

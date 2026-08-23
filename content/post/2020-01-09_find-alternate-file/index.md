@@ -2,7 +2,6 @@
 title = "Emacs でマジックコメントを反映させたいとき"
 author = ["yewton"]
 date = 2020-01-09
-mylastmod = 2020-01-12T06:40:15+09:00
 slug = "find-alternate-file"
 categories = ["Emacs"]
 draft = true

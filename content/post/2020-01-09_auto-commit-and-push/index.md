@@ -2,7 +2,6 @@
 title = "auto-commit-and-push のこと書きたい"
 author = ["yewton"]
 date = 2020-01-09
-mylastmod = 2020-01-12T06:40:13+09:00
 slug = "auto-commit-and-push"
 categories = ["Emacs"]
 draft = true

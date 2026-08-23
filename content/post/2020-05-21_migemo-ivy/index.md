@@ -2,14 +2,12 @@
 title: "Ivy (Swiper) で雑に migemo を使う"
 author: ["yewton"]
 date: 2020-05-21T04:50:00+09:00
-mylastmod: 2021-02-27T22:00:00+09:00
+lastmod: 2021-02-27T22:00:00+09:00
 slug: "migemo-ivy"
 tags: ["ivy", "migemo", "swiper", "emacs"]
 categories: ["Emacs"]
 draft: false
 ---
-
-{{< lastmod >}}
 
 > [!NOTE]
 > [counsel-rg と migemo を組み合わせて ripgrep でもローマ字検索](/2020/05/24/counsel-rg-migemo/) も併せて参照。

@@ -5,10 +5,8 @@ tags = ["github", "hugo", "cloudflare", "ssl", "dns"]
 title = "Hugo + GitHub Pages でお手軽にブログを始めよう"
 slug = "blog-with-hugo"
 
-mylastmod = 2020-01-13T15:43:21+09:00
+lastmod = 2020-01-13T15:43:21+09:00
 +++
-
-{{< lastmod >}}
 
 > [!NOTE]
 > 2020年1月現在は、 [Netlify を使っています](/2020/01/13/hugo-netlify/) 。

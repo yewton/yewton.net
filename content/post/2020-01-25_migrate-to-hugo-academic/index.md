@@ -2,7 +2,6 @@
 title: "Academic テーマへの移行手順"
 author: ["yewton"]
 date: 2019-01-05
-mylastmod: 2020-01-23T06:13:20+09:00
 slug: "random"
 tags: ["emacs", "hugo", "ox-hugo"]
 categories: ["Webサイト運用"]

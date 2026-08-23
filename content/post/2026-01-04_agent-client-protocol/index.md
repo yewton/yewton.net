@@ -2,7 +2,6 @@
 title: "Agent Client Protocol を理解する"
 author: ["yewton"]
 date: 2026-01-12T00:20:00+09:00
-mylastmod: 2026-01-12T00:20:53+09:00
 slug: "agent-client-protocol"
 tags: ["ACP", "Agent", "LSP", "Emacs", "agent-shell"]
 categories: ["技術系"]

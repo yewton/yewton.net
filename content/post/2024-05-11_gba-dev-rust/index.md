@@ -2,7 +2,6 @@
 title: "Rust で GBA 開発のとっかかり"
 author: ["yewton"]
 date: 2024-05-12T00:02:00+09:00
-mylastmod: 2024-05-12T00:02:49+09:00
 slug: "gba-dev-rust"
 tags: ["gba", "rust", "agb"]
 categories: ["技術系"]

@@ -2,7 +2,6 @@
 title: "Elastic Common Schema と OpenTelemetry Semantic Convention を通して Structured Logging について学んだ"
 author: ["yewton"]
 date: 2025-01-08T23:35:00+09:00
-mylastmod: 2025-01-08T23:35:37+09:00
 slug: "structured-logging-ecs-otel-semconv"
 tags: ["Spring Boot", "Structured logging", "Elastic Common Schema", "OpenTelemetry Semantic Convention"]
 categories: ["技術系"]
