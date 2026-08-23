@@ -5,3 +5,9 @@
 /worktree
 /_vendor
 /hugo_stats.json
+# Hugo が js.Build() の import マッピングとして毎ビルド生成する。中身はローカルの
+# モジュールキャッシュのパスとテーマのバージョンに依存する (build.noJSConfigInAssets で停止可)。
+/assets/jsconfig.json
+
+# Paseo (ローカルのエージェント管理ツール) のワークスペース設定。
+/paseo.json
