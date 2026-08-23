@@ -2,6 +2,9 @@ title: yewton.net
 baseURL: http://localhost:1313/
 defaultContentLanguage: ja
 hasCJKLanguage: true
+# 日付のみの `date:` / `lastmod:` を JST として解釈させる。未設定だと UTC 00:00 扱いになり、
+# 公開日と同日の JST 午前に `lastmod:` を付けた記事で `.Lastmod.After .Date` が false になる。
+timeZone: Asia/Tokyo
 
 build:
   buildStats:
