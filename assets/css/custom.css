@@ -36,6 +36,15 @@
     font-size: 0.7rem;
 }
 
+/*
+ * 既定の line-break: auto だと、句読点の直前に半角スペースがある場合などに
+ * 禁則処理 (句読点が行頭に来るのを防ぐ) が効かないことがある。
+ * line-break: strict で明示的に禁則処理を強制する。
+ */
+.prose {
+    line-break: strict;
+}
+
 .mylastmod {
     line-height: 1.4;
     font-size: 0.76rem;
