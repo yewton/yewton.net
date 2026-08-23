@@ -1,0 +1,11 @@
+{{/* ホームページの LCP 候補画像をプリロードする head-end フック。
+
+HugoBlox の site_head.html が `{{ partial "functions/get_hook" (dict "hook" "head-end" "context" .) }}`
+で本ファイルを読み込む（get_hook.html 参照）。
+
+LCP 候補は content/_index.md の hero block の css_style で参照される
+`/media/home-bg.jpg`（hero 背景画像、2026-08-23 時点で 40KB）。
+記事ページでは home-bg.jpg は無関係のためプリロードを出力しない。 */}}
+{{ if .IsHome -}}
+<link rel="preload" as="image" href="/media/home-bg.jpg" fetchpriority="high">
+{{- end }}

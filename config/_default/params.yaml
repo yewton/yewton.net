@@ -28,3 +28,8 @@ hugoblox:
     enable: true
     suggestions: []      # Optional: trending searches
     quick_actions: []    # Optional: quick links in modal
+  # 標準で Inter Variable woff2 (325KB) を読み込むと LCP を圧迫するため、
+  # HugoBlox 標準の "native" (システムフォントスタック) に切替。
+  # デザイン崩れ時は `sans` に戻す。
+  typography:
+    font: native

@@ -6,3 +6,45 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=2592000
   Feature-Policy: vibrate 'none'; geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'
+
+/*.webp
+  Cache-Control: public, max-age=2592000
+
+/*.jpg
+  Cache-Control: public, max-age=2592000
+
+/*.png
+  Cache-Control: public, max-age=2592000
+
+/media/*
+  Cache-Control: public, max-age=2592000
+
+/dist/font/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/preact-built/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/hugo-blox-ja.min.*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/hb-search.min.*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/hb-head.min.*
+  Cache-Control: public, max-age=31536000, immutable
+
+/css/custom.min.*
+  Cache-Control: public, max-age=31536000, immutable
+
+/css/_entry.*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.xml
+  Cache-Control: public, max-age=0, must-revalidate
+
+/sitemap.xml
+  Cache-Control: public, max-age=0, must-revalidate
