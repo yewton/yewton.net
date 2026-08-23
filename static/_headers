@@ -1,4 +1,38 @@
+/css/_entry.*
+  Cache-Control: public, max-age=31536000, immutable
+
+/css/custom.min.*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/hb-head.min.*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/hb-search.min.*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/hugo-blox-ja.min.*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/preact-built/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/dist/font/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/media/*
+  Cache-Control: public, max-age=2592000
+
+/*.webp
+  Cache-Control: public, max-age=2592000
+
+/*.jpg
+  Cache-Control: public, max-age=2592000
+
+/*.png
+  Cache-Control: public, max-age=2592000
+
 /*
+  Cache-Control: public, max-age=0, must-revalidate
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
