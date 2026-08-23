@@ -12,8 +12,11 @@ Markdown as Hugo page bundles and published via Hugo + [HugoBlox](https://hugobl
 ## Content workflow (critical)
 
 New articles are written and edited directly in Markdown — the Emacs Org-mode / `ox-hugo` pipeline
-is no longer used for authoring. (Legacy articles still carry Org sources under `content-org/*.org`;
-those are kept for reference only and are not the source of truth for new work.)
+is no longer used for authoring. (Legacy articles still carry Org sources in
+`content-org/all-posts.org`; that file is kept for reference only and is not the source of truth for
+new work. The Org sources for site pages and author data are gone — top-level pages are
+`content/_index.md` / `content/blog/_index.md` / `content/cv/_index.md`, and author data is
+`data/authors/<slug>.yaml`.)
 
 - **Where content lives**: each post is a Hugo page bundle at `content/post/<YYYY-MM-DD_slug>/index.md`,
   with images and other assets in the same directory. Edit `index.md` directly; there is no Org export

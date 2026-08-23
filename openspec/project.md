@@ -7,7 +7,7 @@
 ## Tech Stack
 - **Content Format**: Markdown（Hugo のページバンドル）
     - 新規記事は `content/post/<YYYY-MM-DD_slug>/index.md` を直接執筆・編集します。
-    - 旧記事の Org ソース（`content-org/*.org`）は参照用として残していますが、新規執筆の正ではありません。
+    - 旧記事の Org ソース（`content-org/all-posts.org`）は参照用として残していますが、新規執筆の正ではありません。
 - **Static Site Generator**: [Hugo Extended](https://gohugo.io/)（`.tool-versions` で 0.159.1 に固定）
 - **Theme**: [HugoBlox](https://hugoblox.com/)（Tailwind CSS 版）を Hugo Modules で取得
     （`github.com/HugoBlox/kit/modules/blox`）。旧 Wowchemy/Bootstrap テーマから移行済み。

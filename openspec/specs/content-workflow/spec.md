@@ -9,7 +9,7 @@
 
 新規記事は Markdown を唯一のソースとして執筆・編集しなければならない (SHALL)。具体的には Hugo のページバンドル `content/post/<YYYY-MM-DD_slug>/index.md` を直接編集し、Emacs Org-mode / `ox-hugo` を経由してはならない。
 
-既存記事および `content-org/*.org` は当面そのまま温存され、参照専用として扱われる。
+既存記事の Org ソース `content-org/all-posts.org` は当面そのまま温存され、参照専用として扱われる（サイトページ・著者データの Org ソースは HugoBlox 移行で不要になり撤去済み）。
 
 #### Scenario: 新規記事を Markdown で書く
 - **WHEN** 執筆者またはエージェントが新規記事を作成するとき
